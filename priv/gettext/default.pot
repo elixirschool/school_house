@@ -1,0 +1,228 @@
+## This file is a PO Template file.
+##
+## "msgid"s here are often extracted from source code.
+## Add new translations manually only if they're dynamic
+## translations that can't be statically extracted.
+##
+## Run "mix gettext.extract" to bring this file up to
+## date. Leave "msgstr"s empty as changing them here as no
+## effect: edit them in PO (.po) files instead.
+msgid ""
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:24
+#: lib/elixirschool_web/templates/layout/_header.html.leex:26 lib/elixirschool_web/templates/layout/_header.html.leex:169
+msgid "Basics"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:29
+msgid "Collections"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:43
+msgid "Control Structures"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:33
+msgid "Enum"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:48
+msgid "Functions"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:58
+msgid "Modules"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:38
+msgid "Pattern Matching"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:53
+msgid "Pipe Operator"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:124
+msgid "Advanced"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:223
+msgid "Associations"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:156
+msgid "Behaviours"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:219
+msgid "Changesets"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:78
+msgid "Comprehensions"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:121
+msgid "Concurrency"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:101
+msgid "Custom Mix Tasks"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:192
+msgid "Data Processing"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:88
+msgid "Date and Time"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:174
+msgid "Doctests"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:73
+msgid "Documentation"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:211
+msgid "Ecto"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:106
+msgid "Erlang Interoperability"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:111
+msgid "Error Handling"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:116
+msgid "Executables"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:93
+msgid "IEX Helpers"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:98
+msgid "Intermediate"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:214
+msgid "Introduction"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:141
+msgid "Metaprogramming"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:256
+msgid "Miscellaneous"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:63
+msgid "Mix"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:127
+msgid "OTP Concurrency"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:136
+msgid "OTP Distribution"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:131
+msgid "OTP Supervisors"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:161
+msgid "Protocols"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:233
+msgid "Querying: Advanced"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:228
+msgid "Querying: Basics"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:68
+msgid "Sigils"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:151
+msgid "Specifications and types"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:236
+msgid "Storage"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:83
+msgid "Strings"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:166
+msgid "Testing"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:146
+msgid "Umbrella Projects"
+msgstr ""
+
+#, elixir-format
+#: lib/elixirschool_web/templates/layout/_header.html.leex:179
+#: lib/elixirschool_web/templates/layout/_header.html.leex:184 lib/elixirschool_web/templates/layout/_header.html.leex:189
+#: lib/elixirschool_web/templates/layout/_header.html.leex:195 lib/elixirschool_web/templates/layout/_header.html.leex:200
+#: lib/elixirschool_web/templates/layout/_header.html.leex:205 lib/elixirschool_web/templates/layout/_header.html.leex:245
+#: lib/elixirschool_web/templates/layout/_header.html.leex:250 lib/elixirschool_web/templates/layout/_header.html.leex:259
+#: lib/elixirschool_web/templates/layout/_header.html.leex:279 lib/elixirschool_web/templates/layout/_header.html.leex:284
+#: lib/elixirschool_web/templates/layout/_header.html.leex:289 lib/elixirschool_web/templates/layout/_header.html.leex:294
+msgid "library"
+msgstr ""

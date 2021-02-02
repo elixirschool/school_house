@@ -1,0 +1,295 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Based on: https://codepen.io/nickelse/pen/YGPJQG
+Influenced by: https://sproutsocial.com/
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* #Mega Menu Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.mega-menu {
+  display: none;
+  left: 0;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+}
+
+
+
+/* #hoverable Class Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hoverable {
+  position: static;
+}
+
+.hoverable > a:after {
+  content: "\25BC";
+  font-size: 10px;
+  padding-left: 6px;
+  position: relative;
+  top: -1px;
+}
+
+.hoverable:hover .mega-menu {
+  display: block;
+}
+
+
+/* #toggle Class Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.toggleable > label:after {
+  content: "\25BC";
+  font-size: 10px;
+  padding-left: 6px;
+  position: relative;
+  top: -1px;
+}
+
+.toggle-input {
+  display: none;
+}
+.toggle-input:not(checked) ~ .mega-menu {
+  display: none;
+}
+
+.toggle-input:checked ~ .mega-menu {
+  display: block;
+}
+
+.toggle-input:checked + label {
+  color: white;
+  background: #7c6f89; /*@apply bg-purple-800 */
+}
+
+.toggle-input:checked ~ label:after {
+  content: "\25B2";
+  font-size: 10px;
+  padding-left: 6px;
+  position: relative;
+  top: -1px;
+}
+
+.makeup .hll {background-color: #f4f5f6}
+.makeup {background-color: #ffffff}.makeup .unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.makeup table td { padding: 2px; }
+.makeup table pre { margin: 0; }
+.makeup .cm {
+  color: #999988;
+  font-style: italic;
+}
+.makeup .cp {
+  color: #999999;
+  font-weight: bold;
+}
+.makeup .c1 {
+  color: #999988;
+  font-style: italic;
+}
+.makeup .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+.makeup .c, .makeup .cd {
+  color: #999988;
+  font-style: italic;
+}
+.makeup .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+.makeup .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+.makeup .ge {
+  color: #000000;
+  font-style: italic;
+}
+.makeup .gr {
+  color: #aa0000;
+}
+.makeup .gh {
+  color: #999999;
+}
+.makeup .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+.makeup .go {
+  color: #888888;
+}
+.makeup .gp {
+  color: #555555;
+}
+.makeup .gs {
+  font-weight: bold;
+}
+.makeup .gu {
+  color: #aaaaaa;
+}
+.makeup .gt {
+  color: #aa0000;
+}
+.makeup .kc {
+  color: #000000;
+  font-weight: bold;
+}
+.makeup .kd {
+  color: #000000;
+  font-weight: bold;
+}
+.makeup .kn {
+  color: #000000;
+  font-weight: bold;
+}
+.makeup .kp {
+  color: #000000;
+  font-weight: bold;
+}
+.makeup .kr {
+  color: #000000;
+  font-weight: bold;
+}
+.makeup .kt {
+  color: #445588;
+  font-weight: bold;
+}
+.makeup .k, .makeup .kv {
+  color: #000000;
+  font-weight: bold;
+}
+.makeup .mf {
+  color: #009999;
+}
+.makeup .mh {
+  color: #009999;
+}
+.makeup .il {
+  color: #009999;
+}
+.makeup .mi {
+  color: #009999;
+}
+.makeup .mo {
+  color: #009999;
+}
+.makeup .m, .makeup .mb, .makeup .mx {
+  color: #009999;
+}
+.makeup .sb {
+  color: #d14;
+}
+.makeup .sc {
+  color: #d14;
+}
+.makeup .sd {
+  color: #d14;
+}
+.makeup .s2 {
+  color: #d14;
+}
+.makeup .se {
+  color: #d14;
+}
+.makeup .sh {
+  color: #d14;
+}
+.makeup .si {
+  color: #d14;
+}
+.makeup .sx {
+  color: #d14;
+}
+.makeup .sr {
+  color: #009926;
+}
+.makeup .s1 {
+  color: #d14;
+}
+.makeup .ss {
+  color: #990073;
+}
+.makeup .s {
+  color: #d14;
+}
+.makeup .na {
+  color: #008080;
+}
+.makeup .bp {
+  color: #999999;
+}
+.makeup .nb {
+  color: #0086B3;
+}
+.makeup .nc {
+  color: #445588;
+  font-weight: bold;
+}
+.makeup .no {
+  color: #008080;
+}
+.makeup .nd {
+  color: #3c5d5d;
+  font-weight: bold;
+}
+.makeup .ni {
+  color: #800080;
+}
+.makeup .ne {
+  color: #990000;
+  font-weight: bold;
+}
+.makeup .nf {
+  color: #990000;
+  font-weight: bold;
+}
+.makeup .nl {
+  color: #990000;
+  font-weight: bold;
+}
+.makeup .nn {
+  color: #555555;
+}
+.makeup .nt {
+  color: #000080;
+}
+.makeup .vc {
+  color: #008080;
+}
+.makeup .vg {
+  color: #008080;
+}
+.makeup .vi {
+  color: #008080;
+}
+.makeup .nv {
+  color: #008080;
+}
+.makeup .ow {
+  color: #000000;
+  font-weight: bold;
+}
+.makeup .o {
+  color: #000000;
+  font-weight: bold;
+}
+.makeup .w {
+  color: #bbbbbb;
+}
+.makeup {
+  background-color: #f8f8f8;
+}
