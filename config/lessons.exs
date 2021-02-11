@@ -18,14 +18,16 @@ config :school_house,
       :comprehensions,
       :strings,
       :date_time,
-      :mix_tasks,
       :iex_helpers
     ],
-    advanced: [
+    intermediate: [
+      :mix_tasks,
       :erlang,
       :error_handling,
       :escripts,
       :concurrency,
+    ],
+    advanced: [
       :otp_concurrency,
       :otp_supervisors,
       :otp_distribution,
@@ -35,5 +37,40 @@ config :school_house,
       :behaviours,
       :gen_stage,
       :protocols
+    ],
+    testing: [
+      :basics,
+      :doctests,
+      :bypass,
+      :mox,
+      :stream_data
+    ],
+    data_processing: [
+      :gen_stage,
+      :flow,
+      :broadway
+    ],
+    ecto: [
+      :intro,
+      :changesets,
+      :associations,
+      :query_basics,
+      :query_advanced
+    ],
+    storage: [
+      :ets,
+      :mnesia,
+      :cachex,
+      :redix
+    ],
+    misc: [
+      :plug,
+      :eex,
+      :debugging,
+      :nerves,
+      :guardian,
+      :poolboy,
+      :distillery,
+      :nimble_publisher
     ]
   ]
