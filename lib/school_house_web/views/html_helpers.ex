@@ -1,8 +1,9 @@
 defmodule ElixirschoolWeb.HtmlHelpers do
+  @moduledoc false
   use Phoenix.HTML
 
-  alias SchoolHouse.Lessons
   alias ElixirschoolWeb.Router.Helpers, as: Routes
+  alias SchoolHouse.Lessons
 
   def lesson_link(conn, section, name, do: contents) do
     locale = Gettext.get_locale()

@@ -1,4 +1,8 @@
 defmodule SchoolHouse.Content.Lesson do
+  @moduledoc """
+  The data representation of a lesson
+  """
+
   @headers_regex ~r/<(h2|h3|h4)>([<>="`\w\s?!\.\/\d]+)<\/(?:h2|h3|h4)>/
 
   @enforce_keys [:body, :section, :locale, :name, :title, :version]
@@ -9,7 +13,6 @@ defmodule SchoolHouse.Content.Lesson do
     :name,
     :next,
     :previous,
-    # TODO: implemenet redirect and remove this
     :redirect_from,
     :section,
     :table_of_contents,
@@ -41,8 +44,6 @@ defmodule SchoolHouse.Content.Lesson do
       |> String.trim()
       |> String.downcase()
 
-    # TODO: Handle sections with `code` fragments
-
     name
     |> String.replace(~r/[^\w\s]/, "")
     |> String.replace(" ", "-")
@@ -64,37 +65,39 @@ defmodule SchoolHouse.Content.Lesson do
     end)
   end
 
+  defp table_of_contents_reducer([_, "h" <> size, name], {html, header}) do
+    section_link =
+      name
+      |> String.trim()
+      |> page_link()
+
+    size = String.to_integer(size)
+
+    cond do
+      is_nil(header) ->
+        {"#{html}<li>#{section_link}", size}
+
+      size == header ->
+        {"#{html}</li><li>#{section_link}", size}
+
+      size < header ->
+        closing_tag =
+          1..(header - size)
+          |> Enum.map(fn _ -> "</ul>" end)
+          |> Enum.join("")
+
+        {"#{html}</li>#{closing_tag}</li><li>#{section_link}", size}
+
+      size > header ->
+        {"#{html}<ul><li>#{section_link}", size}
+    end
+  end
+
   defp table_of_contents_html(body) do
     {html, _} =
       @headers_regex
       |> Regex.scan(body)
-      |> Enum.reduce({"<ul class=\"table_of_contents\">", nil}, fn [_, "h" <> size, name], {html, header} ->
-        section_link =
-          name
-          |> String.trim()
-          |> page_link()
-
-        size = String.to_integer(size)
-
-        cond do
-          is_nil(header) ->
-            {"#{html}<li>#{section_link}", size}
-
-          size == header ->
-            {"#{html}</li><li>#{section_link}", size}
-
-          size < header ->
-            closing_tag =
-              1..(header - size)
-              |> Enum.map(fn _ -> "</ul>" end)
-              |> Enum.join("")
-
-            {"#{html}</li>#{closing_tag}</li><li>#{section_link}", size}
-
-          size > header ->
-            {"#{html}<ul><li>#{section_link}", size}
-        end
-      end)
+      |> Enum.reduce({"<ul class=\"table_of_contents\">", nil}, &table_of_contents_reducer/2)
 
     "#{html}</ul>"
   end

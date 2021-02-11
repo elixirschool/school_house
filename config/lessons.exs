@@ -25,7 +25,7 @@ config :school_house,
       :erlang,
       :error_handling,
       :escripts,
-      :concurrency,
+      :concurrency
     ],
     advanced: [
       :otp_concurrency,

@@ -1,4 +1,5 @@
 defmodule ElixirschoolWeb.PageLive do
+  @moduledoc false
   use ElixirschoolWeb, :live_view
 
   @impl true
