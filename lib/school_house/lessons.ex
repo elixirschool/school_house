@@ -1,11 +1,15 @@
 defmodule SchoolHouse.Lessons do
+  @moduledoc """
+  Implements NimblePublisher and functions for retrieving lessons
+  """
+
   use NimblePublisher,
     build: SchoolHouse.Content.Lesson,
     from: "lessons/**/*.md",
     as: :lessons,
     highlighters: [:makeup_elixir, :makeup_erlang]
 
-  @ordering Application.get_env(:school_house, :lessons)
+  @ordering Application.compile_env(:school_house, :lessons)
   @lesson_map @lessons
               |> Enum.group_by(& &1.locale)
               |> Enum.into(%{}, fn {locale, lessons} ->

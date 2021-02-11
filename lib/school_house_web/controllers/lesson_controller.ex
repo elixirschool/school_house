@@ -9,8 +9,7 @@ defmodule ElixirschoolWeb.LessonController do
         render(conn, "lesson.html", lesson: lesson)
 
       nil ->
-        nil
-        # TODO: 404 w/ translation CTA
+        render(conn, "404.html")
     end
   end
 end
