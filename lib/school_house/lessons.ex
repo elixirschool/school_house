@@ -2,10 +2,9 @@ defmodule SchoolHouse.Lessons do
   @moduledoc """
   Implements NimblePublisher and functions for retrieving lessons
   """
-
   use NimblePublisher,
     build: SchoolHouse.Content.Lesson,
-    from: "lessons/**/*.md",
+    from: "content/lessons/**/*.md",
     as: :lessons,
     highlighters: [:makeup_elixir, :makeup_erlang]
 

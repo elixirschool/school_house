@@ -12,11 +12,11 @@ msgstr ""
 "Plural-Forms: nplurals=2\n"
 
 #, elixir-format
-#: lib/elixirschool_web/templates/layout/_header.html.leex:27
+#: lib/school_house_web/templates/layout/_header.html.leex:27
 msgid "Basics"
 msgstr ""
 
 #, elixir-format
-#: lib/elixirschool_web/templates/layout/_header.html.leex:32
+#: lib/school_house_web/templates/layout/_header.html.leex:32
 msgid "Collections"
 msgstr ""

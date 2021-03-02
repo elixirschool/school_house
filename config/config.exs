@@ -11,10 +11,10 @@ config :school_house,
   ecto_repos: [SchoolHouse.Repo]
 
 # Configures the endpoint
-config :school_house, ElixirschoolWeb.Endpoint,
+config :school_house, SchoolHouseWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "nkt+Wx4IwiwuGAAwhadih8PBxcacSurWEq1mWbLUEiRuA6s+Vtl075yHVnyhxWeV",
-  render_errors: [view: ElixirschoolWeb.ErrorView, accepts: ~w(html json), layout: false],
+  render_errors: [view: SchoolHouseWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: SchoolHouse.PubSub,
   live_view: [signing_salt: "zU0Cq05z"]
 
@@ -27,7 +27,7 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
-config :school_house, ElixirschoolWeb.Gettext,
+config :school_house, SchoolHouseWeb.Gettext,
   default_locale: "en",
   locales: ~w(ar bg bn de en es fr gr id it ja ko ms no pl pt ru sk ta th tr uk vi zh-hans zh-hant)
 

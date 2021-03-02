@@ -15,7 +15,7 @@ config :school_house, SchoolHouse.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :school_house, ElixirschoolWeb.Endpoint,
+config :school_house, SchoolHouseWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -55,13 +55,13 @@ config :school_house, ElixirschoolWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :school_house, ElixirschoolWeb.Endpoint,
+config :school_house, SchoolHouseWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/elixirschool_web/(live|views)/.*(ex)$",
-      ~r"lib/elixirschool_web/templates/.*(eex)$",
+      ~r"lib/school_house_web/(live|views)/.*(ex)$",
+      ~r"lib/school_house_web/templates/.*(eex)$",
       ~r"lessons/*/.*(md)$"
     ]
   ]

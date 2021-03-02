@@ -1,8 +1,10 @@
-defmodule ElixirschoolWeb.HtmlHelpers do
-  @moduledoc false
+defmodule SchoolHouseWeb.HtmlHelpers do
+  @moduledoc """
+  A collection of helpers to assist in working with translations and lessons
+  """
   use Phoenix.HTML
 
-  alias ElixirschoolWeb.Router.Helpers, as: Routes
+  alias SchoolHouseWeb.Router.Helpers, as: Routes
   alias SchoolHouse.Lessons
 
   def lesson_link(conn, section, name, do: contents) do

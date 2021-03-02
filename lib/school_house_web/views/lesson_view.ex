@@ -1,4 +1,3 @@
-defmodule ElixirschoolWeb.LessonView do
-  @moduledoc false
-  use ElixirschoolWeb, :view
+defmodule SchoolHouseWeb.LessonView do
+  use SchoolHouseWeb, :view
 end

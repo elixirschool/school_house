@@ -1,5 +1,5 @@
-defmodule ElixirschoolWeb.LessonController do
-  use ElixirschoolWeb, :controller
+defmodule SchoolHouseWeb.LessonController do
+  use SchoolHouseWeb, :controller
 
   alias SchoolHouse.Lessons
 

@@ -10,11 +10,11 @@ defmodule SchoolHouse.Application do
       # Start the Ecto repository
       #      SchoolHouse.Repo,
       # Start the Telemetry supervisor
-      ElixirschoolWeb.Telemetry,
+      SchoolHouseWeb.Telemetry,
       # Start the PubSub system
       {Phoenix.PubSub, name: SchoolHouse.PubSub},
       # Start the Endpoint (http/https)
-      ElixirschoolWeb.Endpoint
+      SchoolHouseWeb.Endpoint
       # Start a worker by calling: SchoolHouse.Worker.start_link(arg)
       # {SchoolHouse.Worker, arg}
     ]
@@ -28,7 +28,7 @@ defmodule SchoolHouse.Application do
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    ElixirschoolWeb.Endpoint.config_change(changed, removed)
+    SchoolHouseWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

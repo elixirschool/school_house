@@ -1,5 +1,5 @@
-defmodule ElixirschoolWeb.PageController do
-  use ElixirschoolWeb, :controller
+defmodule SchoolHouseWeb.PageController do
+  use SchoolHouseWeb, :controller
 
   def index(conn, _params) do
     render(conn, "index.html")

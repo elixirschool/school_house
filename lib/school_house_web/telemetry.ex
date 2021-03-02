@@ -1,4 +1,4 @@
-defmodule ElixirschoolWeb.Telemetry do
+defmodule SchoolHouseWeb.Telemetry do
   @moduledoc false
   use Supervisor
   import Telemetry.Metrics
@@ -50,7 +50,7 @@ defmodule ElixirschoolWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {ElixirschoolWeb, :count_users, []}
+      # {SchoolHouseWeb, :count_users, []}
     ]
   end
 end
