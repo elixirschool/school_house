@@ -1,8 +1,7 @@
 defmodule SchoolHouse.Content.Lesson do
   @moduledoc """
-  The data representation of a lesson
+  Encapsulates an individual lesson and handles parsing the originating markdown file
   """
-
   @headers_regex ~r/<(h2|h3|h4)>([<>="`\w\s?!\.\/\d]+)<\/(?:h2|h3|h4)>/
 
   @enforce_keys [:body, :section, :locale, :name, :title, :version]

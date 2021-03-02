@@ -1,30 +1,34 @@
-defmodule ElixirschoolWeb.Router do
-  use ElixirschoolWeb, :router
+defmodule SchoolHouseWeb.Router do
+  use SchoolHouseWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, {ElixirschoolWeb.LayoutView, :root}
+    plug :put_root_layout, {SchoolHouseWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-    plug LocalePlug, backend: ElixirschoolWeb.Gettext
+    plug LocalePlug, backend: SchoolHouseWeb.Gettext
   end
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/", ElixirschoolWeb do
+  scope "/", SchoolHouseWeb do
     pipe_through :browser
 
     get "/", PageController, :index
     get "/:locale/:section/:name", LessonController, :lesson
+
+    get "/blog", PostController, :index
+    get "/blog/:slug", PostController, :show
+
     # live "/", PageLive, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", ElixirschoolWeb do
+  # scope "/api", SchoolHouseWeb do
   #   pipe_through :api
   # end
 
@@ -40,7 +44,7 @@ defmodule ElixirschoolWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: ElixirschoolWeb.Telemetry
+      live_dashboard "/dashboard", metrics: SchoolHouseWeb.Telemetry
     end
   end
 end

@@ -1,5 +1,5 @@
-defmodule ElixirschoolWeb.LayoutViewTest do
-  use ElixirschoolWeb.ConnCase, async: true
+defmodule SchoolHouseWeb.LayoutViewTest do
+  use SchoolHouseWeb.ConnCase, async: true
 
   # When testing helpers, you may want to import Phoenix.HTML and
   # use functions such as safe_to_string() to convert the helper

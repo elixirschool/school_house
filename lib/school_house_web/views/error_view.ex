@@ -1,6 +1,5 @@
-defmodule ElixirschoolWeb.ErrorView do
-  @moduledoc false
-  use ElixirschoolWeb, :view
+defmodule SchoolHouseWeb.ErrorView do
+  use SchoolHouseWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

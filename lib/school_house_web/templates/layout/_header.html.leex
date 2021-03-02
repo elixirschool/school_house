@@ -102,7 +102,7 @@
                 <% end %>
               </li>
               <li>
-                <%= lesson_link @conn, :intermediate, :erlang_interoperability do %>
+                <%= lesson_link @conn, :intermediate, :erlang do %>
                   2. <%= gettext("Erlang Interoperability") %>
                 <% end %>
               </li>
@@ -112,7 +112,7 @@
                 <% end %>
               </li>
               <li>
-                <%= lesson_link @conn, :intermediate, :executables do %>
+                <%= lesson_link @conn, :intermediate, :escripts do %>
                   3. <%= gettext("Executables") %>
                 <% end %>
               </li>
@@ -137,7 +137,7 @@
                 <% end %>
               </li>
               <li>
-                <%= lesson_link @conn, :advanced, :metaprogramming do %>
+                <%= lesson_link @conn, :advanced, :mtaprogramming do %>
                   4. <%= gettext("Metaprogramming") %>
                 <% end %>
               </li>
@@ -147,7 +147,7 @@
                 <% end %>
               </li>
               <li>
-                <%= lesson_link @conn, :advanced, :specs_and_types do %>
+                <%= lesson_link @conn, :advanced, :typespecs do %>
                   6. <%= gettext("Specifications and types") %>
                 <% end %>
               </li>
@@ -191,7 +191,7 @@
               </li>
               <h3 class="font-bold text-xl text-gray text-bold mb-2 pt-6"><%= gettext("Data Processing") %></h3>
               <li>
-                <%= lesson_link @conn, :data_processing, :gen_stage do %>
+                <%= lesson_link @conn, :data_processing, :genstage do %>
                   1. GenStage <span class="text-xs italic"><%= gettext("library") %></span>
                 <% end %>
               </li>
@@ -236,12 +236,12 @@
               <h3 class="font-bold text-xl text-gray text-bold mb-2 pt-6"><%= gettext("Storage") %></h3>
               <li>
                 <%= lesson_link @conn, :storage, :ets do %>
-                  1. <%= gettext("1. Erlang Term Storage (ETS)") %>
+                  1. Erlang Term Storage (ETS)
                 <% end %>
               </li>
               <li>
                 <%= lesson_link @conn, :storage, :mnesia do %>
-                  2. <%= gettext("Mnesia") %>
+                  2. Mnesia
                 <% end %>
               </li>
               <li>
@@ -274,7 +274,7 @@
               </li>
               <li>
                 <%= lesson_link @conn, :misc, :nerves do %>
-                  4. Nerves
+                  4. Nerves <span class="text-xs italic"><%= gettext("library") %></span>
                 <% end %>
               </li>
               <li>

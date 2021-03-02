@@ -1,4 +1,4 @@
-defmodule ElixirschoolWeb.ErrorHelpers do
+defmodule SchoolHouseWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -39,9 +39,9 @@ defmodule ElixirschoolWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(ElixirschoolWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(SchoolHouseWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(ElixirschoolWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(SchoolHouseWeb.Gettext, "errors", msg, opts)
     end
   end
 end

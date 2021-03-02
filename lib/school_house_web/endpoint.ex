@@ -1,4 +1,4 @@
-defmodule ElixirschoolWeb.Endpoint do
+defmodule SchoolHouseWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :school_house
 
   # The session will be stored in the cookie and signed,
@@ -10,7 +10,7 @@ defmodule ElixirschoolWeb.Endpoint do
     signing_salt: "6rdoa77b"
   ]
 
-  socket "/socket", ElixirschoolWeb.UserSocket,
+  socket "/socket", SchoolHouseWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -50,5 +50,5 @@ defmodule ElixirschoolWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug ElixirschoolWeb.Router
+  plug SchoolHouseWeb.Router
 end

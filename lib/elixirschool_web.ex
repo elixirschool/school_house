@@ -1,12 +1,12 @@
-defmodule ElixirschoolWeb do
+defmodule SchoolHouseWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use ElixirschoolWeb, :controller
-      use ElixirschoolWeb, :view
+      use SchoolHouseWeb, :controller
+      use SchoolHouseWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,19 +19,19 @@ defmodule ElixirschoolWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: ElixirschoolWeb
+      use Phoenix.Controller, namespace: SchoolHouseWeb
 
       import Plug.Conn
-      import ElixirschoolWeb.Gettext
-      alias ElixirschoolWeb.Router.Helpers, as: Routes
+      import SchoolHouseWeb.Gettext
+      alias SchoolHouseWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/elixirschool_web/templates",
-        namespace: ElixirschoolWeb
+        root: "lib/school_house_web/templates",
+        namespace: SchoolHouseWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -45,7 +45,7 @@ defmodule ElixirschoolWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {ElixirschoolWeb.LayoutView, "live.html"}
+        layout: {SchoolHouseWeb.LayoutView, "live.html"}
 
       unquote(view_helpers())
     end
@@ -72,7 +72,7 @@ defmodule ElixirschoolWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import ElixirschoolWeb.Gettext
+      import SchoolHouseWeb.Gettext
     end
   end
 
@@ -87,10 +87,10 @@ defmodule ElixirschoolWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import ElixirschoolWeb.ErrorHelpers
-      import ElixirschoolWeb.Gettext
-      import ElixirschoolWeb.HtmlHelpers
-      alias ElixirschoolWeb.Router.Helpers, as: Routes
+      import SchoolHouseWeb.ErrorHelpers
+      import SchoolHouseWeb.Gettext
+      import SchoolHouseWeb.HtmlHelpers
+      alias SchoolHouseWeb.Router.Helpers, as: Routes
     end
   end
 

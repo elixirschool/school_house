@@ -1,14 +1,14 @@
-defmodule ElixirschoolWeb.ErrorViewTest do
-  use ElixirschoolWeb.ConnCase, async: true
+defmodule SchoolHouseWeb.ErrorViewTest do
+  use SchoolHouseWeb.ConnCase, async: true
 
   # Bring render/3 and render_to_string/3 for testing custom views
   import Phoenix.View
 
   test "renders 404.html" do
-    assert render_to_string(ElixirschoolWeb.ErrorView, "404.html", []) == "Not Found"
+    assert render_to_string(SchoolHouseWeb.ErrorView, "404.html", []) == "Not Found"
   end
 
   test "renders 500.html" do
-    assert render_to_string(ElixirschoolWeb.ErrorView, "500.html", []) == "Internal Server Error"
+    assert render_to_string(SchoolHouseWeb.ErrorView, "500.html", []) == "Internal Server Error"
   end
 end
