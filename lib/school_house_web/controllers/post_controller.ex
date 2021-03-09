@@ -3,8 +3,13 @@ defmodule SchoolHouseWeb.PostController do
 
   alias SchoolHouse.Posts
 
-  def index(conn) do
-    render(conn, "index.html", posts: Posts.recent())
+  def index(conn, params) do
+    posts =
+      params
+      |> current_page()
+      |> Posts.page()
+
+    render(conn, "index.html", posts: posts)
   end
 
   def show(conn, %{"slug" => slug}) do
@@ -14,6 +19,15 @@ defmodule SchoolHouseWeb.PostController do
 
       nil ->
         nil
+    end
+  end
+
+  defp current_page(params) do
+    value = Map.get(params, "page", "0")
+
+    case Integer.parse(value) do
+      :error -> 0
+      {page, _remainder} -> page
     end
   end
 end
