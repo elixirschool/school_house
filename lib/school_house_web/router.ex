@@ -19,6 +19,7 @@ defmodule SchoolHouseWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/why", PageController, :why
     get "/:locale/:section/:name", LessonController, :lesson
 
     get "/blog", PostController, :index
