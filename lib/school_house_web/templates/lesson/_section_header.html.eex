@@ -1,0 +1,4 @@
+<<%= @header %> id="<%= @fragment %>">
+  <a href="#<%= @fragment %>"><%= @name %></a>
+  <a href="#" class="text-brand-gray font-xsmall">top of page</a>
+</<%= @header %>>
