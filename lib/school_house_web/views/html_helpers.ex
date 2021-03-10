@@ -22,4 +22,6 @@ defmodule SchoolHouseWeb.HtmlHelpers do
       to: destination
     )
   end
+
+  def avatar_url(github_link), do: "#{github_link}.png"
 end
