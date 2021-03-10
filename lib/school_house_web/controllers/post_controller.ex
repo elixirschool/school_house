@@ -9,7 +9,7 @@ defmodule SchoolHouseWeb.PostController do
       |> current_page()
       |> Posts.page()
 
-    render(conn, "index.html", posts: posts)
+    render(conn, "index.html", posts: posts, pages: Posts.pages())
   end
 
   def show(conn, %{"slug" => slug}) do
