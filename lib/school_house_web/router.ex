@@ -8,7 +8,8 @@ defmodule SchoolHouseWeb.Router do
     plug :put_root_layout, {SchoolHouseWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-    plug LocalePlug, backend: SchoolHouseWeb.Gettext
+    plug SchoolHouseWeb.RedirectPlug
+    plug SchoolHouseWeb.SetLocalePlug
   end
 
   pipeline :api do
@@ -18,12 +19,13 @@ defmodule SchoolHouseWeb.Router do
   scope "/", SchoolHouseWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-    get "/why", PageController, :why
-    get "/:locale/:section/:name", LessonController, :lesson
-
     get "/blog", PostController, :index
     get "/blog/:slug", PostController, :show
+
+    get "/", PageController, :index
+    get "/:locale", PageController, :index
+    get "/:locale/why", PageController, :why
+    get "/:locale/:section/:name", LessonController, :lesson
 
     # live "/", PageLive, :index
   end
