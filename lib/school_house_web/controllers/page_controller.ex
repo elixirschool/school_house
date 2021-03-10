@@ -4,7 +4,7 @@ defmodule SchoolHouseWeb.PageController do
   alias SchoolHouse.Posts
 
   def index(conn, _params) do
-    render(conn, "index.html", posts: recent_posts)
+    render(conn, "index.html", posts: recent_posts())
   end
 
   def why(conn, _params) do
@@ -14,6 +14,6 @@ defmodule SchoolHouseWeb.PageController do
   defp recent_posts do
     0
     |> Posts.page()
-    |> Enum.take(2)
+    |> Enum.take(6)
   end
 end
