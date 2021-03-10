@@ -1,9 +1,28 @@
 <section class="container w-3/4 mb-6 items-center prose">
-  <div class="pt-6 pb-6">
-    <span class="text-3xl font-bold"><%= @post.title %></span>
+  <div class="py-6 text-center">
+    <span class="text-4xl leading-8 font-extrabold tracking-tight text-brand-purple sm:text-4xl ">Elixir School Blog</span>
   </div>
 
-  <div class="bg-light-gray rounded-xl p-4"><%= raw @post.excerpt %></div>
+  <div class="relative">
+    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+      <div class="w-full border-t border-gray-300"></div>
+    </div>
+    <div class="relative flex justify-center">
+      <span class="px-2 bg-white text-sm text-gray-500">
+        Presents
+      </span>
+    </div>
+  </div>
+
+  <div class="pt-6 text-center">
+    <span class="text-2xl leading-8 font-extrabold tracking-tight text-brand-gray sm:text-2xl"><%= @post.title %></span>
+  </div>
+
+  <div class="py-2 text-center">
+    <span class="text-medium leading-8 tracking-tight text-brand-gray sm:text-large ">By <%= @post.author %></span>
+  </div>
+
+  <div class="bg-brand-light-gray rounded-xl p-4 mb-3 text-xl text-gray-500 sm:mb-4 text-center"><%= raw @post.excerpt %></div>
 
   <%= raw @post.body %>
 </section>

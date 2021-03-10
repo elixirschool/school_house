@@ -9,10 +9,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'light-gray': '#f4f6f7',
-        gray: '#3c4349',
-        purple: '#7c6f89',
-        red: '#c0394d',
+        'brand-light-gray': '#f4f6f7',
+        'brand-gray': '#3c4349',
+        'brand-purple': '#7c6f89',
+        'brand-light-purple': '#cfbae6',
+        'brand-red': '#c0394d',
       },
       container: {
         center: true,
@@ -20,25 +21,25 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray'),
+            color: theme('colors.brand-gray'),
             maxWidth: 'inherit',
             pre: {
               'background-color': '#f4f5f6',
               color: '#5a6267'
             },
             h1: {
-              color: theme('colors.gray'),
+              color: theme('colors.brand-gray'),
             },
             h2: {
-              color: theme('colors.gray'),
+              color: theme('colors.brand-gray'),
             },
             h3: {
-              color: theme('colors.gray'),
+              color: theme('colors.brand-gray'),
             },
             a: {
-              color: theme('colors.purple'),
+              color: theme('colors.brand-purple'),
               '&:hover': {
-                'background-color': theme('colors.purple'),
+                'background-color': theme('colors.brand-purple'),
                 color: theme('colors.white'),
               }
             },

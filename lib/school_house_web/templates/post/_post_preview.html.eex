@@ -1,0 +1,39 @@
+<div class="<%= if String.length(@post.excerpt) > 300, do: "col-span-2", else: "" %>">
+  <div>
+    <a href="#" class="inline-block">
+      <%= for tag <- @post.tags do %>
+      <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-brand-light-purple text-brand-gray">
+        <%= tag %>
+      </span>
+      <% end %>
+    </a>
+  </div>
+  <%= link(to: Routes.post_path(@conn, :show, @post.slug), class: "block mt-4") do %>
+    <p class="text-xl font-semibold text-brand-gray">
+      <%= @post.title %>
+    </p>
+    <p class="mt-3 text-base text-brand-gray">
+      <%= @post.excerpt %>
+    </p>
+  <% end %>
+  <div class="mt-6 flex items-center">
+    <div class="flex-shrink-0">
+      <a href="#">
+        <span class="sr-only">Paul York</span>
+        <img class="h-10 w-10 rounded-full" src="<%= avatar_url(@post.author_link) %>" alt="">
+      </a>
+    </div>
+    <div class="ml-3">
+      <p class="text-sm font-medium text-gray-900">
+        <a href="#">
+          <%= @post.author %>
+        </a>
+      </p>
+      <div class="flex space-x-1 text-sm text-gray-500">
+        <time datetime="2020-03-16">
+          <%= @post.date %>
+        </time>
+      </div>
+    </div>
+  </div>
+</div>

@@ -18,7 +18,7 @@ defmodule SchoolHouseWeb.HtmlHelpers do
       end
 
     link(contents,
-      class: "block hover:bg-purple text-gray-300 hover:text-white #{additional_classes}",
+      class: "block hover:bg-brand-purple text-brand-gray hover:text-white #{additional_classes}",
       to: destination
     )
   end
