@@ -17,7 +17,7 @@ $ cd ..
 $ git clone git@github.com:elixirschool/school_house.git
 $ cd school_house
 $ ln ../elixirschool ./
-$ mv -T elixirschool lessons
+$ mv -T elixirschool content
 ```
 
 From here the rest is as you would expect with Phoenix! :tada:
