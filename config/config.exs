@@ -32,6 +32,7 @@ config :school_house, SchoolHouseWeb.Gettext,
   locales: ~w(ar bg bn de en es fr gr id it ja ko ms no pl pt ru sk ta th tr uk vi zh-hans zh-hant)
 
 import_config "lessons.exs"
+import_config "redirects.exs"
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"

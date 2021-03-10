@@ -1,6 +1,6 @@
 <section class="container w-3/4 mb-6 items-center prose">
   <div class="py-6 text-center">
-    <span class="text-4xl leading-8 font-extrabold tracking-tight text-brand-purple sm:text-4xl ">Elixir School Blog</span>
+    <span class="text-4xl leading-8 font-extrabold tracking-tight text-brand-purple sm:text-4xl ">Elixir School</span>
   </div>
 
   <div class="relative">

@@ -2,7 +2,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="lg:text-center">
       <p class="mt-2 text-4xl leading-8 font-extrabold tracking-tight text-brand-purple sm:text-4xl">
-        Why Elixir? 
+        Why Elixir?
       </p>
       <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
         Elixir is a wonderful language but don't take our word for it. Let's look at some of the reasons you and your organization should adopt Elixir.
@@ -158,7 +158,7 @@
           </svg>
           <div class="ml-3">
             <dt class="text-lg leading-6 font-medium text-gray-900">
-              Concurrency 
+              Concurrency
             </dt>
             <dd class="mt-2 text-base text-gray-500">
               Find what you need with advanced filters, bulk actions, and quick views.
@@ -173,7 +173,7 @@
           </svg>
           <div class="ml-3">
             <dt class="text-lg leading-6 font-medium text-gray-900">
-              Performant 
+              Performant
             </dt>
             <dd class="mt-2 text-base text-gray-500">
               Find what you need with advanced filters, bulk actions, and quick views.
@@ -205,7 +205,7 @@
       <h2 class="text-3xl font-extrabold text-brand-purple">Vibrant Ecosystem</h2>
       <p class="mt-4 text-lg text-gray-500">The community and ecosystem that have grown up with the language remain one of the alluring parts of Elixir.</p>
     </div>
-    <dl class="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-8">
+    <dl class="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8">
       <div class="flex">
         <!-- Heroicon name: outline/check -->
         <svg class="flex-shrink-0 h-6 w-6 text-brand-purple font-bold" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -218,6 +218,22 @@
           <dd class="mt-2 text-base text-gray-500">
           The Elixir Slack is a popular destination for many in the community.
           <a target="_blank" href="https://elixir-slackin.herokuapp.com/" class="font-bold text-brand-purple">Request your invite today!</a>
+          </dd>
+        </div>
+      </div>
+
+      <div class="flex">
+        <!-- Heroicon name: outline/check -->
+        <svg class="flex-shrink-0 h-6 w-6 text-brand-purple font-bold" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+        </svg>
+        <div class="ml-3">
+          <dt class="text-lg leading-6 font-medium text-gray-900">
+            Discord
+          </dt>
+          <dd class="mt-2 text-base text-gray-500">
+            A Slack alternative built with Elixir is fast becoming a popular chat option for the community.
+            <a target="_blank" href="https://discord.com/invite/elixir" class="font-bold text-brand-purple">Be sure to check it out!</a>
           </dd>
         </div>
       </div>
@@ -244,7 +260,7 @@
         </svg>
         <div class="ml-3">
           <dt class="text-lg leading-6 font-medium text-gray-900">
-            Meetups 
+            Meetups
           </dt>
           <dd class="mt-2 text-base text-gray-500">
           With over 150 meetups, you're sure to find local Elixir enthusiasts. Check out <a href="https://www.meetup.com/topics/elixir/" target="_blank" class="font-bold text-brand-purple">Meetup.com</a> for more.
@@ -282,51 +298,6 @@
         </div>
       </div>
 
-      <div class="flex">
-        <!-- Heroicon name: outline/check -->
-        <svg class="flex-shrink-0 h-6 w-6 text-brand-purple font-bold" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-        </svg>
-        <div class="ml-3">
-          <dt class="text-lg leading-6 font-medium text-gray-900">
-            Discord
-          </dt>
-          <dd class="mt-2 text-base text-gray-500">
-            A Slack alternative built with Elixir is fast becoming a popular chat option for the community.
-            <a target="_blank" href="https://discord.com/invite/elixir" class="font-bold text-brand-purple">Be sure to check it out!</a>
-          </dd>
-        </div>
-      </div>
-
-      <div class="flex">
-        <!-- Heroicon name: outline/check -->
-        <svg class="flex-shrink-0 h-6 w-6 text-brand-purple font-bold" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-        </svg>
-        <div class="ml-3">
-          <dt class="text-lg leading-6 font-medium text-gray-900">
-            Calendars
-          </dt>
-          <dd class="mt-2 text-base text-gray-500">
-            Sed mi, dapibus turpis orci posuere integer. A porta viverra posuere adipiscing turpis.
-          </dd>
-        </div>
-      </div>
-
-      <div class="flex">
-        <!-- Heroicon name: outline/check -->
-        <svg class="flex-shrink-0 h-6 w-6 text-brand-purple font-bold" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-        </svg>
-        <div class="ml-3">
-          <dt class="text-lg leading-6 font-medium text-gray-900">
-            Mobile app
-          </dt>
-          <dd class="mt-2 text-base text-gray-500">
-            Quisque sapien nunc nisl eros. Facilisis sagittis maecenas id dignissim tristique proin sed.
-          </dd>
-        </div>
-      </div>
     </dl>
   </div>
 </div>
