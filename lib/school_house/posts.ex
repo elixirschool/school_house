@@ -8,7 +8,7 @@ defmodule SchoolHouse.Posts do
     as: :posts,
     highlighters: [:makeup_elixir, :makeup_erlang]
 
-  @paged_posts @posts |> Enum.sort(&(&1.date > &2.date)) |> Enum.chunk_every(10)
+  @paged_posts @posts |> Enum.sort(&(Date.compare(&1.date, &2.date) == :gt)) |> Enum.chunk_every(20)
   @posts_by_slug Enum.into(@posts, %{}, fn %{slug: slug} = post ->
                    {slug, post}
                  end)
