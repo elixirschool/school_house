@@ -22,6 +22,8 @@ defmodule SchoolHouseWeb.Router do
     get "/blog", PostController, :index
     get "/blog/:slug", PostController, :show
 
+    get "/privacy", PageController, :privacy
+
     get "/", PageController, :index
     get "/:locale", PageController, :index
     get "/:locale/why", PageController, :why

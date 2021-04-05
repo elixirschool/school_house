@@ -7,6 +7,8 @@
     "watch": "webpack --mode development --watch"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.4.0",
     "alpinejs": "^2.8.1",
     "nprogress": "^0.2.0",

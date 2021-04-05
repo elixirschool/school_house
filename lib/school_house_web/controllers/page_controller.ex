@@ -7,9 +7,9 @@ defmodule SchoolHouseWeb.PageController do
     render(conn, "index.html", posts: recent_posts())
   end
 
-  def why(conn, _params) do
-    render(conn, "why.html")
-  end
+  def privacy(conn, _params), do: render(conn, "privacy.html")
+
+  def why(conn, _params), do: render(conn, "why.html")
 
   defp recent_posts do
     0
