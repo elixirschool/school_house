@@ -50,7 +50,7 @@
         <div class="flex-grow pl-6">
           <h2 class="mb-2 text-xl font-semibold text-brand-gray title-font">Functional Programming</h2>
           <p class="text-base leading-relaxed">
-Functional programming promotes a coding style that helps developers write code that is short, concise, and maintainable. For example, pattern matching allows developers to easily destructure data and access its contents:
+          By focusing on breaking problems down into simple, side-effect free, functions we can ensure fewer bugs, better test coverage, while incrementally building our solutions through the composition of well tested functions.
           </p>
           <a class="inline-flex items-center mt-3 text-brand-purple">Learn More
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
@@ -68,7 +68,7 @@ Functional programming promotes a coding style that helps developers write code 
         <div class="flex-grow pl-6">
           <h2 class="mb-2 text-xl font-semibold text-brand-gray title-font">Feature Packed</h2>
           <p class="text-base leading-relaxed">
-          Built on the tried and true BEAM virtual machine
+          Built on the back of a giant, the Erlang runtime system, Elixir takes things even further with easy extensibility, compatibility with Erlang and other BEAM languages, and an ever expanding collection of libraries and packages to improve developer happiness.
           </p>
           <a class="inline-flex items-center mt-3 text-brand-purple">Learn More
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
@@ -112,6 +112,7 @@ Functional programming promotes a coding style that helps developers write code 
   </div>
 </div>
 
+<!-- 
 <div class="bg-white">
   <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
     <p class="text-xl tracking-wider text-center text-gray-500 title-font">
@@ -152,6 +153,7 @@ Functional programming promotes a coding style that helps developers write code 
     </span>
   </div>
 </div>
+-->
 
 <%= render(SchoolHouseWeb.PostView, "index.html", conn: @conn, posts: @posts) %>
 
