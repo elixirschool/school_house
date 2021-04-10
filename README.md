@@ -1,6 +1,8 @@
 # School House
 
-Detailed explanation to come.
+School House is the new era of [elixirschool.com](https://elixirschool.com) now powered by Elixir and Phoenix :tada:
+
+By leveraging Dashbit's [NimblePublisher](https://github.com/dashbitco/nimble_publisher) and some restructing of the existing lessons we're able to use the lessons so many have contributed to while delivering them in an improved experience!
 
 ## Development
 
@@ -9,15 +11,12 @@ To start we need to checkout a branch from `elixirschool/elixirschool` that's al
 After that is complete we need to create a symbolic link (for now) to that project and rename it to `lessons`:
 
 ```shell
-$ git clone git@github.com:elixirschool/elixirschool.git
-$ cd elixirschool
-$ git fetch --all
-$ git checkout lessons-only
-$ cd ..
 $ git clone git@github.com:elixirschool/school_house.git
 $ cd school_house
-$ ln ../elixirschool ./
-$ mv -T elixirschool content
+$ git clone git@github.com:elixirschool/elixirschool.git content
+$ cd content
+$ git fetch --all
+$ git checkout lessons-only
 ```
 
 From here the rest is as you would expect with Phoenix! :tada:
