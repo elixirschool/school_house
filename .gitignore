@@ -1,6 +1,5 @@
-
-# Created by https://www.toptal.com/developers/gitignore/api/elixir,vim,linux,phoenix
-# Edit at https://www.toptal.com/developers/gitignore?templates=elixir,vim,linux,phoenix
+# Created by https://www.toptal.com/developers/gitignore/api/elixir,vim,linux,osx,phoenix
+# Edit at https://www.toptal.com/developers/gitignore?templates=elixir,vim,linux,osx,phoenix
 
 ### Elixir ###
 /_build
@@ -13,6 +12,7 @@ erl_crash.dump
 *.beam
 /config/*.secret.exs
 .elixir_ls/
+/rel
 
 ### Elixir Patch ###
 
@@ -30,6 +30,34 @@ erl_crash.dump
 
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
+
+### OSX ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
 
 ### Phoenix ###
 # gitignore template for Phoenix projects
@@ -75,4 +103,4 @@ tags
 # Persistent undo
 [._]*.un~
 
-# End of https://www.toptal.com/developers/gitignore/api/elixir,vim,linux,phoenix
+# End of https://www.toptal.com/developers/gitignore/api/elixir,vim,linux,osx,phoenix
