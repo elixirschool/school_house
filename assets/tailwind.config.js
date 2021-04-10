@@ -1,8 +1,8 @@
 module.exports = {
     purge: [
-        '../lib/ground_control_web/**/*.ex',
-        '../lib/ground_control_web/**/*.leex',
-        '../lib/ground_control_web/**/*.eex',
+        '../lib/school_house_web/**/*.ex',
+        '../lib/school_house_web/**/*.leex',
+        '../lib/school_house_web/**/*.eex',
         './js/**/*.js'
     ],
     darkMode: false, // or 'media' or 'class'
