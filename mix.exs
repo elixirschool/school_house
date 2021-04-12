@@ -33,6 +33,8 @@ defmodule SchoolHouse.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:appsignal, "~> 2.1"},
+      {:appsignal_phoenix, "~> 2.0"},
       {:ecto_sql, "~> 3.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
