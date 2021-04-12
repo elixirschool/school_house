@@ -1,4 +1,4 @@
-<div class="<%= if String.length(@post.excerpt) > 300, do: "col-span-2", else: "" %>">
+<div class="">
   <div>
     <a href="#" class="inline-block">
       <%= for tag <- @post.tags do %>
@@ -16,11 +16,11 @@
       <%= @post.excerpt %>
     </p>
   <% end %>
-  <div class="mt-6 flex items-center">
+  <div class="flex items-center mt-6">
     <div class="flex-shrink-0">
       <a href="#">
         <span class="sr-only">Paul York</span>
-        <img class="h-10 w-10 rounded-full" src="<%= avatar_url(@post.author_link) %>" alt="">
+        <img class="w-10 h-10 rounded-full" src="<%= avatar_url(@post.author_link) %>" alt="">
       </a>
     </div>
     <div class="ml-3">
@@ -29,7 +29,7 @@
           <%= @post.author %>
         </a>
       </p>
-      <div class="flex space-x-1 text-sm text-gray-500">
+      <div class="flex text-sm text-gray-500 space-x-1">
         <time datetime="2020-03-16">
           <%= @post.date %>
         </time>
