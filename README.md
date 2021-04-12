@@ -17,6 +17,8 @@ $ git clone git@github.com:elixirschool/elixirschool.git content
 $ cd content
 $ git fetch --all
 $ git checkout lessons-only
+$ cd ..
+$ ln -s content/images assets/static
 ```
 
 From here the rest is as you would expect with Phoenix! :tada:

@@ -6,11 +6,6 @@ RUN apk add --no-cache build-base npm git python
 # prepare build dir
 WORKDIR /app
 
-RUN git clone https://github.com/elixirschool/elixirschool.git content && \
-    cd content && \
-    git fetch --all && \
-    git checkout lessons-only
-
 # install hex + rebar
 RUN mix local.hex --force && \
     mix local.rebar --force
@@ -32,6 +27,15 @@ RUN npm --prefix ./assets ci --progress=false --no-audit --loglevel=error
 
 COPY priv priv
 COPY assets assets
+
+RUN git clone https://github.com/elixirschool/elixirschool.git content && \
+    cd content && \
+    git fetch --all && \
+    git checkout lessons-only && \
+    cd .. && \
+    mkdir -p assets/static/images && \
+    mv content/images/* assets/static/images
+
 RUN npm run --prefix ./assets deploy
 RUN mix phx.digest
 
