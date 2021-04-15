@@ -11,7 +11,7 @@ use Mix.Config
 # before starting your production server.
 config :school_house, SchoolHouseWeb.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [scheme: "https", host: "beta.elixirschool.com", port: 443]
+  url: [scheme: "https", host: "beta.elixirschool.com", port: 443],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
