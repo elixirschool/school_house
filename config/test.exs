@@ -12,4 +12,3 @@ config :logger, level: :warn
 config :school_house,
   lesson_dir: "test/support/content/lessons/**/*.md",
   blog_dir: "test/support/content/posts/**/*.md"
-

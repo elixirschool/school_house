@@ -12,10 +12,9 @@ defmodule SchoolHouse.Posts do
   @posts_by_slug Enum.into(@posts, %{}, fn %{slug: slug} = post ->
                    {slug, post}
                  end)
+  def get(slug), do: Map.get(@posts_by_slug, slug)
 
   def page(n), do: Enum.at(@paged_posts, n)
 
   def pages, do: Enum.count(@paged_posts)
-
-  def get(slug), do: Map.get(@posts_by_slug, slug)
 end
