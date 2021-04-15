@@ -3,6 +3,14 @@ defmodule SchoolHouseWeb.HtmlHelpersTest do
 
   alias SchoolHouseWeb.HtmlHelpers
 
+  setup do
+    Gettext.put_locale("es")
+
+    on_exit(fn ->
+      Gettext.put_locale("en")
+    end)
+  end
+
   describe "avatar_url/1" do
     test "appends .png to GitHub profile link" do
       assert "https://github.com/elixirschool.png" == HtmlHelpers.avatar_url("https://github.com/elixirschool")
@@ -10,28 +18,12 @@ defmodule SchoolHouseWeb.HtmlHelpersTest do
   end
 
   describe "current_locale/0" do
-    setup do
-      Gettext.put_locale("es")
-
-      on_exit(fn ->
-        Gettext.put_locale("en")
-      end)
-    end
-
     test "returns the current locale used by Gettext" do
       assert "es" == HtmlHelpers.current_locale()
     end
   end
 
   describe "current_page_locale_path/2" do
-    setup do
-      Gettext.put_locale("es")
-
-      on_exit(fn ->
-        Gettext.put_locale("en")
-      end)
-    end
-
     test "returns the current page path for another locale" do
       assert "/fr/ecto/changesets" ==
                :get
