@@ -2,287 +2,343 @@
 <label for="toggle-one" class="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold">Lessons</label>
 <div role="toggle" class="border-t-4 border-brand-purple p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-brand-light-gray">
     <div class="container mx-auto w-full flex flex-wrap justify-left mx-2 text-brand-gray">
-    <ul class="px-4 w-full sm:w-1/4 lg:w-1/5 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-        <h3 class="font-bold text-xl text-brand-gray text-bold mb-2"><%= gettext("Basics") %></h3>
-        <li>
-        <%= lesson_link @conn, :basics, :basics do %>
-            1. <%= gettext("Basics") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :basics, :collections do %>
-            2. <%= gettext("Collections") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :basics, :enum do %>
-            3. <%= gettext("Enum") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :basics, :pattern_matching do %>
-            4. <%= gettext("Pattern Matching") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :basics, :control_structures do %>
-            5. <%= gettext("Control Structures") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :basics, :functions do %>
-            6. <%= gettext("Functions") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :basics, :pipe_operator do %>
-            7. <%= gettext("Pipe Operator") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :basics, :modules do %>
-            8. <%= gettext("Modules") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :basics, :mix do %>
-            9. <%= gettext("Mix") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :basics, :sigils do %>
-            10. <%= gettext("Sigils") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :basics, :documentation do %>
-            11. <%= gettext("Documentation") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :basics, :comprehensions do %>
-            12. <%= gettext("Comprehensions") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :basics, :strings do %>
-            13. <%= gettext("Strings") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :basics, :date_time do %>
-            14. <%= gettext("Date and Time") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :basics, :iex_helpers do %>
-            15. <%= gettext("IEX Helpers") %>
-        <% end %>
-        </li>
-    </ul>
-    <ul class="px-4 w-full sm:w-1/4 lg:w-1/5 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-        <h3 class="font-bold text-xl text-brand-gray text-bold mb-2"><%= gettext("Intermediate") %></h3>
-        <li>
-        <%= lesson_link @conn, :intermediate, :mix_tasks do %>
-            1. <%= gettext("Custom Mix Tasks") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :intermediate, :erlang do %>
-            2. <%= gettext("Erlang Interoperability") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :intermediate, :error_handling do %>
-            3. <%= gettext("Error Handling") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :intermediate, :escripts do %>
-            3. <%= gettext("Executables") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :intermediate, :concurrency do %>
-            4. <%= gettext("Concurrency") %>
-        <% end %>
-        </li>
-        <h3 class="font-bold text-xl text-brand-gray text-bold mb-2 pt-6"><%= gettext("Advanced") %></h3>
-        <li>
-        <%= lesson_link @conn, :advanced, :otp_concurrency do %>
-            1. <%= gettext("OTP Concurrency") %><% end %>
-    </li>
-    <li>
-        <%= lesson_link @conn, :advanced, :otp_supervisors do %>
-        2. <%= gettext("OTP Supervisors") %>
-        <% end %>
-    </li>
-    <li>
-        <%= lesson_link @conn, :advanced, :otp_distribution do %>
-        3. <%= gettext("OTP Distribution") %>
-        <% end %>
-    </li>
-    <li>
-        <%= lesson_link @conn, :advanced, :mtaprogramming do %>
-        4. <%= gettext("Metaprogramming") %>
-        <% end %>
-    </li>
-    <li>
-        <%= lesson_link @conn, :advanced, :umbrella_projects do %>
-        5. <%= gettext("Umbrella Projects") %>
-        <% end %>
-    </li>
-    <li>
-        <%= lesson_link @conn, :advanced, :typespecs do %>
-        6. <%= gettext("Specifications and types") %>
-        <% end %>
-    </li>
-    <li>
-        <%= lesson_link @conn, :advanced, :behaviours do %>
-        7. <%= gettext("Behaviours") %>
-        <% end %>
-    </li>
-    <li>
-        <%= lesson_link @conn, :advanced, :protocols do %>
-        8. <%= gettext("Protocols") %>
-        <% end %>
-    </li>
-    </ul>
-    <ul class="px-4 w-full sm:w-1/4 lg:w-1/5 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-        <h3 class="font-bold text-xl text-brand-gray text-bold mb-2"><%= gettext("Testing") %></h3>
-        <li>
-        <%= lesson_link @conn, :testing, :basics do %>
-            1. <%= gettext("Basics") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :testing, :doctests do %>
-            2. <%= gettext("Doctests") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :testing, :bypass do %>
-            3. Bypass <span class="text-xs italic"><%= gettext("library") %></span>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :testing, :mox do %>
-            4. Mox <span class="text-xs italic"><%= gettext("library") %></span>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :testing, :stream_data do %>
-            5. StreamData <span class="text-xs italic"><%= gettext("library") %></span>
-        <% end %>
-        </li>
-        <h3 class="font-bold text-xl text-brand-gray text-bold mb-2 pt-6"><%= gettext("Data Processing") %></h3>
-        <li>
-        <%= lesson_link @conn, :data_processing, :genstage do %>
-            1. GenStage <span class="text-xs italic"><%= gettext("library") %></span>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :data_processing, :flow do %>
-            2. Flow <span class="text-xs italic"><%= gettext("library") %></span>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :data_processing, :broadway do %>
-            2. Broadway <span class="text-xs italic"><%= gettext("library") %></span>
-        <% end %>
-        </li>
-    </ul>
 
-    <ul class="px-4 w-full sm:w-1/4 lg:w-1/5 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-        <h3 class="font-bold text-xl text-brand-gray text-bold mb-2"><%= gettext("Ecto") %></h3>
-        <li>
-        <%= lesson_link @conn, :ecto, :introduction do %>
-            1. <%= gettext("Introduction") %>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :ecto, :changesets do %>
-            2. <%= gettext("Changesets") %><% end %>
-    </li>
-    <li>
-        <%= lesson_link @conn, :ecto, :associations do %>
-        3. <%= gettext("Associations") %>
-        <% end %>
-    </li>
-    <li>
-        <%= lesson_link @conn, :ecto, :querying_basics do %>
-        4. <%= gettext("Querying: Basics") %>
-        <% end %>
-    </li>
-    <li>
-        <%= lesson_link @conn, :ecto, :querying_advanced do %>
-        5. <%= gettext("Querying: Advanced") %>
-        <% end %>
-    </li>
-    <h3 class="font-bold text-xl text-brand-gray text-bold mb-2 pt-6"><%= gettext("Storage") %></h3>
-    <li>
-        <%= lesson_link @conn, :storage, :ets do %>
-        1. Erlang Term Storage (ETS)
-        <% end %>
-    </li>
-    <li>
-        <%= lesson_link @conn, :storage, :mnesia do %>
-        2. Mnesia
-        <% end %>
-    </li>
-    <li>
-        <%= lesson_link @conn, :storage, :cachex do %>
-        3. Cachex <span class="text-xs italic"><%= gettext("library") %></span>
-        <% end %>
-    </li>
-    <li>
-        <%= lesson_link @conn, :storage, :redix do %>
-        4. Redix <span class="text-xs italic"><%= gettext("library") %></span>
-        <% end %>
-    </li>
-    </ul>
-    <ul class="px-4 w-full sm:w-1/4 lg:w-1/5 border-gray-600 pb-6 pt-6 lg:pt-3">
-        <h3 class="font-bold text-xl text-brand-gray text-bold mb-2"><%= gettext("Miscellaneous") %></h3>
-        <li>
-        <%= lesson_link @conn, :misc, :plug do %>
-            1. Plug <span class="text-xs italic"><%= gettext("library") %></span>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :misc, :eex do %>
-            2. Embedded Elixir (EEx)
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :misc, :debugging do %>
-            3. Debugging
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :misc, :nerves do %>
-            4. Nerves <span class="text-xs italic"><%= gettext("library") %></span>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :misc, :guardian do %>
-            5. Guardian <span class="text-xs italic"><%= gettext("library") %></span>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :misc, :poolboy do %>
-            6. Poolboy <span class="text-xs italic"><%= gettext("library") %></span>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :misc, :distillery do %>
-            7. Distillery <span class="text-xs italic"><%= gettext("library") %></span>
-        <% end %>
-        </li>
-        <li>
-        <%= lesson_link @conn, :misc, :nimble_publisher do %>
-            8. NimblePublisher <span class="text-xs italic"><%= gettext("library") %></span>
-        <% end %>
-        </li>
-    </ul>
+        <!-- First column -->
+        <ul class="px-4 w-full sm:w-1/4 lg:w-1/5 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+            <!-- Basics -->
+            <li>
+                <p class="font-bold text-xl text-brand-gray text-bold mb-2"><%= gettext("Basics") %></p>
+                <ol class="list-decimal ml-6">
+                    <li>
+                        <%= lesson_link @conn, :basics, :basics do %>
+                            <%= gettext("Basics") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :basics, :collections do %>
+                            <%= gettext("Collections") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :basics, :enum do %>
+                            <%= gettext("Enum") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :basics, :pattern_matching do %>
+                            <%= gettext("Pattern Matching") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :basics, :control_structures do %>
+                            <%= gettext("Control Structures") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :basics, :functions do %>
+                            <%= gettext("Functions") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :basics, :pipe_operator do %>
+                            <%= gettext("Pipe Operator") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :basics, :modules do %>
+                            <%= gettext("Modules") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :basics, :mix do %>
+                            <%= gettext("Mix") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :basics, :sigils do %>
+                            <%= gettext("Sigils") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :basics, :documentation do %>
+                            <%= gettext("Documentation") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :basics, :comprehensions do %>
+                            <%= gettext("Comprehensions") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :basics, :strings do %>
+                            <%= gettext("Strings") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :basics, :date_time do %>
+                            <%= gettext("Date and Time") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :basics, :iex_helpers do %>
+                            <%= gettext("IEX Helpers") %>
+                        <% end %>
+                    </li>
+                </ol>
+            </li>
+
+        </ul>
+
+        <!-- Second column -->
+        <ul class="px-4 w-full sm:w-1/4 lg:w-1/5 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+            <!-- Intermediate -->
+            <li>
+                <p class="font-bold text-xl text-brand-gray text-bold mb-2"><%= gettext("Intermediate") %></p>
+                <ol class="list-decimal ml-6">
+                    <li>
+                        <%= lesson_link @conn, :intermediate, :mix_tasks do %>
+                            <%= gettext("Custom Mix Tasks") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :intermediate, :erlang do %>
+                            <%= gettext("Erlang Interoperability") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :intermediate, :error_handling do %>
+                            <%= gettext("Error Handling") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :intermediate, :escripts do %>
+                            <%= gettext("Executables") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :intermediate, :concurrency do %>
+                            <%= gettext("Concurrency") %>
+                        <% end %>
+                    </li>
+                </ol>
+            </li>
+
+            <!-- Advanced -->
+            <li>
+                <p class="font-bold text-xl text-brand-gray text-bold mb-2 pt-6"><%= gettext("Advanced") %></p>
+                <ol class="list-decimal ml-6">
+                    <li>
+                        <%= lesson_link @conn, :advanced, :otp_concurrency do %>
+                            <%= gettext("OTP Concurrency") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :advanced, :otp_supervisors do %>
+                            <%= gettext("OTP Supervisors") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :advanced, :otp_distribution do %>
+                            <%= gettext("OTP Distribution") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :advanced, :mtaprogramming do %>
+                            <%= gettext("Metaprogramming") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :advanced, :umbrella_projects do %>
+                            <%= gettext("Umbrella Projects") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :advanced, :typespecs do %>
+                            <%= gettext("Specifications and types") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :advanced, :behaviours do %>
+                            <%= gettext("Behaviours") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :advanced, :protocols do %>
+                            <%= gettext("Protocols") %>
+                        <% end %>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+
+        <!-- Third column -->
+        <ul class="px-4 w-full sm:w-1/4 lg:w-1/5 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+            <!-- Testing -->
+            <li>
+                <p class="font-bold text-xl text-brand-gray text-bold mb-2"><%= gettext("Testing") %></p>
+                <ol class="list-decimal ml-6">
+                    <li>
+                        <%= lesson_link @conn, :testing, :basics do %>
+                            <%= gettext("Basics") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :testing, :doctests do %>
+                            <%= gettext("Doctests") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :testing, :bypass do %>
+                            Bypass <span class="text-xs italic"><%= gettext("library") %></span>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :testing, :mox do %>
+                            Mox <span class="text-xs italic"><%= gettext("library") %></span>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :testing, :stream_data do %>
+                            StreamData <span class="text-xs italic"><%= gettext("library") %></span>
+                        <% end %>
+                    </li>
+                </ol>
+
+            </li>
+
+            <!-- Date Processing -->
+            <li>
+                <p class="font-bold text-xl text-brand-gray text-bold mb-2 pt-6"><%= gettext("Data Processing") %></p>
+                <ol class="list-decimal ml-6">
+                    <li>
+                        <%= lesson_link @conn, :data_processing, :genstage do %>
+                            GenStage <span class="text-xs italic"><%= gettext("library") %></span>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :data_processing, :flow do %>
+                            Flow <span class="text-xs italic"><%= gettext("library") %></span>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :data_processing, :broadway do %>
+                            Broadway <span class="text-xs italic"><%= gettext("library") %></span>
+                        <% end %>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+
+        <!-- Fourth column -->
+        <ul class="px-4 w-full sm:w-1/4 lg:w-1/5 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+            <!-- Ecto -->
+            <li>
+                <p class="font-bold text-xl text-brand-gray text-bold mb-2"><%= gettext("Ecto") %></p>
+                <ol class="list-decimal ml-6">
+                    <li>
+                        <%= lesson_link @conn, :ecto, :introduction do %>
+                            <%= gettext("Introduction") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :ecto, :changesets do %>
+                            <%= gettext("Changesets") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :ecto, :associations do %>
+                            <%= gettext("Associations") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :ecto, :querying_basics do %>
+                            <%= gettext("Querying: Basics") %>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :ecto, :querying_advanced do %>
+                            <%= gettext("Querying: Advanced") %>
+                        <% end %>
+                    </li>
+                </ol>
+            </li>
+
+            <!-- Storage -->
+            <li>
+                <p class="font-bold text-xl text-brand-gray text-bold mb-2 pt-6"><%= gettext("Storage") %></p>
+                <ol class="list-decimal ml-6">
+                    <li>
+                        <%= lesson_link @conn, :storage, :ets do %>
+                            Erlang Term Storage (ETS)
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :storage, :mnesia do %>
+                            Mnesia
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :storage, :cachex do %>
+                            Cachex <span class="text-xs italic"><%= gettext("library") %></span>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :storage, :redix do %>
+                            Redix <span class="text-xs italic"><%= gettext("library") %></span>
+                        <% end %>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+
+        <!-- Fifth column -->
+        <ul class="px-4 w-full sm:w-1/4 lg:w-1/5 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
+            <!-- Miscellaneous -->
+            <li>
+                <p class="font-bold text-xl text-brand-gray text-bold mb-2"><%= gettext("Miscellaneous") %></p>
+                <ol class="list-decimal ml-6">
+                    <li>
+                        <%= lesson_link @conn, :misc, :plug do %>
+                            Plug <span class="text-xs italic"><%= gettext("library") %></span>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :misc, :eex do %>
+                            Embedded Elixir (EEx)
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :misc, :debugging do %>
+                            Debugging
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :misc, :nerves do %>
+                            Nerves <span class="text-xs italic"><%= gettext("library") %></span>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :misc, :guardian do %>
+                            Guardian <span class="text-xs italic"><%= gettext("library") %></span>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :misc, :poolboy do %>
+                            Poolboy <span class="text-xs italic"><%= gettext("library") %></span>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :misc, :distillery do %>
+                            Distillery <span class="text-xs italic"><%= gettext("library") %></span>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= lesson_link @conn, :misc, :nimble_publisher do %>
+                            NimblePublisher <span class="text-xs italic"><%= gettext("library") %></span>
+                        <% end %>
+                    </li>
+                </ol>
+            </li>
+        </ul>
     </div>
 </div>
