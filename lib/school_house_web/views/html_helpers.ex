@@ -9,9 +9,8 @@ defmodule SchoolHouseWeb.HtmlHelpers do
 
   def avatar_url(github_link), do: "#{github_link}.png"
 
-  def current_page_locale_link(conn, locale) do
-    current_url = Phoenix.Controller.current_url(conn)
-    String.replace(current_url, current_locale(), locale)
+  def current_page_locale_path(%{request_path: request_path}, locale) do
+    String.replace(request_path, current_locale(), locale, global: false)
   end
 
   def lesson_link(conn, section, name, do: contents) do
