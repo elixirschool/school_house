@@ -4,7 +4,7 @@ defmodule SchoolHouse.Posts do
   """
   use NimblePublisher,
     build: SchoolHouse.Content.Post,
-    from: "content/posts/**/*.md",
+    from: Application.compile_env!(:school_house, :blog_dir),
     as: :posts,
     highlighters: [:makeup_elixir, :makeup_erlang]
 
@@ -13,9 +13,9 @@ defmodule SchoolHouse.Posts do
                    {slug, post}
                  end)
 
+  def get(slug), do: Map.get(@posts_by_slug, slug)
+
   def page(n), do: Enum.at(@paged_posts, n)
 
   def pages, do: Enum.count(@paged_posts)
-
-  def get(slug), do: Map.get(@posts_by_slug, slug)
 end

@@ -8,7 +8,9 @@
 use Mix.Config
 
 config :school_house,
-  ecto_repos: [SchoolHouse.Repo]
+  ecto_repos: [SchoolHouse.Repo],
+  lesson_dir: "content/lessons/**/*.md",
+  blog_dir: "content/posts/**/*.md"
 
 # Configures the endpoint
 config :school_house, SchoolHouseWeb.Endpoint,
