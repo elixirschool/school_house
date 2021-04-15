@@ -46,7 +46,7 @@ config :school_house,
       :stream_data
     ],
     data_processing: [
-      :gen_stage,
+      :genstage,
       :flow,
       :broadway
     ],
