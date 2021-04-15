@@ -12,11 +12,21 @@ defmodule SchoolHouse.LessonsTest do
 
   describe "get/3" do
     test "returns a lesson for a given section, name, and locale" do
-      assert %Lesson{locale: "en", title: "Basics"} = Lessons.get("basics", "basics", "en")
+      assert {:ok,
+              %Lesson{
+                locale: "en",
+                title: "Collections",
+                previous: %Lesson{title: "Basics"},
+                next: %Lesson{title: "Enum"}
+              }} = Lessons.get("basics", "collections", "en")
     end
 
-    test "returns nil for missing lessons" do
-      assert nil == Lessons.get("basics", "basics", "zz")
+    test "returns {:error, :translation_not_found} for missing translation" do
+      assert {:error, :translation_not_found} == Lessons.get("basics", "basics", "zz")
+    end
+
+    test "returns {:error, :not_found} for missing lessons" do
+      assert {:error, :not_found} == Lessons.get("none", "existant", "lesson")
     end
   end
 end
