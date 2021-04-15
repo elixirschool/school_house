@@ -4,7 +4,7 @@ defmodule SchoolHouse.Posts do
   """
   use NimblePublisher,
     build: SchoolHouse.Content.Post,
-    from: "content/posts/**/*.md",
+    from: Application.compile_env!(:school_house, :blog_dir),
     as: :posts,
     highlighters: [:makeup_elixir, :makeup_erlang]
 
