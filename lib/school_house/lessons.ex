@@ -4,7 +4,7 @@ defmodule SchoolHouse.Lessons do
   """
   use NimblePublisher,
     build: SchoolHouse.Content.Lesson,
-    from: "content/lessons/**/*.md",
+    from: Application.compile_env!(:school_house, :lesson_dir),
     as: :lessons,
     highlighters: [:makeup_elixir, :makeup_erlang]
 
