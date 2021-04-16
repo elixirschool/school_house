@@ -14,6 +14,6 @@ defmodule SchoolHouseWeb.FallbackController do
     conn
     |> put_status(404)
     |> put_view(ErrorView)
-    |> render("404.html", translation_not_found: true)
+    |> render("translation_missing.html")
   end
 end

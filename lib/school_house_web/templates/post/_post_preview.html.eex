@@ -9,17 +9,13 @@
     </a>
   </div>
   <%= link(to: Routes.post_path(@conn, :show, @post.slug), class: "block mt-4") do %>
-    <p class="text-xl font-semibold text-brand-gray">
-      <%= @post.title %>
-    </p>
-    <p class="mt-3 text-base text-brand-gray">
-      <%= @post.excerpt %>
-    </p>
+    <p class="text-xl font-semibold text-brand-gray"><%= @post.title %></p>
+    <p class="mt-3 text-base text-brand-gray"><%= @post.excerpt %></p>
   <% end %>
   <div class="flex items-center mt-6">
     <div class="flex-shrink-0">
       <a href="#">
-        <span class="sr-only">Paul York</span>
+        <span class="sr-only"><%= @post.author %></span>
         <img class="w-10 h-10 rounded-full" src="<%= avatar_url(@post.author_link) %>" alt="">
       </a>
     </div>
