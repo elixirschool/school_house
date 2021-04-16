@@ -10,7 +10,7 @@
     <div x-show="isOpen" @click.away=" { isOpen = false } " class="origin-top-right absolute left-0 mt-2 w-24 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
         <div class="py-1" role="none">
         <%= for locale <- supported_locales() do %>
-            <a href="<%= current_page_locale_link(@conn, locale) %>" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-light-gray hover:font-bold" role="menuitem"><%= locale %></a>
+            <a href="<%= current_page_locale_path(@conn, locale) %>" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-light-gray hover:font-bold" role="menuitem"><%= locale %></a>
         <% end %>
         </div>
     </div>
