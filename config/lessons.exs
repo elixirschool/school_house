@@ -51,7 +51,7 @@ config :school_house,
       :broadway
     ],
     ecto: [
-      :intro,
+      :basics,
       :changesets,
       :associations,
       :query_basics,
