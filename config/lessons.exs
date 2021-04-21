@@ -14,7 +14,6 @@ config :school_house,
       :mix,
       :sigils,
       :documentation,
-      :testing,
       :comprehensions,
       :strings,
       :date_time,
@@ -35,7 +34,6 @@ config :school_house,
       :umbrella_projects,
       :typespec,
       :behaviours,
-      :gen_stage,
       :protocols
     ],
     testing: [
@@ -64,6 +62,7 @@ config :school_house,
       :redix
     ],
     misc: [
+      :benchee,
       :plug,
       :eex,
       :debugging,
