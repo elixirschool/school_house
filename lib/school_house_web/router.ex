@@ -19,17 +19,18 @@ defmodule SchoolHouseWeb.Router do
   scope "/", SchoolHouseWeb do
     pipe_through :browser
 
+    get "/", PageController, :index
+
     get "/blog", PostController, :index
     get "/blog/:slug", PostController, :show
 
     get "/privacy", PageController, :privacy
 
-    get "/", PageController, :index
     get "/:locale", PageController, :index
+    get "/:locale/report", ReportController, :index
     get "/:locale/why", PageController, :why
-    get "/:locale/:section/:name", LessonController, :lesson
 
-    # live "/", PageLive, :index
+    get "/:locale/:section/:name", LessonController, :lesson
   end
 
   # Other scopes may use custom stacks.
