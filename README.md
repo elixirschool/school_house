@@ -7,8 +7,7 @@ By leveraging Dashbit's [NimblePublisher](https://github.com/dashbitco/nimble_pu
 ## Development
 
 At this time there's a little more work to setup for local development.
-To start we need to checkout a branch from `elixirschool/elixirschool` that's already had some processing done to the lessons to work with NimblePublisher.
-After that is complete we need to create a symbolic link (for now) to that project and rename it to `lessons`:
+We'll need to checkout a specific branch from `elixirschool/elixirschool` that's already had some processing done to the lessons to work with NimblePublisher. We'll also need to link the images in the aforementioned branch to our assets folder for Phoenix to pickup.
 
 ```shell
 $ git clone git@github.com:elixirschool/school_house.git
