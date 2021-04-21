@@ -5,10 +5,15 @@ defmodule SchoolHouseWeb.ErrorViewTest do
   import Phoenix.View
 
   test "renders 404.html" do
-    assert render_to_string(SchoolHouseWeb.ErrorView, "404.html", []) == "Not Found"
+    assert render_to_string(SchoolHouseWeb.ErrorView, "404.html", conn: build_conn()) =~ "Page not found"
   end
 
   test "renders 500.html" do
-    assert render_to_string(SchoolHouseWeb.ErrorView, "500.html", []) == "Internal Server Error"
+    assert render_to_string(SchoolHouseWeb.ErrorView, "500.html", conn: build_conn()) =~ "Internal Server Error"
+  end
+
+  test "renders translation_missing.html" do
+    assert render_to_string(SchoolHouseWeb.ErrorView, "translation_missing.html", conn: build_conn()) =~
+             "Translation unavailable"
   end
 end

@@ -8,6 +8,8 @@ defmodule SchoolHouse.Lessons do
     as: :lessons,
     highlighters: [:makeup_elixir, :makeup_erlang]
 
+  alias SchoolHouse.Content.Lesson
+
   @ordering Application.compile_env(:school_house, :lessons)
   @lesson_map @lessons
               |> Enum.group_by(& &1.locale)
@@ -24,16 +26,19 @@ defmodule SchoolHouse.Lessons do
   def get(section, name, locale) do
     key = lesson_key(section, name)
 
-    @lesson_map
-    |> get_in([locale, key])
-    |> populate_surrounding_lessons()
+    with nil <- get_in(@lesson_map, [locale, key]),
+         true <- translation?(locale),
+         %Lesson{} <- get_in(@lesson_map, ["en", key]) do
+      {:error, :translation_not_found}
+    else
+      %Lesson{} = lesson -> {:ok, populate_surrounding_lessons(lesson)}
+      _ -> {:error, :not_found}
+    end
   end
+
+  defp translation?(locale), do: "en" != locale
 
   defp lesson_key(section, name), do: Enum.join([section, name], "/")
-
-  defp populate_surrounding_lessons(nil) do
-    nil
-  end
 
   defp populate_surrounding_lessons(%{locale: locale, name: name, section: section} = lesson) do
     section_lessons = @ordering[section]
