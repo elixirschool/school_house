@@ -71,6 +71,23 @@ defmodule SchoolHouse.Lessons do
     end
   end
 
+  def list(section, locale) do
+    section = String.to_existing_atom(section)
+
+    config =
+      :school_house
+      |> Application.get_env(:lessons)
+      |> Keyword.get(section)
+
+    lessons =
+      for lesson <- config do
+        key = lesson_key(section, lesson)
+        get_in(@lesson_map, [locale, key])
+      end
+
+    Enum.reject(lessons, &is_nil/1)
+  end
+
   defp translation?(locale), do: "en" != locale
 
   defp lesson_key(section, name), do: Enum.join([section, name], "/")

@@ -48,51 +48,35 @@
             </h3>
             <ul class="mt-4 space-y-4">
               <li>
-                <%= lesson_link @conn, :basics, :basics, "text-base text-gray-500 hover:text-gray-900" do  %>
-                  <%= gettext("Basics") %>
-                <% end %>
+                <%= link(gettext("Basics"), to: Routes.lesson_path(@conn, :index, current_locale(), :basics), class: "text-base text-gray-500 hover:text-gray-900") %>
               </li>
 
               <li>
-                <%= lesson_link @conn, :intermediate, :mix_tasks, "text-base text-gray-500 hover:text-gray-900"  do %>
-                  <%= gettext("Intermediate") %>
-                <% end %>
+                <%= link(gettext("Intermediate"), to: Routes.lesson_path(@conn, :index, current_locale(), :intermediate), class: "text-base text-gray-500 hover:text-gray-900") %>
               </li>
 
               <li>
-                <%= lesson_link @conn, :advanced, :otp_concurrency, "text-base text-gray-500 hover:text-gray-900" do %>
-                  <%= gettext("Advanced") %>
-                <% end %>
+                <%= link(gettext("Advanced"), to: Routes.lesson_path(@conn, :index, current_locale(), :advanced), class: "text-base text-gray-500 hover:text-gray-900") %>
               </li>
 
               <li>
-                <%= lesson_link @conn, :testing, :basics, "text-base text-gray-500 hover:text-gray-900" do %>
-                  <%= gettext("Testing") %>
-                <% end %>
+                <%= link(gettext("Testing"), to: Routes.lesson_path(@conn, :index, current_locale(), :testing), class: "text-base text-gray-500 hover:text-gray-900") %>
               </li>
 
               <li>
-                <%= lesson_link @conn, :data_processing, :genstage, "text-base text-gray-500 hover:text-gray-900" do %>
-                  <%= gettext("Data Processing") %>
-                <% end %>
+                <%= link(gettext("Data Processing"), to: Routes.lesson_path(@conn, :index, current_locale(), :data_processing), class: "text-base text-gray-500 hover:text-gray-900") %>
               </li>
 
               <li>
-                <%= lesson_link @conn, :ecto, :basics, "text-base text-gray-500 hover:text-gray-900" do %>
-                  <%= gettext("Ecto") %>
-                <% end %>
+                <%= link(gettext("Ecto"), to: Routes.lesson_path(@conn, :index, current_locale(), :ecto), class: "text-base text-gray-500 hover:text-gray-900") %>
               </li>
 
               <li>
-                <%= lesson_link @conn, :storage, :ets, "text-base text-gray-500 hover:text-gray-900" do %>
-                  <%= gettext("Storage") %>
-                <% end %>
+                <%= link(gettext("Storage"), to: Routes.lesson_path(@conn, :index, current_locale(), :storage), class: "text-base text-gray-500 hover:text-gray-900") %>
               </li>
 
               <li>
-                <%= lesson_link @conn, :misc, :plug, "text-base text-gray-500 hover:text-gray-900" do %>
-                  <%= gettext("Miscellaneous") %>
-                <% end %>
+                <%= link(gettext("Miscellaneous"), to: Routes.lesson_path(@conn, :index, current_locale(), :misc), class: "text-base text-gray-500 hover:text-gray-900") %>
               </li>
             </ul>
           </div>

@@ -29,7 +29,7 @@ defmodule SchoolHouseWeb.Router do
     get "/:locale", PageController, :index
     get "/:locale/report", ReportController, :index
     get "/:locale/why", PageController, :why
-
+    get "/:locale/:section", LessonController, :index
     get "/:locale/:section/:name", LessonController, :lesson
   end
 
