@@ -13,7 +13,9 @@ defmodule SchoolHouseWeb.HtmlHelpers do
     String.replace(request_path, current_locale(), locale, global: false)
   end
 
-  def lesson_link(conn, section, name, class \\ "block hover:bg-brand-purple text-brand-gray hover:text-white", do: contents) do
+  def lesson_link(conn, section, name, class \\ "block hover:bg-brand-purple text-brand-gray hover:text-white",
+        do: contents
+      ) do
     {destination, additional_classes} =
       if Lessons.exists?(section, name, current_locale()) do
         {Routes.lesson_path(conn, :lesson, current_locale(), section, name), ""}
