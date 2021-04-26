@@ -14,71 +14,48 @@ on:
 
 jobs:
   Test:
+    strategy:
+      matrix:
+        elixir: ['1.10']
+        otp: [22]
+    env:
+      MIX_ENV: test
     runs-on: ubuntu-latest
-
-    container:
-      image: elixir:1.11-alpine
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - uses: erlef/setup-beam@v1
         with:
-          persist-credentials: false
-
-      - name: Install (mix)
-        run: |
-          mix local.rebar --force
-          mix local.hex --force
-
-      - name: Install (deps)
-        run: mix deps.get
-
-      - name: Run Tests
-        run: mix test
+          otp-version: ${{matrix.otp}}
+          elixir-version: ${{matrix.elixir}}
+      - run: mix deps.get
+      - run: mix test
 
   Format:
+    strategy:
+      matrix:
+        elixir: ['1.10']
+        otp: [22]
     runs-on: ubuntu-latest
-
-    container:
-      image: elixir:1.11-alpine
-
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - uses: erlef/setup-beam@v1
         with:
-          persist-credentials: false
-
-      - name: Install (mix)
-        run: |
-          mix local.rebar --force
-          mix local.hex --force
-          mix deps.get
-
-      - name: Run Formatter
-        run: mix format --check-formatted
+          otp-version: ${{matrix.otp}}
+          elixir-version: ${{matrix.elixir}}
+      - run: mix deps.get
+      - run: mix format --check-formatted
 
   Credo:
+    strategy:
+      matrix:
+        elixir: ['1.10']
+        otp: [22]
     runs-on: ubuntu-latest
-
-    container:
-      image: elixir:1.11-alpine
-
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - uses: erlef/setup-beam@v1
         with:
-          persist-credentials: false
-
-      - name: Install (os)
-        run: apk add --no-cache gcc g++ git make musl-dev tar zstd
-
-      - name: Install (mix)
-        run: |
-          mix local.rebar --force
-          mix local.hex --force
-
-      - name: Install (deps)
-        run: mix deps.get
-
-      - name: Run Credo
-        run: mix credo
+          otp-version: ${{matrix.otp}}
+          elixir-version: ${{matrix.elixir}}
+      - run: mix deps.get
+      - run: mix credo
