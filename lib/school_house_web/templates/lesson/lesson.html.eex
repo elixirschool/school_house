@@ -31,7 +31,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
               </svg>
               <h3 class="leading-tight text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                <a href="/<%= @lesson.previous.locale %>/<%= @lesson.previous.section %>/<%= @lesson.previous.name %>" class="hover:text-gray-900">
+                <a href="/<%= @lesson.previous.locale %>/<%= @lesson.previous.section %>/<%= @lesson.previous.name %>" class="hover:text-gray-900" rel="prev">
                   Previous lesson
                 </a>
               </h3>
@@ -50,7 +50,7 @@
           <%= if @lesson.next do %>
             <div class="flex md:justify-end justify-center items-center content-center mb-6">
               <h3 class="leading-tight text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                <a href="/<%= @lesson.next.locale %>/<%= @lesson.next.section %>/<%= @lesson.next.name %>" class="hover:text-gray-900">
+                <a href="/<%= @lesson.next.locale %>/<%= @lesson.next.section %>/<%= @lesson.next.name %>" class="hover:text-gray-900" rel="next">
                   Next lesson
                 </a>
               </h3>
