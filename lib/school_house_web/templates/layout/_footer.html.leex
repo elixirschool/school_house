@@ -101,9 +101,7 @@
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
             <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-              <a href="#" class="text-gray-400 hover:text-gray-600">
-              Blog
-              </a>
+              <%= link("Blog", to: Routes.post_path(@conn, :index), class: "text-gray-400 hover:text-gray-600") %>
             </h3>
             <ul class="mt-4 space-y-4">
               <li>
