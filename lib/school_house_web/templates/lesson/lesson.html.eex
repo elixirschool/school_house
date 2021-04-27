@@ -21,7 +21,7 @@
   </blockquote>
 </section>
 
-<section class="bg-brand-light-gray full-width -mb-16 mt-16">
+<section class="bg-brand-light-gray -mb-16 mt-16 w-screen relative left-2/4 right-2/4 ml-half-screen mr-half-screen">
   <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:py-12 lg:px-8 items-center">
       <div class="flex md:justify-between flex-col-reverse md:flex-row">
         <div class="md:w-1/3 mt-8 md:mt-0">
