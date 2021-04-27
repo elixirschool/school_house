@@ -54,6 +54,7 @@ defmodule SchoolHouse.MixProject do
 
       # Dev & Test dependencies
       {:credo, ">= 0.0.0", only: :dev},
+      {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
       {:floki, ">= 0.0.0", only: :test},
       {:phoenix_live_reload, "~> 1.2", only: :dev}
     ]
