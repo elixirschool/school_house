@@ -112,7 +112,7 @@
   </div>
 </div>
 
-<!-- 
+<!--
 <div class="bg-white">
   <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
     <p class="text-xl tracking-wider text-center text-gray-500 title-font">
@@ -156,6 +156,19 @@
 -->
 
 <%= render(SchoolHouseWeb.PostView, "index.html", conn: @conn, posts: @posts) %>
+<div class="bg-white">
+  <div class="max-w-7xl mx-auto text-center py-16 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <h2 class="text-3xl font-extrabold tracking-tight text-brand-gray sm:text-4xl">
+      <span class="block">Want to learn more?</span>
+    </h2>
+    <p class="mt-4 text-lg leading-6 text-brand-gray">We have articles spanning several topics</p>
+    <div class="mt-8 flex justify-center">
+      <div class="rounded-md shadow">
+        <%= link("Visit the Blog", to: Routes.post_path(@conn, :index), class: "font-extrabold items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-purple hover:text-white") %>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="relative">
   <div class="absolute inset-0 flex items-center" aria-hidden="true">
