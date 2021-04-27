@@ -13,10 +13,18 @@
   </div>
   <%= raw @lesson.body %>
 
-  <blockquote class="edit-lesson">    
+  <blockquote class="edit-lesson">
     Caught a mistake or want to contribute to the lesson?
     <a href="https://github.com/elixirschool/elixirschool/edit/master/<%= @lesson.locale %>/lessons/<%= @lesson.section %>/<%= @lesson.name %>.md" target="_blank" rel="noopener">
       Edit this lesson on GitHub!
     </a>
   </blockquote>
 </section>
+
+<%= render("_pagination.html", conn: @conn, next: @lesson.next, previous: @lesson.previous) %>
+
+<div class="relative -mb-16 pb-16">
+  <div class="absolute inset-0 flex items-center pt-16" aria-hidden="true">
+    <div class="w-full border-t border-gray-200"></div>
+  </div>
+</div>

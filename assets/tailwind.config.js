@@ -18,6 +18,9 @@ module.exports = {
             container: {
                 center: true,
             },
+            margin: {
+            'half-screen': '-50vw',
+            },
             typography: (theme) => ({
                 DEFAULT: {
                     css: {
