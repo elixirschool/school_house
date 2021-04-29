@@ -1,0 +1,44 @@
+<div class="my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+  <div class="px-4 py-5 bg-white sm:px-6">
+    <h3 class="text-lg font-medium text-gray-900 leading-6">
+      <%= @section %>
+    </h3>
+  </div>
+</div>
+
+<div class="flex flex-col">
+  <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+    <div class="overflow-hidden border-b border-gray-200 shadow sm:rounded-lg">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-gray">
+              <%= gettext("Lesson") %>
+            </th>
+            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-gray">
+              <%= gettext("Translated Title") %>
+            </th>
+            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-gray">
+              <%= gettext("Original Version") %>
+            </th>
+            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-gray">
+              <%= gettext("Translated Version") %>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= for line <- @lessons do %>
+            <%= cond do %>
+              <% is_nil(line.original) -> %>
+                <%= render("_coming_soon.html", line: line) %>
+              <% is_nil(line.lesson) -> %>
+                <%= render("_missing.html", line: line) %>
+              <% true -> %>
+                <%= render("_lesson.html", line: line) %>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

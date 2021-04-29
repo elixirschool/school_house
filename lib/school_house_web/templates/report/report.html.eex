@@ -1,0 +1,19 @@
+<div class="py-12 bg-white">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="lg:text-center">
+      <p class="mt-2 text-4xl font-extrabold tracking-tight leading-8 text-brand-purple sm:text-4xl">
+      <%= gettext("Translation Report") %>
+      </p>
+    </div>
+  </div>
+</div>
+
+<%= render("_section.html", lessons: @report.basics, section: gettext("Basics")) %>
+<%= render("_section.html", lessons: @report.intermediate, section: gettext("Intermediate")) %>
+<%= render("_section.html", lessons: @report.advanced, section: gettext("Advanced")) %>
+<%= render("_section.html", lessons: @report.testing, section: gettext("Testing"))%>
+<%= render("_section.html", lessons: @report.data_processing, section: gettext("Data Processing")) %>
+<%= render("_section.html", lessons: @report.ecto, section: gettext("Ecto")) %>
+<%= render("_section.html", lessons: @report.storage, section: gettext("Storage")) %>
+<%= render("_section.html", lessons: @report.misc, section: gettext("Miscellaneous")) %>
+

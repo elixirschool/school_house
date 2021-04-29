@@ -17,7 +17,8 @@ defmodule SchoolHouse.LessonsTest do
                 locale: "en",
                 title: "Collections",
                 previous: %Lesson{title: "Basics"},
-                next: %Lesson{title: "Enum"}
+                next: %Lesson{title: "Enum"},
+                version: {1, 3, 1}
               }} = Lessons.get("basics", "collections", "en")
     end
 
@@ -27,6 +28,15 @@ defmodule SchoolHouse.LessonsTest do
 
     test "returns {:error, :not_found} for missing lessons" do
       assert {:error, :not_found} == Lessons.get("none", "existant", "lesson")
+    end
+  end
+
+  describe "locale_report/1" do
+    test "returns a report of translated content for a locale" do
+      %{basics: basics_report} = Lessons.translation_report("es")
+      assert %{status: :complete} = Enum.find(basics_report, &(&1.name == :basics))
+      assert %{status: :minor} = Enum.find(basics_report, &(&1.name == :enum))
+      assert %{original: nil} = Enum.find(basics_report, &(&1.name == :functions))
     end
   end
 end

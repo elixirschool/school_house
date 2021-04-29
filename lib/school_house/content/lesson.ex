@@ -29,13 +29,30 @@ defmodule SchoolHouse.Content.Lesson do
 
     filename_attrs = [
       body: add_table_of_contents_links(body),
-      table_of_contents: table_of_contents_html(body),
-      section: String.to_atom(section),
       locale: locale,
-      name: String.to_atom(name)
+      name: String.to_atom(name),
+      section: String.to_atom(section),
+      table_of_contents: table_of_contents_html(body),
+      version: parse_version(attrs.version)
     ]
 
-    struct!(__MODULE__, filename_attrs ++ Map.to_list(attrs))
+    struct!(__MODULE__, Map.to_list(attrs) ++ filename_attrs)
+  end
+
+  defp add_table_of_contents_links(body) do
+    toc_html = table_of_contents_html(body)
+
+    body = String.replace(body, "{% include toc.html %}", toc_html)
+
+    Regex.replace(@headers_regex, body, fn _, header, name, _ ->
+      fragment = link_fragment(name)
+
+      Phoenix.View.render_to_string(SchoolHouseWeb.LessonView, "_section_header.html",
+        fragment: fragment,
+        header: header,
+        name: name
+      )
+    end)
   end
 
   defp link_fragment(name) do
@@ -53,20 +70,13 @@ defmodule SchoolHouse.Content.Lesson do
     "<a href=\"##{link_fragment(name)}\">#{name}</a>"
   end
 
-  defp add_table_of_contents_links(body) do
-    toc_html = table_of_contents_html(body)
+  defp parse_version(string) do
+    [major, minor, patch] =
+      string
+      |> String.split(".")
+      |> Enum.map(&String.to_integer/1)
 
-    body = String.replace(body, "{% include toc.html %}", toc_html)
-
-    Regex.replace(@headers_regex, body, fn _, header, name, _ ->
-      fragment = link_fragment(name)
-
-      Phoenix.View.render_to_string(SchoolHouseWeb.LessonView, "_section_header.html",
-        fragment: fragment,
-        header: header,
-        name: name
-      )
-    end)
+    {major, minor, patch}
   end
 
   defp build_table(matches, acc \\ [])

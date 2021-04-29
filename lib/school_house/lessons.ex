@@ -36,6 +36,41 @@ defmodule SchoolHouse.Lessons do
     end
   end
 
+  def translation_report(locale) do
+    :school_house
+    |> Application.get_env(:lessons)
+    |> Enum.reduce(%{}, &section_report(&1, locale, &2))
+  end
+
+  defp section_report({section, lessons}, locale, acc) do
+    lesson_statuses = Enum.map(lessons, &lesson_status(section, &1, locale))
+    Map.put(acc, section, lesson_statuses)
+  end
+
+  def lesson_status(section, name, locale) do
+    key = lesson_key(section, name)
+    original = get_in(@lesson_map, ["en", key])
+
+    case get_in(@lesson_map, [locale, key]) do
+      nil ->
+        %{lesson: nil, original: original, name: name, status: :missing}
+
+      %Lesson{} = lesson ->
+        %{lesson: lesson, original: original, name: name, status: compare_versions(lesson, original)}
+    end
+  end
+
+  defp compare_versions(%{version: {translation_major, translation_minor, translation_patch}}, %{
+         version: {major, minor, patch}
+       }) do
+    cond do
+      major > translation_major -> :major
+      minor > translation_minor -> :minor
+      patch > translation_patch -> :patch
+      true -> :complete
+    end
+  end
+
   defp translation?(locale), do: "en" != locale
 
   defp lesson_key(section, name), do: Enum.join([section, name], "/")
