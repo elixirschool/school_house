@@ -39,9 +39,6 @@ defmodule SchoolHouse.Content.Lesson do
     struct!(__MODULE__, Map.to_list(attrs) ++ filename_attrs)
   end
 
-  def compare(lesson, lesson) do
-  end
-
   defp add_table_of_contents_links(body) do
     toc_html = table_of_contents_html(body)
 
