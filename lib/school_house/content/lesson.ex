@@ -2,9 +2,10 @@ defmodule SchoolHouse.Content.Lesson do
   @moduledoc """
   Encapsulates an individual lesson and handles parsing the originating markdown file
   """
-  @headers_regex ~r/<(h2|h3|h4)>([<>="`\w\s?!\.\/\d]+)<\/(?:h2|h3|h4)>/
 
+  @headers_regex ~r/<(h\d)>(["\w\s?!\.\/\d]+)(?=<\/\1>)/i
   @enforce_keys [:body, :section, :locale, :name, :title, :version]
+
   defstruct [
     :body,
     :excerpt,
@@ -68,42 +69,32 @@ defmodule SchoolHouse.Content.Lesson do
     end)
   end
 
-  defp table_of_contents_reducer([_, "h" <> size, name], {html, header}) do
+  defp build_table(matches, acc \\ [])
+
+  defp build_table([], []) do
+    ""
+  end
+
+  defp build_table([], acc) do
+    "<ul>#{acc |> Enum.reverse() |> Enum.join("")}</ul>"
+  end
+
+  defp build_table([{size, name} | matches], acc) do
+    {children, remaining} = Enum.split_while(matches, fn {s, _} -> s > size end)
+    children = build_table(children)
+
     section_link =
       name
       |> String.trim()
       |> page_link()
 
-    size = String.to_integer(size)
-
-    cond do
-      is_nil(header) ->
-        {"#{html}<li>#{section_link}", size}
-
-      size == header ->
-        {"#{html}</li><li>#{section_link}", size}
-
-      size < header ->
-        closing_tag =
-          1..(header - size)
-          |> Enum.map(fn _ -> "</ul>" end)
-          |> Enum.join("")
-
-        {"#{html}</li>#{closing_tag}</li><li>#{section_link}", size}
-
-      size > header ->
-        {"#{html}<ul><li>#{section_link}", size}
-    end
+    build_table(remaining, ["<li>#{section_link}#{children}</li>" | acc])
   end
 
   defp table_of_contents_html(body) do
-    {html, last_size} =
-      @headers_regex
-      |> Regex.scan(body)
-      |> Enum.reduce({"<ul class=\"table_of_contents\">", nil}, &table_of_contents_reducer/2)
-
-    closing_tags = String.duplicate("</ul>", (last_size || 2) - 1)
-
-    "#{html}#{closing_tags}"
+    @headers_regex
+    |> Regex.scan(body)
+    |> Enum.map(fn [_, "h" <> size, name] -> {String.to_integer(size), String.trim(name)} end)
+    |> build_table()
   end
 end
