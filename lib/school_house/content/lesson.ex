@@ -97,11 +97,13 @@ defmodule SchoolHouse.Content.Lesson do
   end
 
   defp table_of_contents_html(body) do
-    {html, _} =
+    {html, last_size} =
       @headers_regex
       |> Regex.scan(body)
       |> Enum.reduce({"<ul class=\"table_of_contents\">", nil}, &table_of_contents_reducer/2)
 
-    "#{html}</ul>"
+    closing_tags = String.duplicate("</ul>", (last_size || 2) - 1)
+
+    "#{html}#{closing_tags}"
   end
 end
