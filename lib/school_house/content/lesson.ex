@@ -96,5 +96,6 @@ defmodule SchoolHouse.Content.Lesson do
     |> Regex.scan(body)
     |> Enum.map(fn [_, "h" <> size, name] -> {String.to_integer(size), String.trim(name)} end)
     |> build_table()
+    |> String.replace_leading("<ul", "<ul class=\"table_of_contents\"")
   end
 end
