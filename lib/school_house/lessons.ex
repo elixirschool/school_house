@@ -2,38 +2,56 @@ defmodule SchoolHouse.Lessons do
   @moduledoc """
   Implements NimblePublisher and functions for retrieving lessons
   """
-  use NimblePublisher,
-    build: SchoolHouse.Content.Lesson,
-    from: Application.compile_env!(:school_house, :lesson_dir),
-    as: :lessons,
-    highlighters: [:makeup_elixir, :makeup_erlang]
 
   alias SchoolHouse.Content.Lesson
 
-  @ordering Application.compile_env(:school_house, :lessons)
-  @lesson_map @lessons
-              |> Enum.group_by(& &1.locale)
-              |> Enum.into(%{}, fn {locale, lessons} ->
-                {locale, Enum.into(lessons, %{}, &{Enum.join([&1.section, &1.name], "/"), &1})}
-              end)
+  @ordering Application.compile_env!(:school_house, :lessons)
+  @locales :school_house |> Application.compile_env!(SchoolHouseWeb.Gettext) |> Keyword.get(:locales)
 
-  def exists?(section, name, locale) do
-    key = lesson_key(section, name)
+  for locale <- @locales do
+    path = Path.join([Application.get_env(:school_house, :lesson_dir), locale, "**/*.md"])
 
-    nil != get_in(@lesson_map, [locale, key])
+    contents =
+      quote do
+        use NimblePublisher,
+          build: SchoolHouse.Content.Lesson,
+          from: unquote(path),
+          as: :lessons,
+          highlighters: [:makeup_elixir, :makeup_erlang]
+
+        @lesson_map Enum.into(@lessons, %{}, &{"#{&1.section}/#{&1.name}", &1})
+
+        def get(section, name) do
+          Map.get(@lesson_map, "#{section}/#{name}")
+        end
+      end
+
+    __MODULE__
+    |> Module.concat(String.capitalize(locale))
+    |> Module.create(contents, Macro.Env.location(__ENV__))
   end
 
-  def get(section, name, locale) do
-    key = lesson_key(section, name)
+  def exists?(section, name, locale) do
+    locale in @locales and nil != locale_lessons(locale).get(section, name)
+  end
 
-    with nil <- get_in(@lesson_map, [locale, key]),
+  defp locale_lessons(locale) do
+    Module.concat(__MODULE__, String.capitalize(locale))
+  end
+
+  def get(section, name, locale) when locale in @locales do
+    with nil <- locale_lessons(locale).get(section, name),
          true <- translation?(locale),
-         %Lesson{} <- get_in(@lesson_map, ["en", key]) do
+         %Lesson{} <- locale_lessons("en").get(section, name) do
       {:error, :translation_not_found}
     else
       %Lesson{} = lesson -> {:ok, populate_surrounding_lessons(lesson)}
       _ -> {:error, :not_found}
     end
+  end
+
+  def get(_section, _name, _locale) do
+    {:error, :not_found}
   end
 
   def translation_report(locale) do
@@ -48,10 +66,9 @@ defmodule SchoolHouse.Lessons do
   end
 
   def lesson_status(section, name, locale) do
-    key = lesson_key(section, name)
-    original = get_in(@lesson_map, ["en", key])
+    original = locale_lessons("en").get(section, name)
 
-    case get_in(@lesson_map, [locale, key]) do
+    case locale_lessons(locale).get(section, name) do
       nil ->
         %{lesson: nil, original: original, name: name, status: :missing}
 
@@ -81,16 +98,13 @@ defmodule SchoolHouse.Lessons do
 
     lessons =
       for lesson <- config do
-        key = lesson_key(section, lesson)
-        get_in(@lesson_map, [locale, key])
+        locale_lessons(locale).get(section, lesson)
       end
 
     Enum.reject(lessons, &is_nil/1)
   end
 
   defp translation?(locale), do: "en" != locale
-
-  defp lesson_key(section, name), do: Enum.join([section, name], "/")
 
   defp populate_surrounding_lessons(%{locale: locale, name: name, section: section} = lesson) do
     section_lessons = @ordering[section]
@@ -99,8 +113,8 @@ defmodule SchoolHouse.Lessons do
     {previous, _} = List.pop_at(section_lessons, index - 1)
     {next, _} = List.pop_at(section_lessons, index + 1)
 
-    previous = get_in(@lesson_map, [locale, lesson_key(section, previous)])
-    next = get_in(@lesson_map, [locale, lesson_key(section, next)])
+    previous = locale_lessons(locale).get(section, previous)
+    next = locale_lessons(locale).get(section, next)
 
     %{lesson | previous: previous, next: next}
   end

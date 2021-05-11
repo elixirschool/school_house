@@ -17,7 +17,7 @@ defmodule SchoolHouseWeb.LessonControllerTest do
     end
 
     test "renders a CTA for missing translations", %{conn: conn} do
-      conn = get(conn, Routes.lesson_path(conn, :lesson, "zz", "basics", "basics"))
+      conn = get(conn, Routes.lesson_path(conn, :lesson, "es", "basics", "enum"))
       body = html_response(conn, 404)
 
       assert body =~ "Translation unavailable"
