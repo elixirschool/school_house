@@ -18,4 +18,13 @@ defmodule SchoolHouse.Posts do
   def page(n), do: Enum.at(@paged_posts, n)
 
   def pages, do: Enum.count(@paged_posts)
+
+  def tag_cloud do
+    Enum.reduce(@posts, %{}, fn %{tags: tags}, acc ->
+      Enum.reduce(tags, acc, fn tag, accc ->
+        count = Map.get(accc, tag, 0) + 1
+        Map.put(accc, tag, count)
+      end)
+    end)
+  end
 end
