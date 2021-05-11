@@ -9,6 +9,8 @@ config :school_house, SchoolHouseWeb.Endpoint,
 # Print only warnings and errors during test
 config :logger, level: :warn
 
+config :school_house, SchoolHouseWeb.Gettext, locales: ~w(en es)
+
 config :school_house,
-  lesson_dir: "test/support/content/lessons/**/*.md",
+  lesson_dir: "test/support/content/lessons",
   blog_dir: "test/support/content/posts/**/*.md"

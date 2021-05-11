@@ -1,10 +1,14 @@
 defmodule SchoolHouseWeb.PageController do
   use SchoolHouseWeb, :controller
 
-  alias SchoolHouse.{Lessons, Posts}
+  alias SchoolHouse.{Lessons, Podcasts, Posts}
 
   def index(conn, _params) do
     render(conn, "index.html", posts: recent_posts())
+  end
+
+  def podcasts(conn, _params) do
+    render(conn, "podcasts.html", podcasts: Podcasts.list())
   end
 
   def privacy(conn, _params) do
@@ -20,9 +24,8 @@ defmodule SchoolHouseWeb.PageController do
   end
 
   defp recent_posts do
-    # 0
-    # |> Posts.page()
-    # |> Enum.take(6)
-    []
+    0
+    |> Posts.page()
+    |> Enum.take(6)
   end
 end
