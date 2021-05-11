@@ -31,7 +31,7 @@ COPY assets assets
 RUN git clone https://github.com/elixirschool/elixirschool.git content && \
     cd content && \
     git fetch --all && \
-    git checkout lessons-only && \
+    git checkout content-only-changes && \
     cd .. && \
     mkdir -p assets/static/images && \
     mv content/images/* assets/static/images
