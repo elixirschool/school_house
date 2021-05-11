@@ -23,7 +23,7 @@ defmodule SchoolHouse.LessonsTest do
     end
 
     test "returns {:error, :translation_not_found} for missing translation" do
-      assert {:error, :translation_not_found} == Lessons.get("basics", "basics", "zz")
+      assert {:error, :translation_not_found} == Lessons.get("basics", "enum", "es")
     end
 
     test "returns {:error, :not_found} for missing lessons" do
@@ -35,7 +35,7 @@ defmodule SchoolHouse.LessonsTest do
     test "returns a report of translated content for a locale" do
       %{basics: basics_report} = Lessons.translation_report("es")
       assert %{status: :complete} = Enum.find(basics_report, &(&1.name == :basics))
-      assert %{status: :minor} = Enum.find(basics_report, &(&1.name == :enum))
+      assert %{status: :missing} = Enum.find(basics_report, &(&1.name == :enum))
       assert %{original: nil} = Enum.find(basics_report, &(&1.name == :functions))
     end
   end
