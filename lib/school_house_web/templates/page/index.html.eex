@@ -50,13 +50,14 @@
         <div class="flex-grow pl-6">
           <h2 class="mb-2 text-xl font-semibold text-brand-gray title-font">Functional Programming</h2>
           <p class="text-base leading-relaxed">
-          By focusing on breaking problems down into simple, side-effect free, functions we can ensure fewer bugs, better test coverage, while incrementally building our solutions through the composition of well tested functions.
+          By focusing on breaking problems down into simple side-effect free functions we can ensure fewer bugs, better test coverage, while incrementally building our solutions through the composition of well tested functions.
           </p>
-          <a class="inline-flex items-center mt-3 text-brand-purple">Learn More
+          <%= link(to: Routes.page_path(@conn, :why, current_locale()), class: "inline-flex items-center mt-3 text-brand-purple") do %>
+            Learn More
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
-          </a>
+          <% end %>
         </div>
       </div>
       <div class="flex p-4 md:w-1/3">
@@ -70,11 +71,12 @@
           <p class="text-base leading-relaxed">
           Built on the back of a giant, the Erlang runtime system, Elixir takes things even further with easy extensibility, compatibility with Erlang and other BEAM languages, and an ever expanding collection of libraries and packages to improve developer happiness.
           </p>
-          <a class="inline-flex items-center mt-3 text-brand-purple">Learn More
+          <%= link(to: Routes.page_path(@conn, :why, current_locale()), class: "inline-flex items-center mt-3 text-brand-purple") do %>
+            Learn More
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
-          </a>
+          <% end %>
         </div>
       </div>
       <div class="flex p-4 md:w-1/3">
@@ -87,12 +89,14 @@
         <div class="flex-grow pl-6">
           <h2 class="mb-2 text-xl font-semibold text-brand-gray title-font">Vibrant Ecosystem</h2>
           <p class="text-base leading-relaxed">
+          With dozens of conferences, hundreds of meetups, Slack, IRC, Discord, and multiple active hashtags.
           </p>
-          <a class="inline-flex items-center mt-3 text-brand-purple">Learn More
+          <%= link(to: Routes.page_path(@conn, :why, current_locale()), class: "inline-flex items-center mt-3 text-brand-purple") do %>
+            Learn More
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
-          </a>
+          <% end %>
         </div>
       </div>
     </div>
@@ -157,13 +161,13 @@
 
 <%= render(SchoolHouseWeb.PostView, "index.html", conn: @conn, posts: @posts) %>
 <div class="bg-white">
-  <div class="max-w-7xl mx-auto text-center py-16 px-4 sm:px-6 lg:py-16 lg:px-8">
+  <div class="px-4 py-16 mx-auto text-center max-w-7xl sm:px-6 lg:py-16 lg:px-8">
     <h2 class="text-3xl font-extrabold tracking-tight text-brand-gray sm:text-4xl">
       <span class="block">Want to learn more?</span>
     </h2>
     <p class="mt-4 text-lg leading-6 text-brand-gray">We have articles spanning several topics</p>
-    <div class="mt-8 flex justify-center">
-      <div class="rounded-md shadow">
+    <div class="flex justify-center mt-8">
+      <div class="shadow rounded-md">
         <%= link("Visit the Blog", to: Routes.post_path(@conn, :index), class: "font-extrabold items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-purple hover:text-white") %>
       </div>
     </div>
