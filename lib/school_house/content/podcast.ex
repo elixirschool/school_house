@@ -5,6 +5,7 @@ defmodule SchoolHouse.Content.Podcast do
   defstruct [
     :about,
     :active,
+    :language,
     :logo,
     :name,
     :website
