@@ -40,6 +40,9 @@
               <li>
                 <%= link(gettext("Why Elixir?"), to: Routes.page_path(@conn, :why, current_locale()), class: "text-base text-gray-500 hover:text-gray-900") %>
               </li>
+              <li>
+                <%= link("Podcasts", to: Routes.page_path(@conn, :podcasts), class: "text-base text-gray-500 hover:text-gray-900") %>
+              </li>
             </ul>
           </div>
           <div class="mt-12 md:mt-0">

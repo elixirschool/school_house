@@ -9,8 +9,9 @@ use Mix.Config
 
 config :school_house,
   ecto_repos: [SchoolHouse.Repo],
-  lesson_dir: "content/lessons/**/*.md",
-  blog_dir: "content/posts/**/*.md"
+  lesson_dir: "content/lessons",
+  blog_dir: "content/posts/**/*.md",
+  podcast_dir: "content/podcasts/*.md"
 
 # Configures the endpoint
 config :school_house, SchoolHouseWeb.Endpoint,
@@ -35,6 +36,7 @@ config :school_house, SchoolHouseWeb.Gettext,
 
 import_config "lessons.exs"
 import_config "redirects.exs"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"

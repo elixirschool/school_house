@@ -1,16 +1,18 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
-<div class="px-4 pt-12 pb-10 bg-white sm:px-6 lg:pt-24 lg:pb-14 lg:px-8">
-  <div class="relative max-w-lg mx-auto divide-gray-200 lg:max-w-7xl">
-    <div>
-      <p class="mt-2 text-4xl font-extrabold tracking-tight text-center leading-8 text-brand-purple sm:text-4xl">
-        Recent Posts
+<div class="py-12 bg-white">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="lg:text-center">
+      <p class="mt-2 text-4xl font-extrabold tracking-tight leading-8 text-brand-purple sm:text-4xl">
+      Recent Posts
       </p>
-      <p class="mt-3 text-xl text-center text-gray-500 sm:mt-4">
-        Articles authored by Elixir School contributors and members of the community.
+      <p class="max-w-2xl mt-4 text-xl text-gray-500 lg:mx-auto">
+      Articles authored by Elixir School contributors and members of the community.
       </p>
     </div>
-    <div class="pt-12 mt-12 grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
-      <%= for post <- @posts, do: render("_post_preview.html", conn: @conn, post: post) %>
-    </div>
+  </div>
+</div>
+
+<div class="bg-white">
+  <div class="pt-12 mt-12 grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
+    <%= for post <- @posts, do: render("_post_preview.html", conn: @conn, post: post) %>
   </div>
 </div>
