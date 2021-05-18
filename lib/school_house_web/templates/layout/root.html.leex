@@ -8,7 +8,7 @@
     <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
     <script defer phx-track-static src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </head>
-  <body>
+  <body class="dark:bg-body-dark">
     <%= render "_header.html", conn: @conn %>
     <%= @inner_content %>
     <%= render "_footer.html", conn: @conn %>

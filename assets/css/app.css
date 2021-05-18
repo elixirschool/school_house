@@ -74,6 +74,14 @@ Influenced by: https://sproutsocial.com/
   top: -1px;
 }
 
+/* #slider Class Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #48bb78;
+}
+
 .makeup .hll {background-color: #f4f5f6}
 .makeup {background-color: #ffffff}.makeup .unselectable {
   -webkit-touch-callout: none;

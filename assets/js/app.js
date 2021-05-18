@@ -32,3 +32,31 @@ liveSocket.connect()
 // >> liveSocket.enableDebug()
 // >> liveSocket.enableLatencySim(1000)
 window.liveSocket = liveSocket
+
+// set up dark mode toggle
+function setDarkMode(on) {
+    if (on) {
+        darkModeToggle.checked = true
+        document.documentElement.classList.add('dark')
+        localStorage.theme = 'dark'
+    } else {
+        darkModeToggle.checked = false
+        document.documentElement.classList.remove('dark')
+        localStorage.theme = 'light'
+    }
+}
+
+const darkModeToggle = document.getElementById("dark-mode-toggle")
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    setDarkMode(true)
+} else {
+    setDarkMode(false)
+}
+
+darkModeToggle.addEventListener('click', function (ev) {
+    if (ev.target.checked) {
+        setDarkMode(true)
+    } else {
+        setDarkMode(false)
+    }
+})
