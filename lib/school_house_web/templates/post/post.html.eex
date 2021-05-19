@@ -8,7 +8,7 @@
       <div class="w-full border-t border-gray-300"></div>
     </div>
     <div class="relative flex justify-center">
-      <span class="px-2 bg-white text-sm text-gray-500">
+      <span class="px-2 bg-white dark:bg-body-dark text-sm text-gray-500 dark:text-gray-200">
         Presents
       </span>
     </div>
@@ -22,7 +22,7 @@
     <span class="text-medium leading-8 tracking-tight text-brand-gray sm:text-large ">By <%= @post.author %></span>
   </div>
 
-  <div class="bg-brand-light-gray rounded-xl p-4 mb-3 text-xl text-gray-500 sm:mb-4 text-center"><%= raw @post.excerpt %></div>
+  <div class="bg-brand-light-gray rounded-xl p-4 mb-3 text-xl text-gray-500 dark:text-gray-200 sm:mb-4 text-center"><%= raw @post.excerpt %></div>
 
   <%= raw @post.body %>
 </section>

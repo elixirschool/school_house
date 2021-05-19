@@ -110,6 +110,9 @@ module.exports = {
                                 color: theme('colors.brand-white'),
                             }
                         },
+                        code: {
+                            color: theme('colors.brand-gray-750')
+                        },
                         'ul li': {
                             marginTop: '0px',
                             marginBottom: '0px',
@@ -124,7 +127,7 @@ module.exports = {
                     css: {
                         color: theme('colors.brand-gray-200'),
                         pre: {
-                            'background-color': '#f4f5f6',
+                            'background-color': theme('colors.brand-gray-300'),
                             color: '#5a6267'
                         },
                         h1: {
@@ -137,11 +140,14 @@ module.exports = {
                             color: theme('colors.brand-gray-200'),
                         },
                         a: {
-                            color: theme('colors.brand-purple'),
+                            color: theme('colors.brand-purple-100'),
                             '&:hover': {
                                 'background-color': theme('colors.brand-purple-200'),
                                 color: theme('colors.brand-white'),
                             }
+                        },
+                        code: {
+                            color: theme('colors.brand-gray-300')
                         },
                         'ul li': {
                             marginTop: '0px',
