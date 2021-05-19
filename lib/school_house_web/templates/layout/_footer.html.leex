@@ -7,9 +7,9 @@
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 p-2 text-white rounded-full bg-brand-purple" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
           </svg>
-          <span class="ml-3 text-xl">Elixir School</span>
+          <span class="ml-3 text-xl text-bold dark:text-bold-dark">Elixir School</span>
         </div>
-        <p class="text-base italic text-gray-500">
+        <p class="text-base italic text-gray-500 dark:text-brand-gray-500">
           The premier destination for learning and mastering Elixir
         </p>
         <div class="flex space-x-6">
@@ -33,83 +33,83 @@
       <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-2 xl:col-span-2">
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
-            <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">
+            <h3 class="text-sm font-semibold tracking-wider text-gray-400 dark:text-brand-gray-500 uppercase">
               Getting Started
             </h3>
             <ul class="mt-4 space-y-4">
               <li>
-                <%= link(gettext("Why Elixir?"), to: Routes.page_path(@conn, :why, current_locale()), class: "text-base text-gray-500 hover:text-gray-900") %>
+                <%= link(gettext("Why Elixir?"), to: Routes.page_path(@conn, :why, current_locale()), class: "text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900") %>
               </li>
               <li>
-                <%= link("Podcasts", to: Routes.page_path(@conn, :podcasts), class: "text-base text-gray-500 hover:text-gray-900") %>
+                <%= link("Podcasts", to: Routes.page_path(@conn, :podcasts), class: "text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900") %>
               </li>
             </ul>
           </div>
           <div class="mt-12 md:mt-0">
-            <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">
+            <h3 class="text-sm font-semibold tracking-wider text-gray-400 dark:text-brand-gray-500 uppercase">
               <%= gettext("Lessons") %>
             </h3>
             <ul class="mt-4 space-y-4">
               <li>
-                <%= link(gettext("Basics"), to: Routes.lesson_path(@conn, :index, current_locale(), :basics), class: "text-base text-gray-500 hover:text-gray-900") %>
+                <%= link(gettext("Basics"), to: Routes.lesson_path(@conn, :index, current_locale(), :basics), class: "text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900") %>
               </li>
 
               <li>
-                <%= link(gettext("Intermediate"), to: Routes.lesson_path(@conn, :index, current_locale(), :intermediate), class: "text-base text-gray-500 hover:text-gray-900") %>
+                <%= link(gettext("Intermediate"), to: Routes.lesson_path(@conn, :index, current_locale(), :intermediate), class: "text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900") %>
               </li>
 
               <li>
-                <%= link(gettext("Advanced"), to: Routes.lesson_path(@conn, :index, current_locale(), :advanced), class: "text-base text-gray-500 hover:text-gray-900") %>
+                <%= link(gettext("Advanced"), to: Routes.lesson_path(@conn, :index, current_locale(), :advanced), class: "text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900") %>
               </li>
 
               <li>
-                <%= link(gettext("Testing"), to: Routes.lesson_path(@conn, :index, current_locale(), :testing), class: "text-base text-gray-500 hover:text-gray-900") %>
+                <%= link(gettext("Testing"), to: Routes.lesson_path(@conn, :index, current_locale(), :testing), class: "text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900") %>
               </li>
 
               <li>
-                <%= link(gettext("Data Processing"), to: Routes.lesson_path(@conn, :index, current_locale(), :data_processing), class: "text-base text-gray-500 hover:text-gray-900") %>
+                <%= link(gettext("Data Processing"), to: Routes.lesson_path(@conn, :index, current_locale(), :data_processing), class: "text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900") %>
               </li>
 
               <li>
-                <%= link(gettext("Ecto"), to: Routes.lesson_path(@conn, :index, current_locale(), :ecto), class: "text-base text-gray-500 hover:text-gray-900") %>
+                <%= link(gettext("Ecto"), to: Routes.lesson_path(@conn, :index, current_locale(), :ecto), class: "text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900") %>
               </li>
 
               <li>
-                <%= link(gettext("Storage"), to: Routes.lesson_path(@conn, :index, current_locale(), :storage), class: "text-base text-gray-500 hover:text-gray-900") %>
+                <%= link(gettext("Storage"), to: Routes.lesson_path(@conn, :index, current_locale(), :storage), class: "text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900") %>
               </li>
 
               <li>
-                <%= link(gettext("Miscellaneous"), to: Routes.lesson_path(@conn, :index, current_locale(), :misc), class: "text-base text-gray-500 hover:text-gray-900") %>
+                <%= link(gettext("Miscellaneous"), to: Routes.lesson_path(@conn, :index, current_locale(), :misc), class: "text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900") %>
               </li>
             </ul>
           </div>
         </div>
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
-            <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">
+            <h3 class="text-sm font-semibold tracking-wider text-gray-400 dark:text-brand-gray-500 uppercase">
               <%= link("Blog", to: Routes.post_path(@conn, :index), class: "text-gray-400 hover:text-gray-600") %>
             </h3>
             <ul class="mt-4 space-y-4">
               <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                <a href="#" class="text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900">
                   Announcements
                 </a>
               </li>
 
               <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                <a href="#" class="text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900">
                   Today I Learned (TIL)
                 </a>
               </li>
 
               <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                <a href="#" class="text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900">
                   Conferences
                 </a>
               </li>
 
               <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                <a href="#" class="text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900">
                   Reviews
                 </a>
               </li>
@@ -117,25 +117,25 @@
             </ul>
           </div>
           <div class="mt-12 md:mt-0">
-            <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">
+            <h3 class="text-sm font-semibold tracking-wider text-gray-400 dark:text-brand-gray-500 uppercase">
               Project
             </h3>
             <ul class="mt-4 space-y-4">
 
               <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                <a href="#" class="text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900">
                   Contributors
                 </a>
               </li>
 
               <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+                <a href="#" class="text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900">
                   Get Involved
                 </a>
               </li>
 
               <li>
-                <a href="#" class="inline-flex text-base text-gray-500 hover:text-gray-900">
+                <a href="#" class="inline-flex text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900">
                   Support <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 mt-1 ml-2 text-brand-red" viewBox="0 0 24 24">
                     <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
                   </svg>
@@ -143,7 +143,7 @@
               </li>
               <li>
                 <%= if current_locale() != "en" do %>
-                  <%= link gettext("Translation Report"), to: Routes.report_path(@conn, :index, current_locale()), class: "text-base text-gray-500 hover:text-gray-900" %>
+                  <%= link gettext("Translation Report"), to: Routes.report_path(@conn, :index, current_locale()), class: "text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900" %>
                 <% end %>
               </li>
             </ul>
@@ -154,7 +154,7 @@
     <div class="pt-8 mt-12 border-t border-gray-200">
       <p class="text-base text-gray-400 xl:text-center">
         &copy; 2021 Sean Callan —
-        <a href="https://twitter.com/doomspork" rel="noopener noreferrer"  class="text-base text-gray-500 hover:text-gray-900" target="_blank">@doomspork</a>
+        <a href="https://twitter.com/doomspork" rel="noopener noreferrer"  class="text-base text-gray-500 dark:text-brand-gray-300 hover:text-gray-900" target="_blank">@doomspork</a>
       </p>
     </div>
   </div>

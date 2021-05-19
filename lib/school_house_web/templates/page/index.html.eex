@@ -1,7 +1,7 @@
-<section class="text-brand-gray dark:text-dark-fg body-font">
+<section class="text-brand-gray dark:text-primary-dark body-font">
   <div class="container px-5 py-24 mx-auto">
     <div class="items-center text-center">
-      <p class="mb-6 text-4xl font-extrabold tracking-tight leading-8 text-brand-purple sm:text-4xl">
+      <p class="mb-6 text-4xl font-extrabold tracking-tight leading-8 text-purple dark:text-purple-dark sm:text-4xl">
         Welcome to Elixir School!
       </p>
       <p class="mb-6 leading-relaxed">
@@ -22,21 +22,21 @@
     <div class="w-full border-t border-gray-300"></div>
   </div>
   <div class="relative flex justify-center">
-    <span class="px-2 text-gray-500 bg-white">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-10 h-10 p-2 text-white rounded-full bg-brand-purple" viewBox="0 0 24 24">
+    <span class="px-2 text-gray-500 bg-white dark:bg-body-dark">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-10 h-10 p-2 dark:text-bold-dark text-bold rounded-full bg-brand-purple" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
       </svg>
     </span>
   </div>
 </div>
 
-<section class="text-brand-gray body-font">
+<section class="text-brand-gray body-font dark:text-primary-dark">
   <div class="container px-5 py-24 mx-auto">
     <div class="mb-20">
-      <p class="mt-2 text-4xl font-extrabold tracking-tight text-center leading-8 text-brand-purple sm:text-4xl">
+      <p class="mt-2 text-4xl font-extrabold tracking-tight text-center leading-8 text-purple dark:text-purple-dark sm:text-4xl">
         Why Elixir?
       </p>
-      <p class="mt-3 text-xl text-center text-gray-500 sm:mt-4">
+      <p class="mt-3 text-xl text-center text-bold dark:text-bold-dark sm:mt-4">
         Discover why Elixir's popularity has skyrocketed and new companies adopt it daily.
       </p>
     </div>
@@ -52,7 +52,7 @@
           <p class="text-base leading-relaxed">
           By focusing on breaking problems down into simple side-effect free functions we can ensure fewer bugs, better test coverage, while incrementally building our solutions through the composition of well tested functions.
           </p>
-          <%= link(to: Routes.page_path(@conn, :why, current_locale()), class: "inline-flex items-center mt-3 text-brand-purple") do %>
+          <%= link(to: Routes.page_path(@conn, :why, current_locale()), class: "inline-flex items-center mt-3 text-purple dark:text-purple-dark") do %>
             Learn More
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -71,7 +71,7 @@
           <p class="text-base leading-relaxed">
           Built on the back of a giant, the Erlang runtime system, Elixir takes things even further with easy extensibility, compatibility with Erlang and other BEAM languages, and an ever expanding collection of libraries and packages to improve developer happiness.
           </p>
-          <%= link(to: Routes.page_path(@conn, :why, current_locale()), class: "inline-flex items-center mt-3 text-brand-purple") do %>
+          <%= link(to: Routes.page_path(@conn, :why, current_locale()), class: "inline-flex items-center mt-3 text-purple dark:text-purple-dark") do %>
             Learn More
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -91,7 +91,7 @@
           <p class="text-base leading-relaxed">
           With dozens of conferences, hundreds of meetups, Slack, IRC, Discord, and multiple active hashtags.
           </p>
-          <%= link(to: Routes.page_path(@conn, :why, current_locale()), class: "inline-flex items-center mt-3 text-brand-purple") do %>
+          <%= link(to: Routes.page_path(@conn, :why, current_locale()), class: "inline-flex items-center mt-3 text-purple dark:text-purple-dark") do %>
             Learn More
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -108,8 +108,8 @@
     <div class="w-full border-t border-gray-300"></div>
   </div>
   <div class="relative flex justify-center">
-    <span class="px-2 text-gray-500 bg-white">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-10 h-10 p-2 text-white rounded-full bg-brand-purple" viewBox="0 0 24 24">
+    <span class="px-2 text-gray-500 bg-white dark:bg-body-dark">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-10 h-10 p-2 dark:text-bold-dark text-bold rounded-full bg-brand-purple" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
       </svg>
     </span>
@@ -160,12 +160,12 @@
 -->
 
 <%= render(SchoolHouseWeb.PostView, "index.html", conn: @conn, posts: @posts) %>
-<div class="bg-white">
+<div class="bg-body dark:bg-body-dark">
   <div class="px-4 py-16 mx-auto text-center max-w-7xl sm:px-6 lg:py-16 lg:px-8">
-    <h2 class="text-3xl font-extrabold tracking-tight text-brand-gray sm:text-4xl">
+    <h2 class="text-3xl font-extrabold tracking-tight text-bold dark:text-bold-dark sm:text-4xl">
       <span class="block">Want to learn more?</span>
     </h2>
-    <p class="mt-4 text-lg leading-6 text-brand-gray">We have articles spanning several topics</p>
+    <p class="mt-4 text-lg leading-6 text-light dark:text-light-dark">We have articles spanning several topics</p>
     <div class="flex justify-center mt-8">
       <div class="shadow rounded-md">
         <%= link("Visit the Blog", to: Routes.post_path(@conn, :index), class: "font-extrabold items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-purple hover:text-white") %>
@@ -179,8 +179,8 @@
     <div class="w-full border-t border-gray-300"></div>
   </div>
   <div class="relative flex justify-center">
-    <span class="px-2 text-gray-500 bg-white">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-10 h-10 p-2 text-white rounded-full bg-brand-purple" viewBox="0 0 24 24">
+    <span class="px-2 text-gray-500 bg-white dark:bg-body-dark">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-10 h-10 p-2 dark:text-bold-dark text-bold rounded-full bg-brand-purple" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
       </svg>
     </span>

@@ -11,32 +11,55 @@ module.exports = {
             backgroundColor: (theme) => ({
                 ...theme('colors'),
                 'nav': {
-                    DEFAULT: theme('colors.brand-light-gray'),
-                    dark: theme('colors.dark-gray-200')
+                    DEFAULT: theme('colors.brand-gray-300'),
+                    dark: theme('colors.brand-gray-800')
                 },
                 'body': {
                     DEFAULT: theme('colors.brand-white'),
-                    dark: theme('colors.dark-gray')
+                    dark: theme('colors.brand-gray-700')
                 }
             }),
             colors: {
-                'brand-light-gray': '#f4f6f7',
-                'brand-gray': '#3c4349',
-                'brand-purple': '#7c6f89',
-                'brand-light-purple': '#cfbae6',
-                'brand-red': '#c0394d',
-                // new
-                'brand-white': '#fff',
-                // dark
-                'dark-gray': '#3d4449',
-                'dark-gray-200': '#31373b',
 
-                'dark-fg': '#f5f6f7',
-                'dark-fg-bold': '#ffffff',
-                'dark-fg-light': '#ffffff',
+                // purple
+                'brand-purple-100': '#cfbae6',
+                'brand-purple-200': '#967ab4',
+                'brand-purple-800': '#7c6f89',
+
+
+                // white
+                'brand-white': '#fff',
+                
+                // gray
+                'brand-gray-200': '#f5f6f7',
+                'brand-gray-300': '#f4f6f7',
+                'brand-gray-500': '#9fa3a6',
+                'brand-gray-700': '#3d4449',
+                'brand-gray-750': '#3c4349',
+                'brand-gray-800': '#31373b',
+
+                // red
+                'brand-red-300': '#f56a6a',
+                'brand-red-500': '#c0394d',
+
                 'dark-border': 'rgba(210,215,217,0.25)',
                 'dark-border-bg': 'rgba(230, 235, 237, 0.75)',
-                'dark-accent': '#f56a6a'
+
+                // old
+                // 'brand-light-gray': '#f4f6f7',
+                // 'brand-gray': '#3c4349',
+                // 'brand-purple': '#7c6f89',
+                // 'brand-light-purple': '#cfbae6',
+                // 'brand-dark-purple': '#967ab4',
+                // 'brand-white': '#fff',
+                // 'dark-gray': '#3d4449',
+                // // 'dark-gray-200': '#31373b',
+
+                // 'dark-fg': '#f5f6f7',
+                // 'light-light-fg': '#9fa3a6',
+                // 'dark-light-fg': '#f5f6f7',
+                // 'dark-fg-light': '#ffffff',
+                // 'dark-accent': '#f56a6a'
             },
             container: {
                 center: true,
@@ -44,6 +67,24 @@ module.exports = {
             margin: {
                 'half-screen': '-50vw',
             },
+            textColor: (theme) => ({
+                primary : {
+                    DEFAULT: theme('colors.brand-gray-700'),
+                    dark: theme('colors.brand-gray-200')
+                },
+                bold: {
+                    DEFAULT: theme('colors.brand-gray-700'),
+                    dark: theme('colors.brand-white')
+                },
+                light: {
+                    DEFAULT: theme('colors.brand-gray-700'),
+                    dark: theme('colors.brand-gray-200')
+                },
+                purple: {
+                    DEFAULT: theme('colors.brand-purple-800'),
+                    dark: theme('colors.brand-purple-200')
+                }
+            }),
             typography: (theme) => ({
                 DEFAULT: {
                     css: {

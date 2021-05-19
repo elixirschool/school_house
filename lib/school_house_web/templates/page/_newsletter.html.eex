@@ -1,4 +1,4 @@
-<div class="bg-white">
+<div class="bg-body dark:bg-body-dark">
   <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
     <div class="px-6 py-10 bg-brand-purple rounded-3xl sm:py-16 sm:px-12 lg:p-20 lg:flex lg:items-center">
       <div class="lg:w-0 lg:flex-1">
