@@ -88,26 +88,26 @@ module.exports = {
             typography: (theme) => ({
                 DEFAULT: {
                     css: {
-                        color: theme('colors.brand-gray'),
+                        color: theme('colors.brand-gray-750'),
                         maxWidth: 'inherit',
                         pre: {
                             'background-color': '#f4f5f6',
                             color: '#5a6267'
                         },
                         h1: {
-                                color: theme('colors.brand-gray')
+                                color: theme('colors.brand-gray-750')
                         },
                         h2: {
-                            color: theme('colors.brand-gray'),
+                            color: theme('colors.brand-gray-750'),
                         },
                         h3: {
-                            color: theme('colors.brand-gray'),
+                            color: theme('colors.brand-gray-750'),
                         },
                         a: {
-                            color: theme('colors.brand-purple'),
+                            color: theme('colors.brand-purple-800'),
                             '&:hover': {
-                                'background-color': theme('colors.brand-purple'),
-                                color: theme('colors.white'),
+                                'background-color': theme('colors.brand-purple-800'),
+                                color: theme('colors.brand-white'),
                             }
                         },
                         'ul li': {
@@ -120,44 +120,44 @@ module.exports = {
                         },
                     }
                 },
-                // dark: {
-                //     css: {
-                //         color: theme('colors.dark-brand-fg'),
-                //         pre: {
-                //             'background-color': '#f4f5f6',
-                //             color: '#5a6267'
-                //         },
-                //         h1: {
-                //                 color: theme('colors.brand-gray')
-                //         },
-                //         h2: {
-                //             color: theme('colors.brand-gray'),
-                //         },
-                //         h3: {
-                //             color: theme('colors.brand-gray'),
-                //         },
-                //         a: {
-                //             color: theme('colors.brand-purple'),
-                //             '&:hover': {
-                //                 'background-color': theme('colors.brand-purple'),
-                //                 color: theme('colors.white'),
-                //             }
-                //         },
-                //         'ul li': {
-                //             marginTop: '0px',
-                //             marginBottom: '0px',
-                //         },
-                //         'ul ul': {
-                //             marginTop: '0px',
-                //             marginBottom: '0px',
-                //         },
-                //     }
-                // }
+                dark: {
+                    css: {
+                        color: theme('colors.brand-gray-200'),
+                        pre: {
+                            'background-color': '#f4f5f6',
+                            color: '#5a6267'
+                        },
+                        h1: {
+                                color: theme('colors.brand-gray-200')
+                        },
+                        h2: {
+                            color: theme('colors.brand-gray-200'),
+                        },
+                        h3: {
+                            color: theme('colors.brand-gray-200'),
+                        },
+                        a: {
+                            color: theme('colors.brand-purple'),
+                            '&:hover': {
+                                'background-color': theme('colors.brand-purple-200'),
+                                color: theme('colors.brand-white'),
+                            }
+                        },
+                        'ul li': {
+                            marginTop: '0px',
+                            marginBottom: '0px',
+                        },
+                        'ul ul': {
+                            marginTop: '0px',
+                            marginBottom: '0px',
+                        },
+                    }
+                }
             }),
         },
     },
     variants: {
-        // extend: { typography: ["dark"] }
+        extend: { typography: ["dark"] }
     },
     plugins: [
         require('@tailwindcss/typography'),

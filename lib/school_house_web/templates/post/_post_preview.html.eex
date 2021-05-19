@@ -2,7 +2,7 @@
   <div>
     <a href="#" class="inline-block">
       <%= for tag <- @post.tags do %>
-      <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-brand-light-purple text-primary dark:text-primary-dark">
+      <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-brand-purple-100 dark:bg-brand-purple-800 text-primary dark:text-primary-dark">
         <%= tag %>
       </span>
       <% end %>
