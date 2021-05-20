@@ -4,19 +4,19 @@
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 p-2 dark:text-bold-dark text-brand-white rounded-full bg-brand-purple-800 rounded-full" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
       </svg>
-      <span class="ml-3 text-2xl font-extrabold text-brand-gray dark:text-bold-dark tracking-tight">Elixir School</span>
+      <span class="ml-3 text-2xl font-extrabold text-brand-gray-750 dark:text-bold-dark tracking-tight">Elixir School</span>
     <% end %>
     <ul class="flex">
-      <li class="hover:bg-brand-purple hover:text-white">
+      <li class="hover:bg-brand-purple-800 hover:text-white">
         <%= link(gettext("Why Elixir?"), to: Routes.page_path(@conn, :why, current_locale()), class: "relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-bold") %>
       </li>
       <li class="toggleable hover:bg-brand-purple-800 hover:text-white">
         <%= render("_lesson_menu.html", conn: @conn) %>
       </li>
-      <li class="hover:bg-brand-purple hover:text-white">
+      <li class="hover:bg-brand-purple-800 hover:text-white">
         <%= link("Blog", to: Routes.post_path(@conn, :index), class: "relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-bold") %>
       </li>
-      <li class="hover:bg-brand-purple hover:text-white">
+      <li class="hover:bg-brand-purple-800 hover:text-white">
         <a href="#" class="relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-bold">Get Involved</a>
       </li>
       <li class="hover:bg-brand-purple-800 hover:text-white text-brand-red-500 inline-flex items-center">
