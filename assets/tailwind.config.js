@@ -127,11 +127,10 @@ module.exports = {
                     css: {
                         color: theme('colors.brand-gray-200'),
                         pre: {
-                            'background-color': theme('colors.brand-gray-300'),
-                            color: '#5a6267'
+                            'background-color': theme('colors.brand-gray-800'),
                         },
                         h1: {
-                                color: theme('colors.brand-gray-200')
+                            color: theme('colors.brand-gray-200')
                         },
                         h2: {
                             color: theme('colors.brand-gray-200'),
