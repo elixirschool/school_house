@@ -1,4 +1,4 @@
-<div class="relative inline-block text-left" x-data="{ isOpen: false }">
+<div id="locale-menu" class="relative inline-block text-left" x-data="{ isOpen: false }">
     <div>
         <button @click=" isOpen = !isOpen" type="button" class="relative block inline-flex justify-center rounded-md border-2 border-brand-purple-800 dark:border-brand-purple-200 shadow-sm px-4 py-2 bg-white dark:bg-nav-dark text-sm font-bold text-brand-gray focus:outline-none focus:ring-0 hover:bg-brand-purple-800 hover:text-white" id="locale-menu" aria-expanded="true" aria-haspopup="true">
             <%= current_locale() %>

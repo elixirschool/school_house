@@ -1,4 +1,4 @@
-<nav class="relative bg-nav dark:bg-nav-dark border-b-4 border-brand-purple-800 text-primary dark:text-primary-dark z-10">
+<nav id="nav" class="relative bg-nav dark:bg-nav-dark border-b-4 border-brand-purple-800 text-primary dark:text-primary-dark z-10">
   <div class="container mx-auto flex justify-between">
     <%= link(to: Routes.page_path(@conn, :index, current_locale()), class: "flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0") do %>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 p-2 dark:text-bold-dark text-brand-white rounded-full bg-brand-purple-800 rounded-full" viewBox="0 0 24 24">
@@ -31,7 +31,7 @@
           <div class="relative">
             <input type="checkbox" id="dark-mode-toggle" class="sr-only">
             <div class="block bg-gray-600 w-14 h-8 rounded-full"></div>
-            <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
+            <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full"></div>
           </div>
         </label>
       </li>

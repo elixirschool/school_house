@@ -60,3 +60,14 @@ darkModeToggle.addEventListener('click', function (ev) {
         setDarkMode(false)
     }
 })
+
+setTimeout(() => {
+    document.body.classList.add('transition-all')
+    document.body.classList.add('duration-300')
+    const nav = document.getElementById("nav");
+    nav.classList.add('transition-all')
+    nav.classList.add('duration-300')
+    const localeMenu = document.getElementById("locale-menu");
+    localeMenu.classList.add('transition-all')
+    localeMenu.classList.add('duration-300')
+}, 200)
