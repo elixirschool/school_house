@@ -76,7 +76,7 @@ Influenced by: https://sproutsocial.com/
 input:checked ~ .dot {
   transform: translateX(100%);
   background-color: #48bb78;
-} 
+}
 
 .makeup .hll {background-color: #f4f5f6}
 .makeup {background-color: #ffffff}.makeup .unselectable {
@@ -520,3 +520,16 @@ input:checked ~ .dot {
 .dark .makeup .vm {
   color: #f8f8f2;
 } /* :name_variable_magic */
+
+
+.preload, .preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+body, body * {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
