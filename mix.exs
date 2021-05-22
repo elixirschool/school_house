@@ -43,7 +43,7 @@ defmodule SchoolHouse.MixProject do
       {:makeup_erlang, ">= 0.0.0"},
       {:nimble_publisher, "~> 0.1"},
       {:phoenix, "~> 1.5.9"},
-      {:phoenix_ecto, "~> 4.1"},
+      {:phoenix_ecto, "~> 4.2"},
       {:phoenix_html, "~> 2.14"},
       {:phoenix_live_dashboard, "~> 0.2.0"},
       {:phoenix_live_view, "~> 0.13.0"},
