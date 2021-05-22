@@ -51,6 +51,7 @@ function setDarkMode(on) {
 }
 
 const darkModeToggle = document.getElementById("dark-mode-toggle")
+
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     setDarkMode(true)
 } else {
@@ -65,6 +66,10 @@ darkModeToggle.addEventListener('click', function (ev) {
     }
 })
 
+// remove preload class after the page laods so the styles
+// will transition smoothly when switching between dark and
+// light mode. Without the preload class, the transition will
+// happen on page load if dark mode is enabled
 setTimeout(() => {
     document.body.classList.remove('preload')
 }, 200)
