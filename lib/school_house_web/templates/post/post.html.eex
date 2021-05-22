@@ -1,6 +1,6 @@
 <section class="container w-3/4 mb-6 items-center prose dark:prose-dark">
   <div class="py-6 text-center">
-    <span class="text-4xl leading-8 font-extrabold tracking-tight text-brand-purple-800 dark:text-brand-purple-200sm:text-4xl ">Elixir School</span>
+    <span class="text-4xl leading-8 font-extrabold tracking-tight text-purple dark:text-purple-dark sm:text-4xl ">Elixir School</span>
   </div>
 
   <div class="relative">
@@ -8,21 +8,21 @@
       <div class="w-full border-t border-gray-300"></div>
     </div>
     <div class="relative flex justify-center">
-      <span class="px-2 bg-white dark:bg-body-dark text-sm text-gray-500 dark:text-gray-200">
+      <span class="px-2 bg-white dark:bg-body-dark text-sm text-light dark:text-light-dark">
         Presents
       </span>
     </div>
   </div>
 
   <div class="pt-6 text-center">
-    <span class="text-2xl leading-8 font-extrabold tracking-tight text-brand-gray-750 dark:text-gray-200 sm:text-2xl"><%= @post.title %></span>
+    <span class="text-2xl leading-8 font-extrabold tracking-tight text-primary dark:text-primary-dark sm:text-2xl"><%= @post.title %></span>
   </div>
 
   <div class="py-2 text-center">
-    <span class="text-medium leading-8 tracking-tight text-brand-gray-750 dark:text-gray-200 sm:text-large ">By <%= @post.author %></span>
+    <span class="text-medium leading-8 tracking-tight text-primary dark:text-primary-dark sm:text-large ">By <%= @post.author %></span>
   </div>
 
-  <div class="bg-brand-light-gray rounded-xl p-4 mb-3 text-xl text-gray-500 dark:text-gray-200 sm:mb-4 text-center"><%= raw @post.excerpt %></div>
+  <div class="bg-brand-gray-300 dark:bg-brand-gray-800 rounded-xl p-4 mb-3 text-xl text-light dark:text-light-dark sm:mb-4 text-center"><%= raw @post.excerpt %></div>
 
   <%= raw @post.body %>
 </section>

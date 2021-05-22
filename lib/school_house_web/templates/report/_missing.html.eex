@@ -1,12 +1,12 @@
 <tr class="bg-red-500">
-  <td class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap">
+  <td class="px-6 py-4 text-sm font-medium text-heavy dark:text-heavy-dark whitespace-nowrap">
     <%= @line.original.title %>
   </td>
-  <td class="px-6 py-4 text-sm text-brand-gray-750 dark:text-gray-200 whitespace-nowrap">
+  <td class="px-6 py-4 text-sm text-primary dark:text-primary-dark whitespace-nowrap">
   </td>
-  <td class="px-6 py-4 text-sm text-brand-gray-750 dark:text-gray-200 whitespace-nowrap">
+  <td class="px-6 py-4 text-sm text-primary dark:text-primary-dark whitespace-nowrap">
     <%= friendly_version(@line.original.version) %>
   </td>
-  <td class="px-6 py-4 text-sm text-brand-gray-750 dark:text-gray-200 whitespace-nowrap">
+  <td class="px-6 py-4 text-sm text-primary dark:text-primary-dark whitespace-nowrap">
   </td>
 </tr>

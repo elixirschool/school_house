@@ -1,10 +1,10 @@
 <div class="py-12 bg-body dark:bg-body-dark">
   <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
     <div class="lg:text-center">
-      <p class="mt-2 text-4xl font-extrabold tracking-tight leading-8 text-brand-purple-800 dark:text-brand-purple-200sm:text-4xl">
+      <p class="mt-2 text-4xl font-extrabold tracking-tight leading-8 text-purple dark:text-purple-dark sm:text-4xl">
       <%= gettext("Lessons") %>: <%= gettext("Testing") %>
       </p>
-      <p class="max-w-2xl mt-4 text-xl text-gray-500 dark:text-brand-gray-500 lg:mx-auto">
+      <p class="max-w-2xl mt-4 text-xl text-lighter dark:text-lighter-dark lg:mx-auto">
       <%= gettext("The first step to writing fault tolerant and scalable code is writing bug free code. In these lessons we explore how best to test our Elixir code.") %>
       </p>
     </div>

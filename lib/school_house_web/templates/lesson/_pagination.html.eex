@@ -1,4 +1,4 @@
-<section class="bg-brand-gray-300 dark:bg-brand-gray-800 -mb-16 mt-16 ml-half-screen mr-half-screen w-screen relative left-2/4 right-2/4">
+<section class="bg-footer dark:bg-footer-dark -mb-16 mt-16 ml-half-screen mr-half-screen w-screen relative left-2/4 right-2/4">
   <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:py-12 lg:px-8 items-center">
       <div class="flex md:justify-between flex-col-reverse md:flex-row">
         <div class="md:w-1/3 mt-12 md:mt-0">
@@ -7,19 +7,19 @@
               <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 h-6 w-6 mr-2 hidden md:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
               </svg>
-              <h3 class="leading-tight text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                <%= lesson_link(@conn, @previous.section, @previous.name, "hover:text-brand-gray") do %>
+              <h3 class="leading-tight text-sm font-semibold text-lighter dark:text-lighter-dark tracking-wider uppercase">
+                <%= lesson_link(@conn, @previous.section, @previous.name, "hover:text-primary") do %>
                   Previous lesson
                 <% end %>
               </h3>
             </div>
             <div class="text-center">
-              <p class="text-base font-semibold text-brand-gray-750 dark:text-brand-gray-300 mb-2">
-              <%= lesson_link(@conn, @previous.section, @previous.name, "hover:text-brand-gray") do %>
+              <p class="text-base font-semibold text-primary dark:text-primary-dark mb-2">
+              <%= lesson_link(@conn, @previous.section, @previous.name, "hover:text-primary") do %>
                 <%= @previous.title %>
               <% end %>
               </p>
-              <p class="md:text-left text-center text-sm text-gray-500 dark:text-brand-gray-500 overflow-hidden max-h-16">
+              <p class="md:text-left text-center text-sm text-lighter dark:text-lighter-dark overflow-hidden max-h-16">
                 <%= raw @previous.excerpt %>
               </p>
             </div>
@@ -28,8 +28,8 @@
         <div class="md:w-1/3">
           <%= if @next do %>
             <div class="flex md:justify-end justify-center items-center content-center mb-2">
-              <h3 class="leading-tight text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                <%= lesson_link(@conn, @next.section, @next.name, "hover:text-brand-gray") do %>
+              <h3 class="leading-tight text-sm font-semibold text-lighter dark:text-lighter-dark tracking-wider uppercase">
+                <%= lesson_link(@conn, @next.section, @next.name, "hover:text-primary") do %>
                   Next Lesson
                 <% end %>
               </h3>
@@ -38,12 +38,12 @@
               </svg>
             </div>
             <div class="text-center">
-              <p class="text-base font-semibold text-brand-gray-750 dark:text-brand-gray-300 mb-2">
-                <%= lesson_link(@conn, @next.section, @next.name, "hover:text-brand-gray") do %>
+              <p class="text-base font-semibold text-primary dark:text-primary-dark mb-2">
+                <%= lesson_link(@conn, @next.section, @next.name, "hover:text-primary") do %>
                   <%= @next.title %>
                 <% end %>
               </p>
-              <p class="text-italic md:text-left text-center text-sm text-gray-500 dark:text-brand-gray-500 overflow-hidden max-h-16">
+              <p class="text-italic md:text-left text-center text-sm text-lighter dark:text-lighter-dark overflow-hidden max-h-16">
                 <%= raw @next.excerpt %>
               </p>
             </div>

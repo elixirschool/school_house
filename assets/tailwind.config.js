@@ -17,15 +17,21 @@ module.exports = {
                 'body': {
                     DEFAULT: theme('colors.brand-white'),
                     dark: theme('colors.brand-gray-700')
+                },
+                'purple': {
+                    DEFAULT: theme('colors.brand-purple-800'),
+                    dark: theme('colors.brand-purple-200')
+                },
+                'footer': {
+                    DEFAULT: theme('colors.brand-gray-200'),
+                    dark: theme('colors.brand-gray-800')
                 }
             }),
             colors: {
-
                 // purple
                 'brand-purple-100': '#cfbae6',
                 'brand-purple-200': '#967ab4',
                 'brand-purple-800': '#7c6f89',
-
 
                 // white
                 'brand-white': '#fff',
@@ -33,7 +39,9 @@ module.exports = {
                 // gray
                 'brand-gray-200': '#f5f6f7',
                 'brand-gray-300': '#f4f6f7',
+                'brand-gray-400': '#A1A1AA',
                 'brand-gray-500': '#9fa3a6',
+                'brand-gray-600': '#666666',
                 'brand-gray-700': '#3d4449',
                 'brand-gray-750': '#3c4349',
                 'brand-gray-800': '#31373b',
@@ -41,25 +49,6 @@ module.exports = {
                 // red
                 'brand-red-300': '#f56a6a',
                 'brand-red-500': '#c0394d',
-
-                'dark-border': 'rgba(210,215,217,0.25)',
-                'dark-border-bg': 'rgba(230, 235, 237, 0.75)',
-
-                // old
-                // 'brand-light-gray': '#f4f6f7',
-                // 'brand-gray': '#3c4349',
-                // 'brand-purple': '#7c6f89',
-                // 'brand-light-purple': '#cfbae6',
-                // 'brand-dark-purple': '#967ab4',
-                // 'brand-white': '#fff',
-                // 'dark-gray': '#3d4449',
-                // // 'dark-gray-200': '#31373b',
-
-                // 'dark-fg': '#f5f6f7',
-                // 'light-light-fg': '#9fa3a6',
-                // 'dark-light-fg': '#f5f6f7',
-                // 'dark-fg-light': '#ffffff',
-                // 'dark-accent': '#f56a6a'
             },
             container: {
                 center: true,
@@ -69,16 +58,20 @@ module.exports = {
             },
             textColor: (theme) => ({
                 primary : {
-                    DEFAULT: theme('colors.brand-gray-700'),
+                    DEFAULT: theme('colors.brand-gray-750'),
                     dark: theme('colors.brand-gray-200')
                 },
-                bold: {
-                    DEFAULT: theme('colors.brand-gray-700'),
+                heavy : {
+                    DEFAULT: theme('colors.brand-gray-800'),
                     dark: theme('colors.brand-white')
                 },
                 light: {
-                    DEFAULT: theme('colors.brand-gray-700'),
-                    dark: theme('colors.brand-gray-200')
+                    DEFAULT: theme('colors.brand-gray-600'),
+                    dark: theme('colors.brand-gray-300')
+                },
+                lighter: {
+                    DEFAULT: theme('colors.brand-gray-400'),
+                    dark: theme('colors.brand-gray-500')
                 },
                 purple: {
                     DEFAULT: theme('colors.brand-purple-800'),
@@ -91,11 +84,11 @@ module.exports = {
                         color: theme('colors.brand-gray-750'),
                         maxWidth: 'inherit',
                         pre: {
-                            'background-color': '#f4f5f6',
-                            color: '#5a6267'
+                            'background-color': theme('colors.brand-gray-300'),
+                            color: theme('colors.brand-gray-700')
                         },
                         h1: {
-                                color: theme('colors.brand-gray-750')
+                            color: theme('colors.brand-gray-750')
                         },
                         h2: {
                             color: theme('colors.brand-gray-750'),

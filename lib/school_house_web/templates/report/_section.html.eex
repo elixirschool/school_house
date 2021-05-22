@@ -1,6 +1,6 @@
 <div class="my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
   <div class="px-4 py-5 bg-body dark:bg-body-dark sm:px-6">
-    <h3 class="text-lg font-medium text-gray-900 leading-6">
+    <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
       <%= @section %>
     </h3>
   </div>
@@ -12,16 +12,16 @@
       <table class="min-w-full divide-y divide-gray-200">
         <thead class="bg-gray-50">
           <tr>
-            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-gray-750 dark:text-gray-200">
+            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-primary dark:text-primary-dark">
               <%= gettext("Lesson") %>
             </th>
-            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-gray-750 dark:text-gray-200">
+            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-primary dark:text-primary-dark">
               <%= gettext("Translated Title") %>
             </th>
-            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-gray-750 dark:text-gray-200">
+            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-primary dark:text-primary-dark">
               <%= gettext("Original Version") %>
             </th>
-            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-gray-750 dark:text-gray-200">
+            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-primary dark:text-primary-dark">
               <%= gettext("Translated Version") %>
             </th>
           </tr>

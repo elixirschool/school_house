@@ -20,12 +20,12 @@
       </a>
     </div>
     <div class="ml-3">
-      <p class="text-sm font-medium text-gray-900 dark:text-gray-200">
+      <p class="text-sm font-medium text-heavy dark:text-heavy-dark">
         <a href="#">
           <%= @post.author %>
         </a>
       </p>
-      <div class="flex text-sm text-gray-500 dark:text-gray-300 space-x-1">
+      <div class="flex text-sm text-light dark:text-light-dark space-x-1">
         <time datetime="2020-03-16">
           <%= @post.date %>
         </time>

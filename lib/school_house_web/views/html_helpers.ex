@@ -19,7 +19,7 @@ defmodule SchoolHouseWeb.HtmlHelpers do
 
   def friendly_version({major, minor, patch}), do: "#{major}.#{minor}.#{patch}"
 
-  def lesson_link(conn, section, name, class \\ "block hover:bg-brand-purple-800 hover:dark:bg-brand-purple-200 text-brand-gray-750 dark:text-gray-200 hover:text-white hover:dark:text-brand-gray",
+  def lesson_link(conn, section, name, class \\ "block hover:bg-purple hover:dark:bg-purple text-primary dark:text-primary-dark hover:text-white hover:dark:text-light-dark",
         do: contents
       ) do
     {destination, additional_classes} =

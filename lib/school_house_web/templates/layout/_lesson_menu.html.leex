@@ -1,13 +1,13 @@
 <input type="checkbox" value="selected" id="toggle-one" class="toggle-input">
 <label for="toggle-one" class="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold">Lessons</label>
 <div class="border-t-4 border-brand-purple-800 p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-nav dark:bg-nav-dark">
-    <div class="container mx-auto w-full flex flex-wrap justify-left mx-2 text-brand-gray-750 dark:text-gray-200">
+    <div class="container mx-auto w-full flex flex-wrap justify-left mx-2 text-primary dark:text-primary-dark">
 
         <!-- First column -->
         <ul class="px-4 w-full sm:w-1/4 lg:w-1/5 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
             <!-- Basics -->
             <li>
-                <p class="font-bold text-xl text-brand-gray-750 dark:text-gray-200 mb-2"><%= gettext("Basics") %></p>
+                <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2"><%= gettext("Basics") %></p>
                 <ol class="list-decimal ml-6">
                     <li>
                         <%= lesson_link @conn, :basics, :basics do %>
@@ -93,7 +93,7 @@
         <ul class="px-4 w-full sm:w-1/4 lg:w-1/5 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
             <!-- Intermediate -->
             <li>
-                <p class="font-bold text-xl text-brand-gray-750 dark:text-gray-200 mb-2"><%= gettext("Intermediate") %></p>
+                <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2"><%= gettext("Intermediate") %></p>
                 <ol class="list-decimal ml-6">
                     <li>
                         <%= lesson_link @conn, :intermediate, :mix_tasks do %>
@@ -125,7 +125,7 @@
 
             <!-- Advanced -->
             <li>
-                <p class="font-bold text-xl text-brand-gray-750 dark:text-gray-200 mb-2 pt-6"><%= gettext("Advanced") %></p>
+                <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2 pt-6"><%= gettext("Advanced") %></p>
                 <ol class="list-decimal ml-6">
                     <li>
                         <%= lesson_link @conn, :advanced, :otp_concurrency do %>
@@ -175,7 +175,7 @@
         <ul class="px-4 w-full sm:w-1/4 lg:w-1/5 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
             <!-- Testing -->
             <li>
-                <p class="font-bold text-xl text-brand-gray-750 dark:text-gray-200 mb-2"><%= gettext("Testing") %></p>
+                <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2"><%= gettext("Testing") %></p>
                 <ol class="list-decimal ml-6">
                     <li>
                         <%= lesson_link @conn, :testing, :basics do %>
@@ -208,7 +208,7 @@
 
             <!-- Date Processing -->
             <li>
-                <p class="font-bold text-xl text-brand-gray-750 dark:text-gray-200 mb-2 pt-6"><%= gettext("Data Processing") %></p>
+                <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2 pt-6"><%= gettext("Data Processing") %></p>
                 <ol class="list-decimal ml-6">
                     <li>
                         <%= lesson_link @conn, :data_processing, :genstage do %>
@@ -233,7 +233,7 @@
         <ul class="px-4 w-full sm:w-1/4 lg:w-1/5 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
             <!-- Ecto -->
             <li>
-                <p class="font-bold text-xl text-brand-gray-750 dark:text-gray-200 mb-2"><%= gettext("Ecto") %></p>
+                <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2"><%= gettext("Ecto") %></p>
                 <ol class="list-decimal ml-6">
                     <li>
                         <%= lesson_link @conn, :ecto, :basics do %>
@@ -265,7 +265,7 @@
 
             <!-- Storage -->
             <li>
-                <p class="font-bold text-xl text-brand-gray-750 dark:text-gray-200 mb-2 pt-6"><%= gettext("Storage") %></p>
+                <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2 pt-6"><%= gettext("Storage") %></p>
                 <ol class="list-decimal ml-6">
                     <li>
                         <%= lesson_link @conn, :storage, :ets do %>
@@ -295,7 +295,7 @@
         <ul class="px-4 w-full sm:w-1/4 lg:w-1/5 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
             <!-- Miscellaneous -->
             <li>
-                <p class="font-bold text-xl text-brand-gray-750 dark:text-gray-200 mb-2"><%= gettext("Miscellaneous") %></p>
+                <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2"><%= gettext("Miscellaneous") %></p>
                 <ol class="list-decimal ml-6">
                     <li>
                         <%= lesson_link @conn, :misc, :plug do %>

@@ -1,10 +1,10 @@
 <div class="py-12 bg-body dark:bg-body-dark">
   <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
     <div class="lg:text-center">
-      <p class="mt-2 text-4xl font-extrabold tracking-tight leading-8 text-brand-purple-800 dark:text-brand-purple-200 sm:text-4xl">
+      <p class="mt-2 text-4xl font-extrabold tracking-tight leading-8 text-purple dark:text-purple-dark sm:text-4xl">
         Why Elixir?
       </p>
-      <p class="max-w-2xl mt-4 text-xl text-gray-500 dark:text-gray-300 lg:mx-auto">
+      <p class="max-w-2xl mt-4 text-xl text-light dark:text-light-dark lg:mx-auto">
         Elixir is a wonderful language but don't take our word for it. Let's look at some of the reasons you and your organization should adopt Elixir.
       </p>
     </div>
@@ -17,14 +17,14 @@
       <dl class="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-1 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
         <div class="flex">
           <!-- Heroicon name: outline/check -->
-          <svg class="flex-shrink-0 w-6 h-6 font-bold text-brand-purple-800 dark:text-brand-purple-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
           </svg>
           <div class="ml-3">
-            <dt class="text-lg font-medium text-gray-900 dark:text-gray-200 leading-6">
+            <dt class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
               Immutability
             </dt>
-            <dd class="mt-2 text-base text-gray-500 dark:text-gray-300">
+            <dd class="mt-2 text-base text-light dark:text-light-dark">
               Data is not mutated, rather transformed, into a new set of data.
               By eliminating the ability to mutate state outside of scope, functional programs are often easier to follow and contain fewer bugs.
               This has the added benefit of improving support for concurrency and thus scalability of systems.
@@ -34,14 +34,14 @@
 
         <div class="flex">
           <!-- Heroicon name: outline/check -->
-          <svg class="flex-shrink-0 w-6 h-6 font-bold text-brand-purple-800 dark:text-brand-purple-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
           </svg>
           <div class="ml-3">
-            <dt class="text-lg font-medium text-gray-900 dark:text-gray-200 leading-6">
+            <dt class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
               Focus on Functions
             </dt>
-            <dd class="mt-2 text-base text-gray-500 dark:text-gray-300">
+            <dd class="mt-2 text-base text-light dark:text-light-dark">
               Problems are decomposed into simple functions with an emphasis on no side-effects.
               These "pure functions" always produce the same results for a given input and change nothing.
               Since functions are first class citizens in Functional Programming we're able to easily re-use our functions throughout our applications.
@@ -51,14 +51,14 @@
 
         <div class="flex">
           <!-- Heroicon name: outline/check -->
-          <svg class="flex-shrink-0 w-6 h-6 font-bold text-brand-purple-800 dark:text-brand-purple-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
           </svg>
           <div class="ml-3">
-            <dt class="text-lg font-medium text-gray-900 dark:text-gray-200 leading-6">
+            <dt class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
               Easy to Test
             </dt>
-            <dd class="mt-2 text-base text-gray-500 dark:text-gray-300">
+            <dd class="mt-2 text-base text-light dark:text-light-dark">
               The very nature of functional programming, small functions with no side-effects, makes testing easy.
               Bundled with Elixir is the venerable ExUnit library providing everything necessary to comprehensively test your applications.
             </dd>
@@ -68,8 +68,8 @@
       </dl>
     </div>
     <div>
-      <p class="mt-2 text-3xl font-extrabold text-brand-purple-800 dark:text-brand-purple-200">Functional Programming</p>
-      <p class="mt-4 text-lg text-gray-500 dark:text-gray-300">
+      <p class="mt-2 text-3xl font-extrabold text-purple dark:text-purple-dark">Functional Programming</p>
+      <p class="mt-4 text-lg text-light dark:text-light-dark">
         While its roots are in lambda calculus, functional programming can be fun, easy, and approachable for everyone! By focusing on breaking problems down into simple, side-effect free, functions we can ensure fewer bugs, better test coverage, while incrementally building our solutions through the composition of well tested functions.
       </p>
     </div>
@@ -82,7 +82,7 @@
   </div>
   <div class="relative flex justify-center">
     <span class="px-2 text-gray-500 bg-body dark:bg-body-dark">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-10 h-10 p-2 text-white rounded-full bg-brand-purple" viewBox="0 0 24 24">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-10 h-10 p-2 text-white rounded-full bg-purple" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
       </svg>
     </span>
@@ -93,18 +93,18 @@
 <div class="bg-body dark:bg-body-dark">
   <div class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
     <div>
-      <p class="mt-2 text-3xl font-extrabold text-brand-purple-800 dark:text-brand-purple-200">Feature Packed</p>
-      <p class="mt-4 text-lg text-gray-500 dark:text-gray-300">Elixir and the BEAM virtual machine pack a serious punch when it comes to features. With over 35 years of experience the Erlang runtime system has proven itself time and time again as solid platform for distributed, high-available systems.</p>
+      <p class="mt-2 text-3xl font-extrabold text-purple dark:text-purple-dark">Feature Packed</p>
+      <p class="mt-4 text-lg text-light dark:text-light-dark">Elixir and the BEAM virtual machine pack a serious punch when it comes to features. With over 35 years of experience the Erlang runtime system has proven itself time and time again as solid platform for distributed, high-available systems.</p>
     </div>
     <div class="mt-12 lg:mt-0 lg:col-span-2">
       <dl class="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
         <div class="flex">
           <!-- Heroicon name: outline/check -->
-          <svg class="flex-shrink-0 w-6 h-6 text-brand-purple-800 dark:text-brand-purple-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg class="flex-shrink-0 w-6 h-6 text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
           </svg>
           <div class="ml-3">
-            <dt class="text-lg font-medium text-gray-900 dark:text-gray-200 leading-6">
+            <dt class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
               <%= gettext("Scalable") %>
             </dt>
           </div>
@@ -112,11 +112,11 @@
 
         <div class="flex">
           <!-- Heroicon name: outline/check -->
-          <svg class="flex-shrink-0 w-6 h-6 font-bold text-brand-purple-800 dark:text-brand-purple-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
           </svg>
           <div class="ml-3">
-            <dt class="text-lg font-medium text-gray-900 dark:text-gray-200 leading-6">
+            <dt class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
               Fault Tolerant
             </dt>
           </div>
@@ -124,11 +124,11 @@
 
         <div class="flex">
           <!-- Heroicon name: outline/check -->
-          <svg class="flex-shrink-0 w-6 h-6 font-bold text-brand-purple-800 dark:text-brand-purple-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
           </svg>
           <div class="ml-3">
-            <dt class="text-lg font-medium text-gray-900 dark:text-gray-200 leading-6">
+            <dt class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
               Extensible
             </dt>
           </div>
@@ -136,11 +136,11 @@
 
         <div class="flex">
           <!-- Heroicon name: outline/check -->
-          <svg class="flex-shrink-0 w-6 h-6 font-bold text-brand-purple-800 dark:text-brand-purple-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
           </svg>
           <div class="ml-3">
-            <dt class="text-lg font-medium text-gray-900 dark:text-gray-200 leading-6">
+            <dt class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
               Compatible with Erlang
             </dt>
           </div>
@@ -148,11 +148,11 @@
 
         <div class="flex">
           <!-- Heroicon name: outline/check -->
-          <svg class="flex-shrink-0 w-6 h-6 font-bold text-brand-purple-800 dark:text-brand-purple-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
           </svg>
           <div class="ml-3">
-            <dt class="text-lg font-medium text-gray-900 dark:text-gray-200 leading-6">
+            <dt class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
               Concurrency
             </dt>
           </div>
@@ -160,11 +160,11 @@
 
         <div class="flex">
           <!-- Heroicon name: outline/check -->
-          <svg class="flex-shrink-0 w-6 h-6 font-bold text-brand-purple-800 dark:text-brand-purple-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
           </svg>
           <div class="ml-3">
-            <dt class="text-lg font-medium text-gray-900 dark:text-gray-200 leading-6">
+            <dt class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
               Performant
             </dt>
             </dd>
@@ -181,7 +181,7 @@
   </div>
   <div class="relative flex justify-center">
     <span class="px-2 text-gray-500 bg-body dark:bg-body-dark">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-10 h-10 p-2 text-white rounded-full bg-brand-purple" viewBox="0 0 24 24">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-10 h-10 p-2 text-white rounded-full bg-purple" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
       </svg>
     </span>
@@ -191,97 +191,97 @@
 <div class="bg-body dark:bg-body-dark">
   <div class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
     <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl font-extrabold text-brand-purple-800 dark:text-brand-purple-200">Vibrant Ecosystem</h2>
-      <p class="mt-4 text-lg text-gray-500 dark:text-gray-300">The community and ecosystem that have grown up with the language remain one of the alluring parts of Elixir.</p>
+      <h2 class="text-3xl font-extrabold text-purple dark:text-purple-dark">Vibrant Ecosystem</h2>
+      <p class="mt-4 text-lg text-light dark:text-light-dark">The community and ecosystem that have grown up with the language remain one of the alluring parts of Elixir.</p>
     </div>
     <dl class="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8">
       <div class="flex">
         <!-- Heroicon name: outline/check -->
-        <svg class="flex-shrink-0 w-6 h-6 font-bold text-brand-purple-800 dark:text-brand-purple-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
         </svg>
         <div class="ml-3">
-          <dt class="text-lg font-medium text-gray-900 dark:text-gray-300 leading-6">
+          <dt class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
             Slack
           </dt>
-          <dd class="mt-2 text-base text-gray-500 dark:text-gray-200">
+          <dd class="mt-2 text-base text-light dark:text-light-dark">
           The Elixir Slack is a popular destination for many in the community.
-          <a target="_blank" href="https://elixir-slackin.herokuapp.com/" class="font-bold text-brand-purple-800 dark:text-brand-purple-200">Request your invite today!</a>
+          <a target="_blank" href="https://elixir-slackin.herokuapp.com/" class="font-bold text-purple dark:text-purple-dark">Request your invite today!</a>
           </dd>
         </div>
       </div>
 
       <div class="flex">
         <!-- Heroicon name: outline/check -->
-        <svg class="flex-shrink-0 w-6 h-6 font-bold text-brand-purple-800 dark:text-brand-purple-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
         </svg>
         <div class="ml-3">
-          <dt class="text-lg font-medium text-gray-900 dark:text-gray-300 leading-6">
+          <dt class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
             Discord
           </dt>
-          <dd class="mt-2 text-base text-gray-500 dark:text-gray-200">
+          <dd class="mt-2 text-base text-light dark:text-light-dark">
             A Slack alternative built with Elixir is fast becoming a popular chat option for the community.
-            <a target="_blank" href="https://discord.com/invite/elixir" class="font-bold text-brand-purple-800 dark:text-brand-purple-200">Be sure to check it out!</a>
+            <a target="_blank" href="https://discord.com/invite/elixir" class="font-bold text-purple dark:text-purple-dark">Be sure to check it out!</a>
           </dd>
         </div>
       </div>
 
       <div class="flex">
         <!-- Heroicon name: outline/check -->
-        <svg class="flex-shrink-0 w-6 h-6 font-bold text-brand-purple-800 dark:text-brand-purple-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
         </svg>
         <div class="ml-3">
-          <dt class="text-lg font-medium text-gray-900 dark:text-gray-300 leading-6">
+          <dt class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
             Forum
           </dt>
-          <dd class="mt-2 text-base text-gray-500 dark:text-gray-200">
-          Prefer the forum format for your questions? No problem! Head over to <a class="font-bold text-brand-purple-800 dark:text-brand-purple-200" href="https://elixirforum.com" target="_blank">Elixir Forum</a> to join the conversation.
+          <dd class="mt-2 text-base text-light dark:text-light-dark">
+          Prefer the forum format for your questions? No problem! Head over to <a class="font-bold text-purple dark:text-purple-dark" href="https://elixirforum.com" target="_blank">Elixir Forum</a> to join the conversation.
           </dd>
         </div>
       </div>
 
       <div class="flex">
         <!-- Heroicon name: outline/check -->
-        <svg class="flex-shrink-0 w-6 h-6 font-bold text-brand-purple-800 dark:text-brand-purple-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
         </svg>
         <div class="ml-3">
-          <dt class="text-lg font-medium text-gray-900 dark:text-gray-300 leading-6">
+          <dt class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
             Meetups
           </dt>
-          <dd class="mt-2 text-base text-gray-500 dark:text-gray-200">
-          With over 150 meetups, you're sure to find local Elixir enthusiasts. Check out <a href="https://www.meetup.com/topics/elixir/" target="_blank" class="font-bold text-brand-purple-800 dark:text-brand-purple-200">Meetup.com</a> for more.
+          <dd class="mt-2 text-base text-light dark:text-light-dark">
+          With over 150 meetups, you're sure to find local Elixir enthusiasts. Check out <a href="https://www.meetup.com/topics/elixir/" target="_blank" class="font-bold text-purple dark:text-purple-dark">Meetup.com</a> for more.
           </dd>
         </div>
       </div>
 
       <div class="flex">
         <!-- Heroicon name: outline/check -->
-        <svg class="flex-shrink-0 w-6 h-6 font-bold text-brand-purple-800 dark:text-brand-purple-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
         </svg>
         <div class="ml-3">
-          <dt class="text-lg font-medium text-gray-900 dark:text-gray-300 leading-6">
+          <dt class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
             Hashtags
           </dt>
-          <dd class="mt-2 text-base text-gray-500 dark:text-gray-200">
-          Be sure to follow the popular Elixir hashtags <a href="https://twitter.com/hashtag/MyElixirStatus" target="_blank" class="font-bold text-brand-purple-800 dark:text-brand-purple-200">#MyElixirStatus</a>, <a href="https://twitter.com/hashtag/WeBEAMTogether" target="_blank" class="font-bold text-brand-purple-800 dark:text-brand-purple-200">#WeBEAMTogether</a>, and <a href="https://twitter.com/hashtag/ElixirLang" target="_blank" class="font-bold text-brand-purple-800 dark:text-brand-purple-200">#Elixirlang</a> on Twitter.
+          <dd class="mt-2 text-base text-light dark:text-light-dark">
+          Be sure to follow the popular Elixir hashtags <a href="https://twitter.com/hashtag/MyElixirStatus" target="_blank" class="font-bold text-purple dark:text-purple-dark">#MyElixirStatus</a>, <a href="https://twitter.com/hashtag/WeBEAMTogether" target="_blank" class="font-bold text-purple dark:text-purple-dark">#WeBEAMTogether</a>, and <a href="https://twitter.com/hashtag/ElixirLang" target="_blank" class="font-bold text-purple dark:text-purple-dark">#Elixirlang</a> on Twitter.
           </dd>
         </div>
       </div>
 
       <div class="flex">
         <!-- Heroicon name: outline/check -->
-        <svg class="flex-shrink-0 w-6 h-6 font-bold text-brand-purple-800 dark:text-brand-purple-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
         </svg>
         <div class="ml-3">
-          <dt class="text-lg font-medium text-gray-900 dark:text-gray-300 leading-6">
+          <dt class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
             Conferences
           </dt>
-          <dd class="mt-2 text-base text-gray-500 dark:text-gray-200">
+          <dd class="mt-2 text-base text-light dark:text-light-dark">
             More to come...
           </dd>
         </div>
