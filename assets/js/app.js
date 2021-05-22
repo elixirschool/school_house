@@ -39,10 +39,14 @@ function setDarkMode(on) {
         darkModeToggle.checked = true
         document.documentElement.classList.add('dark')
         localStorage.theme = 'dark'
+        document.getElementById('sun-icon').classList.add('hidden')
+        document.getElementById('moon-icon').classList.remove('hidden')
     } else {
         darkModeToggle.checked = false
         document.documentElement.classList.remove('dark')
         localStorage.theme = 'light'
+        document.getElementById('moon-icon').classList.add('hidden')
+        document.getElementById('sun-icon').classList.remove('hidden')
     }
 }
 

@@ -1,17 +1,17 @@
-<div class="py-12 bg-white">
+<div class="py-12 bg-body dark:bg-body-dark">
   <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
     <div class="lg:text-center">
-      <p class="mt-2 text-4xl font-extrabold tracking-tight leading-8 text-brand-purple sm:text-4xl">
+      <p class="mt-2 text-4xl font-extrabold tracking-tight leading-8 text-brand-purple-800 dark:text-brand-purple-200 sm:text-4xl">
       Elixir Podcasts
       </p>
-      <p class="max-w-2xl mt-4 text-xl text-gray-500 lg:mx-auto">
+      <p class="max-w-2xl mt-4 text-xl text-gray-500 dark:text-gray-300 lg:mx-auto">
       Check out all the great of Podcasts that focus on Elixir and the BEAM ecosystem!
       </p>
     </div>
   </div>
 </div>
 
-<div class="bg-white">
+<div class="bg-body dark:bg-body-dark">
   <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24">
     <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
       <div class="lg:col-span-3">
@@ -26,14 +26,14 @@
               </a>
               <div class="font-medium text-md leading-6 space-y-1">
                 <%= link(to: podcast.website) do %>
-                  <h3 class="text-xl font-medium text-brand-purple"><%= podcast.name %></h3>
+                  <h3 class="text-xl font-medium text-brand-purple-800 dark:text-brand-purple-200"><%= podcast.name %></h3>
                   <%= if podcast.language do %>
-                    <p class="text-brand-gray"><%= podcast.language %></p>
+                    <p class="text-brand-gray-750 dark:text-gray-200"><%= podcast.language %></p>
                   <% end %>
                 <% end %>
               </div>
               <div class="text-lg">
-                <p class="text-brand-gray"><%= podcast.about %></p>
+                <p class="text-brand-gray-750 dark:text-gray-200"><%= podcast.about %></p>
               </div>
             </div>
           </li>

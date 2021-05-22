@@ -1,4 +1,4 @@
-<tr class="bg-white">
+<tr class="bg-body dark:bg-body-dark">
   <td class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap">
     <%= @line.name %>
   </td>

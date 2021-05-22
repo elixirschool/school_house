@@ -75,7 +75,6 @@ Influenced by: https://sproutsocial.com/
 
 input:checked ~ .dot {
   transform: translateX(100%);
-  background-color: #48bb78;
 }
 
 .makeup .hll {background-color: #f4f5f6}
