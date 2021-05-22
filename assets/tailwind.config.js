@@ -139,7 +139,7 @@ module.exports = {
                             color: theme('colors.brand-gray-200'),
                         },
                         a: {
-                            color: theme('colors.brand-purple-100'),
+                            color: theme('colors.brand-purple-200'),
                             '&:hover': {
                                 'background-color': theme('colors.brand-purple-200'),
                                 color: theme('colors.brand-white'),

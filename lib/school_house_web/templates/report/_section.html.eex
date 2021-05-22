@@ -12,16 +12,16 @@
       <table class="min-w-full divide-y divide-gray-200">
         <thead class="bg-gray-50">
           <tr>
-            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-gray">
+            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-gray-750 dark:text-gray-200">
               <%= gettext("Lesson") %>
             </th>
-            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-gray">
+            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-gray-750 dark:text-gray-200">
               <%= gettext("Translated Title") %>
             </th>
-            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-gray">
+            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-gray-750 dark:text-gray-200">
               <%= gettext("Original Version") %>
             </th>
-            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-gray">
+            <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-gray-750 dark:text-gray-200">
               <%= gettext("Translated Version") %>
             </th>
           </tr>

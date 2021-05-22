@@ -1,6 +1,6 @@
 <div class="bg-body dark:bg-body-dark">
   <div class="max-w-2xl px-4 py-16 mx-auto text-center sm:py-20 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-extrabold text-brand-purple sm:text-4xl">
+    <h2 class="text-3xl font-extrabold text-brand-purple-800 dark:text-brand-purple-200 sm:text-4xl">
       <span class="block"><%= @title %></span>
     </h2>
     <p class="mt-4 text-lg to-brand-gray leading-6"><%= @message %></p>

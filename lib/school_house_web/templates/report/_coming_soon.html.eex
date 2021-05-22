@@ -2,7 +2,7 @@
   <td class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap">
     <%= @line.name %>
   </td>
-  <td colspan=3 class="px-6 py-4 text-sm text-center text-brand-gray whitespace-nowrap">
+  <td colspan=3 class="px-6 py-4 text-sm text-center text-brand-gray-750 dark:text-gray-200 whitespace-nowrap">
     Coming Soon!
   </td>
 </tr>
