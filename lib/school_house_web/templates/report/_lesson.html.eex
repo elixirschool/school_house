@@ -1,14 +1,14 @@
 <tr class="<%= translation_status_css_class(@line) %>">
-  <td class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap">
+  <td class="px-6 py-4 text-sm font-medium text-heavy dark:text-heavy-dark whitespace-nowrap">
     <%= @line.original.title %>
   </td>
-  <td class="px-6 py-4 text-sm text-brand-gray whitespace-nowrap">
+  <td class="px-6 py-4 text-sm text-primary dark:text-primary-dark whitespace-nowrap">
     <%= @line.lesson.title %>
   </td>
-  <td class="px-6 py-4 text-sm text-brand-gray whitespace-nowrap">
+  <td class="px-6 py-4 text-sm text-primary dark:text-primary-dark whitespace-nowrap">
     <%= friendly_version(@line.original.version) %>
   </td>
-  <td class="px-6 py-4 text-sm text-brand-gray whitespace-nowrap">
+  <td class="px-6 py-4 text-sm text-primary dark:text-primary-dark whitespace-nowrap">
     <%= friendly_version(@line.lesson.version) %>
   </td>
 </tr>

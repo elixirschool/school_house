@@ -1,6 +1,6 @@
-<div class="bg-white">
+<div class="bg-body dark:bg-body-dark">
   <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
-    <div class="px-6 py-10 bg-brand-purple rounded-3xl sm:py-16 sm:px-12 lg:p-20 lg:flex lg:items-center">
+    <div class="px-6 py-10 bg-purple rounded-3xl sm:py-16 sm:px-12 lg:p-20 lg:flex lg:items-center">
       <div class="lg:w-0 lg:flex-1">
         <h2 class="text-3xl font-extrabold tracking-tight text-white">
           Sign up for our newsletter
@@ -13,7 +13,7 @@
         <form class="sm:flex">
           <label for="emailAddress" class="sr-only">Email address</label>
           <input id="emailAddress" name="emailAddress" type="email" autocomplete="email" required class="w-full px-5 py-3 placeholder-gray-500 border-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white rounded-md" placeholder="Enter your email">
-          <button type="submit" class="flex items-center justify-center w-full px-5 py-3 mt-3 text-base font-medium text-white border border-transparent rounded-md bg-brand-red hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0">
+          <button type="submit" class="flex items-center justify-center w-full px-5 py-3 mt-3 text-base font-medium text-white border border-transparent rounded-md bg-brand-red-500 hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0">
             Notify me
           </button>
         </form>
