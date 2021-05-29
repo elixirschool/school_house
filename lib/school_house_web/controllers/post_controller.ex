@@ -13,13 +13,8 @@ defmodule SchoolHouseWeb.PostController do
   end
 
   def show(conn, %{"slug" => slug}) do
-    case Posts.get(slug) do
-      %{} = post ->
-        render(conn, "post.html", post: post)
-
-      nil ->
-        nil
-    end
+    post = Posts.get(slug)
+    render(conn, "post.html", post: post)
   end
 
   defp current_page(params) do
