@@ -11,7 +11,8 @@ config :school_house,
   ecto_repos: [SchoolHouse.Repo],
   lesson_dir: "content/lessons",
   blog_dir: "content/posts/**/*.md",
-  podcast_dir: "content/podcasts/*.md"
+  podcast_dir: "content/podcasts/*.md",
+  conference_dir: "content/conferences/*.md"
 
 # Configures the endpoint
 config :school_house, SchoolHouseWeb.Endpoint,

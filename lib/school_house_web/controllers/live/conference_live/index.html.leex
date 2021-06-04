@@ -1,0 +1,41 @@
+<div>
+  <table class="md:w-11/12 lg:w-8/12 divide-y divide-gray-200 mx-auto">
+    <thead class="bg-gray-50">
+      <tr>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Name
+        </th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Location
+        </th>
+        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          Date
+        </th>
+      </tr>
+    </thead>
+    <tbody class="bg-white divide-y divide-gray-200">
+      <%= for conference <- @conferences do %>
+        <tr>
+          <td class="px-6 py-4 whitespace-nowrap">
+            <div class="ml-4">
+              <a href="<%= conference.link %>"><%= conference.name %></a>
+            </div>
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap">
+            <div class="text-sm text-gray-900">
+              <p><%= conference.location %></p>
+            </div>
+          </td>
+          <%# <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                  Active
+                </span>
+              </td> %>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+            <p><%= conference.date %></p>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,7 +1,9 @@
 defmodule SchoolHouseWeb.PageController do
   use SchoolHouseWeb, :controller
 
-  alias SchoolHouse.{Lessons, Podcasts, Posts}
+  import Phoenix.LiveView.Helpers
+
+  alias SchoolHouse.{Conferences, Lessons, Podcasts, Posts}
 
   def index(conn, _params) do
     render(conn, "index.html", posts: recent_posts())
@@ -9,6 +11,10 @@ defmodule SchoolHouseWeb.PageController do
 
   def podcasts(conn, _params) do
     render(conn, "podcasts.html", podcasts: Podcasts.list())
+  end
+
+  def conferences(conn, _params) do
+    render(conn, "conferences.html", conferences: Conferences.list())
   end
 
   def privacy(conn, _params) do

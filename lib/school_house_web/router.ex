@@ -26,6 +26,7 @@ defmodule SchoolHouseWeb.Router do
 
     get "/privacy", PageController, :privacy
     get "/podcasts", PageController, :podcasts
+    get "/conferences", PageController, :conferences
 
     get "/:locale", PageController, :index
     get "/:locale/report", ReportController, :index
