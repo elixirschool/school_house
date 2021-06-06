@@ -7,7 +7,8 @@ defmodule SchoolHouse.Content.Conference do
     :series,
     :link,
     :date,
-    :location
+    :location,
+    :country
   ]
 
   def build(_filename, attrs, _body) do

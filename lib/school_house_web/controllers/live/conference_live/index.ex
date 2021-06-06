@@ -6,7 +6,7 @@ defmodule SchoolHouseWeb.ConferenceLive.Index do
   alias SchoolHouse.Conferences
 
   @impl true
-  def mount(_params, session, socket) do
+  def mount(_params, _session, socket) do
     conferences = Conferences.list()
     filters = default_filters()
     countries = countries()
@@ -60,7 +60,7 @@ defmodule SchoolHouseWeb.ConferenceLive.Index do
     Conferences.list()
   end
 
-  defp query_conferences(%{country: country, online: "true", inperson: "false"}) do
+  defp query_conferences(%{country: _, online: "true", inperson: "false"}) do
     []
   end
 
