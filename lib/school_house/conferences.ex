@@ -6,5 +6,31 @@ defmodule SchoolHouse.Conferences do
     from: Application.compile_env!(:school_house, :conference_dir),
     as: :conferences
 
-  def list, do: @conferences
+  @online "Online"
+
+  def list do
+    @conferences
+    |> Enum.sort(&(Date.compare(&1.date, &2.date) == :gt))
+  end
+
+  def countries do
+    @conferences
+    |> Enum.map(& &1.country)
+    |> Enum.reject(&is_nil/1)
+  end
+
+  def online() do
+    @conferences
+    |> Enum.filter(&(&1.location == @online))
+  end
+
+  def in_person() do
+    @conferences
+    |> Enum.filter(&(&1.location != @online))
+  end
+
+  def by_country(country) do
+    @conferences
+    |> Enum.filter(&(&1.country == country))
+  end
 end
