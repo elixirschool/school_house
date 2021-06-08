@@ -13,4 +13,5 @@ config :school_house, SchoolHouseWeb.Gettext, locales: ~w(en es)
 
 config :school_house,
   lesson_dir: "test/support/content/lessons",
-  blog_dir: "test/support/content/posts/**/*.md"
+  blog_dir: "test/support/content/posts/**/*.md",
+  conference_dir: "test/support/content/conferences/**/*.md"

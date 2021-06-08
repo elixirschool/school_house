@@ -14,23 +14,23 @@ defmodule SchoolHouse.Conferences do
   end
 
   def countries do
-    @conferences
+    list()
     |> Enum.map(& &1.country)
     |> Enum.reject(&is_nil/1)
   end
 
   def online() do
-    @conferences
+    list()
     |> Enum.filter(&(&1.location == @online))
   end
 
   def in_person() do
-    @conferences
+    list()
     |> Enum.filter(&(&1.location != @online))
   end
 
   def by_country(country) do
-    @conferences
+    list()
     |> Enum.filter(&(&1.country == country))
   end
 end
