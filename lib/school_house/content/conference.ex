@@ -1,12 +1,12 @@
 defmodule SchoolHouse.Content.Conference do
   @moduledoc false
 
-  @enforce_keys [:name, :link, :date, :location]
+  @enforce_keys [:name, :link, :date]
   defstruct [
     :name,
-    :series,
     :link,
     :date,
+    :series,
     :location,
     :country
   ]

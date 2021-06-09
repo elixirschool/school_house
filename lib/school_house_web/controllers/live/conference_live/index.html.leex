@@ -2,16 +2,12 @@
   <%= f = form_for :filters, "#", id: "filter-form", class: "flex-row flex items-center mb-6 px-2 text-primary dark:text-primary-dark", phx_change: "filter" %>
     <p class="text-light dark:text-light-dark mr-4">Filter</p>
     <div class="mx-2">
-      <%= checkbox f, :online, id: "online-only", checked: @filters.online == "true" %>
+      <%= checkbox f, :online, id: "online-only", checked: filter_is_online?(@filters) %>
       <label for="online-only">Online</label>
-    </div>
-    <div class="mx-2">
-      <%= checkbox f, :inperson, id: "inperson-only", checked: @filters.inperson == "true" %>
-      <label for="inperson-only">In Person</label>
     </div>
     <div class="ml-auto">
       <label for="country-select" class="pr-2">Country</label>
-      <%= select f, :country, Enum.concat(["-": ""], @countries), selected: @filters.country, class: "w-40 pl-3 pr-6 appearance-none bg-nav dark:bg-nav-dark" %>
+      <%= select f, :country, @country_options, selected: country_filter(@filters), class: "w-40 pl-3 pr-6 appearance-none bg-nav dark:bg-nav-dark" %>
     </div>
   </form>
   <div>

@@ -27,16 +27,11 @@ defmodule SchoolHouse.ConferencesTest do
       online_conferences = Conferences.online()
 
       assert 1 == length(online_conferences)
-      assert hd(online_conferences) |> Map.get(:location) == "Online"
-    end
-  end
 
-  describe "in_person/0" do
-    test "returns just the in person conferences" do
-      in_person_conferences = Conferences.in_person()
-
-      assert 1 == length(in_person_conferences)
-      assert hd(in_person_conferences) |> Map.get(:location) != "Online"
+      assert online_conferences
+             |> hd()
+             |> Map.get(:location)
+             |> is_nil()
     end
   end
 
