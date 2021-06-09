@@ -14,8 +14,7 @@ defmodule SchoolHouseWeb.ConferenceLiveIndexTest do
     test "applying no filters returns both rows", %{conn: conn} do
       {:ok, view, html} = live_isolated(conn, SchoolHouseWeb.ConferenceLive.Index, session: %{})
 
-      filtered_view =
-        IndexTestHelpers.apply_filter(view, %{filters: %{"online" => "false", "country" => ""}})
+      filtered_view = IndexTestHelpers.apply_filter(view, %{filters: %{"online" => "false", "country" => ""}})
 
       assert filtered_view =~ "Test In Person Conference"
       assert filtered_view =~ "Test Online Conference"
