@@ -1,12 +1,13 @@
-<nav id="nav" class="relative bg-nav dark:bg-nav-dark border-b-4 border-brand-purple-800 text-primary dark:text-primary-dark z-10">
-  <div class="container mx-auto flex justify-between">
-    <%= link(to: Routes.page_path(@conn, :index, current_locale()), class: "flex title-font font-medium items-center text-heavy dark:text-heavy-dark mb-4 md:mb-0") do %>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 p-2 text-brand-white rounded-full bg-purple rounded-full" viewBox="0 0 24 24">
+<div class="flex flex-row fixed md:static h-full md:h-auto z-10 md:w-full">
+<nav id="nav" class="w-64 md:w-full relative bg-nav dark:bg-nav-dark border-b-4 border-brand-purple-800 text-primary dark:text-primary-dark shadow-md transition-all duration-500 overflow-y-scroll md:overflow-y-visible">
+  <div class="container mx-auto flex flex-col md:flex-row justify-between">
+    <%= link(to: Routes.page_path(@conn, :index, current_locale()), class: "flex title-font font-medium items-center text-heavy dark:text-heavy-dark mb-4 md:mb-0 mx-auto md:mx-0 mt-6 md:mt-0") do %>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 p-2 text-brand-white rounded-full bg-purple" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
       </svg>
       <span class="ml-3 text-2xl font-extrabold text-primary dark:text-primary-dark tracking-tight">Elixir School</span>
     <% end %>
-    <ul class="flex">
+    <ul class="flex flex-col md:flex-row">
       <li class="hover:bg-purple hover:text-white">
         <%= link(gettext("Why Elixir?"), to: Routes.page_path(@conn, :why, current_locale()), class: "relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-bold") %>
       </li>
@@ -20,13 +21,13 @@
         <a href="#" class="relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-bold">Get Involved</a>
       </li>
       <li class="hover:bg-purple hover:text-white text-brand-red-500 inline-flex items-center">
-        <a class="relative inline-flex items-center py-6 lg:p-6 text-sm lg:text-base font-bold">Support
+        <a class="relative inline-flex items-center py-6 px-4 lg:p-6 text-sm lg:text-base font-bold">Support
           <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
           </svg>
         </a>
       </li>
-      <li class="inline-flex items-center justify-center px-2">
+      <li class="inline-flex items-center md:justify-center px-4 md:px-2">
         <label for="dark-mode-toggle" class="flex items-center cursor-pointer">
           <div class="relative">
             <input type="checkbox" id="dark-mode-toggle" class="sr-only">
@@ -55,9 +56,13 @@
           </div>
         </label>
       </li>
-      <li class="inline-flex items-center justify-center ml-4">
+      <li class="inline-flex items-center md:justify-center ml-4 md:ml-4 mt-4 md:mt-0">
         <%= render("_locale_menu.html", conn: @conn) %>
       </li>
     </ul>
   </div>
 </nav>
+<div id="menu-toggle-button" class="md:hidden w-8 h-8 mt-6 ml-2">
+     <svg  fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+  </div>
+</div>
