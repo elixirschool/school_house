@@ -1,7 +1,7 @@
-FROM elixir:1.10.0-alpine AS build
+FROM elixir:1.12.0-alpine AS build
 
 # install build dependencies
-RUN apk add --no-cache build-base npm git python
+RUN apk add --no-cache build-base npm git python3
 
 # prepare build dir
 WORKDIR /app
@@ -26,14 +26,11 @@ COPY lib lib
 COPY assets assets
 COPY priv priv
 
-# grab images
 COPY Makefile Makefile
 RUN make content
 
 RUN npm run --prefix ./assets deploy
-RUN mix phx.digest
-
-RUN mix do compile, release
+RUN mix do phx.digest, compile, school_house.gen.sitemap, school_house.gen.rss, release
 
 # prepare release image
 FROM alpine:3.9 AS app
