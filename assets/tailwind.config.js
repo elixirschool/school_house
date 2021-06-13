@@ -78,6 +78,9 @@ module.exports = {
                     dark: theme('colors.brand-purple-200')
                 }
             }),
+            transitionProperty: {
+                'margin': 'margin'
+            },
             typography: (theme) => ({
                 DEFAULT: {
                     css: {
