@@ -1,5 +1,5 @@
 <div class="flex flex-row fixed md:relative h-full md:h-auto z-10 md:w-full">
-<nav id="nav" class="w-64 md:w-full relative bg-nav dark:bg-nav-dark border-b-4 border-brand-purple-800 text-primary dark:text-primary-dark shadow-md transition-margin duration-500 overflow-y-scroll md:overflow-y-visible -ml-64 md:ml-0">
+<nav id="nav" class="w-64 md:w-full relative bg-nav dark:bg-nav-dark md:border-b-4 border-brand-purple-800 text-primary dark:text-primary-dark shadow-md transition-margin duration-500 overflow-y-scroll md:overflow-y-visible -ml-64 md:ml-0">
   <div class="container mx-auto flex flex-col md:flex-row justify-between">
     <%= link(to: Routes.page_path(@conn, :index, current_locale()), class: "flex title-font font-medium items-center text-heavy dark:text-heavy-dark mb-4 md:mb-0 mx-auto md:mx-0 mt-6 md:mt-0") do %>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 p-2 text-brand-white rounded-full bg-purple" viewBox="0 0 24 24">
@@ -7,22 +7,22 @@
       </svg>
       <span class="ml-3 text-2xl font-extrabold text-primary dark:text-primary-dark tracking-tight">Elixir School</span>
     <% end %>
-    <div class="mx-auto md:ml-auto md:mr-0 flex flex-col-reverse md:flex-row">
-    <ul class="flex flex-col md:flex-row">
-      <li class="hover:bg-purple hover:text-white">
-        <%= link(gettext("Why Elixir?"), to: Routes.page_path(@conn, :why, current_locale()), class: "relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-bold") %>
+    <div class="w-full md:w-auto mx-auto md:ml-auto md:mr-0 flex flex-col-reverse md:flex-row">
+    <ul class="flex flex-col md:flex-row md:items-center">
+      <li class="hover:bg-purple hover:text-white px-4 md:px-0">
+        <%= link(gettext("Why Elixir?"), to: Routes.page_path(@conn, :why, current_locale()), class: "relative block py-6 px-4 lg:p-6 text-sm md:text-center lg:text-base font-bold") %>
       </li>
-      <li class="toggleable hover:bg-purple hover:text-white">
+      <li class="toggleable hover:bg-purple hover:text-white px-4 md:px-0">
         <%= render("_lesson_menu.html", conn: @conn) %>
       </li>
-      <li class="hover:bg-purple hover:text-white">
-        <%= link("Blog", to: Routes.post_path(@conn, :index), class: "relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-bold") %>
+      <li class="hover:bg-purple hover:text-white px-4 md:px-0">
+        <%= link("Blog", to: Routes.post_path(@conn, :index), class: "relative block py-6 px-4 lg:p-6 text-sm md:text-center lg:text-base font-bold") %>
       </li>
-      <li class="hover:bg-purple hover:text-white">
-        <a href="#" class="relative block py-6 px-4 lg:p-6 text-sm lg:text-base font-bold">Get Involved</a>
+      <li class="hover:bg-purple hover:text-white px-4 md:px-0">
+        <a href="#" class="relative block py-6 px-4 lg:p-6 text-sm md:text-center lg:text-base font-bold">Get Involved</a>
       </li>
-      <li class="hover:bg-purple hover:text-white text-brand-red-500 inline-flex items-center">
-        <a class="relative inline-flex items-center py-6 px-4 lg:p-6 text-sm lg:text-base font-bold">Support
+      <li class="hover:bg-purple hover:text-white px-4 text-brand-red-500 inline-flex items-center">
+        <a class="relative inline-flex items-center py-6 px-4 lg:p-6 text-sm md:text-center lg:text-base font-bold">Support
           <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
           </svg>
