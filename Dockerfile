@@ -17,8 +17,6 @@ ENV MIX_ENV=prod
 COPY mix.exs mix.lock ./
 COPY config config
 RUN mix do deps.get, deps.compile
-
-# compile and build release
 COPY lib lib
 
 # build assets
@@ -26,21 +24,12 @@ COPY assets/package.json assets/package-lock.json ./assets/
 RUN npm --prefix ./assets ci --progress=false --no-audit --loglevel=error
 
 COPY priv priv
-COPY assets assets
 
-RUN git clone https://github.com/elixirschool/elixirschool.git content && \
-    cd content && \
-    git fetch --all && \
-    git checkout content-only-changes && \
-    cd .. && \
-    mkdir -p assets/static/images && \
-    mv content/images/* assets/static/images
+RUN make content
 
 RUN npm run --prefix ./assets deploy
 RUN mix phx.digest
 
-# uncomment COPY if rel/ exists
-# COPY rel rel
 RUN mix do compile, release
 
 # prepare release image

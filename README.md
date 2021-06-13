@@ -6,18 +6,10 @@ By leveraging Dashbit's [NimblePublisher](https://github.com/dashbitco/nimble_pu
 
 ## Development
 
-At this time there's a little more work to setup for local development.
-We'll need to checkout a specific branch from `elixirschool/elixirschool` that's already had some processing done to the lessons to work with NimblePublisher. We'll also need to link the images in the aforementioned branch to our assets folder for Phoenix to pickup.
+To get up and running all we need is a single command:
 
-```shell
-$ git clone git@github.com:elixirschool/school_house.git
-$ cd school_house
-$ git clone git@github.com:elixirschool/elixirschool.git content
-$ cd content
-$ git fetch --all
-$ git checkout lessons-only
-$ cd ..
-$ ln -s content/images assets/static
+```elixir
+$ make setup
 ```
 
-From here the rest is as you would expect with Phoenix! :tada:
+This will fetch our dependencies and setup our content from the external repository.

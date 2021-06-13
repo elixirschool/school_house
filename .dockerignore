@@ -1,0 +1,8 @@
+content/
+README.md
+test/
+.git/
+.github/
+.credo.exs
+.formatter.exs
+heroku.yml
