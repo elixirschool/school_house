@@ -1,5 +1,5 @@
 <section class="text-primary dark:text-primary-dark body-font">
-  <div class="container px-5 py-24 mx-auto">
+  <div class="container px-5 py-20 md:py-24 mx-auto">
     <div class="items-center text-center">
       <p class="mb-6 text-4xl font-extrabold tracking-tight leading-8 text-purple dark:text-purple-dark sm:text-4xl">
         Welcome to Elixir School!
