@@ -30,7 +30,11 @@ COPY Makefile Makefile
 RUN make content
 
 RUN npm run --prefix ./assets deploy
-RUN mix do phx.digest, compile, school_house.gen.sitemap, school_house.gen.rss, release
+RUN mix do phx.digest, \
+    compile, \
+    school_house.gen.sitemap,  \
+    school_house.gen.rss, \
+    release
 
 # prepare release image
 FROM alpine:3.9 AS app
