@@ -3,18 +3,20 @@ defmodule SchoolHouseWeb.PostController do
 
   alias SchoolHouse.Posts
 
+  @page_title "Blog"
+
   def index(conn, params) do
     posts =
       params
       |> current_page()
       |> Posts.page()
 
-    render(conn, "index.html", posts: posts, pages: Posts.pages())
+    render(conn, "index.html", page_title: @page_title, posts: posts, pages: Posts.pages())
   end
 
   def show(conn, %{"slug" => slug}) do
     post = Posts.get(slug)
-    render(conn, "post.html", post: post)
+    render(conn, "post.html", page_title: @page_title, post: post)
   end
 
   defp current_page(params) do

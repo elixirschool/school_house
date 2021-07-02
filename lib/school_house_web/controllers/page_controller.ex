@@ -4,15 +4,15 @@ defmodule SchoolHouseWeb.PageController do
   alias SchoolHouse.{Lessons, Podcasts, Posts}
 
   def index(conn, _params) do
-    render(conn, "index.html", posts: recent_posts())
+    render(conn, "index.html", page_title: "Home", posts: recent_posts())
   end
 
   def podcasts(conn, _params) do
-    render(conn, "podcasts.html", podcasts: Podcasts.list())
+    render(conn, "podcasts.html", page_title: "Podcasts", podcasts: Podcasts.list())
   end
 
   def conferences(conn, _params) do
-    render(conn, "conferences.html")
+    render(conn, "conferences.html", page_title: "Conferences")
   end
 
   def privacy(conn, _params) do

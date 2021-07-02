@@ -89,7 +89,7 @@ input:checked ~ .dot {
 .makeup table td { padding: 2px; }
 .makeup table pre { margin: 0; }
 .makeup .cm {
-  color: #999988;
+  color: #717160;
   font-style: italic;
 }
 .makeup .cp {
@@ -97,7 +97,7 @@ input:checked ~ .dot {
   font-weight: bold;
 }
 .makeup .c1 {
-  color: #999988;
+  color: #717160;
   font-style: italic;
 }
 .makeup .cs {
@@ -106,7 +106,7 @@ input:checked ~ .dot {
   font-style: italic;
 }
 .makeup .c, .makeup .cd {
-  color: #999988;
+  color: #717160;
   font-style: italic;
 }
 .makeup .err {
@@ -175,22 +175,22 @@ input:checked ~ .dot {
   font-weight: bold;
 }
 .makeup .mf {
-  color: #009999;
+  color: #008080;
 }
 .makeup .mh {
-  color: #009999;
+  color: #008080;
 }
 .makeup .il {
-  color: #009999;
+  color: #008080;
 }
 .makeup .mi {
-  color: #009999;
+  color: #008080;
 }
 .makeup .mo {
-  color: #009999;
+  color: #008080;
 }
 .makeup .m, .makeup .mb, .makeup .mx {
-  color: #009999;
+  color: #008080;
 }
 .makeup .sb {
   color: #d14;
@@ -235,7 +235,7 @@ input:checked ~ .dot {
   color: #999999;
 }
 .makeup .nb {
-  color: #0086B3;
+  color: #007AA3;
 }
 .makeup .nc {
   color: #445588;
