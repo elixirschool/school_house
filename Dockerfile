@@ -29,15 +29,17 @@ COPY priv priv
 COPY Makefile Makefile
 RUN make content
 
-RUN npm run --prefix ./assets deploy
 RUN mix do phx.digest, \
     compile, \
     school_house.gen.sitemap,  \
-    school_house.gen.rss, \
-    release
+    school_house.gen.rss
+
+RUN npm run --prefix ./assets deploy
+RUN mix release
 
 # prepare release image
 FROM alpine:3.9 AS app
+
 RUN apk add --no-cache openssl ncurses-libs libstdc++
 
 WORKDIR /app
