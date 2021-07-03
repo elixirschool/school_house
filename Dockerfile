@@ -1,7 +1,7 @@
 FROM elixir:1.12.0-alpine AS build
 
 # install build dependencies
-RUN apk add --no-cache build-base npm git python3
+RUN apk add --no-cache build-base npm git python3 libstdc++
 
 # prepare build dir
 WORKDIR /app
@@ -38,7 +38,7 @@ RUN mix do phx.digest, \
 
 # prepare release image
 FROM alpine:3.9 AS app
-RUN apk add --no-cache openssl ncurses-libs
+RUN apk add --no-cache openssl ncurses-libs libstdc++
 
 WORKDIR /app
 
