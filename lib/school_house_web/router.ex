@@ -25,14 +25,18 @@ defmodule SchoolHouseWeb.Router do
     get "/blog/:slug", PostController, :show
 
     get "/privacy", PageController, :privacy
-    get "/podcasts", PageController, :podcasts
-    get "/conferences", PageController, :conferences
 
-    get "/:locale", PageController, :index
-    get "/:locale/report", ReportController, :index
-    get "/:locale/why", PageController, :why
-    get "/:locale/:section", LessonController, :index
-    get "/:locale/:section/:name", LessonController, :lesson
+    scope "/:locale" do
+      get "/", PageController, :index
+      get "/why", PageController, :why
+      get "/podcasts", PageController, :podcasts
+      get "/conferences", PageController, :conferences
+
+      get "/report", ReportController, :index
+
+      get "/:section", LessonController, :index
+      get "/:section/:name", LessonController, :lesson
+    end
   end
 
   # Other scopes may use custom stacks.

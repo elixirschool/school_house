@@ -1,7 +1,7 @@
 defmodule SchoolHouse.ConferencesTest do
   use ExUnit.Case
 
-  alias SchoolHouse.{Content.Conference, Conferences}
+  alias SchoolHouse.Conferences
 
   describe "list/0" do
     test "returns conferences ordered by date" do

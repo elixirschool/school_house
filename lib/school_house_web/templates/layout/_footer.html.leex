@@ -41,7 +41,10 @@
                 <%= link(gettext("Why Elixir?"), to: Routes.page_path(@conn, :why, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
               </li>
               <li>
-                <%= link("Podcasts", to: Routes.page_path(@conn, :podcasts), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <%= link(gettext("Podcasts"), to: Routes.page_path(@conn, :podcasts, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+              </li>
+              <li>
+                <%= link(gettext("Conferences"), to: Routes.page_path(@conn, :conferences, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
               </li>
             </ul>
           </div>
@@ -100,10 +103,6 @@
                 <a href="#" class="text-base text-light dark:text-light-dark hover:text-gray-900">
                   Today I Learned (TIL)
                 </a>
-              </li>
-
-              <li>
-                <%= link("Conferences", to: Routes.page_path(@conn, :conferences), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
               </li>
 
               <li>
