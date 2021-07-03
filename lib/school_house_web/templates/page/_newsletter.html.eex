@@ -5,7 +5,7 @@
         <h2 class="text-3xl font-extrabold tracking-tight text-white">
           Sign up for our newsletter
         </h2>
-        <p class="max-w-3xl mt-4 text-lg text-indigo-100">
+        <p class="max-w-3xl mt-4 text-lg text-white">
           Join the Elixir School newsletter to keep up with the latest lessons, blog posts, and opportunities within the community.
         </p>
       </div>
@@ -17,7 +17,7 @@
             Notify me
           </button>
         </form>
-        <p class="mt-3 text-sm text-indigo-100">
+        <p class="mt-3 text-sm text-white">
           We care about the protection of your data. Read our
           <a href="<%= Routes.page_path(@conn, :privacy) %>" class="font-medium text-white underline">
             Privacy Policy.

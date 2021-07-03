@@ -1,15 +1,16 @@
-const darkModeToggle = document.getElementById("dark-mode-toggle")
+const darkModeToggleContainer = document.getElementById("dark-mode-toggle-container")
+const darkModeToggleInput = document.getElementById("dark-mode-toggle")
 
 // set up dark mode toggle
 function setDarkMode(on) {
     if (on) {
-        darkModeToggle.checked = true
+        darkModeToggleInput.checked = true
         document.documentElement.classList.add('dark')
         localStorage.theme = 'dark'
         document.getElementById('sun-icon').classList.add('hidden')
         document.getElementById('moon-icon').classList.remove('hidden')
     } else {
-        darkModeToggle.checked = false
+        darkModeToggleInput.checked = false
         document.documentElement.classList.remove('dark')
         localStorage.theme = 'light'
         document.getElementById('moon-icon').classList.add('hidden')
@@ -23,11 +24,11 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
     setDarkMode(false)
 }
 
-darkModeToggle.addEventListener('click', function (ev) {
-    if (ev.target.checked) {
-        setDarkMode(true)
-    } else {
+darkModeToggleContainer.addEventListener('click', function () {
+    if (darkModeToggleInput.checked) {
         setDarkMode(false)
+    } else {
+        setDarkMode(true)
     }
 })
 

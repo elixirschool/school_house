@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
     purge: [
         '../lib/school_house_web/**/*.ex',
@@ -15,7 +17,7 @@ module.exports = {
                     dark: theme('colors.brand-gray-800')
                 },
                 'body': {
-                    DEFAULT: theme('colors.brand-white'),
+                    DEFAULT: colors.white,
                     dark: theme('colors.brand-gray-700')
                 },
                 'purple': {
@@ -32,16 +34,15 @@ module.exports = {
                 'brand-purple-100': '#cfbae6',
                 'brand-purple-200': '#967ab4',
                 'brand-purple-800': '#7c6f89',
-
-                // white
-                'brand-white': '#fff',
                 
                 // gray
                 'brand-gray-200': '#f5f6f7',
                 'brand-gray-300': '#f4f6f7',
                 'brand-gray-400': '#A1A1AA',
                 'brand-gray-500': '#9fa3a6',
+                'brand-gray-550': '#717171',
                 'brand-gray-600': '#666666',
+                'brand-gray-650': '#4a4a4a',
                 'brand-gray-700': '#3d4449',
                 'brand-gray-750': '#3c4349',
                 'brand-gray-800': '#31373b',
@@ -63,14 +64,14 @@ module.exports = {
                 },
                 heavy : {
                     DEFAULT: theme('colors.brand-gray-800'),
-                    dark: theme('colors.brand-white')
+                    dark: colors.white
                 },
                 light: {
-                    DEFAULT: theme('colors.brand-gray-600'),
+                    DEFAULT: theme('colors.brand-gray-650'),
                     dark: theme('colors.brand-gray-300')
                 },
                 lighter: {
-                    DEFAULT: theme('colors.brand-gray-400'),
+                    DEFAULT: theme('colors.brand-gray-550'),
                     dark: theme('colors.brand-gray-500')
                 },
                 purple: {
@@ -103,7 +104,7 @@ module.exports = {
                             color: theme('colors.brand-purple-800'),
                             '&:hover': {
                                 'background-color': theme('colors.brand-purple-800'),
-                                color: theme('colors.brand-white'),
+                                color: colors.white,
                             }
                         },
                         code: {
@@ -138,7 +139,7 @@ module.exports = {
                             color: theme('colors.brand-purple-200'),
                             '&:hover': {
                                 'background-color': theme('colors.brand-purple-200'),
-                                color: theme('colors.brand-white'),
+                                color: colors.white,
                             }
                         },
                         code: {
