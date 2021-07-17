@@ -123,14 +123,6 @@
                   Get Involved
                 </a>
               </li>
-
-              <li>
-                <a href="#" class="inline-flex text-base text-light dark:text-light-dark hover:text-gray-900">
-                  Support <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 mt-1 ml-2 text-brand-red-500" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
-                  </svg>
-                </a>
-              </li>
               <li>
                 <%= if current_locale() != "en" do %>
                   <%= link gettext("Translation Report"), to: Routes.report_path(@conn, :index, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900" %>
