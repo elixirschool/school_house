@@ -531,3 +531,8 @@ input:checked ~ .dot {
 body, body * {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
+
+/* Alpine.js */
+/* https://alpinejs.dev/directives/cloak */
+
+[x-cloak] { display: none !important; }
