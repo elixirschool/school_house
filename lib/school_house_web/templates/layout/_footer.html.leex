@@ -44,7 +44,7 @@
                 <%= link(gettext("Podcasts"), to: Routes.page_path(@conn, :podcasts, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
               </li>
               <li>
-                <%= link(gettext("Conferences"), to: Routes.page_path(@conn, :conferences, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <%= link(gettext("Conferences"), to: Routes.live_path(@conn, SchoolHouseWeb.ConferencesLive, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
               </li>
             </ul>
           </div>

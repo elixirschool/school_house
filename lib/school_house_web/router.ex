@@ -30,7 +30,7 @@ defmodule SchoolHouseWeb.Router do
       get "/", PageController, :index
       get "/why", PageController, :why
       get "/podcasts", PageController, :podcasts
-      get "/conferences", PageController, :conferences
+      live "/conferences", ConferencesLive
 
       get "/report", ReportController, :index
 
