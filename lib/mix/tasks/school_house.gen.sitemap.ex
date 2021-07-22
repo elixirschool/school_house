@@ -41,7 +41,7 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Sitemap do
 
   defp page_links(locale) do
     [
-      Helpers.page_url(Endpoint, :conferences, locale),
+      Helpers.live_url(Endpoint, SchoolHouseWeb.ConferencesLive, locale),
       Helpers.page_url(Endpoint, :index, locale),
       Helpers.page_url(Endpoint, :podcasts, locale),
       Helpers.page_url(Endpoint, :why, locale),
