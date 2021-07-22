@@ -11,5 +11,5 @@
   </div>
 </div>
 <div class="bg-body dark:bg-body-dark">
-  <%= live_render(@conn, SchoolHouseWeb.ConferenceLive.Index) %>
+  <%= live_render(@conn, SchoolHouseWeb.ConferenceLive) %>
 </div>
