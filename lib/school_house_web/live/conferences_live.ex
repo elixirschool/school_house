@@ -1,4 +1,4 @@
-defmodule SchoolHouseWeb.ConferenceLive do
+defmodule SchoolHouseWeb.ConferencesLive do
   @moduledoc false
 
   use SchoolHouseWeb, :live_view

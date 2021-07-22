@@ -1,6 +1,6 @@
 ExUnit.start()
 
-defmodule SchoolHouseWeb.ConferenceLive.TestHelpers do
+defmodule SchoolHouseWeb.ConferencesLive.TestHelpers do
   import Phoenix.LiveViewTest
 
   def apply_filter(view, filters) do

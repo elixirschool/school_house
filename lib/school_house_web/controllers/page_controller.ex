@@ -11,10 +11,6 @@ defmodule SchoolHouseWeb.PageController do
     render(conn, "podcasts.html", page_title: "Podcasts", podcasts: Podcasts.list())
   end
 
-  def conferences(conn, _params) do
-    render(conn, "conferences.html", page_title: "Conferences")
-  end
-
   def privacy(conn, _params) do
     render(conn, "privacy.html", page_title: "Privacy Policy")
   end
