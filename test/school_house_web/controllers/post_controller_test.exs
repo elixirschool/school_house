@@ -21,10 +21,9 @@ defmodule SchoolHouseWeb.PostControllerTest do
 
     test "renders a page with an error message when the blog post is not found", %{conn: conn} do
       conn = get(conn, Routes.post_path(conn, :show, "test_no_post_found"))
-      body = html_response(conn, 200)
+      body = html_response(conn, 404)
 
-      assert body =~ "Sorry, we couldn&apos;t find the post you are looking for."
-      refute body =~ "By Sean Callan"
+      assert body =~ "Page not found"
     end
   end
 end

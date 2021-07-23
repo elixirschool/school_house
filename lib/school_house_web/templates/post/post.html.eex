@@ -1,6 +1,5 @@
 <section class="container w-3/4 mb-6 items-center">
-  <%= if @post do %>
-    <div class="py-6 text-center">
+  <div class="py-6 text-center">
       <span class="text-4xl leading-8 font-extrabold tracking-tight text-purple dark:text-purple-dark sm:text-4xl ">Elixir School</span>
     </div>
 
@@ -28,11 +27,4 @@
     <div class="prose dark:prose-dark">
       <%= raw @post.body %>
     </div>
-  <% else %>
-    <div class="my-20 text-center">
-      <span class="text-2xl font-bold tracking-tight text-light dark:text-light-dark sm:text-2xl">
-        Sorry, we couldn&apos;t find the post you are looking for.
-      </span>
-    </div>
-  <% end %>
 </section>
