@@ -14,7 +14,7 @@ defmodule SchoolHouseWeb.HtmlHelpers do
   end
 
   def current_page_locale_path(%{request_path: request_path}, locale) do
-    String.replace(request_path, current_locale(), locale, global: false)
+    String.replace(request_path, "/#{current_locale()}/", "/#{locale}/", global: false)
   end
 
   def friendly_version({major, minor, patch}), do: "#{major}.#{minor}.#{patch}"
