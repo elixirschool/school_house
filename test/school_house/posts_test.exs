@@ -5,7 +5,11 @@ defmodule SchoolHouse.PostsTest do
 
   describe "get/1" do
     test "returns a specific post by slug" do
-      assert %Post{title: "Title for a post"} = Posts.get("test_blog_post")
+      assert {:ok, %Post{title: "Title for a post"}} = Posts.get("test_blog_post")
+    end
+
+    test "returns error if post not found" do
+      assert {:error, :not_found} == Posts.get("unknown")
     end
   end
 

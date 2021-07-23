@@ -2,8 +2,10 @@ defmodule SchoolHouse.Posts do
   @moduledoc """
   Stores our posts in a module attribute and provides mechanisms to retrieve them
   """
+  alias SchoolHouse.Content.Post
+
   use NimblePublisher,
-    build: SchoolHouse.Content.Post,
+    build: Post,
     from: Application.compile_env!(:school_house, :blog_dir),
     as: :posts,
     highlighters: [:makeup_elixir, :makeup_erlang]
@@ -13,7 +15,12 @@ defmodule SchoolHouse.Posts do
                    {slug, post}
                  end)
 
-  def get(slug), do: Map.get(@posts_by_slug, slug)
+  def get(slug) do
+    case Map.get(@posts_by_slug, slug) do
+      nil -> {:error, :not_found}
+      %Post{} = post -> {:ok, post}
+    end
+  end
 
   def page(n), do: Enum.at(@paged_posts, n)
 

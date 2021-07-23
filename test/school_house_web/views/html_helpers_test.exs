@@ -29,11 +29,12 @@ defmodule SchoolHouseWeb.HtmlHelpersTest do
                :get
                |> build_conn("/es/ecto/changesets")
                |> HtmlHelpers.current_page_locale_path("fr")
+    end
 
-      # With or without a leading slash, the replacement is correct
-      assert "fr/ecto/changesets" ==
+    test "returns the same page path for a page without locale scope" do
+      assert "/blog/instrumenting-phoenix" ==
                :get
-               |> build_conn("es/ecto/changesets")
+               |> build_conn("/blog/instrumenting-phoenix")
                |> HtmlHelpers.current_page_locale_path("fr")
     end
   end

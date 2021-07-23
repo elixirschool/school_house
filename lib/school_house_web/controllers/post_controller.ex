@@ -2,6 +2,9 @@ defmodule SchoolHouseWeb.PostController do
   use SchoolHouseWeb, :controller
 
   alias SchoolHouse.Posts
+  alias SchoolHouseWeb.FallbackController
+
+  action_fallback FallbackController
 
   @page_title "Blog"
 
@@ -15,8 +18,9 @@ defmodule SchoolHouseWeb.PostController do
   end
 
   def show(conn, %{"slug" => slug}) do
-    post = Posts.get(slug)
-    render(conn, "post.html", page_title: @page_title, post: post)
+    with {:ok, post} <- Posts.get(slug) do
+      render(conn, "post.html", page_title: @page_title, post: post)
+    end
   end
 
   defp current_page(params) do
