@@ -31,11 +31,25 @@ defmodule SchoolHouseWeb.HtmlHelpersTest do
                |> HtmlHelpers.current_page_locale_path("fr")
     end
 
+    test "returns the home page path for another locale" do
+      assert "/fr" ==
+               :get
+               |> build_conn("/es")
+               |> HtmlHelpers.current_page_locale_path("fr")
+    end
+
     test "returns the same page path for a page without locale scope" do
       assert "/blog/instrumenting-phoenix" ==
                :get
                |> build_conn("/blog/instrumenting-phoenix")
                |> HtmlHelpers.current_page_locale_path("fr")
+    end
+
+    test "doesn't break URLs starting with something similar to a locale" do
+      assert "/essential" ==
+               :get
+               |> build_conn("/essential")
+               |> HtmlHelpers.current_page_locale_path("ar")
     end
   end
 
