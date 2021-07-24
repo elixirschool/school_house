@@ -123,7 +123,7 @@
         By The Numbers
       </h2>
       <p class="mt-3 text-xl text-center text-heavy dark:text-heavy-dark sm:mt-4">
-        If you still are not convinced, here are some numbers that exemplify Elixir's growth.
+        Still not convinced? Here are some numbers that demonstrate Elixir's growth and reach.
       </p>
     </div>
     <div class="flex flex-wrap -mx-4 -mt-4 -mb-10 sm:-m-4 justify-around">
@@ -139,7 +139,7 @@
       </div>
 
       <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-purple-dark rounded-lg flex flex-col items-center justify-between">
-        <p class="text-white font-bold text-2xl text-center">6 Podcasts <br /> and Counting</p>
+        <p class="text-white font-bold text-2xl text-center">6 Podcasts <br /> (&amp; Counting)</p>
 
         <%= link(to: Routes.page_path(@conn, :podcasts, current_locale()), class: "inline-flex items-center mx-auto text-white") do %>
             See Them Here

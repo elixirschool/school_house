@@ -29,6 +29,7 @@ defmodule SchoolHouseWeb.Router do
     scope "/:locale" do
       get "/", PageController, :index
       get "/why", PageController, :why
+      get "/get_involved", PageController, :get_involved
       get "/podcasts", PageController, :podcasts
       live "/conferences", ConferencesLive
 

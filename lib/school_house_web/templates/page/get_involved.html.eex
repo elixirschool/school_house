@@ -1,0 +1,61 @@
+<div class="pt-20 pb-4 md:py-12 bg-body dark:bg-body-dark">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="lg:text-center">
+      <h1 class="mt-2 text-4xl font-extrabold tracking-tight leading-8 text-purple dark:text-purple-dark sm:text-4xl">
+        Get Involved
+      </h1>
+      <p class="max-w-2xl mt-4 text-xl text-light dark:text-light-dark lg:mx-auto">
+        Elixir School is built by contributors, skilled and new alike! Help us make it better and extend the reach of Elixir to anyone that wants to learn. Below are a few ways to contribute.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="bg-body dark:bg-body-dark px-4 lg:px-0">
+  <div>
+    <div class="flex my-16">
+      <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+      </svg>
+      <div class="ml-3">
+        <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
+          Improve the Website
+        </h3>
+        <div class="mt-2 text-base text-light dark:text-light-dark">
+          Elixir school is an open source project, with code hosted on <a target="_blank" href="https://github.com/elixirschool/school_house" class="font-bold text-purple dark:text-purple-dark">Github</a>.
+          Take a look at the <a target="_blank" href="https://github.com/elixirschool/school_house/issues" class="font-bold text-purple dark:text-purple-dark">issues</a> on the repository to find a task that interests you. Create a pull request when your change is ready and after review it will be merged into the codebase!
+          See something you think should be improved? Feel free to open an issue or create a pull request with the change.
+        </div>
+      </div>
+    </div>
+    <div class="flex my-16">
+      <!-- Heroicon name: outline/check -->
+      <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+      </svg>
+      <div class="ml-3">
+        <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
+          Translate Lessons
+        </h3>
+        <div class="mt-2 text-base text-light dark:text-light-dark">
+          Lessons on Elixir School are translated into 25 different langauges! If there is a lesson missing a translation that you can provide, translate it and create a pull request.
+          As you read lessons, if you see an opportunity for improvement go ahead and create a pull request with the change, the next reader will thank you.
+        </div>
+      </div>
+    </div>
+    <div class="flex my-16">
+      <!-- Heroicon name: outline/check -->
+      <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+      </svg>
+      <div class="ml-3">
+        <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
+          Contribute to the Blog
+        </h3>
+        <div class="mt-2 text-base text-light dark:text-light-dark">
+          Have a topic related to Elixir that you are knowledgeable about and want to share? Write a blog post and it could be featured on the Elixir School post feed.
+          This is a great way to contriubte and get visibility for your post!
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
