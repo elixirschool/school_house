@@ -22,5 +22,10 @@ defmodule SchoolHouseWeb.LessonControllerTest do
 
       assert body =~ "Translation unavailable"
     end
+
+    test "redirects to / for invalid locale", %{conn: conn} do
+      conn = get(conn, Routes.page_path(conn, :index, "klingon"))
+      assert redirected_to(conn) == "/"
+    end
   end
 end
