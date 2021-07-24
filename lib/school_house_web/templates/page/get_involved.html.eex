@@ -12,7 +12,7 @@
 </div>
 <div class="bg-body dark:bg-body-dark px-4 lg:px-0">
   <div>
-    <div class="flex my-16">
+    <div class="flex my-12">
       <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
       </svg>
@@ -27,7 +27,7 @@
         </div>
       </div>
     </div>
-    <div class="flex my-16">
+    <div class="flex my-12">
       <!-- Heroicon name: outline/check -->
       <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
@@ -38,11 +38,12 @@
         </h3>
         <div class="mt-2 text-base text-light dark:text-light-dark">
           Lessons on Elixir School are translated into 25 different langauges! If there is a lesson missing a translation that you can provide, translate it and create a pull request.
-          As you read lessons, if you see an opportunity for improvement go ahead and create a pull request with the change, the next reader will thank you.
+          As you read lessons, if you see an opportunity for improvement go ahead and create a pull request with the change, the next reader will thank you. Steps for translating a lesson
+          are available on <a target="_blank" href="https://github.com/elixirschool/elixirschool#translating-a-lesson" class="font-bold text-purple dark:text-purple-dark">Github</a>.
         </div>
       </div>
     </div>
-    <div class="flex my-16">
+    <div class="flex my-12">
       <!-- Heroicon name: outline/check -->
       <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
@@ -53,7 +54,8 @@
         </h3>
         <div class="mt-2 text-base text-light dark:text-light-dark">
           Have a topic related to Elixir that you are knowledgeable about and want to share? Write a blog post and it could be featured on the Elixir School post feed.
-          This is a great way to contriubte and get visibility for your post!
+          This is a great way to contriubte and get visibility for your post! Steps for submitting a post are available on
+          <a target="_blank" href="https://github.com/elixirschool/elixirschool#posting-an-article" class="font-bold text-purple dark:text-purple-dark">Github</a>.
         </div>
       </div>
     </div>
