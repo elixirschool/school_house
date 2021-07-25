@@ -45,6 +45,7 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Sitemap do
       Helpers.page_url(Endpoint, :index, locale),
       Helpers.page_url(Endpoint, :podcasts, locale),
       Helpers.page_url(Endpoint, :why, locale),
+      Helpers.page_url(Endpoint, :get_involved, locale),
       Helpers.report_url(Endpoint, :index, locale)
     ]
   end
