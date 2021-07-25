@@ -7,5 +7,6 @@ config :school_house,
     ~r/^\/cb/ => "/zh-hans",
     ~r/^\/tw/ => "/zh-hant",
     ~r/^\/my/ => "/me",
-    ~r/^\/jp/ => "/ja"
+    ~r/^\/jp/ => "/ja",
+    ~r/^\/gr/ => "/el"
   }
