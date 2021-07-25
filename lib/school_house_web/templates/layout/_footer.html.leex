@@ -119,9 +119,7 @@
             </h3>
             <ul class="mt-4 space-y-4">
               <li>
-                <a href="#" class="text-base text-light dark:text-light-dark hover:text-gray-900">
-                  Get Involved
-                </a>
+                <%= link("Get Involved", to: Routes.page_path(@conn, :get_involved, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
               </li>
               <li>
                 <%= if current_locale() != "en" do %>

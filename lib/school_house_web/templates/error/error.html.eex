@@ -3,6 +3,6 @@
     <h2 class="text-3xl font-extrabold text-purple dark:text-purple-dark sm:text-4xl">
       <span class="block"><%= @title %></span>
     </h2>
-    <p class="mt-4 text-lg to-brand-gray leading-6"><%= @message %></p>
+    <p class="mt-4 text-lg text-primary dark:text-primary-dark leading-6"><%= @message %></p>
   </div>
 </div>

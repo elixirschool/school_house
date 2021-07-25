@@ -23,6 +23,10 @@ defmodule SchoolHouseWeb.PageController do
     render(conn, "why.html", page_title: "Why Choose Elixir?")
   end
 
+  def get_involved(conn, _params) do
+    render(conn, "get_involved.html", page_title: "Get Involved")
+  end
+
   defp recent_posts do
     0
     |> Posts.page()
