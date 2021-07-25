@@ -18,7 +18,7 @@ function setDarkMode(on) {
     }
 }
 
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+if (document.documentElement.classList.contains('dark')) {
     setDarkMode(true)
 } else {
     setDarkMode(false)
