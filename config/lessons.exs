@@ -52,7 +52,7 @@ config :school_house,
       :basics,
       :changesets,
       :associations,
-      :query_basics,
+      :querying_basics,
       :query_advanced
     ],
     storage: [
