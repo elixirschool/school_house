@@ -14,7 +14,7 @@ import "../css/app.css"
 //
 import "phoenix_html"
 import { Socket } from "phoenix"
-import NProgress from "nprogress"
+import topbar from "topbar"
 import { LiveSocket } from "phoenix_live_view"
 import 'alpinejs'
 
@@ -22,8 +22,16 @@ let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("
 let liveSocket = new LiveSocket("/live", Socket, { params: { _csrf_token: csrfToken } })
 
 // Show progress bar on live navigation and form submits
-window.addEventListener("phx:page-loading-start", info => NProgress.start())
-window.addEventListener("phx:page-loading-stop", info => NProgress.done())
+topbar.config({
+    barColors: {
+        '0': "rgba(237, 233, 254)",
+        '0.5': "rgba(167, 139, 250)",
+        '1.0': "rgba(76, 29, 149)"
+    },
+    shadowColor: "rgba(76, 29, 149, 0.3)"
+})
+window.addEventListener("phx:page-loading-start", info => topbar.show())
+window.addEventListener("phx:page-loading-stop", info => topbar.hide())
 
 // connect if there are any LiveViews on the page
 liveSocket.connect()
