@@ -56,11 +56,13 @@ https://rocketvalidator.com/domains/beta.elixirschool.com?tab=mutings&date=&auth
 
 Each RV user defines his own muting rules, here is [what we've agreed to mute](https://rocketvalidator.com/domains/beta.elixirschool.com?tab=mutings&date=&auth=e536facf-2cba-4288-ba45-3e7b95addcf8):
 
-| URL match    | Message match     | Reason                        |
-| ------------ | ----------------- | ----------------------------- |
-| elixirschool | Attribute “@click | Required by Alpine.js         |
-| elixirschool | Attribute “phx-   | Required by Phoenix framework |
-| elixirschool | Attribute “x-     | Required by Alpine.js         |
+| URL match    | Message match     | Reason                                                       |
+| ------------ | ----------------- | ------------------------------------------------------------ |
+| elixirschool | Attribute “@click | Required by Alpine.js.                                       |
+| elixirschool | Attribute “phx-   | Required by Phoenix framework.                               |
+| elixirschool | Attribute “x-     | Required by Alpine.js.                                       |
+| elixirschool | Bad value “{%     | Wrong content in some posts, will be reviewed before launch. |
+| elixirschool | This document appears to be written in English but the “html” start tag has “lang= | Pending translation. We already have a mechanism to track content waiting to be translated. |
 
 ## Shared Domain Stats
 
