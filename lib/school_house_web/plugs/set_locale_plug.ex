@@ -3,8 +3,8 @@ defmodule SchoolHouseWeb.SetLocalePlug do
   Set the process' locale given the path params value
   """
 
-  import Phoenix.Controller, only: [redirect: 2]
-  import Plug.Conn, only: [halt: 1]
+  import Plug.Conn, only: [put_status: 2, halt: 1]
+  import Phoenix.Controller, only: [put_view: 2, render: 2]
 
   @spec init(any) :: any
   def init(opts), do: opts
@@ -19,7 +19,11 @@ defmodule SchoolHouseWeb.SetLocalePlug do
         conn
 
       false ->
-        redirect(conn, to: "/") |> halt()
+        conn
+        |> put_status(404)
+        |> put_view(SchoolHouseWeb.ErrorView)
+        |> render("404.html")
+        |> halt()
     end
   end
 
