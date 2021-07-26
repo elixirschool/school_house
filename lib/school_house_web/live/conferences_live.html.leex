@@ -21,7 +21,7 @@
       </div>
       <div class="ml-auto">
         <label for="country-select" class="pr-2">Country</label>
-        <%= select f, :country, @country_options, selected: country_filter(@filters), class: "w-40 pl-3 pr-6 appearance-none bg-nav dark:bg-nav-dark" %>
+        <%= select f, :country, @country_options, selected: country_filter(@filters), class: "w-40 pl-3 pr-6 appearance-none bg-nav dark:bg-nav-dark", id: "country-select" %>
       </div>
     </form>
     <div>
