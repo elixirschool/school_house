@@ -55,12 +55,12 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Sitemap do
 
     translated_lesson_links =
       for {section, lessons} <- config, lesson <- lessons, translated_lesson?(section, lesson, locale) do
-        Helpers.lesson_url(Endpoint, :lesson, section, lesson, locale)
+        Helpers.lesson_url(Endpoint, :lesson, locale, section, lesson)
       end
 
     section_indexes =
       for section <- Keyword.keys(config) do
-        Helpers.lesson_url(Endpoint, :index, section, locale)
+        Helpers.lesson_url(Endpoint, :index, locale, section)
       end
 
     section_indexes ++ translated_lesson_links
