@@ -121,11 +121,11 @@
               <li>
                 <%= link("Get Involved", to: Routes.page_path(@conn, :get_involved, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
               </li>
-              <li>
-                <%= if current_locale() != "en" do %>
+              <%= if current_locale() != "en" do %>
+                <li>
                   <%= link gettext("Translation Report"), to: Routes.report_path(@conn, :index, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900" %>
-                <% end %>
-              </li>
+                </li>
+              <% end %>
             </ul>
           </div>
         </div>

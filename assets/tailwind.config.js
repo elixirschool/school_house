@@ -22,7 +22,7 @@ module.exports = {
                 },
                 'purple': {
                     DEFAULT: theme('colors.brand-purple-800'),
-                    dark: theme('colors.brand-purple-200')
+                    dark: theme('colors.brand-purple-100')
                 },
                 'footer': {
                     DEFAULT: theme('colors.brand-gray-200'),
@@ -31,11 +31,13 @@ module.exports = {
             }),
             colors: {
                 // purple
-                'brand-purple-100': '#cfbae6',
-                'brand-purple-200': '#967ab4',
+                'brand-purple-100': '#caa2f5',
+                'brand-purple-200': '#cfbae6',
+                'brand-purple-300': '#967ab4',
                 'brand-purple-800': '#7c6f89',
                 
                 // gray
+                'brand-gray-100': '#f8f9fa',
                 'brand-gray-200': '#f5f6f7',
                 'brand-gray-300': '#f4f6f7',
                 'brand-gray-400': '#A1A1AA',
@@ -46,6 +48,7 @@ module.exports = {
                 'brand-gray-700': '#3d4449',
                 'brand-gray-750': '#3c4349',
                 'brand-gray-800': '#31373b',
+                'brand-gray-900': '#22272e',
 
                 // red
                 'brand-red-300': '#f56a6a',
@@ -76,7 +79,7 @@ module.exports = {
                 },
                 purple: {
                     DEFAULT: theme('colors.brand-purple-800'),
-                    dark: theme('colors.brand-purple-200')
+                    dark: theme('colors.brand-purple-100')
                 }
             }),
             transitionProperty: {
@@ -88,11 +91,16 @@ module.exports = {
                         color: theme('colors.brand-gray-750'),
                         maxWidth: 'inherit',
                         pre: {
-                            'background-color': theme('colors.brand-gray-300'),
+                            'background-color': theme('colors.brand-gray-100'),
                             color: theme('colors.brand-gray-700')
                         },
                         h1: {
-                            color: theme('colors.brand-gray-750')
+                            color: theme('colors.brand-gray-750'),
+                            fontSize: '3.75rem',
+                            marginTop: '0',
+                            marginBottom: '0',
+                            fontWeight: 700,
+                            lineHeight: 1
                         },
                         h2: {
                             color: theme('colors.brand-gray-750'),
@@ -124,7 +132,7 @@ module.exports = {
                     css: {
                         color: theme('colors.brand-gray-200'),
                         pre: {
-                            'background-color': theme('colors.brand-gray-800'),
+                            'background-color': theme('colors.brand-gray-900'),
                         },
                         h1: {
                             color: theme('colors.brand-gray-200')
@@ -136,11 +144,14 @@ module.exports = {
                             color: theme('colors.brand-gray-200'),
                         },
                         a: {
-                            color: theme('colors.brand-purple-200'),
+                            color: theme('colors.brand-purple-100'),
                             '&:hover': {
-                                'background-color': theme('colors.brand-purple-200'),
+                                'background-color': theme('colors.brand-purple-100'),
                                 color: colors.white,
                             }
+                        },
+                        strong: {
+                            color: theme('colors.brand-gray-200')
                         },
                         code: {
                             color: theme('colors.brand-gray-300')
