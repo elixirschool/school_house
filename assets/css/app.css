@@ -290,7 +290,7 @@ input:checked ~ .dot {
   font-weight: bold;
 }
 .makeup .w {
-  color: #bbbbbb;
+  color: #000;
 }
 .makeup {
   background-color: #f8f8f8;
@@ -298,8 +298,8 @@ input:checked ~ .dot {
 
 
 /* Originally taken from: https://tmbb.github.io/makeup_demo/elixir.html#monokai */
-.dark .makeup {
-  --dark-comment-color: #969386;
+.dark {
+  --dark-comment-color: #cbc1c8;
   color: #f8f8f2;
 }
 
@@ -310,25 +310,25 @@ input:checked ~ .dot {
   color: #f8f8f2;
 } /* :name_builtin_pseudo */
 .dark .makeup .c {
-  color: --var(dark-comment-color);
+  color: var(--dark-comment-color);
 } /* :comment */
 .dark .makeup .c1 {
-  color: --var(dark-comment-color);
+  color: var(--dark-comment-color);
 } /* :comment_single */
 .dark .makeup .ch {
-  color: --var(dark-comment-color);
+  color: var(--dark-comment-color);
 } /* :comment_hashbang */
 .dark .makeup .cm {
-  color: --var(dark-comment-color);
+  color: var(--dark-comment-color);
 } /* :comment_multiline */
 .dark .makeup .cp {
-  color: --var(dark-comment-color);
+  color: var(--dark-comment-color);
 } /* :comment_preproc */
 .dark .makeup .cpf {
-  color: --var(dark-comment-color);
+  color: var(--dark-comment-color);
 } /* :comment_preproc_file */
 .dark .makeup .cs {
-  color: --var(dark-comment-color);
+  color: var(--dark-comment-color);
 } /* :comment_special */
 .dark .makeup .dl {
   color: #e6db74;
@@ -350,13 +350,13 @@ input:checked ~ .dot {
   color: #a6e22e;
 } /* :generic_inserted */
 .dark .makeup .gp {
-  color: --var(dark-comment-color);
+  color: var(--dark-comment-color);
 } /* :generic_prompt */
 .dark .makeup .gs {
   font-weight: bold;
 } /* :generic_strong */
 .dark .makeup .gu {
-  color: --var(dark-comment-color);
+  color: var(--dark-comment-color);
 } /* :generic_subheading */
 .dark .makeup .gt {
   color: #ff5385;
@@ -518,7 +518,9 @@ input:checked ~ .dot {
 .dark .makeup .vm {
   color: #f8f8f2;
 } /* :name_variable_magic */
-
+.dark .makeup .w {
+  color: #fff;
+}
 
 .preload, .preload * {
   -webkit-transition: none !important;

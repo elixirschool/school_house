@@ -127,7 +127,7 @@
       </p>
     </div>
     <div class="flex flex-wrap -mx-4 -mt-4 -mb-10 sm:-m-4 justify-around">
-      <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-purple-dark rounded-lg flex flex-col items-center justify-between">
+      <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-brand-purple-800 rounded-lg flex flex-col items-center justify-between">
         <p class="text-white font-bold text-2xl text-center">100+ <br /> Conferences</p>
 
         <%= link(to: "https://github.com/elixir-lang/elixir/wiki/Conferences", class: "inline-flex items-center mx-auto text-white") do %>
@@ -138,7 +138,7 @@
           <% end %>
       </div>
 
-      <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-purple-dark rounded-lg flex flex-col items-center justify-between">
+      <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-brand-purple-800 rounded-lg flex flex-col items-center justify-between">
         <p class="text-white font-bold text-2xl text-center">6 Podcasts <br /> (&amp; Counting)</p>
 
         <%= link(to: Routes.page_path(@conn, :podcasts, current_locale()), class: "inline-flex items-center mx-auto text-white") do %>
@@ -149,8 +149,8 @@
           <% end %>
       </div>
 
-      <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-purple-dark rounded-lg flex flex-col items-center justify-between">
-        <p class="text-white font-bold text-2xl text-center">25 Lanuages <br /> With Lesson <br /> Translations</p>
+      <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-brand-purple-800 rounded-lg flex flex-col items-center justify-between">
+        <p class="text-white font-bold text-2xl text-center">25 Languages <br /> With Lesson <br /> Translations</p>
 
         <%= link(to: "https://github.com/elixirschool/elixirschool", class: "inline-flex items-center mx-auto text-white") do %>
             See Them Here
@@ -160,7 +160,7 @@
           <% end %>
       </div>
 
-      <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-purple-dark rounded-lg flex flex-col items-center justify-between">
+      <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-brand-purple-800 rounded-lg flex flex-col items-center justify-between">
         <p class="text-white font-bold text-2xl text-center">600+ Companies <br /> Using Elixir</p>
 
         <%= link(to: "https://elixir-companies.com/en", class: "inline-flex items-center mx-auto text-white") do %>
@@ -171,7 +171,7 @@
           <% end %>
       </div>
 
-      <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-purple-dark rounded-lg flex flex-col items-center justify-between">
+      <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-brand-purple-800 rounded-lg flex flex-col items-center justify-between">
         <p class="text-white font-bold text-2xl text-center">13,000+ Packages <br /> On Hex</p>
 
         <%= link(to: "https://hex.pm/", class: "inline-flex items-center mx-auto text-white") do %>
