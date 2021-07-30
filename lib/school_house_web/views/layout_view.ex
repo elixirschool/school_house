@@ -1,7 +1,7 @@
 defmodule SchoolHouseWeb.LayoutView do
   use SchoolHouseWeb, :view
 
-  def get_dark_mode_param(conn) do
+  def render_dark_mode?(conn) do
     case Map.get(conn.query_params, "ui", nil) do
       "dark" -> "dark"
       _ -> ""
