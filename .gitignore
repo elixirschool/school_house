@@ -17,6 +17,7 @@ erl_crash.dump
 /assets/static/images
 /assets/static/feed.xml
 /assets/static/sitemap.xml
+/assets/static/sitemap_dark_mode.xml
 
 ### Elixir Patch ###
 
@@ -42,7 +43,8 @@ erl_crash.dump
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
