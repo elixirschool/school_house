@@ -54,7 +54,7 @@
         </h3>
         <div class="mt-2 text-base text-light dark:text-light-dark">
           Have a topic related to Elixir that you are knowledgeable about and want to share? Write a blog post and it could be featured on the Elixir School post feed.
-          This is a great way to contriubte and get visibility for your post! Steps for submitting a post are available on
+          This is a great way to contribute and get visibility for your post! Steps for submitting a post are available on
           <a target="_blank" href="https://github.com/elixirschool/elixirschool#posting-an-article" class="font-bold text-purple dark:text-purple-dark">Github</a>.
         </div>
       </div>
