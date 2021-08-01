@@ -90,6 +90,7 @@ module.exports = {
                     css: {
                         color: theme('colors.brand-gray-750'),
                         maxWidth: 'inherit',
+                        fontSize: '1.08rem',
                         pre: {
                             'background-color': theme('colors.brand-gray-100'),
                             color: theme('colors.brand-gray-700')
