@@ -144,6 +144,9 @@ module.exports = {
                         h3: {
                             color: theme('colors.brand-gray-200'),
                         },
+                        h4: {
+                            color: theme('colors.brand-gray-200'),
+                        },
                         a: {
                             color: theme('colors.brand-purple-100'),
                             '&:hover': {
