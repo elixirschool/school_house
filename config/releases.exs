@@ -14,8 +14,6 @@ live_view_salt =
     You can generate one by calling: mix phx.gen.secret
     """
 
-
-
 config :school_house, SchoolHouseWeb.Endpoint,
   http: [
     port: String.to_integer(System.get_env("PORT") || "4000"),
