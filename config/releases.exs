@@ -14,10 +14,11 @@ live_view_salt =
     You can generate one by calling: mix phx.gen.secret
     """
 
-host = case System.get_env("HEROKU_APP_NAME") do
-  nil -> "beta.elixirschool.com"
-  sub -> "#{sub}.herokuapp.com"
-end
+host =
+  case System.get_env("HEROKU_APP_NAME") do
+    nil -> "beta.elixirschool.com"
+    sub -> "#{sub}.herokuapp.com"
+  end
 
 config :school_house, SchoolHouseWeb.Endpoint,
   http: [
