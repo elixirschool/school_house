@@ -21,5 +21,4 @@ config :school_house, SchoolHouseWeb.Endpoint,
   ],
   secret_key_base: secret_key_base,
   live_view: [signing_salt: live_view_salt],
-  url: [scheme: "https", host: "beta.elixirschool.com"],
   server: true

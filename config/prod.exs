@@ -1,5 +1,11 @@
 use Mix.Config
 
+host =
+  case System.get_env("HEROKU_APP_NAME") do
+    nil -> "beta.elixirschool.com"
+    sub -> "#{sub}.herokuapp.com"
+  end
+
 # For production, don't forget to configure the url host
 # to something meaningful, Phoenix uses this information
 # when generating URLs.
@@ -11,7 +17,7 @@ use Mix.Config
 # before starting your production server.
 config :school_house, SchoolHouseWeb.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [scheme: "https", host: "beta.elixirschool.com", port: 443],
+  url: [scheme: "https", host: host, port: 443],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
