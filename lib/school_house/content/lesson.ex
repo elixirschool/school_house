@@ -3,7 +3,7 @@ defmodule SchoolHouse.Content.Lesson do
   Encapsulates an individual lesson and handles parsing the originating markdown file
   """
 
-  @headers_regex ~r/<(h\d)>(["\w\s?!\.\/\d]+)(?=<\/\1>)/i
+  @headers_regex ~r/<(h\d)>(["\p{L}\s?!\.\/\d]+)(?=<\/\1>)/iu
   @enforce_keys [:body, :section, :locale, :name, :title, :version]
 
   defstruct [
