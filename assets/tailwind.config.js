@@ -37,7 +37,7 @@ module.exports = {
                 'brand-purple-800': '#7c6f89',
                 
                 // gray
-                'brand-gray-100': '#f8f9fa',
+                'brand-gray-100': '#f9fafb',
                 'brand-gray-200': '#f5f6f7',
                 'brand-gray-300': '#f4f6f7',
                 'brand-gray-400': '#A1A1AA',
@@ -89,6 +89,7 @@ module.exports = {
                 DEFAULT: {
                     css: {
                         color: theme('colors.brand-gray-750'),
+                        fontSize: '1.08rem',
                         maxWidth: 'inherit',
                         pre: {
                             'background-color': theme('colors.brand-gray-100'),
@@ -143,6 +144,9 @@ module.exports = {
                         h3: {
                             color: theme('colors.brand-gray-200'),
                         },
+                        h4: {
+                            color: theme('colors.brand-gray-200'),
+                        },
                         a: {
                             color: theme('colors.brand-purple-100'),
                             '&:hover': {
@@ -164,6 +168,9 @@ module.exports = {
                             marginTop: '0px',
                             marginBottom: '0px',
                         },
+                        blockquote: {
+                            color: theme('colors.brand-gray-300')
+                        }
                     }
                 }
             }),
