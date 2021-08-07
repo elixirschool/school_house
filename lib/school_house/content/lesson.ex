@@ -62,7 +62,7 @@ defmodule SchoolHouse.Content.Lesson do
       |> String.downcase()
 
     name
-    |> String.replace(~r/[^\w\s]/, "")
+    |> String.replace(~r/[^\p{L}\s]/u, "")
     |> String.replace(" ", "-")
   end
 
