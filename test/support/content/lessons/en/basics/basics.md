@@ -19,3 +19,7 @@ After Elixir is installed, you can easily confirm the installed version.
     Erlang/OTP {{ site.erlang.OTP }} [erts-{{ site.erlang.erts }}] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:10] [hipe] [kernel-poll:false] [dtrace]
 
     Elixir {{ site.elixir.version }}
+
+## áéíóúàèìòùâêîôûäëïöüñçÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÄËÏÖÜÑÇ
+
+This heading is a subset of unicode characters used to test the process of constructing a table of contents for each lesson.
