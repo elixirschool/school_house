@@ -1,12 +1,12 @@
-<tr class="bg-red-500">
-  <td class="px-6 py-4 text-sm font-medium text-heavy dark:text-heavy-dark whitespace-nowrap">
+<tr class="bg-red-300">
+  <td class="px-6 py-4 text-sm font-medium text-heavy whitespace-nowrap">
     <%= @line.original.title %>
   </td>
-  <td class="px-6 py-4 text-sm text-primary dark:text-primary-dark whitespace-nowrap">
+  <td class="px-6 py-4 text-sm text-primary whitespace-nowrap">
   </td>
-  <td class="px-6 py-4 text-sm text-primary dark:text-primary-dark whitespace-nowrap">
+  <td class="px-6 py-4 text-sm text-primary whitespace-nowrap">
     <%= friendly_version(@line.original.version) %>
   </td>
-  <td class="px-6 py-4 text-sm text-primary dark:text-primary-dark whitespace-nowrap">
+  <td class="px-6 py-4 text-sm text-primary whitespace-nowrap">
   </td>
 </tr>

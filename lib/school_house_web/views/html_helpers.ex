@@ -48,8 +48,8 @@ defmodule SchoolHouseWeb.HtmlHelpers do
   end
 
   def translation_status_css_class(%{status: :complete}), do: "bg-green-500"
-  def translation_status_css_class(%{status: status}) when status in [:major, :missing], do: "bg-red-500"
-  def translation_status_css_class(%{status: :minor}), do: "bg-yellow-500"
+  def translation_status_css_class(%{status: status}) when status in [:major, :missing], do: "bg-yellow-500"
+  def translation_status_css_class(%{status: :minor}), do: "bg-yellow-400"
   def translation_status_css_class(%{status: :patch}), do: "bg-yellow-200"
   def translation_status_css_class(_line), do: "bg-white"
 end
