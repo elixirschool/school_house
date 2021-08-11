@@ -13,12 +13,25 @@ defmodule SchoolHouse.PostsTest do
     end
   end
 
+  describe "get_by_tag/1" do
+    test "returns the correct number of posts by tag" do
+      {:ok, posts} = Posts.get_by_tag("general")
+
+      assert is_list(posts)
+      assert 2 == length(posts)
+    end
+
+    test "returns error if no posts found" do
+      assert {:error, :not_found} == Posts.get_by_tag("unknown")
+    end
+  end
+
   describe "page/1" do
     test "returns a specific page of posts" do
       posts = Posts.page(0)
 
       assert is_list(posts)
-      assert 1 == length(posts)
+      assert 2 == length(posts)
     end
   end
 

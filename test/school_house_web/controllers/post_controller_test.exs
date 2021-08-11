@@ -26,4 +26,26 @@ defmodule SchoolHouseWeb.PostControllerTest do
       assert body =~ "Page not found"
     end
   end
+
+  describe "filter_by_tag/2" do
+    test "renders a page with blog posts matching the tag", %{conn: conn} do
+      conn = get(conn, Routes.post_path(conn, :filter_by_tag, "general"))
+      body = html_response(conn, 200)
+
+      assert body =~ "Posts tagged \"general\""
+      assert body =~ "Title for a post"
+      assert body =~ "Sean Callan"
+      assert body =~ "2021-04-15"
+      assert body =~ "Testing is important"
+      assert body =~ "Kate Beard"
+      assert body =~ "2021-08-11"
+    end
+
+    test "renders a page with an error message when no posts with the tag are found", %{conn: conn} do
+      conn = get(conn, Routes.post_path(conn, :filter_by_tag, "unknown"))
+      body = html_response(conn, 404)
+
+      assert body =~ "Page not found"
+    end
+  end
 end

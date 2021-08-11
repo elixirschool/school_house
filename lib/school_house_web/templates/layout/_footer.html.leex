@@ -94,21 +94,15 @@
             </h3>
             <ul class="mt-4 space-y-4">
               <li>
-                <a href="#" class="text-base text-light dark:text-light-dark hover:text-gray-900">
-                  Announcements
-                </a>
+                <%= link("Announcements", to: Routes.post_path(@conn, :filter_by_tag, "announcement"), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
               </li>
 
               <li>
-                <a href="#" class="text-base text-light dark:text-light-dark hover:text-gray-900">
-                  Today I Learned (TIL)
-                </a>
+                <%= link("Today I Learned (TIL)", to: Routes.post_path(@conn, :filter_by_tag, "til"), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
               </li>
 
               <li>
-                <a href="#" class="text-base text-light dark:text-light-dark hover:text-gray-900">
-                  Reviews
-                </a>
+                <%= link("Reviews", to: Routes.post_path(@conn, :filter_by_tag, "review"), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
               </li>
 
             </ul>

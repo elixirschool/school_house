@@ -3,7 +3,7 @@
     <a href="#" class="inline-block">
       <%= for tag <- @post.tags do %>
       <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-brand-purple-200 dark:bg-brand-purple-800 text-primary dark:text-white">
-        <%= tag %>
+        <%= String.downcase(tag) %>
       </span>
       <% end %>
     </a>

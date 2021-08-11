@@ -22,6 +22,22 @@ defmodule SchoolHouse.Posts do
     end
   end
 
+  def get_by_tag(tag) do
+    tag = String.downcase(tag)
+
+    tagged_posts =
+      @posts
+      |> Enum.filter(fn post ->
+        post_tags = Enum.map(post.tags, fn tag -> String.downcase(tag) end)
+        Enum.member?(post_tags, tag) == true
+      end)
+
+    cond do
+      Enum.empty?(tagged_posts) -> {:error, :not_found}
+      true -> {:ok, tagged_posts}
+    end
+  end
+
   def page(n), do: Enum.at(@paged_posts, n)
 
   def pages, do: Enum.count(@paged_posts)
