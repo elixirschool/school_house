@@ -32,7 +32,7 @@ defmodule SchoolHouseWeb.PostControllerTest do
       conn = get(conn, Routes.post_path(conn, :filter_by_tag, "general"))
       body = html_response(conn, 200)
 
-      assert body =~ "Posts tagged \"general\""
+      assert body =~ "Posts Tagged &quot;general&quot;"
       assert body =~ "Title for a post"
       assert body =~ "Sean Callan"
       assert body =~ "2021-04-15"
