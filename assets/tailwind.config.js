@@ -97,7 +97,7 @@ module.exports = {
                         },
                         h1: {
                             color: theme('colors.brand-gray-750'),
-                            fontSize: '3.75rem',
+                            fontSize: '3.5rem',
                             marginTop: '0',
                             marginBottom: '0',
                             fontWeight: 700,

@@ -15,3 +15,23 @@ config :school_house,
   lesson_dir: "test/support/content/lessons",
   blog_dir: "test/support/content/posts/**/*.md",
   conference_dir: "test/support/content/conferences/**/*.md"
+
+config :school_house,
+  lessons: [
+    basics: [
+      :basics,
+      :collections,
+      :functions,
+      :enum
+    ],
+    intermediate: [
+      :mix_tasks,
+      :erlang
+    ]
+  ]
+
+config :school_house,
+  future_lessons: [
+    :mix_tasks,
+    :functions
+  ]

@@ -28,4 +28,30 @@ defmodule SchoolHouse.LessonTest do
 
     assert toc =~ "áéíóúàèìòùâêîôûäëïöüñçÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÄËÏÖÜÑÇ"
   end
+
+  test "generates nil as the previous link for first lesson" do
+    assert {:ok, %Lesson{previous: previous}} = Lessons.get("basics", "basics", "en")
+
+    assert is_nil(previous)
+  end
+
+  test "generates previous lesson for first lesson in section" do
+    assert {:ok, %Lesson{previous: previous}} = Lessons.get("intermediate", "erlang", "en")
+
+    assert previous.section == :basics
+    assert previous.name == :enum
+  end
+
+  test "generates next lesson for last lesson in section" do
+    assert {:ok, %Lesson{next: next}} = Lessons.get("basics", "enum", "en")
+
+    assert next.section == :intermediate
+    assert next.name == :erlang
+  end
+
+  test "generates nil as the next lesson for last lesson" do
+    assert {:ok, %Lesson{next: next}} = Lessons.get("intermediate", "erlang", "en")
+
+    assert is_nil(next)
+  end
 end

@@ -298,6 +298,11 @@
                 <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2"><%= gettext("Miscellaneous") %></p>
                 <ol class="list-decimal ml-6">
                     <li>
+                        <%= lesson_link @conn, :misc, :benchee do %>
+                            Benchee <span class="text-xs italic"><%= gettext("library") %></span>
+                        <% end %>
+                    </li>
+                    <li>
                         <%= lesson_link @conn, :misc, :plug do %>
                             Plug <span class="text-xs italic"><%= gettext("library") %></span>
                         <% end %>
