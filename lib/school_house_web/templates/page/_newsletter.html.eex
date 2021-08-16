@@ -12,7 +12,7 @@
       <div class="mt-12 sm:w-full sm:max-w-md lg:mt-0 lg:ml-8 lg:flex-1">
         <form class="sm:flex">
           <label for="emailAddress" class="sr-only">Email address</label>
-          <input id="emailAddress" name="emailAddress" type="email" autocomplete="email" required class="w-full px-5 py-3 placeholder-gray-500 border-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white rounded-md" placeholder="Enter your email">
+          <input id="emailAddress" name="emailAddress" type="email" autocomplete="email" required class="w-full px-5 py-3 dark:text-gray-600 placeholder-gray-500 border-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white rounded-md" placeholder="Enter your email">
           <button type="submit" class="flex items-center justify-center w-full px-5 py-3 mt-3 text-base font-medium text-white border border-transparent rounded-md bg-brand-red-500 hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0">
             Notify me
           </button>
