@@ -1,6 +1,16 @@
 use Mix.Config
 
 config :school_house,
+  future_lessons: [
+    :doctests,
+    :flow,
+    :broadway,
+    :query_advanced,
+    :cachex,
+    :redix
+  ]
+
+config :school_house,
   lessons: [
     basics: [
       :basics,

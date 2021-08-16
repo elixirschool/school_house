@@ -9,11 +9,11 @@
               </svg>
               <h3 class="leading-tight text-sm font-semibold text-lighter dark:text-lighter-dark tracking-wider uppercase">
                 <%= lesson_link(@conn, @previous.section, @previous.name, "hover:text-primary") do %>
-                  Previous lesson
+                  Previous Lesson
                 <% end %>
               </h3>
             </div>
-            <div class="text-center">
+            <div class="text-left ml-2">
               <p class="text-base font-semibold text-primary dark:text-primary-dark mb-2">
               <%= lesson_link(@conn, @previous.section, @previous.name, "hover:text-primary") do %>
                 <%= @previous.title %>
@@ -37,13 +37,13 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
             </div>
-            <div class="text-center">
+            <div class="text-right mr-2">
               <p class="text-base font-semibold text-primary dark:text-primary-dark mb-2">
                 <%= lesson_link(@conn, @next.section, @next.name, "hover:text-primary") do %>
                   <%= @next.title %>
                 <% end %>
               </p>
-              <p class="text-italic md:text-left text-center text-sm text-lighter dark:text-lighter-dark overflow-hidden max-h-16">
+              <p class="text-italic text-right text-sm text-lighter dark:text-lighter-dark overflow-hidden max-h-16">
                 <%= raw @next.excerpt %>
               </p>
             </div>

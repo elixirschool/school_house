@@ -21,7 +21,7 @@
           Improve the Website
         </h3>
         <div class="mt-2 text-base text-light dark:text-light-dark">
-          Elixir school is an open source project, with code hosted on <a target="_blank" href="https://github.com/elixirschool/school_house" class="font-bold text-purple dark:text-purple-dark">Github</a>.
+          Elixir School is an open source project, with code hosted on <a target="_blank" href="https://github.com/elixirschool/school_house" class="font-bold text-purple dark:text-purple-dark">Github</a>.
           Take a look at the <a target="_blank" href="https://github.com/elixirschool/school_house/issues" class="font-bold text-purple dark:text-purple-dark">issues</a> on the repository to find a task that interests you. Create a pull request when your change is ready and after review it will be merged into the codebase!
           See something you think should be improved? Feel free to open an issue or create a pull request with the change.
         </div>
