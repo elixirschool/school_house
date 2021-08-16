@@ -170,6 +170,9 @@ module.exports = {
                         },
                         blockquote: {
                             color: theme('colors.brand-gray-300')
+                        },
+                        thead: {
+                            color: theme('colors.brand-gray-300')
                         }
                     }
                 }

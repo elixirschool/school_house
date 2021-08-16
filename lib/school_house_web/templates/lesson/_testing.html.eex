@@ -4,7 +4,7 @@
       <p class="mt-2 text-4xl font-extrabold tracking-tight leading-8 text-purple dark:text-purple-dark sm:text-4xl">
       <%= gettext("Lessons") %>: <%= gettext("Testing") %>
       </p>
-      <p class="max-w-2xl mt-4 text-xl text-lighter dark:text-lighter-dark lg:mx-auto">
+      <p class="max-w-2xl mt-4 text-xl text-light dark:text-light-dark lg:mx-auto">
       <%= gettext("The first step to writing fault tolerant and scalable code is writing bug free code. In these lessons we explore how best to test our Elixir code.") %>
       </p>
     </div>
