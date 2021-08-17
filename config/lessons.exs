@@ -53,7 +53,7 @@ config :school_house,
       :changesets,
       :associations,
       :querying_basics,
-      :query_advanced
+      :querying_advanced
     ],
     storage: [
       :ets,
