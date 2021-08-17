@@ -121,25 +121,25 @@ defmodule SchoolHouse.Lessons do
   end
 
   defp previous_lesson(%{section: section} = lesson) do
-    {index, section_lessons} = get_section_from_lesson(lesson)
+    {section_index, section_lessons} = get_section_from_lesson(lesson)
 
-    if index == 0 do
+    if section_index == 0 do
       {previous_section, lessons} = previous_section(section)
       {previous_section, List.last(lessons)}
     else
-      {previous, _} = List.pop_at(section_lessons, index - 1)
+      {previous, _} = List.pop_at(section_lessons, section_index - 1)
       {section, previous}
     end
   end
 
   defp next_lesson(%{section: section} = lesson) do
-    {index, section_lessons} = get_section_from_lesson(lesson)
+    {section_index, section_lessons} = get_section_from_lesson(lesson)
 
-    if index == Enum.count(section_lessons) - 1 do
+    if section_index == Enum.count(section_lessons) - 1 do
       {next_section, lessons} = next_section(section)
       {next_section, List.first(lessons)}
     else
-      {next, _} = List.pop_at(section_lessons, index + 1)
+      {next, _} = List.pop_at(section_lessons, section_index + 1)
       {section, next}
     end
   end

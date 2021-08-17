@@ -1,4 +1,4 @@
-<section class="bg-footer dark:bg-footer-dark -mb-16 mt-16 ml-half-screen mr-half-screen w-screen relative left-2/4 right-2/4">
+<section class="bg-footer dark:bg-footer-dark -mb-16 mt-16 ml-half-screen mr-half-screen w-screen relative left-2/4 right-2/4 lesson-pagination">
   <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:py-12 lg:px-8 items-center">
       <div class="flex md:justify-between flex-col-reverse md:flex-row">
         <div class="md:w-1/3 mt-12 md:mt-0">
@@ -19,9 +19,7 @@
                 <%= @previous.title %>
               <% end %>
               </p>
-              <p class="md:text-left text-center text-sm text-lighter dark:text-lighter-dark overflow-hidden max-h-16">
-                <%= raw @previous.excerpt %>
-              </p>
+              <%= raw @previous.excerpt %>
             </div>
           <% end %>
         </div>
@@ -43,9 +41,7 @@
                   <%= @next.title %>
                 <% end %>
               </p>
-              <p class="text-italic text-right text-sm text-lighter dark:text-lighter-dark overflow-hidden max-h-16">
-                <%= raw @next.excerpt %>
-              </p>
+              <%= raw @next.excerpt %>
             </div>
           <% end %>
         </div>

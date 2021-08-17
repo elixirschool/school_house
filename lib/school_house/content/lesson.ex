@@ -30,7 +30,7 @@ defmodule SchoolHouse.Content.Lesson do
     filename_attrs = [
       body: add_table_of_contents_links(body),
       locale: locale,
-      excerpt: convert_meta(attrs.excerpt),
+      excerpt: convert_meta(attrs.excerpt, "excerpt"),
       name: String.to_atom(name),
       section: String.to_atom(section),
       table_of_contents: table_of_contents_html(body),
@@ -110,7 +110,11 @@ defmodule SchoolHouse.Content.Lesson do
     |> String.replace_leading("<ul", "<ul class=\"table_of_contents\"")
   end
 
-  defp convert_meta(metadata) do
-    metadata |> Earmark.as_html!()
+  defp convert_meta("", _) do
+    nil
+  end
+
+  defp convert_meta(metadata, class) do
+    Earmark.as_html!("#{metadata} {: .#{class} }")
   end
 end
