@@ -5,7 +5,7 @@ config :school_house,
     :doctests,
     :flow,
     :broadway,
-    :query_advanced,
+    :querying_advanced,
     :cachex,
     :redix
   ]
@@ -62,8 +62,8 @@ config :school_house,
       :basics,
       :changesets,
       :associations,
-      :query_basics,
-      :query_advanced
+      :querying_basics,
+      :querying_advanced
     ],
     storage: [
       :ets,
