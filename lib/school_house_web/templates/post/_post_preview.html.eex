@@ -1,12 +1,12 @@
 <div class="">
   <div>
-    <a href="#" class="inline-block">
-      <%= for tag <- @post.tags do %>
-      <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-brand-purple-200 dark:bg-brand-purple-800 text-primary dark:text-white">
-        <%= tag %>
-      </span>
+    <%= for tag <- @post.tags do %>
+      <%= link(to: Routes.post_path(@conn, :filter_by_tag, String.downcase(tag))) do %>
+        <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-brand-purple-200 dark:bg-brand-purple-800 text-primary dark:text-white">
+          <%= String.downcase(tag) %>
+        </span>
       <% end %>
-    </a>
+    <% end %>
   </div>
   <%= link(to: Routes.post_path(@conn, :show, @post.slug), class: "block mt-4") do %>
     <p class="text-xl font-semibold text-primary dark:text-primary-dark"><%= @post.title %></p>

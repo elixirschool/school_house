@@ -23,6 +23,7 @@ defmodule SchoolHouseWeb.Router do
 
     get "/blog", PostController, :index
     get "/blog/:slug", PostController, :show
+    get "/blog/tag/:tag", PostController, :filter_by_tag
 
     get "/privacy", PageController, :privacy
 

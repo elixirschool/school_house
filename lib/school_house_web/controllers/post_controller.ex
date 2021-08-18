@@ -23,6 +23,17 @@ defmodule SchoolHouseWeb.PostController do
     end
   end
 
+  def filter_by_tag(conn, %{"tag" => tag}) do
+    with {:ok, posts_by_tag} <- Posts.get_by_tag(tag) do
+      render(conn, "index.html",
+        blog_heading: "Posts Tagged \"#{tag}\"",
+        page_title: @page_title,
+        posts: posts_by_tag,
+        pages: Posts.pages()
+      )
+    end
+  end
+
   defp current_page(params) do
     value = Map.get(params, "page", "0")
 
