@@ -76,6 +76,17 @@ input:checked ~ .dot {
   transform: translateX(100%);
 }
 
+/* Lesson Class Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+section.lesson-pagination p.excerpt {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.excerpt-box > p {
+  margin: 0;
+}
+
 .makeup .hll {background-color: #f4f5f6}
 .makeup {background-color: #ffffff}.makeup .unselectable {
   -webkit-touch-callout: none;
