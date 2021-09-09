@@ -93,9 +93,7 @@ module.exports = {
                         maxWidth: 'inherit',
                         pre: {
                             'background-color': theme('colors.brand-gray-100'),
-                            color: theme('colors.brand-gray-700'),
-                            'overflow-x': 'auto',
-                            width: '100%'
+                            color: theme('colors.brand-gray-700')
                         },
                         h1: {
                             color: theme('colors.brand-gray-750'),
