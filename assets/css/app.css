@@ -80,11 +80,14 @@ input:checked ~ .dot {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 section.lesson-pagination p.excerpt {
   font-size: 0.9rem;
-  opacity: 0.8;
 }
 
 .excerpt-box > p {
   margin: 0;
+}
+
+p.excerpt > a {
+  color: #776C84;
 }
 
 .makeup .hll {background-color: #f4f5f6}
