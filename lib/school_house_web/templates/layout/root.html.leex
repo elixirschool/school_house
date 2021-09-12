@@ -8,9 +8,9 @@
     <meta content="<%= get_csrf_token() %>" name="csrf-token">
 
     <%= live_title_tag assigns[:page_title] || "Elixir School", suffix: " · Elixir School" %>
-    <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
-    <script phx-track-static src="<%= Routes.static_path(@conn, "/js/initialize-theme.js") %>"></script>
-    <script defer phx-track-static src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/assets/app.css") %>"/>
+    <script phx-track-static src="<%= Routes.static_path(@conn, "/assets/initialize-theme.js") %>"></script>
+    <script defer phx-track-static src="<%= Routes.static_path(@conn, "/assets/app.js") %>"></script>
   </head>
   <body class="preload dark:bg-body-dark">
     <%= render "_header.html", conn: @conn %>

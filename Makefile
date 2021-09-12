@@ -1,8 +1,7 @@
 .PHONY: $(MAKECMDGOALS)
 
 setup: content
-	mix do deps.get, compile
-	npm install --prefix assets
+	mix do deps.get, compile, assets.deploy
 
 content:
 	rm -rf content assets/static/images

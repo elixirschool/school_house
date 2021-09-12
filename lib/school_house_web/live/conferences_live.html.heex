@@ -13,7 +13,7 @@
 
 <div class="bg-body dark:bg-body-dark">
   <div class="md:w-11/12 lg:w-8/12 mx-auto">
-    <%= f = form_for :filters, "#", id: "filter-form", class: "flex-row flex items-center mb-6 px-2 text-primary dark:text-primary-dark", phx_change: "filter" %>
+    <.form let={f} for={:filters} id="filter-form", class="flex-row flex items-center mb-6 px-2 text-primary dark:text-primary-dark", phx-change="filter">
       <p class="text-light dark:text-light-dark mr-4">Filter</p>
       <div class="mx-2">
         <%= checkbox f, :online, id: "online-only", checked: filter_is_online?(@filters) %>
@@ -23,7 +23,7 @@
         <label for="country-select" class="pr-2">Country</label>
         <%= select f, :country, @country_options, selected: country_filter(@filters), class: "w-40 pl-3 pr-6 appearance-none bg-nav dark:bg-nav-dark", id: "country-select" %>
       </div>
-    </form>
+    </.form>
     <div>
       <table class="divide-y divide-gray-200 w-full">
         <thead class="bg-gray-50 dark:bg-gray-600">
@@ -43,7 +43,7 @@
           <%= for conference <- @conferences do %>
             <tr>
               <td class="px-6 py-4">
-                <a class="text-purple dark:text-purple-dark underline" href="<%= conference.link %>"><%= conference.name %></a>
+                <a class="text-purple dark:text-purple-dark underline" href={conference.link}><%= conference.name %></a>
               </td>
               <td class="px-6 py-4">
                 <p class="text-sm text-primary dark:text-primary-dark"><%= conference.location %></p>

@@ -25,7 +25,7 @@ defmodule SchoolHouseWeb.Endpoint do
     at: "/",
     from: :school_house,
     gzip: false,
-    only: ~w(css fonts images js favicon.ico robots.txt feed.xml sitemap.xml sitemap_dark_mode.xml)
+    only: ~w(assets fonts images favicon.ico robots.txt feed.xml sitemap.xml sitemap_dark_mode.xml)
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.

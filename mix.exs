@@ -36,21 +36,25 @@ defmodule SchoolHouse.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:appsignal, "~> 2.1"},
-      {:appsignal_phoenix, "~> 2.0"},
+      {:appsignal, "~> 2.2"},
+      {:appsignal_phoenix, "~> 2.0.12"},
+      {:ecto_sql, "~> 3.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:locale_plug, "~> 0.1.0"},
       {:makeup_elixir, ">= 0.0.0"},
       {:makeup_erlang, ">= 0.0.0"},
       {:nimble_publisher, "~> 0.1"},
-      {:phoenix, "~> 1.5.9"},
-      {:phoenix_html, "~> 2.14"},
-      {:phoenix_live_dashboard, "~> 0.4"},
-      {:phoenix_live_view, "~> 0.15"},
+      {:phoenix, "~> 1.6.0-rc.0", override: true},
+      {:phoenix_ecto, "~> 4.2"},
+      {:phoenix_html, "~> 3.0"},
+      {:phoenix_live_dashboard, "~> 0.5"},
+      {:phoenix_live_view, "~> 0.16.3"},
       {:plug_cowboy, "~> 2.0"},
-      {:telemetry_metrics, "~> 0.4"},
-      {:telemetry_poller, "~> 0.4"},
+      {:postgrex, ">= 0.0.0"},
+      {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
+      {:telemetry_metrics, "~> 0.6"},
+      {:telemetry_poller, "~> 0.5"},
 
       # Dev & Test dependencies
       {:credo, ">= 0.0.0", only: :dev},
@@ -68,7 +72,12 @@ defmodule SchoolHouse.MixProject do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-      setup: ["deps.get", "cmd npm install --prefix assets"]
+      setup: ["deps.get", "cmd --cd assets npm install"],
+      "assets.deploy": [
+        "cmd --cd assets npm run deploy",
+        "esbuild default --minify",
+        "phx.digest"
+      ]
     ]
   end
 end
