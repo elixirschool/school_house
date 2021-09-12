@@ -1,13 +1,13 @@
 <div id="locale-menu-container" class="relative inline-block text-left" x-data="{ isOpen: false }">
   <div>
-    <button @click=" isOpen = !isOpen" type="button" class="relative inline-flex justify-center rounded-md border-2 border-brand-purple-800 dark:border-brand-purple-300 shadow-sm px-4 py-2 bg-white dark:bg-nav-dark text-sm font-bold text-primary dark:text-primary-dark focus:outline-none focus:ring-0 hover:bg-purple hover:text-white" id="locale-menu" aria-expanded="true" aria-haspopup="true">
+    <button @click="isOpen = !isOpen" type="button" class="relative inline-flex justify-center rounded-md border-2 border-brand-purple-800 dark:border-brand-purple-300 shadow-sm px-4 py-2 bg-white dark:bg-nav-dark text-sm font-bold text-primary dark:text-primary-dark focus:outline-none focus:ring-0 hover:bg-purple hover:text-white" id="locale-menu" aria-expanded="true" aria-haspopup="true">
       <%= current_locale() %>
       <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
       </svg>
     </button>
   </div>
-  <div x-cloak x-show="isOpen" @click.away=" { isOpen = false } " class="origin-top-right absolute left-0 mt-2 w-24 rounded-md shadow-lg bg-white dark:bg-nav-dark ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="locale-menu">
+  <div x-cloak x-show="isOpen" @click.away="isOpen = false" class="origin-top-right absolute left-0 mt-2 w-24 rounded-md shadow-lg bg-white dark:bg-nav-dark ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="locale-menu">
     <div class="py-1" role="none">
       <%= for locale <- supported_locales() do %>
         <%= link(locale, to: current_page_locale_path(@conn, locale), class: "block px-4 py-2 text-sm text-primary dark:text-primary-dark hover:bg-brand-gray-300 dark:hover:bg-purple-dark hover:font-bold") %>
