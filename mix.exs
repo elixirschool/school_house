@@ -38,7 +38,6 @@ defmodule SchoolHouse.MixProject do
     [
       {:appsignal, "~> 2.1"},
       {:appsignal_phoenix, "~> 2.0"},
-      {:ecto_sql, "~> 3.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:locale_plug, "~> 0.1.0"},
@@ -46,12 +45,10 @@ defmodule SchoolHouse.MixProject do
       {:makeup_erlang, ">= 0.0.0"},
       {:nimble_publisher, "~> 0.1"},
       {:phoenix, "~> 1.5.9"},
-      {:phoenix_ecto, "~> 4.2"},
       {:phoenix_html, "~> 2.14"},
       {:phoenix_live_dashboard, "~> 0.4"},
       {:phoenix_live_view, "~> 0.15"},
       {:plug_cowboy, "~> 2.0"},
-      {:postgrex, ">= 0.0.0"},
       {:telemetry_metrics, "~> 0.4"},
       {:telemetry_poller, "~> 0.4"},
 
@@ -71,9 +68,7 @@ defmodule SchoolHouse.MixProject do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-      setup: ["deps.get", "ecto.setup", "cmd npm install --prefix assets"],
-      "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
-      "ecto.reset": ["ecto.drop", "ecto.setup"]
+      setup: ["deps.get", "cmd npm install --prefix assets"]
     ]
   end
 end
