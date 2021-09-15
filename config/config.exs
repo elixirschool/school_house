@@ -8,7 +8,6 @@
 use Mix.Config
 
 config :school_house,
-  ecto_repos: [SchoolHouse.Repo],
   lesson_dir: "content/lessons",
   blog_dir: "content/posts/**/*.md",
   podcast_dir: "content/podcasts/*.md",

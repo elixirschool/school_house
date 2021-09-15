@@ -7,8 +7,6 @@ defmodule SchoolHouse.Application do
 
   def start(_type, _args) do
     children = [
-      # Start the Ecto repository
-      #      SchoolHouse.Repo,
       # Start the Telemetry supervisor
       SchoolHouseWeb.Telemetry,
       # Start the PubSub system
