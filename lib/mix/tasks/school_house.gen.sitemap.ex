@@ -28,8 +28,14 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Sitemap do
       |> Enum.map(&link_xml/1)
       |> Enum.join()
 
-    File.write!(Application.app_dir(:school_house, @destination), generate_document(links))
-    File.write!(Application.app_dir(:school_house, @destination_dark_mode), generate_document(dark_mode_links))
+    write_to_priv_file!(@destination, generate_document(links))
+    write_to_priv_file!(@destination_dark_mode, generate_document(dark_mode_links))
+  end
+
+  defp write_to_priv_file!(file_path, contents) do
+    :school_house
+    |> Application.app_dir(file_path)
+    |> File.write!(contents)
   end
 
   defp generate_document(links) do
