@@ -1,7 +1,7 @@
 defmodule SchoolHouse.Release do
   @moduledoc """
-    Helper module used during releases to run rss and sitemap generation tasks.
-    Based on https://hexdocs.pm/phoenix/releases.html#ecto-migrations-and-custom-commands
+  Helper module used during releases to run rss and sitemap generation tasks.
+  Based on https://hexdocs.pm/phoenix/releases.html#ecto-migrations-and-custom-commands
   """
 
   @app :school_house
