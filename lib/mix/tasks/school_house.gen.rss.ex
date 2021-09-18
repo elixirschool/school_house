@@ -8,11 +8,15 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Rss do
   alias SchoolHouse.Posts
   alias SchoolHouseWeb.{Endpoint, Router.Helpers}
 
-  @destination "assets/static/feed.xml"
+  @destination "priv/static/feed.xml"
 
   def run(_args) do
     Mix.Task.run("app.start")
 
+    generate()
+  end
+
+  def generate do
     items =
       0..(Posts.pages() - 1)
       |> Enum.flat_map(&Posts.page/1)
@@ -28,7 +32,13 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Rss do
     </rss>
     """
 
-    File.write!(@destination, document)
+    write_to_priv_file!(@destination, document)
+  end
+
+  defp write_to_priv_file!(file_path, contents) do
+    :school_house
+    |> Application.app_dir(file_path)
+    |> File.write!(contents)
   end
 
   defp link_xml(post) do

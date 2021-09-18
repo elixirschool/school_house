@@ -3,6 +3,3 @@ build:
     web: Dockerfile
   config:
     MIX_ENV: prod
-    LIVE_VIEW_SALT:  $LIVE_VIEW_SALT
-    SECRET_KEY_BASE: $SECRET_KEY_BASE
-    HEROKU_APP_NAME: $HEROKU_APP_NAME

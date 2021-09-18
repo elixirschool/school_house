@@ -29,10 +29,7 @@ COPY priv priv
 COPY Makefile Makefile
 RUN make content
 
-RUN mix do phx.digest, \
-    compile, \
-    school_house.gen.sitemap,  \
-    school_house.gen.rss
+RUN mix do phx.digest, compile
 
 RUN npm run --prefix ./assets deploy
 RUN mix release
@@ -52,4 +49,6 @@ COPY --from=build --chown=nobody:nobody /app/_build/prod/rel/school_house ./
 
 ENV HOME=/app
 
-CMD ["bin/school_house", "start"]
+CMD bin/school_house eval "SchoolHouse.Release.generate_sitemap" \
+  && bin/school_house eval "SchoolHouse.Release.generate_rss" \
+  && bin/school_house start

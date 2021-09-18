@@ -8,12 +8,16 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Sitemap do
   alias SchoolHouse.{Lessons, Posts}
   alias SchoolHouseWeb.{Endpoint, Router.Helpers}
 
-  @destination "assets/static/sitemap.xml"
-  @destination_dark_mode "assets/static/sitemap_dark_mode.xml"
+  @destination "priv/static/sitemap.xml"
+  @destination_dark_mode "priv/static/sitemap_dark_mode.xml"
 
   def run(_args) do
     Mix.Task.run("app.start")
 
+    generate()
+  end
+
+  def generate do
     links =
       all_links(:light)
       |> Enum.map(&link_xml/1)
@@ -24,8 +28,14 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Sitemap do
       |> Enum.map(&link_xml/1)
       |> Enum.join()
 
-    File.write!(@destination, generate_document(links))
-    File.write!(@destination_dark_mode, generate_document(dark_mode_links))
+    write_to_priv_file!(@destination, generate_document(links))
+    write_to_priv_file!(@destination_dark_mode, generate_document(dark_mode_links))
+  end
+
+  defp write_to_priv_file!(file_path, contents) do
+    :school_house
+    |> Application.app_dir(file_path)
+    |> File.write!(contents)
   end
 
   defp generate_document(links) do
