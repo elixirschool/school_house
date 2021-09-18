@@ -1,12 +1,5 @@
 FROM elixir:1.12.0-alpine AS build
 
-ARG HEROKU_APP_NAME
-ARG MIX_ENV
-RUN printenv
-RUN env
-RUN echo $MIX_ENV
-RUN echo ${MIX_ENV}
-
 # install build dependencies
 RUN apk add --no-cache build-base npm git python3 libstdc++
 
@@ -38,7 +31,6 @@ RUN make content
 
 RUN mix do phx.digest, \
     compile, \
-    school_house.gen.sitemap,  \
     school_house.gen.rss
 
 RUN npm run --prefix ./assets deploy
@@ -59,4 +51,5 @@ COPY --from=build --chown=nobody:nobody /app/_build/prod/rel/school_house ./
 
 ENV HOME=/app
 
-CMD ["bin/school_house", "start"]
+CMD bin/school_house eval "SchoolHouse.Release.generate_sitemap" \
+  && bin/school_house start
