@@ -1,8 +1,11 @@
 FROM elixir:1.12.0-alpine AS build
 
 ARG HEROKU_APP_NAME
+ARG MIX_ENV
 RUN echo $HEROKU_APP_NAME
 RUN echo ${HEROKU_APP_NAME}
+RUN echo MIX_ENV
+RUN echo ${MIX_ENV}
 
 # install build dependencies
 RUN apk add --no-cache build-base npm git python3 libstdc++
