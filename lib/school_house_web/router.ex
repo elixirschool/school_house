@@ -36,8 +36,8 @@ defmodule SchoolHouseWeb.Router do
 
       get "/report", ReportController, :index
 
-      get "/:section", LessonController, :index
-      get "/:section/:name", LessonController, :lesson
+      get "/lessons/:section", LessonController, :index
+      get "/lessons/:section/:name", LessonController, :lesson
     end
   end
 
