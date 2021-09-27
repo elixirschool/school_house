@@ -16,7 +16,7 @@ live_view_salt =
 
 host =
   case System.get_env("HEROKU_APP_NAME") do
-    nil -> "beta.elixirschool.com"
+    nil -> "elixirschool.com"
     sub -> "#{sub}.herokuapp.com"
   end
 
