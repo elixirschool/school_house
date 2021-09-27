@@ -1,6 +1,6 @@
 {
     "name": "Elixir School House",
-    "website": "https://beta.elixirschool.com/",
+    "website": "https://elixirschool.com/",
     "repository": "https://github.com/elixirschool/school_house",
     "stack": "container"
 }
