@@ -14,10 +14,9 @@ erl_crash.dump
 .elixir_ls/
 /rel
 /content
-/assets/static/images
-/assets/static/feed.xml
-/assets/static/sitemap.xml
-/assets/static/sitemap_dark_mode.xml
+/priv/static/feed.xml
+/priv/static/sitemap.xml
+/priv/static/sitemap_dark_mode.xml
 
 ### Elixir Patch ###
 
@@ -78,10 +77,10 @@ Temporary Items
 /node_modules
 /assets/node_modules
 
-# Since we are building assets from web/static,
-# we ignore priv/static. You may want to comment
-# this depending on your deployment strategy.
-/priv/static/
+# Since we are building assets with esbuild now,
+# we only ignore priv/static/assets and priv/static/images
+/priv/static/assets
+/priv/static/images
 
 # Installer-related files
 /installer/_build

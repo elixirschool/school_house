@@ -4,7 +4,7 @@ setup: content
 	mix do deps.get, compile, assets.deploy
 
 content:
-	rm -rf content assets/static/images
+	rm -rf content priv/static/images
 	git clone --branch master --single-branch --depth 1 https://github.com/elixirschool/elixirschool.git content
 	mv content/images priv/static/images
 
