@@ -14,6 +14,7 @@ erl_crash.dump
 .elixir_ls/
 /rel
 /content
+/assets/static/images
 /priv/static
 
 ### Elixir Patch ###
