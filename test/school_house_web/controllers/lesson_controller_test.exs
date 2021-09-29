@@ -24,7 +24,7 @@ defmodule SchoolHouseWeb.LessonControllerTest do
     {"libraries", "benchee"} => {"misc", "benchee"},
     {"libraries", "bypass"} => {"testing", "bypass"},
     {"libraries", "distillery"} => {"misc", "distillery"},
-    {"libraries", "stream-data"} => {"misc", "stream_data"},
+    {"libraries", "stream-data"} => {"testing", "stream_data"},
     {"libraries", "nimble-publisher"} => {"misc", "nimble_publisher"},
     {"libraries", "mox"} => {"testing", "mox"}
   }
@@ -59,9 +59,10 @@ defmodule SchoolHouseWeb.LessonControllerTest do
     end
 
     test "redirects old routes to new routes", %{conn: conn} do
-      Enum.map(@routes_map, fn {{section, name}, {new_section, new_name}} ->
+      Enum.each(@routes_map, fn {{section, name}, {new_section, new_name}} ->
         conn = get(conn, Routes.lesson_path(conn, :lesson, "en", section, name))
-        assert redirected_to(conn) =~ "/en/lessons/#{new_section}/#{new_name}"
+
+        assert %{section: ^new_section, name: ^new_name} = redirected_params(conn)
       end)
     end
   end
