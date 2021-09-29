@@ -14,6 +14,8 @@ erl_crash.dump
 .elixir_ls/
 /rel
 /content
+/priv/static/images
+/priv/static/assets
 /priv/static/feed.xml
 /priv/static/sitemap.xml
 /priv/static/sitemap_dark_mode.xml
@@ -76,11 +78,6 @@ Temporary Items
 # Static artifacts
 /node_modules
 /assets/node_modules
-
-# Since we are building assets with esbuild now,
-# we only ignore priv/static/assets and priv/static/images
-/priv/static/assets
-/priv/static/images
 
 # Installer-related files
 /installer/_build
