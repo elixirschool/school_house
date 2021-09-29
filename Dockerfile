@@ -16,22 +16,17 @@ ENV MIX_ENV=prod
 # install mix dependencies
 COPY mix.exs mix.lock ./
 COPY config config
-RUN mix do deps.get, deps.compile
-
-# install npm dependencies
 COPY assets/package.json assets/package-lock.json ./assets/
-RUN npm --prefix ./assets ci --progress=false --no-audit --loglevel=error
+
+RUN mix do setup, deps.compile
 
 COPY lib lib
 COPY assets assets
 COPY priv priv
-
 COPY Makefile Makefile
+
 RUN make content
-
-RUN mix do phx.digest, compile
-
-RUN npm run --prefix ./assets deploy
+RUN mix do assets.deploy, compile
 RUN mix release
 
 # prepare release image

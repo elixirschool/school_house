@@ -34,6 +34,15 @@ config :school_house, SchoolHouseWeb.Gettext,
   default_locale: "en",
   locales: ~w(ar bg bn de el en es fr id it ja ko ms no pl pt ru sk ta th tr uk vi zh-hans zh-hant)
 
+# Configure esbuild (the version is required)
+config :esbuild,
+  version: "0.12.18",
+  default: [
+    args: ~w(js/app.js js/initialize-theme.js --bundle --target=es2016 --outdir=../priv/static/assets),
+    cd: Path.expand("../assets", __DIR__),
+    env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
+  ]
+
 import_config "lessons.exs"
 import_config "redirects.exs"
 
