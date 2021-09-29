@@ -72,6 +72,7 @@ defmodule SchoolHouse.MixProject do
       "assets.deploy": [
         "cmd --cd assets npm run deploy",
         "esbuild default --minify",
+        "cmd cp -r assets/static priv",
         "phx.digest"
       ]
     ]

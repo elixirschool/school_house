@@ -24,7 +24,7 @@ defmodule SchoolHouseWeb.Endpoint do
   plug Plug.Static,
     at: "/",
     from: :school_house,
-    gzip: false,
+    gzip: true,
     only: ~w(assets fonts images favicon.ico robots.txt feed.xml sitemap.xml sitemap_dark_mode.xml)
 
   # Code reloading can be explicitly enabled under the

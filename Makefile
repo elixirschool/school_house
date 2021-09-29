@@ -6,6 +6,7 @@ setup: content
 content:
 	rm -rf content priv/static/images
 	git clone --branch master --single-branch --depth 1 https://github.com/elixirschool/elixirschool.git content
+	mkdir -p priv/static
 	mv content/images priv/static/images
 
 build:
