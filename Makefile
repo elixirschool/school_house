@@ -1,7 +1,7 @@
 .PHONY: $(MAKECMDGOALS)
 
 setup: content
-	mix do deps.get, compile, assets.deploy
+	mix do setup, compile, assets.deploy
 
 content:
 	rm -rf content assets/static/images
