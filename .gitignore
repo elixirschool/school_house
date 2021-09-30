@@ -15,9 +15,7 @@ erl_crash.dump
 /rel
 /content
 /assets/static/images
-/assets/static/feed.xml
-/assets/static/sitemap.xml
-/assets/static/sitemap_dark_mode.xml
+/priv/static
 
 ### Elixir Patch ###
 
@@ -77,11 +75,6 @@ Temporary Items
 # Static artifacts
 /node_modules
 /assets/node_modules
-
-# Since we are building assets from web/static,
-# we ignore priv/static. You may want to comment
-# this depending on your deployment strategy.
-/priv/static/
 
 # Installer-related files
 /installer/_build

@@ -5,6 +5,7 @@ module.exports = {
         '../lib/school_house_web/**/*.ex',
         '../lib/school_house_web/**/*.leex',
         '../lib/school_house_web/**/*.eex',
+        '../lib/school_house_web/**/*.heex',
         './js/**/*.js'
     ],
     darkMode: 'class', // or 'media' or 'class'
