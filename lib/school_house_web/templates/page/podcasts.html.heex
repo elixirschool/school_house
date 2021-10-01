@@ -19,9 +19,9 @@
           <%= for podcast <- @podcasts do %>
           <li>
             <div class="space-y-4">
-              <a href="<%= podcast.website %>" target="_blank">
+              <a href={podcast.website} target="_blank">
                 <div class="aspect-w-3 aspect-h-2">
-                  <img class="object-scale-down rounded-lg shadow-lg" src="<%= Routes.static_path(@conn, "/images/#{podcast.logo}") %>" alt="<%= podcast.name %> logo">
+                  <img class="object-scale-down rounded-lg shadow-lg" src={Routes.static_path(@conn, "/images/#{podcast.logo}")} alt={"#{podcast.name} logo"}>
                 </div>
               </a>
               <div class="font-medium text-md leading-6 space-y-1">

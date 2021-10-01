@@ -16,7 +16,7 @@
     <div class="flex-shrink-0">
       <a href="#">
         <span class="sr-only"><%= @post.author %></span>
-        <img class="w-10 h-10 rounded-full" src="<%= avatar_url(@post.author_link) %>" alt="">
+        <img class="w-10 h-10 rounded-full" src={avatar_url(@post.author_link)} alt={@post.author}>
       </a>
     </div>
     <div class="ml-3">
