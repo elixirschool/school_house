@@ -48,14 +48,11 @@ defmodule SchoolHouse.Content.Lesson do
     Regex.replace(@headers_regex, body, fn _, header, name, _ ->
       fragment = link_fragment(name)
 
-      # Phoenix.View.render_to_string(SchoolHouseWeb.LessonView, "_section_header.html",
-      #   fragment: fragment,
-      #   header: header,
-      #   name: name
-      # )
-
-      content = SchoolHouseWeb.LessonHeader.render(%{fragment: fragment, header: header, name: name}) |> Map.get(:static)
-      Phoenix.HTML.html_escape({:safe, content}) |> Phoenix.HTML.safe_to_string()
+      Phoenix.View.render_to_string(SchoolHouseWeb.LessonView, "_section_header.html",
+        fragment: fragment,
+        header: header,
+        name: name
+      )
     end)
   end
 
