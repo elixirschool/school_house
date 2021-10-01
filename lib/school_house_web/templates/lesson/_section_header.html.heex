@@ -1,4 +1,4 @@
-<%= content_tag String.to_atom(@header), class: "flex" do %>
+<%= content_tag String.to_atom(@header), class: "flex", id: @fragment do %>
   <a href={"##{@fragment}"}><%= @name %></a>
   <a href="#" title="go to top of page" class="pt-1 ml-2">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
