@@ -13,6 +13,8 @@
 
 <div class="bg-body dark:bg-body-dark">
   <div class="px-4 pt-4 mt-2 grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
-    <%= for post <- @posts, do: render("_post_preview.html", conn: @conn, post: post) %>
+    <%= for post <- @posts  do %>
+      <%= render("_post_preview.html", conn: @conn, post: post) %>
+    <% end %>
   </div>
 </div>
