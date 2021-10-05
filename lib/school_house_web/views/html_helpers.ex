@@ -35,11 +35,30 @@ defmodule SchoolHouseWeb.HtmlHelpers do
         {"#", "cursor-not-allowed"}
       end
 
-    link(contents,
-      class: "#{class} #{additional_classes}",
-      to: destination
+    additional_classes = if Lessons.coming_soon?(name), do: additional_classes <> " mr-2", else: additional_classes
+
+    content_tag(
+      :div,
+      [
+        link(contents,
+          class: "#{class} #{additional_classes}",
+          to: destination
+        ),
+        Lessons.coming_soon?(name) |> maybe_coming_soon_badge()
+      ],
+      class: "flex flex-wrap"
     )
   end
+
+  def maybe_coming_soon_badge(true),
+    do:
+      content_tag(
+        :span,
+        Gettext.gettext(SchoolHouseWeb.Gettext, "Coming Soon"),
+        class: "rounded py-px px-1 bg-purple text-xs font-semibold self-center flex-shrink-0"
+      )
+
+  def maybe_coming_soon_badge(_), do: []
 
   def supported_locales do
     :school_house

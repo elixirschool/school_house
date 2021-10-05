@@ -39,6 +39,8 @@ defmodule SchoolHouse.Lessons do
     locale in @locales and nil != locale_lessons(locale).get(section, name)
   end
 
+  def coming_soon?(name), do: name in @future_lessons
+
   defp locale_lessons(locale) do
     Module.concat(__MODULE__, String.capitalize(locale))
   end
