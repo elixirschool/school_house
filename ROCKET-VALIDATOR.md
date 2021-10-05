@@ -50,7 +50,7 @@ There are some issues that we can decide not to fix, for example HTML markup tha
 * A string to match URLs. It can be a whole URL if you want to be specific, or just a substring like `elixirschool`, which is recommended as it will match both on the beta, staging and production sites, as well as your ngrok instances if you include that on the name.
 * A string to match the issue message. A substring is enough, for example matching on `Attribute “phx-` will hide all issues regarding about invalid attributes set by Phoenix.
 
-Each RV user defines his own muting rules, here is [what we've agreed to mute](https://rocketvalidator.com/domains/elixirschool.com?tab=mutings&auth=171c6160-f0a2-49d9-b83f-065c15c8a072).
+Each RV user defines their own muting rules, here are the rules [that we've agreed to mute](https://rocketvalidator.com/domains/elixirschool.com?tab=mutings&auth=171c6160-f0a2-49d9-b83f-065c15c8a072).
 
 ## Shared Domain Stats
 
