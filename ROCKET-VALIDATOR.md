@@ -1,6 +1,6 @@
 # Rocket Validator
 
-We're using [Rocket Validator](https://rocketvalidator.com) to check [Beta Elixir School](https://beta.elixirschool.com) for HTML and accessibility issues.
+We're using [Rocket Validator](https://rocketvalidator.com) to check [Elixir School](https://elixirschool.com) for HTML and accessibility issues.
 
 This document is a quick guide on how to use that service, for full documentation please refer to [https://docs.rocketvalidator.com](https://docs.rocketvalidator.com)
 
@@ -50,25 +50,13 @@ There are some issues that we can decide not to fix, for example HTML markup tha
 * A string to match URLs. It can be a whole URL if you want to be specific, or just a substring like `elixirschool`, which is recommended as it will match both on the beta, staging and production sites, as well as your ngrok instances if you include that on the name.
 * A string to match the issue message. A substring is enough, for example matching on `Attribute “phx-` will hide all issues regarding about invalid attributes set by Phoenix.
 
-https://rocketvalidator.com/domains/beta.elixirschool.com?tab=mutings&date=&auth=e536facf-2cba-4288-ba45-3e7b95addcf8
-
-### Muting rules for Elixir School
-
-Each RV user defines his own muting rules, here is [what we've agreed to mute](https://rocketvalidator.com/domains/beta.elixirschool.com?tab=mutings&date=&auth=e536facf-2cba-4288-ba45-3e7b95addcf8):
-
-| URL match    | Message match     | Reason                                                       |
-| ------------ | ----------------- | ------------------------------------------------------------ |
-| elixirschool | Attribute “@click | Required by Alpine.js.                                       |
-| elixirschool | Attribute “phx-   | Required by Phoenix framework.                               |
-| elixirschool | Attribute “x-     | Required by Alpine.js.                                       |
-| elixirschool | Bad value “{%     | Wrong content in some posts, will be reviewed before launch. |
-| elixirschool | This document appears to be written in English but the “html” start tag has “lang= | Pending translation. We already have a mechanism to track content waiting to be translated. |
+Each RV user defines his own muting rules, here is [what we've agreed to mute](https://rocketvalidator.com/domains/elixirschool.com?tab=mutings&auth=171c6160-f0a2-49d9-b83f-065c15c8a072).
 
 ## Shared Domain Stats
 
 RV generates daily domain stats based on the reports you run, which can be shared by RV users. We're using the ones shared from @jaimeiniesta's account as a central reference:
 
-[Latest Stats and Reports for Beta Elixir School](https://rocketvalidator.com/domains/beta.elixirschool.com?tab=mutings&date=&auth=e536facf-2cba-4288-ba45-3e7b95addcf8)
+[Latest Stats and Reports for Beta Elixir School](https://rocketvalidator.com/domains/elixirschool.com?auth=171c6160-f0a2-49d9-b83f-065c15c8a072)
 
 ## Scheduling Reports
 
