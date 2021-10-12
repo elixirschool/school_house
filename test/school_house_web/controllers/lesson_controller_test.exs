@@ -2,6 +2,11 @@ defmodule SchoolHouseWeb.LessonControllerTest do
   use SchoolHouseWeb.ConnCase
 
   @routes_map %{
+    {"basics", "pattern-matching"} => {"basics", "pattern_matching"},
+    {"basics", "control-structures"} => {"basics", "control_structures"},
+    {"basics", "pipe-operator"} => {"basics", "pipe_operator"},
+    {"basics", "date-time"} => {"basics", "date_time"},
+    {"basics", "mix-tasks"} => {"intermediate", "mix_tasks"},
     {"basics", "iex-helpers"} => {"basics", "iex_helpers"},
     {"basics", "testing"} => {"testing", "basics"},
     {"advanced", "erlang"} => {"intermediate", "erlang"},
@@ -13,6 +18,7 @@ defmodule SchoolHouseWeb.LessonControllerTest do
     {"advanced", "otp-distribution"} => {"advanced", "otp_distribution"},
     {"advanced", "umbrella-projects"} => {"advanced", "umbrella_projects"},
     {"advanced", "gen-stage"} => {"data_processing", "genstage"},
+    {"ecto", "querying"} => {"ecto", "querying_basics"},
     {"specifics", "plug"} => {"misc", "plug"},
     {"specifics", "eex"} => {"misc", "eex"},
     {"specifics", "ets"} => {"storage", "ets"},
