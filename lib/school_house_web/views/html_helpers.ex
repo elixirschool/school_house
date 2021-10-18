@@ -30,7 +30,13 @@ defmodule SchoolHouseWeb.HtmlHelpers do
       ) do
     {destination, additional_classes} =
       if Lessons.exists?(section, name, current_locale()) do
-        {Routes.lesson_path(conn, :lesson, current_locale(), section, name), ""}
+        path = Routes.lesson_path(conn, :lesson, current_locale(), section, name)
+
+        if path == Phoenix.Controller.current_path(conn, %{}) do
+          {path, "font-bold"}
+        else
+          {path, ""}
+        end
       else
         {"#", "cursor-not-allowed"}
       end
