@@ -14,4 +14,10 @@ To get up and running all we need is a single command:
 $ make setup
 ```
 
+Then start the server
+
+```elixir
+$ mix phx.server
+```
+
 This will fetch our dependencies and setup our content from the external repository.
