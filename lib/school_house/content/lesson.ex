@@ -3,7 +3,7 @@ defmodule SchoolHouse.Content.Lesson do
   Encapsulates an individual lesson and handles parsing the originating markdown file
   """
 
-  @headers_regex ~r/<(h\d)>(["\p{L}\p{M}\s?!\.\/\d]+)(?=<\/\1>)/iu
+  @headers_regex ~r/<(h\d)>(["\p{L}\p{M}\s?!\.\/\d]+)(<\/\1>)/iu
   @enforce_keys [:body, :section, :locale, :name, :title, :version]
 
   defstruct [
@@ -105,7 +105,7 @@ defmodule SchoolHouse.Content.Lesson do
   defp table_of_contents_html(body) do
     @headers_regex
     |> Regex.scan(body)
-    |> Enum.map(fn [_, "h" <> size, name] -> {String.to_integer(size), String.trim(name)} end)
+    |> Enum.map(fn [_, "h" <> size, name, _] -> {String.to_integer(size), String.trim(name)} end)
     |> build_table()
     |> String.replace_leading("<ul", "<ul class=\"table_of_contents\"")
   end
