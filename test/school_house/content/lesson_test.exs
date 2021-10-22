@@ -54,4 +54,11 @@ defmodule SchoolHouse.LessonTest do
 
     assert is_nil(next)
   end
+
+  test "correctly parses body" do
+    assert {:ok, %Lesson{body: body}} = Lessons.get("basics", "enum", "en")
+
+    assert body ==
+             "<h2 class=\"flex\" id=\"a\">\n  <a href=\"#a\">\nA</a>\n  <a href=\"#\" title=\"go to top of page\" class=\"pt-1 ml-2\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"w-6 h-6\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 15l7-7 7 7\"></path>\n    </svg>\n  </a>\n</h2>\n<h3 class=\"flex\" id=\"aa\">\n  <a href=\"#aa\">\nAA</a>\n  <a href=\"#\" title=\"go to top of page\" class=\"pt-1 ml-2\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"w-6 h-6\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 15l7-7 7 7\"></path>\n    </svg>\n  </a>\n</h3>\n<h4 class=\"flex\" id=\"aaa\">\n  <a href=\"#aaa\">\nAAA</a>\n  <a href=\"#\" title=\"go to top of page\" class=\"pt-1 ml-2\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"w-6 h-6\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 15l7-7 7 7\"></path>\n    </svg>\n  </a>\n</h4>\n<h2 class=\"flex\" id=\"b\">\n  <a href=\"#b\">\nB</a>\n  <a href=\"#\" title=\"go to top of page\" class=\"pt-1 ml-2\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"w-6 h-6\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 15l7-7 7 7\"></path>\n    </svg>\n  </a>\n</h2>\n"
+  end
 end
