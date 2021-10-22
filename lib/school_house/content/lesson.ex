@@ -54,7 +54,6 @@ defmodule SchoolHouse.Content.Lesson do
         name: name
       )
     end)
-
   end
 
   defp link_fragment(name, index) do
@@ -137,6 +136,7 @@ defmodule SchoolHouse.Content.Lesson do
     replace_wrapper = fn m1, m2, m3, m4 ->
       replacement.(m1, m2, m3, m4, counter)
     end
+
     new = Regex.replace(regex, input, replace_wrapper, global: false)
     replace_counted_helper(regex, input, new, replacement, counter + 1)
   end
