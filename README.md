@@ -10,14 +10,8 @@ By leveraging Dashbit's [NimblePublisher](https://github.com/dashbitco/nimble_pu
 
 To get up and running all we need is a single command:
 
-```shell
+```elixir
 $ make setup
 ```
 
 This will fetch our dependencies and setup our content from the external repository.
-
-Then start the phoenix server
-
-```shell
-$ mix phx.server
-```
