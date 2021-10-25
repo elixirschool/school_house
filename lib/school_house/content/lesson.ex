@@ -45,8 +45,8 @@ defmodule SchoolHouse.Content.Lesson do
 
     body = String.replace(body, "{% include toc.html %}", toc_html)
 
-    Regex.replace(@headers_regex, body, fn _, header, name, _ ->
-      fragment = link_fragment(name)
+    replace_counted(@headers_regex, body, fn _, header, name, _, count ->
+      fragment = link_fragment(name, count)
 
       Phoenix.View.render_to_string(SchoolHouseWeb.LessonView, "_section_header.html",
         fragment: fragment,
@@ -56,7 +56,7 @@ defmodule SchoolHouse.Content.Lesson do
     end)
   end
 
-  defp link_fragment(name) do
+  defp link_fragment(name, index) do
     name =
       name
       |> String.trim()
@@ -65,10 +65,11 @@ defmodule SchoolHouse.Content.Lesson do
     name
     |> String.replace(~r/[^\p{L}\s]/u, "")
     |> String.replace(" ", "-")
+    |> Kernel.<>("-#{index}")
   end
 
-  defp page_link(name) do
-    "<a href=\"##{link_fragment(name)}\">#{name}</a>"
+  defp page_link(name, index) do
+    "<a href=\"##{link_fragment(name, index)}\">#{name}</a>"
   end
 
   defp parse_version(string) do
@@ -90,14 +91,14 @@ defmodule SchoolHouse.Content.Lesson do
     "<ul>#{acc |> Enum.reverse() |> Enum.join("")}</ul>"
   end
 
-  defp build_table([{size, name} | matches], acc) do
-    {children, remaining} = Enum.split_while(matches, fn {s, _} -> s > size end)
+  defp build_table([{size, name, index} | matches], acc) do
+    {children, remaining} = Enum.split_while(matches, fn {s, _, _} -> s > size end)
     children = build_table(children)
 
     section_link =
       name
       |> String.trim()
-      |> page_link()
+      |> page_link(index)
 
     build_table(remaining, ["<li>#{section_link}#{children}</li>" | acc])
   end
@@ -105,7 +106,8 @@ defmodule SchoolHouse.Content.Lesson do
   defp table_of_contents_html(body) do
     @headers_regex
     |> Regex.scan(body)
-    |> Enum.map(fn [_, "h" <> size, name, _] -> {String.to_integer(size), String.trim(name)} end)
+    |> Enum.with_index()
+    |> Enum.map(fn {[_, "h" <> size, name, _], index} -> {String.to_integer(size), String.trim(name), index} end)
     |> build_table()
     |> String.replace_leading("<ul", "<ul class=\"table_of_contents\"")
   end
@@ -116,5 +118,26 @@ defmodule SchoolHouse.Content.Lesson do
 
   defp convert_meta(metadata, class) do
     Earmark.as_html!("#{metadata} {: .#{class} }")
+  end
+
+  # Replaces regex matches by calling replacement with the match and current match count
+  def replace_counted(regex, input, replacement) do
+    replace_counted_helper(regex, "", input, replacement, 0)
+  end
+
+  # If nothing has changed end recursion
+  defp replace_counted_helper(_, prev, prev, _, _) do
+    prev
+  end
+
+  # If something has changed, replace and recurse
+  defp replace_counted_helper(regex, _prev, input, replacement, counter) do
+    # Bind the current value of counter for the call to replacement
+    replace_wrapper = fn m1, m2, m3, m4 ->
+      replacement.(m1, m2, m3, m4, counter)
+    end
+
+    new = Regex.replace(regex, input, replace_wrapper, global: false)
+    replace_counted_helper(regex, input, new, replacement, counter + 1)
   end
 end
