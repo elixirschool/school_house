@@ -49,7 +49,7 @@ defmodule SchoolHouseWeb.HtmlHelpers do
       end
 
     content_tag(
-      :div,
+      :span,
       [
         link(contents,
           class: "#{class} #{additional_classes}",
