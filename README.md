@@ -16,7 +16,7 @@ $ make setup
 
 Then start the server
 
-```elixir
+```shell
 $ mix phx.server
 ```
 
