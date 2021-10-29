@@ -110,9 +110,10 @@ module.exports = {
                         },
                         a: {
                             color: theme('colors.brand-purple-800'),
+                            fontWeight: 'inherit',
+                            textDecoration: 'none',
                             '&:hover': {
-                                'background-color': theme('colors.brand-purple-800'),
-                                color: colors.white,
+                                textDecoration: 'underline',
                             }
                         },
                         code: {
@@ -148,9 +149,10 @@ module.exports = {
                         },
                         a: {
                             color: theme('colors.brand-purple-100'),
+                            fontWeight: 'inherit',
+                            textDecoration: 'none',
                             '&:hover': {
-                                'background-color': theme('colors.brand-purple-100'),
-                                color: colors.white,
+                                textDecoration: 'underline',
                             }
                         },
                         strong: {
