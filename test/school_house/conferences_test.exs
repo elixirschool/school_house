@@ -40,7 +40,7 @@ defmodule SchoolHouse.ConferencesTest do
       us_conferences = Conferences.by_country("United States")
 
       assert 1 == length(us_conferences)
-      assert hd(us_conferences) |> Map.get(:country) == "United States"
+      assert us_conferences |> hd() |> Map.get(:country) == "United States"
     end
 
     test "returns empty array for conferences in Brazil" do

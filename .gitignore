@@ -15,6 +15,7 @@ erl_crash.dump
 /rel
 /content
 /assets/static/images
+/assets/static/sitemap*
 /priv/static
 
 ### Elixir Patch ###
