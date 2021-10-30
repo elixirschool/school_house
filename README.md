@@ -14,9 +14,9 @@ To get up and running all we need is a single command:
 $ make setup
 ```
 
-This will fetch our dependencies and setup our content from the external repository.
+This will fetch dependencies, download lessons and blog posts from the [external repository](https://github.com/elixirschool/elixirschool), and compile the project.
 
-Then start the phoenix server
+Then start the phoenix server with:
 
 ```shell
 $ mix phx.server
