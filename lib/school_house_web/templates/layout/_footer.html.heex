@@ -1,5 +1,4 @@
 <footer class="mt-16 bg-footer dark:bg-footer-dark" aria-labelledby="footerHeading">
-  <h2 id="footerHeading" class="sr-only">Footer</h2>
   <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
     <div class="xl:grid xl:grid-cols-3 xl:gap-8">
       <div class="space-y-8 xl:col-span-1">
@@ -33,9 +32,9 @@
       <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-2 xl:col-span-2">
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
-            <h3 class="text-sm font-semibold tracking-wider text-lighter dark:text-lighter-dark uppercase">
+            <p class="text-sm font-semibold tracking-wider text-lighter dark:text-lighter-dark uppercase">
               Getting Started
-            </h3>
+            </p>
             <ul class="mt-4 space-y-4">
               <li>
                 <%= link(gettext("Why Elixir?"), to: Routes.page_path(@conn, :why, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
@@ -49,9 +48,9 @@
             </ul>
           </div>
           <div class="mt-12 md:mt-0">
-            <h3 class="text-sm font-semibold tracking-wider text-lighter dark:text-lighter-dark uppercase">
+            <p class="text-sm font-semibold tracking-wider text-lighter dark:text-lighter-dark uppercase">
               <%= gettext("Lessons") %>
-            </h3>
+            </p>
             <ul class="mt-4 space-y-4">
               <li>
                 <%= link(gettext("Basics"), to: Routes.lesson_path(@conn, :index, current_locale(), :basics), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
@@ -89,9 +88,9 @@
         </div>
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
-            <h3 class="text-sm font-semibold tracking-wider text-lighter dark:text-lighter-dark uppercase">
+            <p class="text-sm font-semibold tracking-wider text-lighter dark:text-lighter-dark uppercase">
               <%= link("Blog", to: Routes.post_path(@conn, :index), class: "hover:text-gray-600") %>
-            </h3>
+            </p>
             <ul class="mt-4 space-y-4">
               <li>
                 <%= link("Announcements", to: Routes.post_path(@conn, :filter_by_tag, "announcement"), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
@@ -108,9 +107,9 @@
             </ul>
           </div>
           <div class="mt-12 md:mt-0">
-            <h3 class="text-sm font-semibold tracking-wider text-lighter dark:text-lighter-dark uppercase">
+            <p class="text-sm font-semibold tracking-wider text-lighter dark:text-lighter-dark uppercase">
               Project
-            </h3>
+            </p>
             <ul class="mt-4 space-y-4">
               <li>
                 <%= link("Get Involved", to: Routes.page_path(@conn, :get_involved, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
