@@ -44,7 +44,7 @@ defmodule SchoolHouseWeb.LessonControllerTest do
     end
 
     test "renders a 404 for invalid lessons", %{conn: conn} do
-      conn = get(conn, Routes.lesson_path(conn, :lesson, "en", "non", "existant"))
+      conn = get(conn, Routes.lesson_path(conn, :lesson, "en", "non", "existent"))
       body = html_response(conn, 404)
 
       assert body =~ "Page not found"
