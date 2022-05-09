@@ -27,7 +27,7 @@ defmodule SchoolHouse.LessonsTest do
     end
 
     test "returns {:error, :not_found} for missing lessons" do
-      assert {:error, :not_found} == Lessons.get("none", "existant", "lesson")
+      assert {:error, :not_found} == Lessons.get("none", "existent", "lesson")
     end
   end
 

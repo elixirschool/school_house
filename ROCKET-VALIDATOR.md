@@ -17,7 +17,7 @@ Rocket Validator is a web crawler and reporting tool that lets you automatically
 
 The current site for Beta Elixir School has 1,040 web pages. Imagine if you had to check each web page manually, both for HTML and accessibility issues. That's 2,080 checks needed!
 
-RV lets us automate this site-wide checking and also schedule periodic checks to constanly monitor for new issues.
+RV lets us automate this site-wide checking and also schedule periodic checks to constantly monitor for new issues.
 
 ## Create your RV account
 
