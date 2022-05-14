@@ -901,7 +901,7 @@ msgstr ""
 msgid "While its roots are in lambda calculus, functional programming can be fun, easy, and approachable for everyone! By focusing on breaking problems down into simple, side-effect free, functions we can ensure fewer bugs, better test coverage, while incrementally building our solutions through the composition of well tested functions."
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/school_house_web/controllers/page_controller.ex:23
 msgid "Why Choose Elixir?"
 msgstr ""
@@ -922,6 +922,7 @@ msgid "With over 150 meetups, you're sure to find local Elixir enthusiasts. Chec
 msgstr ""
 
 #, elixir-format
+#: lib/school_house_web/templates/page/index.html.heex:30
 #: lib/school_house_web/templates/page/why.html.heex:270
 msgid "and"
 msgstr ""
@@ -954,4 +955,9 @@ msgstr ""
 #, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:240
 msgid "to join the conversation."
+msgstr ""
+
+#, elixir-format
+#: lib/school_house_web/templates/post/index.html.heex:5
+msgid "Recent Posts"
 msgstr ""
