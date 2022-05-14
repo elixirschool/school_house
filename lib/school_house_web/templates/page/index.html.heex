@@ -159,7 +159,7 @@
       </div>
 
       <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-brand-purple-800 rounded-lg flex flex-col items-center justify-between">
-        <p class="text-white font-bold text-2xl text-center">6 <%= gettext("Podcasts")%> <br /> <%= gettext("(&amp; Counting)")%></p>
+        <p class="text-white font-bold text-2xl text-center">6 <%= gettext("Podcasts")%> <br /> <%= gettext("(& Counting)")%></p>
 
         <%= link(to: Routes.page_path(@conn, :podcasts, current_locale()), class: "inline-flex items-center mx-auto text-white") do %>
             <%= gettext("See Them Here")%>
@@ -270,7 +270,7 @@
     <p class="mt-4 text-lg leading-6 text-light dark:text-light-dark"><%= gettext("We have articles spanning several topics")%></p>
     <div class="flex justify-center mt-8">
       <div class="shadow rounded-md">
-        <%= link("Visit the Blog", to: Routes.post_path(@conn, :index), class: "font-extrabold items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple hover:text-white") %>
+        <%= link(gettext("Visit the Blog"), to: Routes.post_path(@conn, :index), class: "font-extrabold items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple hover:text-white") %>
       </div>
     </div>
   </div>

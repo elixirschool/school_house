@@ -280,11 +280,6 @@ msgid "Translation Report"
 msgstr ""
 
 #, elixir-format
-#: lib/school_house_web/templates/page/index.html.heex:162
-msgid "(&amp; Counting)"
-msgstr ""
-
-#, elixir-format
 #: lib/school_house_web/templates/lesson/_misc.html.heex:8
 msgid "."
 msgstr ""
@@ -960,4 +955,14 @@ msgstr ""
 #, elixir-format
 #: lib/school_house_web/templates/post/index.html.heex:5
 msgid "Recent Posts"
+msgstr ""
+
+#, elixir-format
+#: lib/school_house_web/templates/page/index.html.heex:162
+msgid "(& Counting)"
+msgstr ""
+
+#, elixir-format
+#: lib/school_house_web/templates/page/index.html.heex:273
+msgid "Visit the Blog"
 msgstr ""
