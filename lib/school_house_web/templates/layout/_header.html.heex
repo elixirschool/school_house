@@ -5,7 +5,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 md:w-7 md:h-7 lg:h-10 lg:w-10 p-2 text-white rounded-full bg-purple" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
         </svg>
-        <span class="ml-3 text-2xl font-extrabold text-primary dark:text-primary-dark tracking-tight">Elixir School</span>
+        <span class="ml-3 text-2xl font-extrabold text-primary dark:text-primary-dark tracking-tight"><%= gettext("Elixir School")%></span>
       <% end %>
       <div class="w-full md:w-auto mx-auto md:ml-auto md:mr-0 flex flex-col-reverse md:flex-row">
         <ul class="flex flex-col md:flex-row md:items-center">
@@ -16,10 +16,10 @@
             <%= render("_lesson_menu.html", conn: @conn) %>
           </li>
           <li class="hover:bg-purple hover:text-white px-4 md:px-0">
-            <%= link("Blog", to: Routes.post_path(@conn, :index), class: "relative block py-6 px-4 lg:p-6 text-sm md:text-center lg:text-base font-bold") %>
+            <%= link(gettext("Blog"), to: Routes.post_path(@conn, :index), class: "relative block py-6 px-4 lg:p-6 text-sm md:text-center lg:text-base font-bold") %>
           </li>
           <li class="hover:bg-purple hover:text-white px-4 md:px-0">
-            <%= link("Get Involved", to: Routes.page_path(@conn, :get_involved, current_locale()), class: "relative block py-6 px-4 lg:p-6 text-sm md:text-center lg:text-base font-bold") %>
+            <%= link(gettext("Get Involved"), to: Routes.page_path(@conn, :get_involved, current_locale()), class: "relative block py-6 px-4 lg:p-6 text-sm md:text-center lg:text-base font-bold") %>
           </li>
         </ul>
         <ul class="flex flex-row items-center justify-center py-4 md:py-0">

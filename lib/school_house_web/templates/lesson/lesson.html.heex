@@ -8,7 +8,7 @@
   <% end %>
 
   <div class="pt-8">
-    <span class="text-4xl font-bold border-b-4 border-brand-purple">Table of Contents</span>
+    <span class="text-4xl font-bold border-b-4 border-brand-purple"><%= gettext("Table of Contents")%></span>
     <div class="pt-6">
       <%= raw @lesson.table_of_contents %>
     </div>
@@ -16,9 +16,9 @@
   <%= raw @lesson.body %>
 
   <blockquote class="edit-lesson dark:text-primary-dark">
-    Caught a mistake or want to contribute to the lesson?
+    <%= gettext("Caught a mistake or want to contribute to the lesson?")%>
     <a href={"https://github.com/elixirschool/elixirschool/edit/master/lessons/#{@lesson.locale}/#{@lesson.section}/#{@lesson.name}.md"} target="_blank" rel="noopener">
-      Edit this lesson on GitHub!
+      <%= gettext("Edit this lesson on GitHub!")%>
     </a>
   </blockquote>
 </section>
