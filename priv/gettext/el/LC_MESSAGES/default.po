@@ -794,7 +794,7 @@ msgstr "Ο κορυφαίος προορισμός για εκμάθηση κα�
 #, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:63
 msgid "The very nature of functional programming, small functions with no side-effects, makes testing easy."
-msgstr "Η ίδια η φύση του συναρτησιακού προγραμματισμού, οι μικρές λειτουργίες χωρίς παρενέργειες, κάνουν τη δοκιμή εύκολη."
+msgstr "Η ίδια η φύση του συναρτησιακού προγραμματισμού, οι μικρές συναρτήσεις χωρίς παρενέργειες, κάνουν τη δοκιμή εύκολη."
 
 #, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:46
