@@ -625,7 +625,7 @@ msgstr "Συναντήσεις"
 #, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:285
 msgid "More to come..."
-msgstr "Περισσότερα ακολουθούν..."
+msgstr "Ακολουθούν περισσότερα..."
 
 #, elixir-format
 #: lib/school_house_web/live/conferences_live.html.heex:32
