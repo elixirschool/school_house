@@ -280,11 +280,6 @@ msgid "Translation Report"
 msgstr ""
 
 #, elixir-format
-#: lib/school_house_web/templates/lesson/_misc.html.heex:8
-msgid "."
-msgstr ""
-
-#, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:224
 msgid "A Slack alternative built with Elixir is fast becoming a popular chat option for the community."
 msgstr ""
@@ -695,12 +690,8 @@ msgstr ""
 
 #, elixir-format
 #: lib/school_house_web/controllers/page_controller.ex:15
-msgid "Privacy Policy"
-msgstr ""
-
-#, elixir-format
 #: lib/school_house_web/templates/page/_newsletter.html.heex:23
-msgid "Privacy Policy."
+msgid "Privacy Policy"
 msgstr ""
 
 #, elixir-format
