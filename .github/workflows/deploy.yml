@@ -1,17 +1,16 @@
 ---
-
 name: Deploy
 
 on:
   workflow_dispatch:
   push:
     branches:
-      - master
+      - main
 jobs:
   Dialyzer:
     strategy:
       matrix:
-        elixir: ['1.12']
+        elixir: ["1.12"]
         otp: [24]
     runs-on: ubuntu-latest
     steps:
@@ -40,19 +39,19 @@ jobs:
     if: ${{ github.repository_owner == 'elixirschool' }}
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+      - uses: actions/checkout@v1
 
-    - name: Login to Heroku Container registry
-      env:
-        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:login
+      - name: Login to Heroku Container registry
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: heroku container:login
 
-    - name: Build and push
-      env:
-        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:push web -a ${{ secrets.HEROKU_APP_NAME }}
+      - name: Build and push
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: heroku container:push web -a ${{ secrets.HEROKU_APP_NAME }}
 
-    - name: Release
-      env:
-        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:release web -a ${{ secrets.HEROKU_APP_NAME }}
+      - name: Release
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: heroku container:release web -a ${{ secrets.HEROKU_APP_NAME }}

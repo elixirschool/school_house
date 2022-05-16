@@ -1,5 +1,4 @@
 ---
-
 name: Continuous Integration
 
 on:
@@ -10,13 +9,13 @@ on:
       - synchronize
   push:
     branches:
-      - master
+      - main
 
 jobs:
   Test:
     strategy:
       matrix:
-        elixir: ['1.12']
+        elixir: ["1.12"]
         otp: [24]
     env:
       MIX_ENV: test
@@ -33,7 +32,7 @@ jobs:
   Format:
     strategy:
       matrix:
-        elixir: ['1.12']
+        elixir: ["1.12"]
         otp: [24]
     runs-on: ubuntu-latest
     steps:
@@ -48,7 +47,7 @@ jobs:
   Credo:
     strategy:
       matrix:
-        elixir: ['1.12']
+        elixir: ["1.12"]
         otp: [24]
     runs-on: ubuntu-latest
     steps:
