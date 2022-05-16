@@ -32,6 +32,14 @@ defmodule SchoolHouse.Content.Post do
       |> Path.basename(".md")
       |> String.slice(date_prefix_length..-1)
 
+    {title, attrs} = Map.pop!(attrs, :title)
+    {excerpt, attrs} = Map.pop!(attrs, :excerpt)
+
+    attrs =
+      attrs
+      |> Map.put(:title, Earmark.as_html!(title))
+      |> Map.put(:excerpt, Earmark.as_html!(excerpt))
+
     struct!(__MODULE__, [body: body, slug: slug] ++ Map.to_list(attrs))
   end
 end

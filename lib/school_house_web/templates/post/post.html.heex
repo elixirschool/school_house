@@ -15,14 +15,16 @@
     </div>
 
     <div class="pt-6 text-center">
-      <h1 class="text-2xl leading-8 font-extrabold tracking-tight text-primary dark:text-primary-dark sm:text-2xl"><%= @post.title %></h1>
+      <h1 class="text-2xl leading-8 font-extrabold tracking-tight sm:text-2xl prose dark:prose-dark"><%= raw @post.title %></h1>
     </div>
 
     <div class="py-2 text-center">
       <h2 class="text-medium leading-8 tracking-tight text-primary dark:text-primary-dark sm:text-large "><%= gettext("By") %> <%= @post.author %></h2>
     </div>
 
-    <div class="bg-brand-gray-300 dark:bg-brand-gray-800 rounded-xl p-4 mb-3 text-xl text-light dark:text-light-dark sm:mb-4 text-center"><%= raw @post.excerpt %></div>
+    <div class="bg-brand-gray-300 dark:bg-brand-gray-800 rounded-xl p-4 mb-3 text-xl sm:mb-4 text-center prose dark:prose-dark">
+      <%= raw @post.excerpt %>
+    </div>
 
     <div class="prose dark:prose-dark">
       <%= raw @post.body %>

@@ -34,7 +34,7 @@ module.exports = {
                 'brand-purple-200': '#cfbae6',
                 'brand-purple-300': '#967ab4',
                 'brand-purple-800': '#7c6f89',
-                
+
                 // gray
                 'brand-gray-100': '#f9fafb',
                 'brand-gray-200': '#f5f6f7',
@@ -60,11 +60,11 @@ module.exports = {
                 'half-screen': '-50vw',
             },
             textColor: (theme) => ({
-                primary : {
+                primary: {
                     DEFAULT: theme('colors.brand-gray-750'),
                     dark: theme('colors.brand-gray-200')
                 },
-                heavy : {
+                heavy: {
                     DEFAULT: theme('colors.brand-gray-800'),
                     dark: colors.white
                 },
@@ -115,8 +115,19 @@ module.exports = {
                                 color: colors.white,
                             }
                         },
+                        'code::before': {
+                            content: '""'
+                        },
+                        'code::after': {
+                            content: '""'
+                        },
                         code: {
-                            color: theme('colors.brand-gray-750')
+                            color: theme('colors.brand-gray-750'),
+                            'background-color': theme('colors.brand-gray-300'),
+                            'border-radius': '6px',
+                            display: 'inline-block',
+                            padding: '2px 4px',
+                            whitespace: 'no-wrap'
                         },
                         'ul li': {
                             marginTop: '0px',
@@ -155,9 +166,6 @@ module.exports = {
                         },
                         strong: {
                             color: theme('colors.brand-gray-200')
-                        },
-                        code: {
-                            color: theme('colors.brand-gray-300')
                         },
                         'ul li': {
                             marginTop: '0px',
