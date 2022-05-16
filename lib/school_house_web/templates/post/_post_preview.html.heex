@@ -9,8 +9,8 @@
     <% end %>
   </div>
   <%= link(to: Routes.post_path(@conn, :show, @post.slug), class: "block mt-4") do %>
-    <span class="text-xl font-semibold text-primary dark:text-primary-dark prose"><%= raw @post.title %></span>
-    <span class="mt-3 text-base text-primary dark:text-primary-dark prose"><%= raw @post.excerpt %></span>
+    <span class="text-xl font-semibold prose dark:prose-dark"><%= raw @post.title %></span>
+    <span class="mt-3 text-base prose dark:prose-dark"><%= raw @post.excerpt %></span>
   <% end %>
   <div class="flex items-center mt-6">
     <div class="flex-shrink-0">
