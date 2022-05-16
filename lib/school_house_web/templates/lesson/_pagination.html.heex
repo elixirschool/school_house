@@ -9,7 +9,7 @@
               </svg>
               <div class="leading-tight text-sm font-semibold text-lighter dark:text-lighter-dark tracking-wider uppercase">
                 <%= lesson_link(@conn, @previous.section, @previous.name, "hover:text-primary") do %>
-                  Previous Lesson
+                  <%= gettext("Previous Lesson")%>
                 <% end %>
               </div>
             </div>
@@ -28,7 +28,7 @@
             <div class="flex md:justify-end justify-center items-center content-center mb-2">
               <div class="leading-tight text-sm font-semibold text-lighter dark:text-lighter-dark tracking-wider uppercase">
                 <%= lesson_link(@conn, @next.section, @next.name, "hover:text-primary") do %>
-                  Next Lesson
+                  <%= gettext("Next Lesson")%>
                 <% end %>
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 h-6 w-6 ml-2 hidden md:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">

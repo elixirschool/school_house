@@ -2,14 +2,14 @@
   <div class="container px-5 py-20 md:py-24 mx-auto">
     <div class="items-center text-center">
       <h1 class="mb-6 text-4xl font-extrabold tracking-tight leading-8 text-purple dark:text-purple-dark sm:text-4xl">
-        Welcome to Elixir School!
+        <%= gettext("Welcome to Elixir School!") %>
       </h1>
       <p class="mb-6 leading-relaxed">
-        Elixir School is the premier destination for people looking to learn and master the Elixir programming language.
-        Whether you’re a seasoned veteran or this is your first time, you’ll find what you need in lessons and auxiliary resources.
+        <%= gettext("Elixir School is the premier destination for people looking to learn and master the Elixir programming language.")%>
+        <%= gettext("Whether you’re a seasoned veteran or this is your first time, you’ll find what you need in lessons and auxiliary resources.")%>
       </p>
       <p class="mb-6 leading-relaxed prose dark:prose-dark">
-        Through the hard work of volunteers Elixir School has been translated to many languages. Some of these translations include: 
+        <%= gettext("Through the hard work of volunteers Elixir School has been translated to many languages. Some of these translations include: ")%>
         <a href="/vi" title="Vietnamese">Việt ngữ</a>,
         <a href="/zh-hans" title="Chinese, in simplified script">简体中文</a>, 
         <a href="/zh-hant" title="Chinese, in traditional script">繁體中文</a>, 
@@ -27,11 +27,11 @@
         <a href="/de" title="German">Deutsch</a>,
         <a href="/bn" title="Bengali">বাংলা</a>,
         <a href="/tr" title="Turkish">Türkçe</a>,
-        <a href="/th" title="Thai">ภาษาไทย</a>, and
+        <a href="/th" title="Thai">ภาษาไทย</a>, <%= gettext("and")%>
         <a href="/el" title="Modern Greek">Ελληνικά</a>.
       </p>
       <p class="mb-6 leading-relaxed">
-        We welcome and encourage you to join us in continuing to make Elixir School great by getting involved at elixirschool/elixirschool!
+        <%= gettext("We welcome and encourage you to join us in continuing to make Elixir School great by getting involved at elixirschool/elixirschool!")%>
       </p>
     </div>
   </div>
@@ -54,10 +54,10 @@
   <div class="container px-5 py-24 mx-auto">
     <div class="mb-20">
       <h2 class="mt-2 text-4xl font-extrabold tracking-tight text-center leading-8 text-purple dark:text-purple-dark sm:text-4xl">
-      Why Elixir?
+      <%= gettext("Why Elixir?")%>
       </h2>
       <p class="mt-3 text-xl text-center text-heavy dark:text-heavy-dark sm:mt-4">
-        Discover why Elixir's popularity has skyrocketed and new companies adopt it daily.
+        <%= gettext("Discover why Elixir's popularity has skyrocketed and new companies adopt it daily.")%>
       </p>
     </div>
     <div class="flex flex-wrap -mx-4 -mt-4 -mb-10 sm:-m-4 md:space-y-0 space-y-6">
@@ -68,12 +68,12 @@
           </svg>
         </div>
         <div class="flex-grow pl-6">
-          <p class="mb-2 text-xl font-semibold text-primary dark:text-primary-dark title-font">Functional Programming</p>
+          <p class="mb-2 text-xl font-semibold text-primary dark:text-primary-dark title-font"><%= gettext("Functional Programming")%></p>
           <p class="text-base leading-relaxed">
-          By focusing on breaking problems down into simple side-effect free functions we can ensure fewer bugs, better test coverage, while incrementally building our solutions through the composition of well tested functions.
+          <%= gettext("By focusing on breaking problems down into simple side-effect free functions we can ensure fewer bugs, better test coverage, while incrementally building our solutions through the composition of well tested functions.")%>
           </p>
           <%= link(to: Routes.page_path(@conn, :why, current_locale()), class: "inline-flex items-center mt-3 text-purple dark:text-purple-dark") do %>
-            Learn More
+            <%= gettext("Learn More")%>
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
@@ -87,12 +87,12 @@
           </svg>
         </div>
         <div class="flex-grow pl-6">
-          <p class="mb-2 text-xl font-semibold text-primary dark:text-primary-dark title-font">Feature Packed</p>
+          <p class="mb-2 text-xl font-semibold text-primary dark:text-primary-dark title-font"><%= gettext("Feature Packed")%></p>
           <p class="text-base leading-relaxed">
-          Built on the back of a giant, the Erlang runtime system, Elixir takes things even further with easy extensibility, compatibility with Erlang and other BEAM languages, and an ever expanding collection of libraries and packages to improve developer happiness.
+          <%= gettext("Built on the back of a giant, the Erlang runtime system, Elixir takes things even further with easy extensibility, compatibility with Erlang and other BEAM languages, and an ever expanding collection of libraries and packages to improve developer happiness.")%>
           </p>
           <%= link(to: Routes.page_path(@conn, :why, current_locale()), class: "inline-flex items-center mt-3 text-purple dark:text-purple-dark") do %>
-            Learn More
+            <%= gettext("Learn More")%>
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
@@ -107,12 +107,12 @@
           </svg>
         </div>
         <div class="flex-grow pl-6">
-          <p class="mb-2 text-xl font-semibold text-primary dark:text-primary-dark title-font">Vibrant Ecosystem</p>
+          <p class="mb-2 text-xl font-semibold text-primary dark:text-primary-dark title-font"><%= gettext("Vibrant Ecosystem")%></p>
           <p class="text-base leading-relaxed">
-          With dozens of conferences, hundreds of meetups, Slack, IRC, Discord, and multiple active hashtags.
+          <%= gettext("With dozens of conferences, hundreds of meetups, Slack, IRC, Discord, and multiple active hashtags.")%>
           </p>
           <%= link(to: Routes.page_path(@conn, :why, current_locale()), class: "inline-flex items-center mt-3 text-purple dark:text-purple-dark") do %>
-            Learn More
+            <%= gettext("Learn More")%>
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
@@ -140,18 +140,18 @@
   <div class="container px-5 py-24 mx-auto">
     <div class="mb-20">
       <h2 class="mt-2 text-4xl font-extrabold tracking-tight text-center leading-8 text-purple dark:text-purple-dark sm:text-4xl">
-        By The Numbers
+        <%= gettext("By The Numbers")%>
       </h2>
       <p class="mt-3 text-xl text-center text-heavy dark:text-heavy-dark sm:mt-4">
-        Still not convinced? Here are some numbers that demonstrate Elixir's growth and reach.
+        <%= gettext("Still not convinced? Here are some numbers that demonstrate Elixir's growth and reach.")%>
       </p>
     </div>
     <div class="flex flex-wrap -mx-4 -mt-4 -mb-10 sm:-m-4 justify-around">
       <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-brand-purple-800 rounded-lg flex flex-col items-center justify-between">
-        <p class="text-white font-bold text-2xl text-center">100+ <br /> Conferences</p>
+        <p class="text-white font-bold text-2xl text-center">100+ <br /> <%= gettext("Conferences")%></p>
 
         <%= link(to: "https://github.com/elixir-lang/elixir/wiki/Conferences", class: "inline-flex items-center mx-auto text-white") do %>
-            See Them Here
+            <%= gettext("See Them Here")%>
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
@@ -159,10 +159,10 @@
       </div>
 
       <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-brand-purple-800 rounded-lg flex flex-col items-center justify-between">
-        <p class="text-white font-bold text-2xl text-center">6 Podcasts <br /> (&amp; Counting)</p>
+        <p class="text-white font-bold text-2xl text-center">6 <%= gettext("Podcasts")%> <br /> <%= gettext("(& Counting)")%></p>
 
         <%= link(to: Routes.page_path(@conn, :podcasts, current_locale()), class: "inline-flex items-center mx-auto text-white") do %>
-            See Them Here
+            <%= gettext("See Them Here")%>
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
@@ -170,10 +170,10 @@
       </div>
 
       <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-brand-purple-800 rounded-lg flex flex-col items-center justify-between">
-        <p class="text-white font-bold text-2xl text-center">25 Languages <br /> With Lesson <br /> Translations</p>
+        <p class="text-white font-bold text-2xl text-center">25 <%= gettext("Languages")%> <br /> <%= gettext("With Lesson")%> <br /> <%= gettext("Translations")%></p>
 
         <%= link(to: "https://github.com/elixirschool/elixirschool", class: "inline-flex items-center mx-auto text-white") do %>
-            See Them Here
+            <%= gettext("See Them Here")%>
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
@@ -181,10 +181,10 @@
       </div>
 
       <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-brand-purple-800 rounded-lg flex flex-col items-center justify-between">
-        <p class="text-white font-bold text-2xl text-center">600+ Companies <br /> Using Elixir</p>
+        <p class="text-white font-bold text-2xl text-center">600+ <%= gettext("Companies")%> <br /> <%= gettext("Using Elixir")%></p>
 
         <%= link(to: "https://elixir-companies.com/en", class: "inline-flex items-center mx-auto text-white") do %>
-            See Them Here
+            <%= gettext("See Them Here")%>
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
@@ -192,10 +192,10 @@
       </div>
 
       <div class="w-52 h-56 px-3 my-3 py-8 bg-purple dark:bg-brand-purple-800 rounded-lg flex flex-col items-center justify-between">
-        <p class="text-white font-bold text-2xl text-center">13,000+ Packages <br /> On Hex</p>
+        <p class="text-white font-bold text-2xl text-center">13,000+ <%= gettext("Packages")%> <br /> <%= gettext("On Hex")%></p>
 
         <%= link(to: "https://hex.pm/", class: "inline-flex items-center mx-auto text-white") do %>
-            See Them Here
+            <%= gettext("See Them Here")%>
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
@@ -265,12 +265,12 @@
 <div class="bg-body dark:bg-body-dark">
   <div class="px-4 py-16 mx-auto text-center max-w-7xl sm:px-6 lg:py-16 lg:px-8">
     <h2 class="text-3xl font-extrabold tracking-tight text-heavy dark:text-heavy-dark sm:text-4xl">
-      Want to learn more?
+      <%= gettext("Want to learn more?")%>
     </h2>
-    <p class="mt-4 text-lg leading-6 text-light dark:text-light-dark">We have articles spanning several topics</p>
+    <p class="mt-4 text-lg leading-6 text-light dark:text-light-dark"><%= gettext("We have articles spanning several topics")%></p>
     <div class="flex justify-center mt-8">
       <div class="shadow rounded-md">
-        <%= link("Visit the Blog", to: Routes.post_path(@conn, :index), class: "font-extrabold items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple hover:text-white") %>
+        <%= link(gettext("Visit the Blog"), to: Routes.post_path(@conn, :index), class: "font-extrabold items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple hover:text-white") %>
       </div>
     </div>
   </div>

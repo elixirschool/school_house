@@ -1,6 +1,6 @@
 <section class="container w-3/4 mb-6 items-center">
   <div class="py-6 text-center">
-      <span class="text-4xl leading-8 font-extrabold tracking-tight text-purple dark:text-purple-dark sm:text-4xl ">Elixir School</span>
+      <span class="text-4xl leading-8 font-extrabold tracking-tight text-purple dark:text-purple-dark sm:text-4xl "><%= gettext("Elixir School") %></span>
     </div>
 
     <div class="relative">
@@ -9,7 +9,7 @@
       </div>
       <div class="relative flex justify-center">
         <span class="px-2 bg-white dark:bg-body-dark text-sm text-light dark:text-light-dark">
-          Presents
+          <%= gettext("Presents") %>
         </span>
       </div>
     </div>
@@ -19,7 +19,7 @@
     </div>
 
     <div class="py-2 text-center">
-      <h2 class="text-medium leading-8 tracking-tight text-primary dark:text-primary-dark sm:text-large ">By <%= @post.author %></h2>
+      <h2 class="text-medium leading-8 tracking-tight text-primary dark:text-primary-dark sm:text-large "><%= gettext("By") %> <%= @post.author %></h2>
     </div>
 
     <div class="bg-brand-gray-300 dark:bg-brand-gray-800 rounded-xl p-4 mb-3 text-xl text-light dark:text-light-dark sm:mb-4 text-center"><%= raw @post.excerpt %></div>

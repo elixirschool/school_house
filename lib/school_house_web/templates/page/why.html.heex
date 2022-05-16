@@ -2,10 +2,10 @@
   <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
     <div class="lg:text-center">
       <h1 class="mt-2 text-4xl font-extrabold tracking-tight leading-8 text-purple dark:text-purple-dark sm:text-4xl">
-        Why Elixir?
+        <%= gettext("Why Elixir?")%>
       </h1>
       <p class="max-w-2xl mt-4 text-xl text-light dark:text-light-dark lg:mx-auto">
-        Elixir is a wonderful language but don't take our word for it. Let's look at some of the reasons you and your organization should adopt Elixir.
+        <%= gettext("Elixir is a wonderful language but don't take our word for it. Let's look at some of the reasons you and your organization should adopt Elixir.")%>
       </p>
     </div>
   </div>
@@ -22,12 +22,12 @@
           </svg>
           <div class="ml-3">
             <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-              Immutability
+              <%= gettext("Immutability")%>
             </h3>
             <div class="mt-2 text-base text-light dark:text-light-dark">
-              Data is not mutated, rather transformed, into a new set of data.
-              By eliminating the ability to mutate state outside of scope, functional programs are often easier to follow and contain fewer bugs.
-              This has the added benefit of improving support for concurrency and thus scalability of systems.
+              <%= gettext("Data is not mutated, rather transformed, into a new set of data.")%>
+              <%= gettext("By eliminating the ability to mutate state outside of scope, functional programs are often easier to follow and contain fewer bugs.")%>
+              <%= gettext("This has the added benefit of improving support for concurrency and thus scalability of systems.")%>
             </div>
           </div>
         </div>
@@ -39,12 +39,12 @@
           </svg>
           <div class="ml-3">
             <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-              Focus on Functions
+              <%= gettext("Focus on Functions")%>
             </h3>
             <div class="mt-2 text-base text-light dark:text-light-dark">
-              Problems are decomposed into simple functions with an emphasis on no side-effects.
-              These "pure functions" always produce the same results for a given input and change nothing.
-              Since functions are first class citizens in Functional Programming we're able to easily re-use our functions throughout our applications.
+              <%= gettext("Problems are decomposed into simple functions with an emphasis on no side-effects.")%>
+              <%= gettext("These \"pure functions\" always produce the same results for a given input and change nothing.")%>
+              <%= gettext("Since functions are first class citizens in Functional Programming we're able to easily re-use our functions throughout our applications.")%>
             </div>
           </div>
         </div>
@@ -57,11 +57,11 @@
 
           <div class="ml-3">
             <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-              Easy to Test
+              <%= gettext("Easy to Test")%>
             </h3>
             <div class="mt-2 text-base text-light dark:text-light-dark">
-              The very nature of functional programming, small functions with no side-effects, makes testing easy.
-              Bundled with Elixir is the venerable ExUnit library providing everything necessary to comprehensively test your applications.
+              <%= gettext("The very nature of functional programming, small functions with no side-effects, makes testing easy.")%>
+              <%= gettext("Bundled with Elixir is the venerable ExUnit library providing everything necessary to comprehensively test your applications.")%>
             </div>
           </div>
         </div>
@@ -69,9 +69,9 @@
       </div>
     </div>
     <div>
-      <h2 class="mt-8 md:mt-2 text-3xl font-extrabold text-purple dark:text-purple-dark">Functional Programming</h2>
+      <h2 class="mt-8 md:mt-2 text-3xl font-extrabold text-purple dark:text-purple-dark"><%= gettext("Functional Programming")%></h2>
       <p class="mt-4 mb-16 md:mb-0 text-lg text-light dark:text-light-dark">
-        While its roots are in lambda calculus, functional programming can be fun, easy, and approachable for everyone! By focusing on breaking problems down into simple, side-effect free, functions we can ensure fewer bugs, better test coverage, while incrementally building our solutions through the composition of well tested functions.
+        <%= gettext("While its roots are in lambda calculus, functional programming can be fun, easy, and approachable for everyone! By focusing on breaking problems down into simple, side-effect free, functions we can ensure fewer bugs, better test coverage, while incrementally building our solutions through the composition of well tested functions.")%>
       </p>
     </div>
   </div>
@@ -94,8 +94,8 @@
 <div class="bg-body dark:bg-body-dark">
   <div class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
     <div>
-      <h2 class="mt-2 text-3xl font-extrabold text-purple dark:text-purple-dark">Feature Packed</h2>
-      <p class="mt-4 text-lg text-light dark:text-light-dark">Elixir and the BEAM virtual machine pack a serious punch when it comes to features. With over 35 years of experience the Erlang runtime system has proven itself time and time again as solid platform for distributed, high-available systems.</p>
+      <h2 class="mt-2 text-3xl font-extrabold text-purple dark:text-purple-dark"><%= gettext("Feature Packed")%></h2>
+      <p class="mt-4 text-lg text-light dark:text-light-dark"><%= gettext("Elixir and the BEAM virtual machine pack a serious punch when it comes to features. With over 35 years of experience the Erlang runtime system has proven itself time and time again as solid platform for distributed, high-available systems.")%></p>
     </div>
     <div class="mt-12 lg:mt-0 lg:col-span-2">
       <div class="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
@@ -118,7 +118,7 @@
           </svg>
           <div class="ml-3">
             <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-              Fault Tolerant
+              <%= gettext("Fault Tolerant")%>
             </h3>
           </div>
         </div>
@@ -130,7 +130,7 @@
           </svg>
           <div class="ml-3">
             <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-              Extensible
+              <%= gettext("Extensible")%>
             </h3>
           </div>
         </div>
@@ -142,7 +142,7 @@
           </svg>
           <div class="ml-3">
             <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-              Compatible with Erlang
+              <%= gettext("Compatible with Erlang")%>
             </h3>
           </div>
         </div>
@@ -154,7 +154,7 @@
           </svg>
           <div class="ml-3">
             <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-              Concurrency
+              <%= gettext("Concurrency")%>
             </h3>
           </div>
         </div>
@@ -166,7 +166,7 @@
           </svg>
           <div class="ml-3">
             <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-              Performant
+              <%= gettext("Performant")%>
             </h3>
           </div>
         </div>
@@ -191,8 +191,8 @@
 <div class="bg-body dark:bg-body-dark">
   <div class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
     <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl font-extrabold text-purple dark:text-purple-dark">Vibrant Ecosystem</h2>
-      <p class="mt-4 text-lg text-light dark:text-light-dark">The community and ecosystem that have grown up with the language remain one of the alluring parts of Elixir.</p>
+      <h2 class="text-3xl font-extrabold text-purple dark:text-purple-dark"><%= gettext("Vibrant Ecosystem")%></h2>
+      <p class="mt-4 text-lg text-light dark:text-light-dark"><%= gettext("The community and ecosystem that have grown up with the language remain one of the alluring parts of Elixir.")%></p>
     </div>
     <div class="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8">
       <div class="flex">
@@ -202,11 +202,11 @@
         </svg>
         <div class="ml-3">
           <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-            Slack
+            <%= gettext("Slack")%>
           </h3>
           <div class="mt-2 text-base text-light dark:text-light-dark">
-          The Elixir Slack is a popular destination for many in the community.
-          <a target="_blank" href="https://elixir-slackin.herokuapp.com/" class="font-bold text-purple dark:text-purple-dark">Request your invite today!</a>
+          <%= gettext("The Elixir Slack is a popular destination for many in the community.")%>
+          <a target="_blank" href="https://elixir-slackin.herokuapp.com/" class="font-bold text-purple dark:text-purple-dark"><%= gettext("Request your invite today!")%></a>
           </div>
         </div>
       </div>
@@ -218,11 +218,11 @@
         </svg>
         <div class="ml-3">
           <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-            Discord
+            <%= gettext("Discord")%>
           </h3>
           <div class="mt-2 text-base text-light dark:text-light-dark">
-            A Slack alternative built with Elixir is fast becoming a popular chat option for the community.
-            <a target="_blank" href="https://discord.com/invite/elixir" class="font-bold text-purple dark:text-purple-dark">Be sure to check it out!</a>
+            <%= gettext("A Slack alternative built with Elixir is fast becoming a popular chat option for the community.")%>
+            <a target="_blank" href="https://discord.com/invite/elixir" class="font-bold text-purple dark:text-purple-dark"><%= gettext("Be sure to check it out!")%></a>
           </div>
         </div>
       </div>
@@ -234,10 +234,10 @@
         </svg>
         <div class="ml-3">
           <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-            Forum
+            <%= gettext("Forum")%>
           </h3>
           <div class="mt-2 text-base text-light dark:text-light-dark">
-          Prefer the forum format for your questions? No problem! Head over to <a class="font-bold text-purple dark:text-purple-dark" href="https://elixirforum.com" target="_blank">Elixir Forum</a> to join the conversation.
+          <%= gettext("Prefer the forum format for your questions? No problem! Head over to")%> <a class="font-bold text-purple dark:text-purple-dark" href="https://elixirforum.com" target="_blank"><%= gettext("Elixir Forum")%></a> <%= gettext("to join the conversation.")%>
           </div>
         </div>
       </div>
@@ -249,10 +249,10 @@
         </svg>
         <div class="ml-3">
           <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-            Meetups
+            <%= gettext("Meetups")%>
           </h3>
           <div class="mt-2 text-base text-light dark:text-light-dark">
-          With over 150 meetups, you're sure to find local Elixir enthusiasts. Check out <a href="https://www.meetup.com/topics/elixir/" target="_blank" class="font-bold text-purple dark:text-purple-dark">Meetup.com</a> for more.
+          <%= gettext("With over 150 meetups, you're sure to find local Elixir enthusiasts. Check out")%> <a href="https://www.meetup.com/topics/elixir/" target="_blank" class="font-bold text-purple dark:text-purple-dark">Meetup.com</a> <%= gettext("for more.")%>
           </div>
         </div>
       </div>
@@ -264,10 +264,10 @@
         </svg>
         <div class="ml-3">
           <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-            Hashtags
+            <%= gettext("Hashtags")%>
           </h3>
           <div class="mt-2 text-base text-light dark:text-light-dark">
-          Be sure to follow the popular Elixir hashtags <a href="https://twitter.com/hashtag/MyElixirStatus" target="_blank" class="font-bold text-purple dark:text-purple-dark">#MyElixirStatus</a>, <a href="https://twitter.com/hashtag/WeBEAMTogether" target="_blank" class="font-bold text-purple dark:text-purple-dark">#WeBEAMTogether</a>, and <a href="https://twitter.com/hashtag/ElixirLang" target="_blank" class="font-bold text-purple dark:text-purple-dark">#Elixirlang</a> on Twitter.
+          <%= gettext("Be sure to follow the popular Elixir hashtags")%> <a href="https://twitter.com/hashtag/MyElixirStatus" target="_blank" class="font-bold text-purple dark:text-purple-dark">#MyElixirStatus</a>, <a href="https://twitter.com/hashtag/WeBEAMTogether" target="_blank" class="font-bold text-purple dark:text-purple-dark">#WeBEAMTogether</a>, <%= gettext("and")%> <a href="https://twitter.com/hashtag/ElixirLang" target="_blank" class="font-bold text-purple dark:text-purple-dark">#Elixirlang</a> <%= gettext("on Twitter")%>.
           </div>
         </div>
       </div>
@@ -279,10 +279,10 @@
         </svg>
         <div class="ml-3">
           <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-            Conferences
+            <%= gettext("Conferences")%>
           </h3>
           <div class="mt-2 text-base text-light dark:text-light-dark">
-            More to come...
+            <%= gettext("More to come...")%>
           </div>
         </div>
       </div>

@@ -7,10 +7,10 @@
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 p-2 text-white rounded-full bg-purple dark:bg-purple-dark" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
           </svg>
-          <span class="ml-3 text-xl text-heavy dark:text-heavy-dark">Elixir School</span>
+          <span class="ml-3 text-xl text-heavy dark:text-heavy-dark"><%= gettext("Elixir School")%></span>
         </div>
         <p class="text-base italic text-lighter dark:text-lighter-dark">
-          The premier destination for learning and mastering Elixir
+          <%= gettext("The premier destination for learning and mastering Elixir")%>
         </p>
         <div class="flex space-x-6">
 
@@ -34,7 +34,7 @@
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
             <p class="text-sm font-semibold tracking-wider text-lighter dark:text-lighter-dark uppercase">
-              Getting Started
+              <%= gettext("Getting Started")%>
             </p>
             <ul class="mt-4 space-y-4">
               <li>
@@ -90,30 +90,30 @@
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
             <p class="text-sm font-semibold tracking-wider text-lighter dark:text-lighter-dark uppercase">
-              <%= link("Blog", to: Routes.post_path(@conn, :index), class: "hover:text-gray-600") %>
+              <%= link(gettext("Blog"), to: Routes.post_path(@conn, :index), class: "hover:text-gray-600") %>
             </p>
             <ul class="mt-4 space-y-4">
               <li>
-                <%= link("Announcements", to: Routes.post_path(@conn, :filter_by_tag, "announcement"), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <%= link(gettext("Announcements"), to: Routes.post_path(@conn, :filter_by_tag, "announcement"), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
               </li>
 
               <li>
-                <%= link("Today I Learned (TIL)", to: Routes.post_path(@conn, :filter_by_tag, "til"), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <%= link(gettext("Today I Learned (TIL)"), to: Routes.post_path(@conn, :filter_by_tag, "til"), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
               </li>
 
               <li>
-                <%= link("Reviews", to: Routes.post_path(@conn, :filter_by_tag, "review"), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <%= link(gettext("Reviews"), to: Routes.post_path(@conn, :filter_by_tag, "review"), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
               </li>
 
             </ul>
           </div>
           <div class="mt-12 md:mt-0">
             <p class="text-sm font-semibold tracking-wider text-lighter dark:text-lighter-dark uppercase">
-              Project
+              <%= gettext("Project")%>
             </p>
             <ul class="mt-4 space-y-4">
               <li>
-                <%= link("Get Involved", to: Routes.page_path(@conn, :get_involved, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <%= link(gettext("Get Involved"), to: Routes.page_path(@conn, :get_involved, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
               </li>
               <%= if current_locale() != "en" do %>
                 <li>

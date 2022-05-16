@@ -4,8 +4,8 @@ defmodule SchoolHouseWeb.ErrorView do
   def render("404.html", assigns) do
     render("error.html",
       conn: assigns.conn,
-      title: "Page not found",
-      message: "The page you're looking for seems to be missing."
+      title: gettext("Page not found"),
+      message: gettext("The page you're looking for seems to be missing.")
     )
   end
 
@@ -18,7 +18,7 @@ defmodule SchoolHouseWeb.ErrorView do
     render("error.html",
       conn: assigns.conn,
       title: title,
-      message: "An error occurred."
+      message: gettext("An error occurred.")
     )
   end
 end
