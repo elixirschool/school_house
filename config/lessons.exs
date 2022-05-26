@@ -1,4 +1,4 @@
-use Mix.Config
+import Mix.Config
 
 config :school_house,
   future_lessons: [
