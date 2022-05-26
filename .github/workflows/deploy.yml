@@ -10,7 +10,7 @@ jobs:
   Dialyzer:
     strategy:
       matrix:
-        elixir: ["1.12"]
+        elixir: ['1.13']
         otp: [24]
     runs-on: ubuntu-latest
     steps:
