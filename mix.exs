@@ -5,7 +5,7 @@ defmodule SchoolHouse.MixProject do
     [
       app: :school_house,
       version: "0.1.0",
-      elixir: "~> 1.12",
+      elixir: "~> 1.13",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -44,16 +44,16 @@ defmodule SchoolHouse.MixProject do
       {:makeup_elixir, ">= 0.0.0"},
       {:makeup_erlang, ">= 0.0.0"},
       {:nimble_publisher, "~> 0.1"},
-      {:phoenix, "~> 1.6.0"},
-      {:phoenix_html, "~> 3.0"},
-      {:phoenix_live_view, "~> 0.16"},
+      {:phoenix, "~> 1.6.9"},
+      {:phoenix_html, "~> 3.2"},
+      {:phoenix_live_view, "~> 0.17"},
       {:plug_cowboy, "~> 2.0"},
       {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 0.5"},
 
       # Dev & Test dependencies
-      {:credo, ">= 0.0.0", only: :dev},
+      {:credo, "1.6.4", only: :dev},
       {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
       {:floki, ">= 0.0.0", only: :test},
       {:phoenix_live_reload, "~> 1.2", only: :dev}

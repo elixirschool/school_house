@@ -15,8 +15,8 @@ jobs:
   Test:
     strategy:
       matrix:
-        elixir: ["1.12"]
-        otp: [24]
+        elixir: ['1.13']
+        otp: [25]
     env:
       MIX_ENV: test
     runs-on: ubuntu-latest
@@ -32,8 +32,8 @@ jobs:
   Format:
     strategy:
       matrix:
-        elixir: ["1.12"]
-        otp: [24]
+        elixir: ['1.13']
+        otp: [25]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -47,8 +47,8 @@ jobs:
   Credo:
     strategy:
       matrix:
-        elixir: ["1.12"]
-        otp: [24]
+        elixir: ['1.13']
+        otp: [25]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
