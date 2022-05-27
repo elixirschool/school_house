@@ -19,14 +19,14 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Sitemap do
 
   def generate do
     links =
-      all_links(:light)
-      |> Enum.map(&link_xml/1)
-      |> Enum.join()
+      :light
+      |> all_links()
+      |> Enum.map_join(&link_xml/1)
 
     dark_mode_links =
-      all_links(:dark)
-      |> Enum.map(&link_xml/1)
-      |> Enum.join()
+      :dark
+      |> all_links()
+      |> Enum.map_join(&link_xml/1)
 
     write_to_priv_file!(@destination, generate_document(links))
     write_to_priv_file!(@destination_dark_mode, generate_document(dark_mode_links))
