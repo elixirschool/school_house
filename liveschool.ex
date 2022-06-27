@@ -1,3 +1,3 @@
 #!/usr/bin/env elixir
 
-LiveSchool.Cli.main(System.argv)
+LiveSchool.Cli.main(System.argv())

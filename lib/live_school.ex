@@ -6,38 +6,42 @@ defmodule LiveSchool do
 
   """
 
-
   def rewrite_expre(code) do
-    is_iex = fn x -> String.match?(x, ~r/^iex>/) end
-    write_cells = fn code -> "\n```elixir\n" <> code <> "```\n" end
-    strip_iex = fn x -> String.slice(x, 4..-1//1) end
+    wrap_code = fn x -> "\n```elixir\n" <> x <> "```\n" end
 
-    if Enum.any?(code, is_iex) do
+    match_to_cell = fn
+      [code | _] -> wrap_code.(code)
+      _ -> nil
+    end
+
+    res =
       code
-      |> Enum.filter(is_iex)
-      |> Enum.map(strip_iex)
-      |> Enum.map(write_cells)
-      |> Enum.join()
+      |> Enum.map(&Regex.run(~r/^iex>(.*\n)$/, &1, capture: :all_but_first))
+      |> Enum.reject(&is_nil/1)
+      |> Enum.map(match_to_cell)
+
+    if Enum.any?(res) do
+      res |> Enum.join()
     else
-      "\n```elixir\n" <> Enum.join(code) <> "```\n"
+      code |> Enum.join() |> wrap_code.()
     end
   end
- 
+
   defp local_cats_only(ast) do
-     ast 
-     |> Macro.prewalk(fn
-         danger = {{:., _, _}, _, _} ->
-           IO.puts("warning: removed non local call to #inspect(danger)}")
-           nil
+    ast
+    |> Macro.prewalk(fn
+      danger = {{:., _, _}, _, _} ->
+        IO.puts("warning: removed non local call to #inspect(danger)}")
+        nil
 
-         {:eval, _, args} when is_list(args) ->
-           IO.puts("warning: removed call to eval")
-           nil
+      {:eval, _, args} when is_list(args) ->
+        IO.puts("warning: removed call to eval")
+        nil
 
-         code -> code
-        end)
+      code ->
+        code
+    end)
   end
-
 
   defp kernel_only(ast) do
     quote do
@@ -47,12 +51,12 @@ defmodule LiveSchool do
   end
 
   defp safer_eval(danger) do
-   {value, _} = 
-         danger 
-         |> Code.string_to_quoted!()  
-         |> local_cats_only
-         |> kernel_only
-         |> Code.eval_quoted
+    {value, _} =
+      danger
+      |> Code.string_to_quoted!()
+      |> local_cats_only
+      |> kernel_only
+      |> Code.eval_quoted()
 
     value
   end
@@ -70,15 +74,18 @@ defmodule LiveSchool do
 
   def rewrite_title(content) do
     case split_at(content, "---") do
-	{code, rest} ->  
-	    if String.starts_with?(hd(code), "%{") do
-	       info = code |> Enum.join("") |> safer_eval      # nee Code.eval_string()
-	       title = Map.get(info, :title, "Untitled") |> IO.inspect
-               ["# " <> title <> "\n" | rest]
-	    else
-	       [ code, "---\n" , rest ]
-            end
-        single -> single 
+      {code, rest} ->
+        if String.starts_with?(hd(code), "%{") do
+          # nee Code.eval_string()
+          info = code |> Enum.join("") |> safer_eval
+          title = Map.get(info, :title, "Untitled") |> IO.inspect()
+          ["# " <> title <> "\n" | rest]
+        else
+          [code, "---\n", rest]
+        end
+
+      single ->
+        single
     end
   end
 
@@ -98,6 +105,7 @@ defmodule LiveSchool do
     |> Stream.map(fn
       [pre, ["```elixir\n"], content, ["```\n"]] ->
         [pre, rewrite_expre(content)]
+
       rest ->
         rest
     end)
@@ -112,12 +120,14 @@ defmodule LiveSchool do
   def reschool_path!(path) when is_binary(path) do
     files = Path.wildcard(path <> "/**/*\.md")
 
-    res = files |> Enum.map(fn filename ->
-      newname = String.trim(filename, ".md") <> ".livemd" 
-      IO.write(newname <> " --> ")
-      newcontent = reschool_file(filename)
-      :ok = File.write(newname, newcontent)
-    end)
+    res =
+      files
+      |> Enum.map(fn filename ->
+        newname = String.trim(filename, ".md") <> ".livemd"
+        IO.write(newname <> " --> ")
+        newcontent = reschool_file(filename)
+        :ok = File.write(newname, newcontent)
+      end)
 
     pass = Enum.count(res, fn x -> x == :ok end)
     count = Enum.count(res)
@@ -125,4 +135,3 @@ defmodule LiveSchool do
     {pass, count}
   end
 end
-
