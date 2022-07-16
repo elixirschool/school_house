@@ -412,6 +412,11 @@ msgid "Date"
 msgstr ""
 
 #, elixir-format
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:312
+msgid "Debugging"
+msgstr ""
+
+#, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:221
 msgid "Discord"
 msgstr ""
