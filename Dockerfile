@@ -41,6 +41,7 @@ RUN chown nobody:nobody /app
 USER nobody:nobody
 
 COPY --from=build --chown=nobody:nobody /app/_build/prod/rel/school_house ./
+COPY --from=build --chown=nobody:nobody /app/priv/static ./static
 
 ENV HOME=/app
 

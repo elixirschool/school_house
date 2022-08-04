@@ -37,3 +37,7 @@ PORT = 4000
     interval = "15s"
     restart_limit = 0
     timeout = "2s"
+
+[[statics]]
+  guest_path = "/app/static"
+  url_prefix = "/"
