@@ -935,7 +935,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:270
-msgid "on Twitter"
+msgid "on Twitter."
 msgstr ""
 
 #, elixir-format
