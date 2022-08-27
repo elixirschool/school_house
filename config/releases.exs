@@ -23,6 +23,7 @@ host =
   end
 
 config :school_house, SchoolHouseWeb.Endpoint,
+  check_origin: ["//#{host}", "//#{app_name}.fly.dev"],
   http: [
     port: String.to_integer(System.get_env("PORT", "4000")),
     transport_options: [socket_opts: [:inet6]]
