@@ -39,19 +39,12 @@ jobs:
     if: ${{ github.repository_owner == 'elixirschool' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
 
-      - name: Login to Heroku Container registry
-        env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        run: heroku container:login
+      - name: Setup Fly
+        uses: superfly/flyctl-actions/setup-flyctl@master
 
-      - name: Build and push
+      - name: Deploy
+        run: fly deploy --remote-only
         env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        run: heroku container:push web -a ${{ secrets.HEROKU_APP_NAME }}
-
-      - name: Release
-        env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        run: heroku container:release web -a ${{ secrets.HEROKU_APP_NAME }}
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

@@ -13,7 +13,8 @@ defmodule SchoolHouse.MixProject do
       deps: deps(),
       dialyzer: [
         plt_add_apps: [:mix]
-      ]
+      ],
+      releases: releases()
     ]
   end
 
@@ -24,6 +25,15 @@ defmodule SchoolHouse.MixProject do
     [
       mod: {SchoolHouse.Application, []},
       extra_applications: [:logger, :runtime_tools]
+    ]
+  end
+
+  def releases do
+    [
+      school_house: [
+        include_executables_for: [:unix],
+        cookie: "school_house"
+      ]
     ]
   end
 
@@ -40,6 +50,7 @@ defmodule SchoolHouse.MixProject do
       {:appsignal_phoenix, "~> 2.0.12"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
+      {:libcluster, "~> 3.3"},
       {:locale_plug, "~> 0.1.0"},
       {:makeup_elixir, ">= 0.0.0"},
       {:makeup_erlang, ">= 0.0.0"},

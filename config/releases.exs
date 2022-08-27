@@ -14,18 +14,32 @@ live_view_salt =
     You can generate one by calling: mix phx.gen.secret
     """
 
+app_name = System.get_env("FLY_APP_NAME", "elixirschool")
+
 host =
-  case System.get_env("HEROKU_APP_NAME") do
-    nil -> "elixirschool.com"
-    sub -> "#{sub}.herokuapp.com"
+  case app_name do
+    "elixirschool" -> "elixirschool.com"
+    app_name -> "#{app_name}.fly.dev"
   end
 
 config :school_house, SchoolHouseWeb.Endpoint,
   http: [
-    port: String.to_integer(System.get_env("PORT") || "4000"),
+    port: String.to_integer(System.get_env("PORT", "4000")),
     transport_options: [socket_opts: [:inet6]]
   ],
   secret_key_base: secret_key_base,
   url: [scheme: "https", host: host, port: 443],
   live_view: [signing_salt: live_view_salt],
   server: true
+
+config :libcluster,
+  topologies: [
+    fly6pn: [
+      strategy: Cluster.Strategy.DNSPoll,
+      config: [
+        polling_interval: 5_000,
+        query: "#{app_name}.internal",
+        node_basename: app_name
+      ]
+    ]
+  ]

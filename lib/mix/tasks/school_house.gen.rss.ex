@@ -6,21 +6,31 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Rss do
   """
 
   alias SchoolHouse.Posts
-  alias SchoolHouseWeb.{Endpoint, Router.Helpers}
+  alias SchoolHouseWeb.Router.Helpers
 
   @destination "priv/static/feed.xml"
 
-  def run(_args) do
-    Mix.Task.run("app.start")
-
-    generate()
+  def run([uri_string]) do
+    uri_string
+    |> parse_uri()
+    |> generate()
   end
 
-  def generate do
+  def parse_uri(uri_string) do
+    case URI.parse(uri_string) do
+      %{host: nil} ->
+        raise ArgumentError, message: "no URI with host given"
+
+      uri ->
+        uri
+    end
+  end
+
+  def generate(uri) do
     items =
       0..(Posts.pages() - 1)
       |> Enum.flat_map(&Posts.page/1)
-      |> Enum.map_join(&link_xml/1)
+      |> Enum.map_join(&link_xml(&1, uri))
 
     document = """
     <?xml version="1.0" encoding="UTF-8" ?>
@@ -40,8 +50,8 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Rss do
     |> File.write!(contents)
   end
 
-  defp link_xml(post) do
-    link = Helpers.post_url(Endpoint, :show, post.slug)
+  defp link_xml(post, uri) do
+    link = Helpers.post_url(uri, :show, post.slug)
 
     """
     <item>

@@ -6,7 +6,10 @@ defmodule SchoolHouse.Application do
   use Application
 
   def start(_type, _args) do
+    topologies = Application.get_env(:libcluster, :topologies) || []
+
     children = [
+      {Cluster.Supervisor, [topologies, [name: SchoolHouse.ClusterSupervisor]]},
       # Start the Telemetry supervisor
       SchoolHouseWeb.Telemetry,
       # Start the PubSub system

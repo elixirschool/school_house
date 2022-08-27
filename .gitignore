@@ -12,7 +12,6 @@ erl_crash.dump
 *.beam
 /config/*.secret.exs
 .elixir_ls/
-/rel
 /content
 /assets/static/images
 /assets/static/sitemap*
