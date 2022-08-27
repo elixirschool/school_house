@@ -30,7 +30,7 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Rss do
     items =
       0..(Posts.pages() - 1)
       |> Enum.flat_map(&Posts.page/1)
-      |> Enum.map_join(&(link_xml(&1, uri)))
+      |> Enum.map_join(&link_xml(&1, uri))
 
     document = """
     <?xml version="1.0" encoding="UTF-8" ?>
