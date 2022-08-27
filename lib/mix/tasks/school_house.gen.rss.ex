@@ -45,9 +45,13 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Rss do
   end
 
   defp write_to_priv_file!(file_path, contents) do
-    :school_house
-    |> Application.app_dir(file_path)
-    |> File.write!(contents)
+    full_file_path = Application.app_dir(:school_house, file_path)
+
+    full_file_path
+    |> Path.dirname()
+    |> File.mkdir_p!()
+
+    File.write!(full_file_path, contents)
   end
 
   defp link_xml(post, uri) do
