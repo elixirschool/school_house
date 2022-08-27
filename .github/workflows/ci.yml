@@ -80,7 +80,7 @@ jobs:
             deps
       - if: steps.cache.outputs.cache-hit != 'true'
         run: mix deps.get
-      - run: mix credo
+      - run: mix dialyzer
 
   Format:
     runs-on: ubuntu-latest
