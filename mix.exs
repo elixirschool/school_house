@@ -32,7 +32,7 @@ defmodule SchoolHouse.MixProject do
     [
       school_house: [
         include_executables_for: [:unix],
-        cookie: "weJWW3SxJGcji9QIMLMpGoMwO1RuigVIC7zpqlinhkg_TS4UrJXIzg=="
+        cookie: "school_house"
       ]
     ]
   end
