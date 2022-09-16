@@ -180,7 +180,10 @@ module.exports = {
                         },
                         thead: {
                             color: theme('colors.brand-gray-300')
-                        }
+                        },
+                        'pre code': {
+                            color: colors.white
+                        },
                     }
                 }
             }),
