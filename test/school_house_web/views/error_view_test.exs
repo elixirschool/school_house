@@ -13,7 +13,7 @@ defmodule SchoolHouseWeb.ErrorViewTest do
   end
 
   test "renders translation_missing.html" do
-    assert render_to_string(SchoolHouseWeb.ErrorView, "translation_missing.html", conn: build_conn()) =~
+    assert render_to_string(SchoolHouseWeb.ErrorView, "translation_missing.html", conn: build_conn(), missing_locale: "no") =~
              "Translation unavailable"
   end
 end
