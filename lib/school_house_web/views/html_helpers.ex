@@ -4,6 +4,7 @@ defmodule SchoolHouseWeb.HtmlHelpers do
   """
   use Phoenix.HTML
 
+  import SchoolHouseWeb.Gettext
   alias SchoolHouseWeb.Router.Helpers, as: Routes
   alias SchoolHouse.Lessons
 
@@ -64,7 +65,7 @@ defmodule SchoolHouseWeb.HtmlHelpers do
   def maybe_coming_soon_badge(true) do
     content_tag(
       :span,
-      Gettext.gettext(SchoolHouseWeb.Gettext, "Coming Soon"),
+      gettext("Coming Soon"),
       class: "rounded py-px px-1 bg-purple text-xs text-white font-semibold self-center flex-shrink-0"
     )
   end
