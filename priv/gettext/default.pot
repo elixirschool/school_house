@@ -371,6 +371,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/school_house_web/templates/report/_coming_soon.html.heex:6
+#: lib/school_house_web/views/html_helpers.ex:68
 msgid "Coming Soon"
 msgstr ""
 
@@ -411,7 +412,7 @@ msgid "Date"
 msgstr ""
 
 #, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:312
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:317
 msgid "Debugging"
 msgstr ""
 
