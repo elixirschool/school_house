@@ -374,7 +374,7 @@ msgstr "ElixirとBEAM仮想マシンに焦点が当てられている全ての�
 
 #, elixir-format
 #: lib/school_house_web/templates/report/_coming_soon.html.heex:6
-msgid "Coming Soon!"
+msgid "Coming Soon"
 msgstr "近日公開！"
 
 #, elixir-format
