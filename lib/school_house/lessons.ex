@@ -13,7 +13,7 @@ defmodule SchoolHouse.Lessons do
   @locales :school_house |> Application.compile_env!(SchoolHouseWeb.Gettext) |> Keyword.get(:locales)
 
   for locale <- @locales do
-    path = Path.join([Application.get_env(:school_house, :lesson_dir), locale, "**/*.md"])
+    path = Path.join([Application.compile_env(:school_house, :lesson_dir), locale, "**/*.md"])
 
     contents =
       quote do
