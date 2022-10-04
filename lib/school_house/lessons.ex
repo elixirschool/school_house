@@ -49,7 +49,7 @@ defmodule SchoolHouse.Lessons do
     with nil <- locale_lessons(locale).get(section, name),
          true <- translation?(locale),
          %Lesson{} <- locale_lessons("en").get(section, name) do
-      {:error, :translation_not_found}
+      {:error, :translation_not_found, locale}
     else
       %Lesson{} = lesson -> {:ok, populate_surrounding_lessons(lesson)}
       _ -> {:error, :not_found}

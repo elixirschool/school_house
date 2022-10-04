@@ -412,7 +412,7 @@ msgid "Date"
 msgstr "Ημερομηνία"
 
 #, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:312
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:317
 msgid "Debugging"
 msgstr ""
 
@@ -962,3 +962,13 @@ msgstr "(& Αυξάνονται)"
 #: lib/school_house_web/templates/page/index.html.heex:273
 msgid "Visit the Blog"
 msgstr "Επισκεφθείτε το Blog"
+
+#, elixir-format
+#: lib/school_house_web/templates/error/translation_missing.html.heex:7
+msgid "If you speak that language, you can help translate"
+msgstr ""
+
+#, elixir-format
+#: lib/school_house_web/templates/error/translation_missing.html.heex:7
+msgid "this page"
+msgstr ""

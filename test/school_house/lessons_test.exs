@@ -22,8 +22,8 @@ defmodule SchoolHouse.LessonsTest do
               }} = Lessons.get("basics", "collections", "en")
     end
 
-    test "returns {:error, :translation_not_found} for missing translation" do
-      assert {:error, :translation_not_found} == Lessons.get("basics", "enum", "es")
+    test "returns {:error, :translation_not_found, missing_locale} for missing translation" do
+      assert {:error, :translation_not_found, "es"} == Lessons.get("basics", "enum", "es")
     end
 
     test "returns {:error, :not_found} for missing lessons" do

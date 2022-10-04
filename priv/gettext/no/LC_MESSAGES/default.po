@@ -413,7 +413,7 @@ msgid "Date"
 msgstr "Dato"
 
 #, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:312
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:317
 msgid "Debugging"
 msgstr "Feilsøking"
 
@@ -963,3 +963,13 @@ msgstr "(& Teller)"
 #: lib/school_house_web/templates/page/index.html.heex:273
 msgid "Visit the Blog"
 msgstr "Besøk bloggen"
+
+#, elixir-format
+#: lib/school_house_web/templates/error/translation_missing.html.heex:7
+msgid "If you speak that language, you can help translate"
+msgstr "Hvis du snakker dette språket, kan du hjelpe oss med å oversette"
+
+#, elixir-format
+#: lib/school_house_web/templates/error/translation_missing.html.heex:7
+msgid "this page"
+msgstr "denne siden"

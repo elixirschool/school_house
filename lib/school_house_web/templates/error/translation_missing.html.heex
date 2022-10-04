@@ -4,5 +4,6 @@
       <span class="block"><%= gettext("Translation unavailable")%></span>
     </h2>
     <p class="mt-4 text-lg text-primary dark:text-primary-dark leading-6"><%= gettext("We're sorry, the resource you're looking for has not been translated yet.")%></p>
+    <p class="mt-4 text-lg text-primary dark:text-primary-dark leading-6"><%= gettext("If you speak that language, you can help translate")%> <%= link gettext("this page"), to: "https://github.com/elixirschool/elixirschool/tree/master/lessons/#{@missing_locale}", class: "text-purple dark:text-purple-dark" %>.</p>
   </div>
 </div>
