@@ -372,7 +372,7 @@ msgstr "Δείτε όλα τα υπέροχα Podcast που εστιάζουν 
 
 #, elixir-format
 #: lib/school_house_web/templates/report/_coming_soon.html.heex:6
-msgid "Coming Soon!"
+msgid "Coming Soon"
 msgstr "Έρχεται σύντομα!"
 
 #, elixir-format
