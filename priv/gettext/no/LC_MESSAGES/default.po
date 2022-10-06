@@ -373,8 +373,8 @@ msgstr "Sjekk ut alle de flotte podcastene som fokuserer på Elixir og BEAM-ekos
 
 #, elixir-format
 #: lib/school_house_web/templates/report/_coming_soon.html.heex:6
-msgid "Coming Soon!"
-msgstr "Kommer snart!"
+msgid "Coming Soon"
+msgstr "Kommer snart"
 
 #, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:184
