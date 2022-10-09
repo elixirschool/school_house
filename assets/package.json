@@ -1,24 +1,25 @@
 {
-  "scripts": {
-    "deploy": "NODE_ENV=production postcss css/app.css -o ../priv/static/assets/app.css"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "tabWidth": 4
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.12",
-    "postcss": "^8.4.17",
-    "postcss-cli": "^10.0.0",
-    "postcss-import": "^15.0.0",
-    "tailwindcss": "^3.1.8",
-    "topbar": "^1.0.1"
-  },
-  "dependencies": {
-    "alpinejs": "^3.2.3",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/forms": "^0.5.3",
-    "@tailwindcss/typography": "^0.5.7"
-  }
+    "scripts": {
+        "deploy": "NODE_ENV=production postcss css/app.css -o ../priv/static/assets/app.css"
+    },
+    "prettier": {
+        "singleQuote": true,
+        "trailingComma": "none",
+        "tabWidth": 4,
+        "semi": false
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.12",
+        "postcss": "^8.4.17",
+        "postcss-cli": "^10.0.0",
+        "postcss-import": "^15.0.0",
+        "tailwindcss": "^3.1.8",
+        "topbar": "^1.0.1"
+    },
+    "dependencies": {
+        "alpinejs": "^3.2.3",
+        "@tailwindcss/aspect-ratio": "^0.4.2",
+        "@tailwindcss/forms": "^0.5.3",
+        "@tailwindcss/typography": "^0.5.7"
+    }
 }
