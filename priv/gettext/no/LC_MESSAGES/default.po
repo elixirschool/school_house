@@ -174,7 +174,7 @@ msgstr "OTP Concurrency"
 #, elixir-format
 #: lib/school_house_web/templates/layout/_lesson_menu.html.heex:142
 msgid "OTP Distribution"
-msgstr "OTP Distrubisjon"
+msgstr "OTP Distribusjon"
 
 #, elixir-format
 #: lib/school_house_web/templates/layout/_lesson_menu.html.heex:137
