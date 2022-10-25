@@ -1,5 +1,7 @@
-const darkModeToggleContainer = document.getElementById("dark-mode-toggle-container")
-const darkModeToggleInput = document.getElementById("dark-mode-toggle")
+const darkModeToggleContainer = document.getElementById(
+    'dark-mode-toggle-container'
+)
+const darkModeToggleInput = document.getElementById('dark-mode-toggle')
 
 // set up dark mode toggle
 function setDarkMode(on) {
