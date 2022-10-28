@@ -13,7 +13,7 @@ on:
 
 env:
   CACHE_VERSION: v1
-  ELIXIR_VERSION: '1.14'
+  ELIXIR_VERSION: '1.14.1'
   MIX_ENV: test
   OTP_VERSION: '25'
 
