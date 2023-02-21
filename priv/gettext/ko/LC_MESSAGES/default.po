@@ -368,7 +368,7 @@ msgstr "Elixir 중심의 컨퍼런스들을 확인해보세요!"
 #, elixir-format
 #: lib/school_house_web/templates/page/podcasts.html.heex:8
 msgid "Check out all the great of Podcasts that focus on Elixir and the BEAM ecosystem!"
-msgstr "Elixir 와 BEAM 생태계 중심의 팟캐스트들을 확인해보세요!"
+msgstr "Elixir와 BEAM 생태계 중심의 팟캐스트들을 확인해보세요!"
 
 #, elixir-format
 #: lib/school_house_web/templates/report/_coming_soon.html.heex:6
