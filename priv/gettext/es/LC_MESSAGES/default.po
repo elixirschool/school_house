@@ -47,7 +47,7 @@ msgstr "Módulos"
 #, elixir-format
 #: lib/school_house_web/templates/layout/_lesson_menu.html.heex:29
 msgid "Pattern Matching"
-msgstr "Macheo de patrones"
+msgstr "Pattern Matching"
 
 #, elixir-format
 #: lib/school_house_web/templates/layout/_lesson_menu.html.heex:44
