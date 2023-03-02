@@ -54,7 +54,7 @@ defmodule SchoolHouseWeb.LessonControllerTest do
       conn = get(conn, Routes.lesson_path(conn, :lesson, "es", "basics", "enum"))
       body = html_response(conn, 404)
 
-      assert body =~ "Translation unavailable"
+      assert body =~ "Traducción no disponible"
     end
 
     test "renders 404 for invalid locale", %{conn: conn} do
