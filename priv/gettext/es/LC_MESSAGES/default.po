@@ -69,12 +69,12 @@ msgstr "Asociaciones"
 #, elixir-format
 #: lib/school_house_web/templates/layout/_lesson_menu.html.heex:162
 msgid "Behaviours"
-msgstr "Comportamientos"
+msgstr "Behaviours"
 
 #, elixir-format
 #: lib/school_house_web/templates/layout/_lesson_menu.html.heex:245
 msgid "Changesets"
-msgstr "Conjuntos de cambios"
+msgstr "Changesets"
 
 #, elixir-format
 #: lib/school_house_web/templates/layout/_lesson_menu.html.heex:69
