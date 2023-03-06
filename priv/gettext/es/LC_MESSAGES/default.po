@@ -429,7 +429,7 @@ msgstr "Descubre por qué la popularidad de Elixir ha aumentado vertiginosamente
 #, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:60
 msgid "Easy to Test"
-msgstr "Fácil de probar"
+msgstr "Fácil de testear"
 
 #, elixir-format
 #: lib/school_house_web/templates/lesson/lesson.html.heex:21
@@ -500,7 +500,7 @@ msgstr "Introduce tu correo electrónico"
 #, elixir-format
 #: lib/school_house_web/templates/lesson/_storage.html.heex:8
 msgid "Explore how interact with the BEAM's built in data storage, Redis, and others."
-msgstr "Explore cómo interactuar con el almacenamiento de datos integrado en el BEAM, Redis y otros."
+msgstr "Explora cómo interactuar con el almacenamiento de datos integrado en el BEAM, Redis y otros."
 
 #, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:133
@@ -559,7 +559,7 @@ msgstr "Etiquetas"
 #, elixir-format
 #: lib/school_house_web/templates/page/get_involved.html.heex:56
 msgid "Have a topic related to Elixir that you are knowledgeable about and want to share? Write a blog post and it could be featured on the Elixir School post feed."
-msgstr "¿Tiene un tema relacionado con Elixir que conoce y desea compartir? Escriba una publicación de blog y podría ser publicada en el feed de publicaciones de Elixir School."
+msgstr "¿Tienes un tema relacionado con Elixir que conoce y desea compartir? Escriba una publicación de blog y podría ser publicada en el feed de publicaciones de Elixir School."
 
 #, elixir-format
 #: lib/school_house_web/controllers/page_controller.ex:7
@@ -615,7 +615,7 @@ msgstr "Lecciones que cubren los temas fundamentales. ¿Nuevo en Elixir? Este es
 #, elixir-format
 #: lib/school_house_web/templates/page/get_involved.html.heex:40
 msgid "Lessons on Elixir School are translated into 25 different languages! If there is a lesson missing a translation that you can provide, translate it and create a pull request."
-msgstr "¡Las lecciones de Elixir School se traducen a 25 idiomas diferentes! Si hay una lección que falta una traducción que pueda proporcionar, tradúzcala y cree una solicitud de extracción."
+msgstr "¡Las lecciones de Elixir School se traducen a 25 idiomas diferentes! Si hay una lección a la que le falta una traducción que pueda proporcionar, tradúzcala y cree una solicitud de extracción."
 
 #, elixir-format
 #: lib/school_house_web/live/conferences_live.html.heex:35
@@ -670,7 +670,7 @@ msgstr "Página no encontrada"
 #, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:169
 msgid "Performant"
-msgstr "Rendimiento"
+msgstr "Eficiente"
 
 #, elixir-format
 #: lib/school_house_web/controllers/page_controller.ex:11
@@ -717,7 +717,7 @@ msgstr "Proyecto"
 #, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:209
 msgid "Request your invite today!"
-msgstr "¡Solicite su invitación hoy!"
+msgstr "¡Solicita tu invitación hoy!"
 
 #, elixir-format
 #: lib/school_house_web/templates/layout/_footer.html.heex:105
@@ -734,7 +734,7 @@ msgstr "Miralos aquí"
 #, elixir-format
 #: lib/school_house_web/templates/page/get_involved.html.heex:26
 msgid "See something you think should be improved? Feel free to open an issue or create a pull request with the change."
-msgstr "¿Ves algo que crees que debería mejorarse? No dudes en abrir un problema o crear una solicitud de extracción con el cambio."
+msgstr "¿Ves algo que crees que debería mejorarse? No dudes en abrir un issue o crear un pull request con el cambio."
 
 #, elixir-format
 #: lib/school_house_web/templates/page/_newsletter.html.heex:6
