@@ -222,7 +222,7 @@ msgstr "Cadenas de texto"
 #: lib/school_house_web/templates/layout/_lesson_menu.html.heex:178 lib/school_house_web/templates/lesson/_testing.html.heex:5
 #: lib/school_house_web/templates/report/report.html.heex:14
 msgid "Testing"
-msgstr "Pruebas"
+msgstr "Testing"
 
 #, elixir-format
 #: lib/school_house_web/templates/layout/_lesson_menu.html.heex:152
@@ -333,7 +333,7 @@ msgstr "Construido sobre la espalda de un gigante, el sistema de tiempo de ejecu
 #, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:64
 msgid "Bundled with Elixir is the venerable ExUnit library providing everything necessary to comprehensively test your applications."
-msgstr "Incluido con Elixir está la venerable biblioteca ExUnit que proporciona todo lo necesario para probar exhaustivamente sus aplicaciones."
+msgstr "Incluido con Elixir está la venerable biblioteca ExUnit que proporciona todo lo necesario para testear exhaustivamente sus aplicaciones."
 
 #, elixir-format
 #: lib/school_house_web/templates/post/post.html.heex:22
@@ -343,7 +343,7 @@ msgstr "Por"
 #, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:143
 msgid "By The Numbers"
-msgstr "Por los números"
+msgstr "En números"
 
 #, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:29
@@ -358,7 +358,7 @@ msgstr "Al centrarse en dividir los problemas en funciones simples sin efectos s
 #, elixir-format
 #: lib/school_house_web/templates/lesson/lesson.html.heex:19
 msgid "Caught a mistake or want to contribute to the lesson?"
-msgstr "¿Capturaste un error o quieres contribuir a la lección?"
+msgstr "¿Encontraste un error o quieres contribuir a la lección?"
 
 #, elixir-format
 #: lib/school_house_web/live/conferences_live.html.heex:8
@@ -368,7 +368,7 @@ msgstr "¡Echa un vistazo a todas las conferencias que se centran en Elixir!"
 #, elixir-format
 #: lib/school_house_web/templates/page/podcasts.html.heex:8
 msgid "Check out all the great of Podcasts that focus on Elixir and the BEAM ecosystem!"
-msgstr "¡Echa un vistazo a todos los grandes Podcasts que se centran en Elixir y el ecosistema BEAM!"
+msgstr "¡Echa un vistazo a todos los grandes podcasts que se centran en Elixir y el ecosistema BEAM!"
 
 #, elixir-format
 #: lib/school_house_web/templates/report/_coming_soon.html.heex:6
@@ -769,7 +769,7 @@ msgstr "Mira el"
 #, elixir-format
 #: lib/school_house_web/templates/lesson/_advanced.html.heex:8
 msgid "Taking our knowledge to the next level, these lessons get cover the advanced topics of Elixir and the BEAM."
-msgstr "Tomando nuestro conocimiento al siguiente nivel, estas lecciones cubren los temas avanzados de Elixir y el BEAM."
+msgstr "Llevando nuestro conocimiento al siguiente nivel, estas lecciones cubren los temas avanzados de Elixir y el BEAM."
 
 #, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:208
@@ -784,7 +784,7 @@ msgstr "La comunidad y el ecosistema que han crecido con el lenguaje siguen sien
 #, elixir-format
 #: lib/school_house_web/templates/lesson/_testing.html.heex:8
 msgid "The first step to writing fault tolerant and scalable code is writing bug free code. In these lessons we explore how best to test our Elixir code."
-msgstr "El primer paso para escribir código tolerante a fallos y escalable es escribir código sin errores. En estas lecciones exploramos cómo probar mejor nuestro código Elixir."
+msgstr "El primer paso para escribir código tolerante a fallos y escalable es escribir código sin errores. En estas lecciones exploramos cómo testear mejor nuestro código Elixir."
 
 #, elixir-format
 #: lib/school_house_web/views/error_view.ex:8
@@ -799,7 +799,7 @@ msgstr "El destino de referencia para aprender y dominar Elixir"
 #, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:63
 msgid "The very nature of functional programming, small functions with no side-effects, makes testing easy."
-msgstr "La naturaleza misma de la programación funcional, pequeñas funciones sin efectos secundarios, hace que la prueba sea fácil."
+msgstr "La naturaleza misma de la programación funcional, pequeñas funciones sin efectos secundarios, hace que testear sea fácil."
 
 #, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:46
@@ -819,7 +819,7 @@ msgstr "¡Esta es una gran manera de contribuir y obtener visibilidad para tu pu
 #, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:12
 msgid "Through the hard work of volunteers Elixir School has been translated to many languages. Some of these translations include: "
-msgstr "Gracias al trabajo duro de voluntarios, Elixir School se ha traducido a muchos idiomas. Algunas de estas traducciones incluyen:"
+msgstr "Gracias al duro trabajo de voluntarios, Elixir School se ha traducido a muchos idiomas. Algunas de estas traducciones incluyen:"
 
 #, elixir-format
 #: lib/school_house_web/templates/layout/_footer.html.heex:101
@@ -875,7 +875,7 @@ msgstr "¡Te damos la bienvenida y te animamos a que te unas a nosotros para con
 #, elixir-format
 #: lib/school_house_web/templates/error/translation_missing.html.heex:6
 msgid "We're sorry, the resource you're looking for has not been translated yet."
-msgstr "Lo sentimos, el recurso que está buscando aún no se ha traducido."
+msgstr "Lo sentimos, el recurso que estás buscando aún no se ha traducido."
 
 #, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:5
