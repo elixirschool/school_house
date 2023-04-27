@@ -62,7 +62,6 @@ defmodule SchoolHouseWeb.HtmlHelpers do
     )
   end
 
-
   # mod -> module
   # asgn -> assigns
   def load_locale_styles(mod, asgn) do
