@@ -32,7 +32,7 @@ config :phoenix, :json_library, Jason
 
 config :school_house, SchoolHouseWeb.Gettext,
   default_locale: "en",
-  locales: ~w(ar bg bn de el en es fr id it ja ko ms no pl pt ru sk ta th tr uk vi zh-hans zh-hant)
+  locales: ~w(ar bg bn de el en es fa fr id it ja ko ms no pl pt ru sk ta th tr uk vi zh-hans zh-hant)
 
 # Configure esbuild (the version is required)
 config :esbuild,
