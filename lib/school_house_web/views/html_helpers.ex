@@ -62,6 +62,17 @@ defmodule SchoolHouseWeb.HtmlHelpers do
     )
   end
 
+  # mod -> module
+  # asgn -> assigns
+  def load_locale_styles(mod, asgn) do
+    sanitized_locale = String.replace(current_locale(), "-", "_")
+    style_func = String.to_atom("#{sanitized_locale}_locale_styles")
+
+    if function_exported?(mod, style_func, 1) do
+      apply(mod, style_func, [asgn])
+    end
+  end
+
   def maybe_coming_soon_badge(true) do
     content_tag(
       :span,

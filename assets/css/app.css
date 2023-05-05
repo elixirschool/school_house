@@ -87,6 +87,14 @@ p.excerpt > a {
   color: #776C84;
 }
 
+pre, code {
+  direction: ltr;
+}
+
+code.inline {
+  unicode-bidi: embed;
+}
+
 .makeup .hll {background-color: #f4f5f6}
 .makeup {background-color: #ffffff}.makeup .unselectable {
   -webkit-touch-callout: none;
