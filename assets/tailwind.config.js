@@ -116,6 +116,8 @@ module.exports = {
                                 ),
                                 color: colors.white,
                             },
+			    textUnderlinePosition: 'under',
+			    textUnderlineOffset: '2px',
                         },
                         'code::before': {
                             content: '""',
