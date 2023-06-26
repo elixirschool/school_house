@@ -191,6 +191,9 @@ module.exports = {
                         thead: {
                             color: theme('colors.brand-gray-300'),
                         },
+                        code: {
+                            color: theme('colors.brand-gray-750'),
+                        },
                         'pre code': {
                             color: colors.white,
                         },
