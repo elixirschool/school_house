@@ -1,6 +1,7 @@
 defmodule SchoolHouseWeb.PostController do
   use SchoolHouseWeb, :controller
 
+  alias SchoolHouse.Content.Post
   alias SchoolHouse.Posts
   alias SchoolHouseWeb.FallbackController
 
@@ -42,7 +43,7 @@ defmodule SchoolHouseWeb.PostController do
       {page, _remainder} -> page
     end
   end
-  
+
   defp format_page_title(%Post{title: title}), do: title <> " | " <> @page_title
   defp format_page_title(_), do: @page_title
 end

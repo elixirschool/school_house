@@ -5,7 +5,7 @@
 # is restricted to this project.
 
 # General application configuration
-import Mix.Config
+import Config
 
 config :school_house,
   lesson_dir: "content/lessons",
