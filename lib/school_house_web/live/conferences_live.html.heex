@@ -13,7 +13,7 @@
 
 <div class="bg-body dark:bg-body-dark">
   <div class="md:w-11/12 lg:w-8/12 mx-auto">
-    <.form let={f} for={:filters} id="filter-form" class="flex-row flex items-center mb-6 px-2 text-primary dark:text-primary-dark" phx-change="filter">
+    <.form :let={f} for={:filters} id="filter-form" class="flex-row flex items-center mb-6 px-2 text-primary dark:text-primary-dark" phx-change="filter">
       <p class="text-light dark:text-light-dark mr-5"><%= gettext("Filter")%></p>
       <div class="mx-2 flex flex-row items-center gap-x-2">
         <%= checkbox f, :online, id: "online-only", checked: filter_is_online?(@filters) %>
