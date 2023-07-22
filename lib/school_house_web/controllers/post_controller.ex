@@ -19,7 +19,7 @@ defmodule SchoolHouseWeb.PostController do
 
   def show(conn, %{"slug" => slug}) do
     with {:ok, post} <- Posts.get(slug) do
-      render(conn, "post.html", page_title: @page_title, post: post)
+      render(conn, "post.html", page_title: format_page_title(post), post: post)
     end
   end
 
@@ -42,4 +42,7 @@ defmodule SchoolHouseWeb.PostController do
       {page, _remainder} -> page
     end
   end
+  
+  defp format_page_title(%Post{title: title}), do: title <> " | " <> @page_title
+  defp format_page_title(_), do: @page_title
 end
