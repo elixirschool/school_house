@@ -46,8 +46,8 @@ defmodule SchoolHouse.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:appsignal, "~> 2.2"},
-      {:appsignal_phoenix, "~> 2.0.12"},
+      {:appsignal, "~> 2.7"},
+      {:appsignal_phoenix, "~> 2.3"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:libcluster, "~> 3.3"},
@@ -59,13 +59,14 @@ defmodule SchoolHouse.MixProject do
       {:phoenix_html, "~> 3.2"},
       {:phoenix_live_view, "~> 0.17"},
       {:plug_cowboy, "~> 2.0"},
-      {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
+      {:ssl_verify_fun, "~> 1.1.7", manager: :rebar3, override: true},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 0.5"},
 
       # Dev & Test dependencies
-      {:credo, "1.6.4", only: [:dev, :test]},
+      {:credo, "~> 1.6", only: [:dev, :test]},
       {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
+      {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
       {:floki, ">= 0.0.0", only: :test},
       {:phoenix_live_reload, "~> 1.2", only: :dev}
     ]
