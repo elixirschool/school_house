@@ -15,6 +15,17 @@
     <link rel="icon" href="/favicon.ico" />
   </head>
   <body class="preload dark:bg-body-dark overflow-x-hidden">
+    <div id="pick-up" class="hidden w-full md:text-md text-sm sticky text-white bg-purple font-semibold py-3 text-center">
+      Want to pick up from where you left of? 
+      <div class="md:hidden leading-[5px]"><br/></div>
+      <a class="cursor-pointer ml-2 mt-2 md:mt-0 font-normal px-3 py-1 text-xs md:text-sm rounded-md dark:text-white text-black bg-nav dark:bg-nav-dark">
+        Take me there 
+        <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="1.3em" viewBox="0 0 24 24"><path fill="currentColor" d="M12.6 12L8.7 8.1q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375q0 .2-.063.375t-.212.325l-4.6 4.6q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l3.9-3.9Z"/></svg>
+      </a>
+      <button class="absolute right-2 top-[50%] -translate-y-[50%]">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m17.705 7.705l-1.41-1.41L12 10.59L7.705 6.295l-1.41 1.41L10.59 12l-4.295 4.295l1.41 1.41L12 13.41l4.295 4.295l1.41-1.41L13.41 12l4.295-4.295z"/></svg>
+      </button>
+    </div>
     <%= render "_header.html", conn: @conn %>
     <%= @inner_content %>
     <%= render "_footer.html", conn: @conn %>
