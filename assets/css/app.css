@@ -553,6 +553,26 @@ body, body * {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
+#pick-up-phone {
+	translate: 0 100%;
+	transition: translate 500ms ease-in-out;
+}
+
+#pick-up-phone.is-visible {
+	translate: 0 0;
+}
+
+#pick-up-overlay {
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 500ms ease-in-out;
+}
+
+#pick-up-overlay.is-on {
+	pointer-events: auto;
+	opacity: 1;
+}
+
 /* Alpine.js */
 /* https://alpinejs.dev/directives/cloak */
 
