@@ -15,10 +15,22 @@
     <link rel="icon" href="/favicon.ico" />
   </head>
   <body class="preload dark:bg-body-dark overflow-x-hidden">
-    <div id="pick-up" class="hidden w-full md:text-md text-sm sticky text-white bg-purple font-semibold py-3 text-center">
+    <div id="pick-up-overlay" class="md:hidden fixed z-[100] bg-black/20 h-screen w-screen backdrop-blur-[5px]"></div>
+    <div id="pick-up-phone" class="md:hidden z-[101] text-lg bg-purple w-full fixed bottom-0 left-0 rounded-t-2xl p-5 pb-7 flex justify-center items-center flex-col gap-3 drop-shadow-xl">
+      <div class="rounded-full h-[5px] w-1/3 mb-4 bg-white/20"></div>
+      <div class="font-semibold text-center text-2xl">Do you want to pick up from where you left of?</div>
+      <div class="flex justify-center items-center gap-2 mt-5 w-full flex-col px-5">
+        <a class="p-3 w-full rounded-md dark:text-white text-black bg-nav dark:bg-nav-dark text-center">
+          Take me there
+        </a>
+        <button class="p-2 w-full">
+          No thanks
+        </button>
+      </div>
+    </div>
+    <div id="pick-up" class="hidden md:hidden md:block w-full text-md sticky text-white bg-purple font-semibold py-3 text-center">
       Want to pick up from where you left of? 
-      <div class="md:hidden leading-[5px]"><br/></div>
-      <a class="cursor-pointer ml-2 mt-2 md:mt-0 font-normal px-3 py-1 text-xs md:text-sm rounded-md dark:text-white text-black bg-nav dark:bg-nav-dark">
+      <a class="cursor-pointer ml-2 font-normal px-3 py-1 text-sm rounded-md dark:text-white text-black bg-nav dark:bg-nav-dark">
         Take me there 
         <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="1.3em" viewBox="0 0 24 24"><path fill="currentColor" d="M12.6 12L8.7 8.1q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375q0 .2-.063.375t-.212.325l-4.6 4.6q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l3.9-3.9Z"/></svg>
       </a>
