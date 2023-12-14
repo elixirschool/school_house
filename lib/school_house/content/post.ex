@@ -3,7 +3,7 @@ defmodule SchoolHouse.Content.Post do
   Encapsulates an individual post and handles parsing the originating markdown file
   """
 
-  @enforce_keys [:author, :author_link, :body, :date, :excerpt, :slug, :tags, :title]
+  @enforce_keys [:author, :author_link, :body, :date, :excerpt, :slug, :tags, :title, :title_text]
   defstruct [
     :author,
     :author_link,
@@ -12,7 +12,8 @@ defmodule SchoolHouse.Content.Post do
     :excerpt,
     :slug,
     :tags,
-    :title
+    :title,
+    :title_text
   ]
 
   @doc """
@@ -32,12 +33,13 @@ defmodule SchoolHouse.Content.Post do
       |> Path.basename(".md")
       |> String.slice(date_prefix_length..-1)
 
-    {title, attrs} = Map.pop!(attrs, :title)
+    {title_text, attrs} = Map.pop!(attrs, :title)
     {excerpt, attrs} = Map.pop!(attrs, :excerpt)
 
     attrs =
       attrs
-      |> Map.put(:title, Earmark.as_html!(title))
+      |> Map.put(:title_text, title_text)
+      |> Map.put(:title, Earmark.as_html!(title_text))
       |> Map.put(:excerpt, Earmark.as_html!(excerpt))
 
     struct!(__MODULE__, [body: body, slug: slug] ++ Map.to_list(attrs))

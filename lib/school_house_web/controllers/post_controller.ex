@@ -44,6 +44,6 @@ defmodule SchoolHouseWeb.PostController do
     end
   end
 
-  defp format_page_title(%Post{title: title}), do: title <> " | " <> @page_title
+  defp format_page_title(%Post{title_text: title}), do: title <> " | " <> @page_title
   defp format_page_title(_), do: @page_title
 end

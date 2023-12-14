@@ -59,7 +59,7 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Rss do
 
     """
     <item>
-      <title>#{post.title}</title>
+      <title>#{post.title_text}</title>
       <description>#{post.excerpt}</description>
       <pubDate>#{Calendar.strftime(post.date, "%a, %d %B %Y 00:00:00 +0000")}</pubDate>
       <link>#{link}</link>
