@@ -434,7 +434,7 @@ msgstr "손쉬운 테스트"
 #, elixir-format
 #: lib/school_house_web/templates/lesson/lesson.html.heex:21
 msgid "Edit this lesson on GitHub!"
-msgstr "Github에서 이 강의를 수정해보세요!"
+msgstr "GitHub에서 이 강의를 수정해보세요!"
 
 #, elixir-format
 #: lib/school_house_web/live/conferences_live.html.heex:5
