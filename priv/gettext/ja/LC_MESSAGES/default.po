@@ -824,7 +824,7 @@ msgstr "ボランティアの方々の努力により、Elixir Schoolは多く�
 #, elixir-format
 #: lib/school_house_web/templates/layout/_footer.html.heex:101
 msgid "Today I Learned (TIL)"
-msgstr "今日の学び（ITL）"
+msgstr "今日の学び（TIL）"
 
 #, elixir-format
 #: lib/school_house_web/templates/page/get_involved.html.heex:37
