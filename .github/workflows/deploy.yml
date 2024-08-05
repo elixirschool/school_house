@@ -28,7 +28,7 @@ jobs:
             latest=auto
           github-token: ${{ secrets.GITHUB_TOKEN }}
           images: |
-            ghcr.io/${{ context.repo.owner }}/${{ context.repo.repo }}
+            ghcr.io/${{ github.repository }}
           tags: |
             type=sha
             type=semver,pattern={{version}}
