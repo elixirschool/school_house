@@ -61,4 +61,12 @@ defmodule SchoolHouse.LessonTest do
     assert body ==
              "<h2 class=\"flex\" id=\"a-0\">\n  <a href=\"#a-0\">\nA</a>\n  <a href=\"#\" title=\"go to top of page\" class=\"pt-1 ml-2\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"w-6 h-6\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 15l7-7 7 7\"></path>\n    </svg>\n  </a>\n</h2>\n<h3 class=\"flex\" id=\"aa-1\">\n  <a href=\"#aa-1\">\nAA</a>\n  <a href=\"#\" title=\"go to top of page\" class=\"pt-1 ml-2\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"w-6 h-6\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 15l7-7 7 7\"></path>\n    </svg>\n  </a>\n</h3>\n<h4 class=\"flex\" id=\"aaa-2\">\n  <a href=\"#aaa-2\">\nAAA</a>\n  <a href=\"#\" title=\"go to top of page\" class=\"pt-1 ml-2\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"w-6 h-6\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 15l7-7 7 7\"></path>\n    </svg>\n  </a>\n</h4>\n<h2 class=\"flex\" id=\"b-3\">\n  <a href=\"#b-3\">\nB</a>\n  <a href=\"#\" title=\"go to top of page\" class=\"pt-1 ml-2\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"w-6 h-6\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 15l7-7 7 7\"></path>\n    </svg>\n  </a>\n</h2>\n<h3 class=\"flex\" id=\"aa-4\">\n  <a href=\"#aa-4\">\nAA</a>\n  <a href=\"#\" title=\"go to top of page\" class=\"pt-1 ml-2\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"w-6 h-6\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 15l7-7 7 7\"></path>\n    </svg>\n  </a>\n</h3>\n"
   end
+
+  test "replaces version variables in content" do
+    assert {:ok, %Lesson{body: body}} = Lessons.get("basics", "basics", "en")
+
+    assert body =~ "Elixir #{Application.get_env(:school_house, :elixir_version)}"
+    assert body =~ "Erlang/OTP #{Application.get_env(:school_house, :erlang_otp_version)}"
+    assert body =~ "[erts-#{Application.get_env(:school_house, :erlang_erts_version)}]"
+  end
 end

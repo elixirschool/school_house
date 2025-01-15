@@ -11,7 +11,10 @@ config :school_house,
   lesson_dir: "content/lessons",
   blog_dir: "content/posts/**/*.md",
   podcast_dir: "content/podcasts/*.md",
-  conference_dir: "content/conferences/*.md"
+  conference_dir: "content/conferences/*.md",
+  elixir_version: "1.17.0",
+  erlang_otp_version: "27.0",
+  erlang_erts_version: "12.0"
 
 # Configures the endpoint
 config :school_house, SchoolHouseWeb.Endpoint,

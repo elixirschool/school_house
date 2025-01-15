@@ -27,8 +27,13 @@ defmodule SchoolHouse.Content.Lesson do
       |> Path.split()
       |> Enum.take(-3)
 
+    processed_body =
+      body
+      |> add_table_of_contents_links()
+      |> replace_version_variables()
+
     filename_attrs = [
-      body: add_table_of_contents_links(body),
+      body: processed_body,
       locale: locale,
       excerpt: convert_meta(attrs.excerpt, "excerpt"),
       name: String.to_atom(name),
@@ -139,5 +144,12 @@ defmodule SchoolHouse.Content.Lesson do
 
     new = Regex.replace(regex, input, replace_wrapper, global: false)
     replace_counted_helper(regex, input, new, replacement, counter + 1)
+  end
+
+  defp replace_version_variables(content) do
+    content
+    |> String.replace(~r/{{\s*site.elixir.version\s*}}/i, Application.get_env(:school_house, :elixir_version))
+    |> String.replace(~r/{{\s*site.erlang.erts\s*}}/i, Application.get_env(:school_house, :erlang_erts_version))
+    |> String.replace(~r/{{\s*site.erlang.OTP\s*}}/i, Application.get_env(:school_house, :erlang_otp_version))
   end
 end
