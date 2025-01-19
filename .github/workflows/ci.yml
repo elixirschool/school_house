@@ -52,6 +52,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: beam
+        env:
+          ImageOS: ubuntu20
         uses: erlef/setup-beam@v1.16
         with:
           otp-version: ${{ env.OTP_VERSION }}
@@ -79,6 +81,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: beam
+        env:
+          ImageOS: ubuntu20
         uses: erlef/setup-beam@v1.16
         with:
           otp-version: ${{ env.OTP_VERSION }}
@@ -106,6 +110,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: beam
+        env:
+          ImageOS: ubuntu20
         uses: erlef/setup-beam@v1.16
         with:
           otp-version: ${{ env.OTP_VERSION }}
@@ -133,6 +139,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: beam
+        env:
+          ImageOS: ubuntu20
         uses: erlef/setup-beam@v1.16
         with:
           otp-version: ${{ env.OTP_VERSION }}
