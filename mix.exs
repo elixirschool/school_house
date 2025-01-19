@@ -5,9 +5,9 @@ defmodule SchoolHouse.MixProject do
     [
       app: :school_house,
       version: "0.1.0",
-      elixir: "~> 1.17",
+      elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: [:phoenix] ++ Mix.compilers(),
+      compilers: Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),

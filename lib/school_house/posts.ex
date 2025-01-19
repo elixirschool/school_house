@@ -37,9 +37,14 @@ defmodule SchoolHouse.Posts do
     |> Enum.member?(tag)
   end
 
-  def page(n), do: Enum.at(@paged_posts, n)
+  def page(n) when is_integer(n) do
+    case @paged_posts do
+      nil -> []
+      posts -> Enum.at(posts, n)
+    end
+  end
 
-  def pages, do: Enum.count(@paged_posts)
+  def pages, do: length(@paged_posts || [])
 
   def tag_cloud do
     Enum.reduce(@posts, %{}, fn %{tags: tags}, acc ->

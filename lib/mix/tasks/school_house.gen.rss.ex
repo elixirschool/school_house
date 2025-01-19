@@ -28,9 +28,13 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Rss do
 
   def generate(uri) do
     items =
-      0..(Posts.pages() - 1)
-      |> Enum.flat_map(&Posts.page/1)
-      |> Enum.map_join(&link_xml(&1, uri))
+      case Posts.pages() do
+        0 -> ""  # Return empty string if no pages
+        pages ->
+          0..(pages - 1)
+          |> Enum.flat_map(fn page -> Posts.page(page) || [] end)
+          |> Enum.map_join(&link_xml(&1, uri))
+      end
 
     document = """
     <?xml version="1.0" encoding="UTF-8" ?>
