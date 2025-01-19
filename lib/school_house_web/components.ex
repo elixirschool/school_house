@@ -1,4 +1,6 @@
 defmodule SchoolHouseWeb.Components do
+  @moduledoc false
+
   use Phoenix.Component
 
   def app(assigns) do
