@@ -51,9 +51,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - name: Install OpenSSL
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libssl3
       - id: beam
         env:
-          ImageOS: ubuntu20
+          ImageOS: ubuntu22
         uses: erlef/setup-beam@v1.16
         with:
           otp-version: ${{ env.OTP_VERSION }}
@@ -80,9 +84,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - name: Install OpenSSL
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libssl3
       - id: beam
         env:
-          ImageOS: ubuntu20
+          ImageOS: ubuntu22
         uses: erlef/setup-beam@v1.16
         with:
           otp-version: ${{ env.OTP_VERSION }}
@@ -109,9 +117,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - name: Install OpenSSL
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libssl3
       - id: beam
         env:
-          ImageOS: ubuntu20
+          ImageOS: ubuntu22
         uses: erlef/setup-beam@v1.16
         with:
           otp-version: ${{ env.OTP_VERSION }}
@@ -138,9 +150,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - name: Install OpenSSL
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libssl3
       - id: beam
         env:
-          ImageOS: ubuntu20
+          ImageOS: ubuntu22
         uses: erlef/setup-beam@v1.16
         with:
           otp-version: ${{ env.OTP_VERSION }}
