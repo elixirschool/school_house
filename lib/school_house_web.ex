@@ -19,6 +19,7 @@ defmodule SchoolHouseWeb do
 
   def controller do
     quote do
+      use Gettext, backend: SchoolHouseWeb.Gettext
       use Phoenix.Controller, namespace: SchoolHouseWeb
 
       import Plug.Conn

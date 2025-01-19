@@ -2,6 +2,7 @@ defmodule SchoolHouseWeb.ConferencesLive do
   @moduledoc false
 
   use SchoolHouseWeb, :live_view
+  use Gettext, backend: SchoolHouseWeb.Gettext
 
   alias SchoolHouse.Conferences
 

@@ -4,8 +4,7 @@ defmodule SchoolHouseWeb.HtmlHelpers do
   """
   use Phoenix.Component
   use PhoenixHTMLHelpers
-
-  import SchoolHouseWeb.Gettext
+  use Gettext, backend: SchoolHouseWeb.Gettext
 
   alias SchoolHouseWeb.Router.Helpers, as: Routes
   alias SchoolHouse.Lessons
