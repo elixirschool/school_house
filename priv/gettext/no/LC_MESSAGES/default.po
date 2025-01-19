@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Language: no\n"
-"Plural-Forms: nplurals=2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, elixir-format
 #: lib/school_house_web/templates/layout/_footer.html.heex:57
@@ -885,7 +885,7 @@ msgstr "Velkommen til Elixir School!"
 
 #, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:9
-msgid "Whether you’re a seasoned veteran or this is your first time, you’ll find what you need in lessons and auxiliary resources."
+msgid "Whether you're a seasoned veteran or this is your first time, you'll find what you need in lessons and auxiliary resources."
 msgstr "Enten du er en erfaren alkymist eller dette er første gangen, vil du finne det du trenger blant våre leksjoner og hjelpemidler."
 
 #, elixir-format

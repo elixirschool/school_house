@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Language: ar\n"
-"Plural-Forms: nplurals=6\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
 
 #, elixir-format
 #: lib/school_house_web/templates/layout/_footer.html.heex:57
@@ -884,7 +884,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:9
-msgid "Whether you’re a seasoned veteran or this is your first time, you’ll find what you need in lessons and auxiliary resources."
+msgid "Whether you're a seasoned veteran or this is your first time, you'll find what you need in lessons and auxiliary resources."
 msgstr ""
 
 #, elixir-format

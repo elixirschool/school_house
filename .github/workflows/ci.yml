@@ -1,6 +1,12 @@
 ---
 name: Continuous Integration
 
+# Add environment variables section
+env:
+  OTP_VERSION: "27.0"
+  ELIXIR_VERSION: "1.17"
+  CACHE_VERSION: "v1"
+
 on:
   pull_request:
     types:
@@ -11,12 +17,6 @@ on:
     branches:
       - main
 
-env:
-  CACHE_VERSION: v1
-  ELIXIR_VERSION: '1.14.1'
-  MIX_ENV: test
-  OTP_VERSION: '25'
-
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
@@ -24,19 +24,41 @@ concurrency:
 jobs:
   Build:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - uses: actions/checkout@v3
-      - uses: docker/setup-buildx-action@v1
-      - uses: docker/build-push-action@v3
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/metadata-action@v5
+        id: meta
+        with:
+          images: ${{ github.repository }}
+          tags: |
+            type=sha
+            type=ref,event=branch
+            type=ref,event=tag
+      - uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: false
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
   Credo:
+    needs: Build
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - name: Install OpenSSL
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libssl3
       - id: beam
-        uses: erlef/setup-beam@v1
+        env:
+          ImageOS: ubuntu22
+        uses: erlef/setup-beam@v1.16
         with:
           otp-version: ${{ env.OTP_VERSION }}
           elixir-version: ${{ env.ELIXIR_VERSION }}
@@ -57,12 +79,19 @@ jobs:
       - run: mix credo
 
   Dialyzer:
+    needs: Build
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - name: Install OpenSSL
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libssl3
       - id: beam
-        uses: erlef/setup-beam@v1
+        env:
+          ImageOS: ubuntu22
+        uses: erlef/setup-beam@v1.16
         with:
           otp-version: ${{ env.OTP_VERSION }}
           elixir-version: ${{ env.ELIXIR_VERSION }}
@@ -83,12 +112,19 @@ jobs:
       - run: mix dialyzer
 
   Format:
+    needs: Build
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - name: Install OpenSSL
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libssl3
       - id: beam
-        uses: erlef/setup-beam@v1
+        env:
+          ImageOS: ubuntu22
+        uses: erlef/setup-beam@v1.16
         with:
           otp-version: ${{ env.OTP_VERSION }}
           elixir-version: ${{ env.ELIXIR_VERSION }}
@@ -109,12 +145,19 @@ jobs:
       - run: mix format --check-formatted
 
   Test:
+    needs: Build
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - name: Install OpenSSL
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libssl3
       - id: beam
-        uses: erlef/setup-beam@v1
+        env:
+          ImageOS: ubuntu22
+        uses: erlef/setup-beam@v1.16
         with:
           otp-version: ${{ env.OTP_VERSION }}
           elixir-version: ${{ env.ELIXIR_VERSION }}

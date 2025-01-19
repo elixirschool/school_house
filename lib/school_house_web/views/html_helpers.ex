@@ -2,9 +2,10 @@ defmodule SchoolHouseWeb.HtmlHelpers do
   @moduledoc """
   A collection of helpers to assist in working with translations and lessons
   """
-  use Phoenix.HTML
+  use Phoenix.Component
+  use PhoenixHTMLHelpers
+  use Gettext, backend: SchoolHouseWeb.Gettext
 
-  import SchoolHouseWeb.Gettext
   alias SchoolHouseWeb.Router.Helpers, as: Routes
   alias SchoolHouse.Lessons
 
