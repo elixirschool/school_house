@@ -56,7 +56,8 @@ defmodule SchoolHouse.Content.Lesson do
       Phoenix.View.render_to_string(SchoolHouseWeb.LessonView, "_section_header.html",
         fragment: fragment,
         header: header,
-        name: name
+        name: String.trim(name),
+        as: :string
       )
     end)
   end

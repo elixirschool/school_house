@@ -31,6 +31,9 @@ defmodule SchoolHouseWeb do
   def view do
     quote do
       use Phoenix.Component
+      import Phoenix.HTML
+      import Phoenix.HTML.Form
+      use PhoenixHTMLHelpers
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
