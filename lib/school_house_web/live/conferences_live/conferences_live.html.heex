@@ -1,0 +1,41 @@
+<div class="py-12 bg-body dark:bg-body-dark">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="lg:text-center">
+      <h1 class="mt-2 text-4xl font-extrabold tracking-tight leading-8 text-purple dark:text-purple-dark sm:text-4xl">
+        <%= gettext("Elixir Conferences")%>
+      </h1>
+      <p class="max-w-2xl mt-4 text-xl text-light dark:text-light-dark lg:mx-auto">
+        <%= gettext("Check out all of the conferences that focus on Elixir!")%>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="bg-body dark:bg-body-dark">
+  <div class="md:w-11/12 lg:w-8/12 mx-auto">
+    <.form :let={f} for={:filters} id="filter-form" class="flex-row flex items-center mb-6 px-2 text-primary dark:text-primary-dark" phx-change="filter">
+      <p class="text-light dark:text-light-dark mr-5"><%= gettext("Filter")%></p>
+      <div class="mx-2 flex flex-row items-center gap-x-2">
+        <%= Phoenix.HTML.Form.checkbox(f, :online, id: "online-only", checked: filter_is_online?(@filters)) %>
+        <label for="online-only"><%= gettext("Online")%></label>
+      </div>
+      <div class="ml-auto">
+        <label for="country-select" class="pr-2"><%= gettext("Country")%></label>
+        <%= Phoenix.HTML.Form.select(f, :country, @country_options, selected: country_filter(@filters), class: "w-40 pl-3 pr-6 appearance-none bg-nav dark:bg-nav-dark", id: "country-select") %>
+      </div>
+    </.form>
+    <div>
+      <.table id="conferences" rows={@conferences}>
+        <:col :let={conference} label={gettext("Name")}>
+          <.link class="text-purple dark:text-purple-dark underline" href={conference.link}><%= conference.name %></.link>
+        </:col>
+        <:col :let={conference} label={gettext("Location")}>
+          <p class="text-sm text-primary dark:text-primary-dark"><%= conference.location %></p>
+        </:col>
+        <:col :let={conference} label={gettext("Date")}>
+          <p class="text-sm text-primary dark:text-primary-dark"><%= conference.date %></p>
+        </:col>
+      </.table>
+    </div>
+  </div>
+</div> 

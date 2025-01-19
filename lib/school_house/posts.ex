@@ -44,7 +44,12 @@ defmodule SchoolHouse.Posts do
     end
   end
 
-  def pages, do: length(@paged_posts || [])
+  def pages do
+    case @paged_posts do
+      [] -> 0
+      posts when is_list(posts) -> length(posts)
+    end
+  end
 
   def tag_cloud do
     Enum.reduce(@posts, %{}, fn %{tags: tags}, acc ->

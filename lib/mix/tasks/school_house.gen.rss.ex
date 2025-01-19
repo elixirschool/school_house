@@ -29,7 +29,10 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Rss do
   def generate(uri) do
     items =
       case Posts.pages() do
-        0 -> ""  # Return empty string if no pages
+        # Return empty string if no pages
+        0 ->
+          ""
+
         pages ->
           0..(pages - 1)
           |> Enum.flat_map(fn page -> Posts.page(page) || [] end)
