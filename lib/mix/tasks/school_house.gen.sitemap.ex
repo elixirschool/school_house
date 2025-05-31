@@ -7,6 +7,7 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Sitemap do
 
   alias SchoolHouse.{Lessons, Posts}
   alias SchoolHouseWeb.Router.Helpers
+  alias SchoolHouse.LocaleInfo
 
   @destination "priv/static/sitemap.xml"
   @destination_dark_mode "priv/static/sitemap_dark_mode.xml"
@@ -67,7 +68,7 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Sitemap do
     top_level_pages = [{:post, :index}, {:page, :privacy}]
 
     Enum.map(top_level_pages, &create_helper_link(&1, theme, uri)) ++
-      post_links(theme, uri) ++ Enum.flat_map(supported_locales(), &locale_links(&1, theme, uri))
+      post_links(theme, uri) ++ Enum.flat_map(LocaleInfo.list(), &locale_links(&1, theme, uri))
   end
 
   defp locale_links(locale, theme, uri), do: page_links(locale, theme, uri) ++ lesson_links(locale, theme, uri)
@@ -114,12 +115,6 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Sitemap do
     |> Enum.map(fn post ->
       apply_theme(theme, &Helpers.post_url/4, [uri, :show, post.slug])
     end)
-  end
-
-  defp supported_locales do
-    :school_house
-    |> Application.get_env(SchoolHouseWeb.Gettext)
-    |> Keyword.get(:locales)
   end
 
   defp create_helper_link({:page, page}, theme, uri) do

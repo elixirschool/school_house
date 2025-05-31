@@ -4,13 +4,14 @@ defmodule SchoolHouse.Lessons do
   """
 
   alias SchoolHouse.Content.Lesson
+  alias SchoolHouse.LocaleInfo
 
   @ordering Application.compile_env!(:school_house, :lessons)
   @future_lessons Application.compile_env!(:school_house, :future_lessons)
   @filtered_lessons Enum.map(@ordering, fn {section_name, lessons} ->
                       {section_name, Enum.filter(lessons, &(not Enum.member?(@future_lessons, &1)))}
                     end)
-  @locales :school_house |> Application.compile_env!(SchoolHouseWeb.Gettext) |> Keyword.get(:locales)
+  @locales LocaleInfo.list()
 
   for locale <- @locales do
     path = Path.join([Application.compile_env(:school_house, :lesson_dir), locale, "**/*.md"])

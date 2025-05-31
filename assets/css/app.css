@@ -1,6 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "flag-icons/css/flag-icons.min.css";
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
 Based on: https://codepen.io/nickelse/pen/YGPJQG

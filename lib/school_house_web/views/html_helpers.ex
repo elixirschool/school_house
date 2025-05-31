@@ -7,11 +7,16 @@ defmodule SchoolHouseWeb.HtmlHelpers do
   import SchoolHouseWeb.Gettext
   alias SchoolHouseWeb.Router.Helpers, as: Routes
   alias SchoolHouse.Lessons
+  alias SchoolHouse.LocaleInfo
 
   def avatar_url(github_link), do: "#{github_link}.png"
 
   def current_locale do
     Gettext.get_locale(SchoolHouseWeb.Gettext)
+  end
+
+  def current_locale_info do
+    LocaleInfo.map()[current_locale()]
   end
 
   def current_page_locale_path(%{request_path: request_path}, locale) do
@@ -84,9 +89,8 @@ defmodule SchoolHouseWeb.HtmlHelpers do
   def maybe_coming_soon_badge(_), do: []
 
   def supported_locales do
-    :school_house
-    |> Application.get_env(SchoolHouseWeb.Gettext)
-    |> Keyword.get(:locales)
+    LocaleInfo.map()
+    |> Map.values()
   end
 
   def translation_status_css_class(%{status: :complete}), do: "bg-green-500"
