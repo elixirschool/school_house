@@ -64,7 +64,7 @@ defmodule SchoolHouse.MixProject do
       {:telemetry_poller, "~> 0.5"},
 
       # Dev & Test dependencies
-      {:credo, "~> 1.6", only: [:dev, :test]},
+      {:credo, "~> 1.7", only: [:dev, :test]},
       {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
       {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
       {:floki, ">= 0.0.0", only: :test},

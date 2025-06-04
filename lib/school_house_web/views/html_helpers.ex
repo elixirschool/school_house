@@ -89,8 +89,8 @@ defmodule SchoolHouseWeb.HtmlHelpers do
   def maybe_coming_soon_badge(_), do: []
 
   def supported_locales do
-    LocaleInfo.map()
-    |> Map.values()
+    locales = LocaleInfo.map()
+    Map.values(locales)
   end
 
   def translation_status_css_class(%{status: :complete}), do: "bg-green-500"

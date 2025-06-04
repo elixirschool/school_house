@@ -180,7 +180,7 @@ defmodule SchoolHouse.LocaleInfo do
   Returns a list of all supported locale codes.
   """
   def list do
-    map()
-    |> Map.keys()
+    locales = map()
+    Map.keys(locales)
   end
 end
