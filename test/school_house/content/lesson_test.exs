@@ -6,7 +6,7 @@ defmodule SchoolHouse.LessonTest do
   test "generates properly nested lists for table of contents" do
     assert {:ok, %Lesson{table_of_contents: toc}} = Lessons.get("basics", "enum", "en")
 
-    assert "<ul class=\"table_of_contents\"><li><a href=\"#a-0\">A</a><ul><li><a href=\"#aa-1\">AA</a><ul><li><a href=\"#aaa-2\">AAA</a></li></ul></li></ul></li><li><a href=\"#b-3\">B</a><ul><li><a href=\"#aa-4\">AA</a></li></ul></li></ul>" ==
+    assert ~s(<ul class="table_of_contents"><li><a href="#a-0">A</a><ul><li><a href="#aa-1">AA</a><ul><li><a href="#aaa-2">AAA</a></li></ul></li></ul></li><li><a href="#b-3">B</a><ul><li><a href="#aa-4">AA</a></li></ul></li></ul>) ==
              toc
   end
 

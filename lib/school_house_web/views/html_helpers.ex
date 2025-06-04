@@ -5,9 +5,10 @@ defmodule SchoolHouseWeb.HtmlHelpers do
   use Phoenix.HTML
 
   import SchoolHouseWeb.Gettext
-  alias SchoolHouseWeb.Router.Helpers, as: Routes
+
   alias SchoolHouse.Lessons
   alias SchoolHouse.LocaleInfo
+  alias SchoolHouseWeb.Router.Helpers, as: Routes
 
   def avatar_url(github_link), do: "#{github_link}.png"
 

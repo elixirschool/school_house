@@ -6,8 +6,8 @@ defmodule Mix.Tasks.SchoolHouse.Gen.Sitemap do
   """
 
   alias SchoolHouse.{Lessons, Posts}
-  alias SchoolHouseWeb.Router.Helpers
   alias SchoolHouse.LocaleInfo
+  alias SchoolHouseWeb.Router.Helpers
 
   @destination "priv/static/sitemap.xml"
   @destination_dark_mode "priv/static/sitemap_dark_mode.xml"
