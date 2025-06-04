@@ -23,6 +23,13 @@ defmodule SchoolHouseWeb.HtmlHelpersTest do
     end
   end
 
+  describe "current_locale_info/0" do
+    test "returns the current locale info" do
+      assert %SchoolHouse.LocaleInfo{code: "es", title: "Spanish", original_name: "Español", flag_icon: "es"} ==
+               HtmlHelpers.current_locale_info()
+    end
+  end
+
   describe "current_page_locale_path/2" do
     test "returns the current page path for another locale" do
       assert "/fr/ecto/changesets" ==
@@ -58,6 +65,7 @@ defmodule SchoolHouseWeb.HtmlHelpersTest do
       locales = HtmlHelpers.supported_locales()
 
       assert is_list(locales)
+      assert Enum.all?(locales, &assert(%SchoolHouse.LocaleInfo{} = &1))
       assert 1 < length(locales)
     end
   end

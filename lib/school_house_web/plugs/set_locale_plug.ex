@@ -5,6 +5,7 @@ defmodule SchoolHouseWeb.SetLocalePlug do
 
   import Plug.Conn, only: [put_status: 2, halt: 1]
   import Phoenix.Controller, only: [put_view: 2, render: 2]
+  alias SchoolHouse.LocaleInfo
 
   @spec init(any) :: any
   def init(opts), do: opts
@@ -32,16 +33,10 @@ defmodule SchoolHouseWeb.SetLocalePlug do
   end
 
   defp default_locale do
-    locale_config(:default_locale)
+    LocaleInfo.default_locale()
   end
 
   defp valid_locales do
-    locale_config(:locales)
-  end
-
-  defp locale_config(key) do
-    :school_house
-    |> Application.get_env(SchoolHouseWeb.Gettext)
-    |> Keyword.get(key)
+    LocaleInfo.list()
   end
 end

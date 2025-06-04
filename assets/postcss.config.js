@@ -4,5 +4,9 @@ module.exports = {
     'postcss-nested': {},
     tailwindcss: {},
     autoprefixer: {},
+    'postcss-url': {
+        url: 'copy',
+        assetsPath: 'flags',
+      },
   }
 }

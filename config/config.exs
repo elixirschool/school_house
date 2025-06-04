@@ -30,6 +30,7 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+# You should add locales here and in SchoolHouse.LocaleInfo
 config :school_house, SchoolHouseWeb.Gettext,
   default_locale: "en",
   locales: ~w(ar bg bn de el en es fa fr id it ja ko ms no pl pt ru sk ta th tr uk vi zh-hans zh-hant)
