@@ -5,9 +5,7 @@ config :school_house,
     :doctests,
     :flow,
     :broadway,
-    :querying_advanced,
-    :cachex,
-    :redix
+    :querying_advanced
   ]
 
 config :school_house,
@@ -66,19 +64,20 @@ config :school_house,
       :querying_advanced
     ],
     storage: [
+      :cachex,
       :ets,
       :mnesia,
-      :cachex,
       :redix
     ],
     misc: [
       :benchee,
-      :plug,
-      :eex,
       :debugging,
-      :nerves,
+      :eex,
       :guardian,
-      :poolboy,
-      :nimble_publisher
+      :lua,
+      :nerves,
+      :nimble_publisher,
+      :plug,
+      :poolboy
     ]
   ]
