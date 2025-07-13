@@ -79,7 +79,6 @@ config :school_house,
       :nerves,
       :guardian,
       :poolboy,
-      :distillery,
       :nimble_publisher
     ]
   ]
