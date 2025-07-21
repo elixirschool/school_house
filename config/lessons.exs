@@ -79,6 +79,7 @@ config :school_house,
       :nerves,
       :guardian,
       :poolboy,
-      :nimble_publisher
+      :nimble_publisher,
+      :lua
     ]
   ]
