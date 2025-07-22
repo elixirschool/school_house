@@ -51,7 +51,7 @@ defmodule SchoolHouse.LocaleInfo do
         code: "en",
         title: "English",
         original_name: "English",
-        flag_icon: "gb"
+        flag_icon: "us"
       },
       "es" => %__MODULE__{
         code: "es",
