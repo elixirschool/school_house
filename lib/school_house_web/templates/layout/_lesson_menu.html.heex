@@ -333,15 +333,16 @@
                         <% end %>
                     </li>
                     <li>
-                        <%= lesson_link @conn, :misc, :distillery do %>
-                            Distillery <span class="text-xs italic"><%= gettext("library") %></span>
-                        <% end %>
-                    </li>
-                    <li>
                         <%= lesson_link @conn, :misc, :nimble_publisher do %>
                             NimblePublisher <span class="text-xs italic"><%= gettext("library") %></span>
                         <% end %>
                     </li>
+                    <li>
+                        <%= lesson_link @conn, :misc, :lua do %>
+                            Lua <span class="text-xs italic"><%= gettext("library") %></span>
+                        <% end %>
+                    </li>
+
                 </ol>
             </li>
         </ul>
