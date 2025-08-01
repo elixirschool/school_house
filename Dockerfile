@@ -19,7 +19,7 @@ ARG DEBIAN_VERSION=bullseye-20240722-slim
 ARG BUILDER_IMAGE="hexpm/elixir:${ELIXIR_VERSION}-erlang-${OTP_VERSION}-debian-${DEBIAN_VERSION}"
 ARG RUNNER_IMAGE="debian:${DEBIAN_VERSION}"
 
-FROM ${BUILDER_IMAGE} as builder
+FROM ${BUILDER_IMAGE} AS builder
 
 ARG DEPLOY_DOMAIN="https://elixirschool.com"
 
@@ -72,6 +72,12 @@ RUN mix assets.deploy
 # Compile the release
 RUN mix compile
 
+# Clean up unnecessary files after compilation to reduce image size
+RUN rm -rf content \
+    && rm -rf assets/node_modules \
+    && mix deps.clean --unused \
+    && rm -rf /root/.cache
+
 # Changes to config/runtime.exs don't require recompiling the code
 COPY config/releases.exs config/
 
@@ -88,9 +94,9 @@ RUN apt-get update -y && apt-get install -y libstdc++6 openssl libncurses5 local
 # Set the locale
 RUN sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && locale-gen
 
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US:en
+ENV LC_ALL=en_US.UTF-8
 
 WORKDIR "/app"
 RUN chown nobody /app
