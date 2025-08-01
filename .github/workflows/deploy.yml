@@ -65,12 +65,12 @@ jobs:
         with:
           script: |
             const metadata = JSON.parse(process.env.BUILD_OUTPUT)
-            const shaUrl = metadata.tags.find((t) => t.includes(':sha-'))
+            const timestampUrl = metadata.tags.find((t) => t.match(/:\d{8}-\d{6}$/))
 
-            if (shaUrl == null) {
-              core.error('Unable to find sha tag of image')
+            if (timestampUrl == null) {
+              core.error('Unable to find timestamp tag of image')
             } else {
-              const [image, tag] = shaUrl.split(':')
+              const [image, tag] = timestampUrl.split(':')
               core.setOutput('image', image)
               core.setOutput('tag', tag)
             }
