@@ -79,7 +79,7 @@ RUN rm -rf content \
     && rm -rf /root/.cache
 
 # Changes to config/runtime.exs don't require recompiling the code
-COPY config/releases.exs config/
+COPY config/runtime.exs config/
 
 COPY rel rel
 RUN mix release
