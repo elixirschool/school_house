@@ -12,9 +12,9 @@
 #   - https://pkgs.org/ - resource for finding needed packages
 #   - Ex: hexpm/elixir:1.13.4-erlang-25.0.4-debian-bullseye-20220801-slim
 #
-ARG ELIXIR_VERSION=1.15.8
-ARG OTP_VERSION=25.0.4
-ARG DEBIAN_VERSION=bullseye-20240722-slim
+ARG ELIXIR_VERSION=1.18.4
+ARG OTP_VERSION=27.3.4.1
+ARG DEBIAN_VERSION=bookworm-20250630-slim
 
 ARG BUILDER_IMAGE="hexpm/elixir:${ELIXIR_VERSION}-erlang-${OTP_VERSION}-debian-${DEBIAN_VERSION}"
 ARG RUNNER_IMAGE="debian:${DEBIAN_VERSION}"
@@ -24,8 +24,14 @@ FROM ${BUILDER_IMAGE} AS builder
 ARG DEPLOY_DOMAIN="https://elixirschool.com"
 
 # install build dependencies
-RUN apt-get update -y && apt-get install -y build-essential git npm --fix-missing --no-install-recommends \
-    && apt-get clean && rm -f /var/lib/apt/lists/*_*
+RUN rm -f /etc/apt/apt.conf.d/docker-clean
+
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
+    apt-get update -y && \
+    apt-get install -y build-essential git npm --fix-missing --no-install-recommends && \
+    apt-get clean && \
+    rm -f /var/lib/apt/lists/*_*
 
 # prepare build dir
 WORKDIR /app
@@ -72,12 +78,6 @@ RUN mix assets.deploy
 # Compile the release
 RUN mix compile
 
-# Clean up unnecessary files after compilation to reduce image size
-RUN rm -rf content \
-    && rm -rf assets/node_modules \
-    && mix deps.clean --unused \
-    && rm -rf /root/.cache
-
 # Changes to config/runtime.exs don't require recompiling the code
 COPY config/runtime.exs config/
 
@@ -88,8 +88,14 @@ RUN mix release
 # the compiled release and other runtime necessities
 FROM ${RUNNER_IMAGE}
 
-RUN apt-get update -y && apt-get install -y libstdc++6 openssl libncurses5 locales \
-    && apt-get clean && rm -f /var/lib/apt/lists/*_*
+RUN rm -f /etc/apt/apt.conf.d/docker-clean
+
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
+    apt-get update -y && \
+    apt-get install -y libstdc++6 openssl libncurses5 locales ca-certificates tini && \
+    apt-get clean && \
+    rm -f /var/lib/apt/lists/*_*
 
 # Set the locale
 RUN sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && locale-gen
@@ -108,10 +114,15 @@ ENV MIX_ENV="prod"
 ENV ECTO_IPV6=true
 ENV ERL_AFLAGS="-proto_dist inet6_tcp"
 
+# Allow any release script to be ran without prefix
+ENV PATH="$PATH:/app/bin"
+
 # Only copy the final release from the build stage
 COPY --from=builder --chown=nobody:root /app/_build/${MIX_ENV}/rel/school_house ./
 COPY --from=builder --chown=nobody:root /app/priv/static ./static
 
 USER nobody
+
+ENTRYPOINT ["tini", "--"]
 
 CMD ["/app/bin/server"]
