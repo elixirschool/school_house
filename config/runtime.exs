@@ -1,8 +1,6 @@
 import Config
 
 if config_env() == :prod do
-  config :school_house, SchoolHouseWeb.Endpoint, url: [scheme: "https", host: "elixirschool.com", port: 443]
-
   secret_key_base =
     System.get_env("SECRET_KEY_BASE") ||
       raise """
