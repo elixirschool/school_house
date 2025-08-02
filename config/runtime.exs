@@ -1,46 +1,50 @@
 import Config
 
-secret_key_base =
-  System.get_env("SECRET_KEY_BASE") ||
-    raise """
-    environment variable SECRET_KEY_BASE is missing.
-    You can generate one by calling: mix phx.gen.secret
-    """
+if config_env() == :prod do
+  config :school_house, SchoolHouseWeb.Endpoint, url: [scheme: "https", host: "elixirschool.com", port: 443]
 
-live_view_salt =
-  System.get_env("LIVE_VIEW_SALT") ||
-    raise """
-    environment variable LIVE_VIEW_SALT is missing.
-    You can generate one by calling: mix phx.gen.secret
-    """
+  secret_key_base =
+    System.get_env("SECRET_KEY_BASE") ||
+      raise """
+      environment variable SECRET_KEY_BASE is missing.
+      You can generate one by calling: mix phx.gen.secret
+      """
 
-app_name = System.get_env("FLY_APP_NAME", "elixirschool")
+  live_view_salt =
+    System.get_env("LIVE_VIEW_SALT") ||
+      raise """
+      environment variable LIVE_VIEW_SALT is missing.
+      You can generate one by calling: mix phx.gen.secret
+      """
 
-host =
-  case app_name do
-    "elixirschool" -> "elixirschool.com"
-    app_name -> "#{app_name}.fly.dev"
-  end
+  app_name = System.get_env("FLY_APP_NAME", "elixirschool")
 
-config :school_house, SchoolHouseWeb.Endpoint,
-  http: [
-    ip: {0, 0, 0, 0},
-    port: String.to_integer(System.get_env("PORT", "4000")),
-    transport_options: [socket_opts: [:inet6]]
-  ],
-  secret_key_base: secret_key_base,
-  url: [scheme: "https", host: host, port: 443],
-  live_view: [signing_salt: live_view_salt],
-  server: true
+  host =
+    case app_name do
+      "elixirschool" -> "elixirschool.com"
+      app_name -> "#{app_name}.fly.dev"
+    end
 
-config :libcluster,
-  topologies: [
-    fly6pn: [
-      strategy: Cluster.Strategy.DNSPoll,
-      config: [
-        polling_interval: 5_000,
-        query: "#{app_name}.internal",
-        node_basename: app_name
+  config :school_house, SchoolHouseWeb.Endpoint,
+    http: [
+      ip: {0, 0, 0, 0},
+      port: String.to_integer(System.get_env("PORT", "4000")),
+      transport_options: [socket_opts: [:inet6]]
+    ],
+    secret_key_base: secret_key_base,
+    url: [scheme: "https", host: host, port: 443],
+    live_view: [signing_salt: live_view_salt],
+    server: true
+
+  config :libcluster,
+    topologies: [
+      fly6pn: [
+        strategy: Cluster.Strategy.DNSPoll,
+        config: [
+          polling_interval: 5_000,
+          query: "#{app_name}.internal",
+          node_basename: app_name
+        ]
       ]
     ]
-  ]
+end
