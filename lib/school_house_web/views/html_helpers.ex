@@ -4,7 +4,7 @@ defmodule SchoolHouseWeb.HtmlHelpers do
   """
   use Phoenix.HTML
 
-  import SchoolHouseWeb.Gettext
+  use Gettext, backend: SchoolHouseWeb.Gettext
 
   alias SchoolHouse.Lessons
   alias SchoolHouse.LocaleInfo
