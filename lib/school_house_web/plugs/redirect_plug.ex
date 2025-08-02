@@ -6,8 +6,6 @@ defmodule SchoolHouseWeb.RedirectPlug do
 
   require Logger
 
-  @redirects Application.compile_env!(:school_house, :redirects)
-
   @spec init(any) :: any
   def init(opts), do: opts
 
@@ -27,7 +25,9 @@ defmodule SchoolHouseWeb.RedirectPlug do
   end
 
   defp redirect_to_path(conn) do
-    with {pattern, replacement} <- Enum.find(@redirects, &path_matcher(&1, conn.request_path)) do
+    redirects = Application.fetch_env!(:school_house, :redirects)
+
+    with {pattern, replacement} <- Enum.find(redirects, &path_matcher(&1, conn.request_path)) do
       Regex.replace(pattern, conn.request_path, replacement)
     end
   end
