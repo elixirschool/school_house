@@ -31,7 +31,7 @@ defmodule SchoolHouse.Content.Post do
     slug =
       filename
       |> Path.basename(".md")
-      |> String.slice(date_prefix_length..-1)
+      |> String.slice(date_prefix_length..-1//1)
 
     {title_text, attrs} = Map.pop!(attrs, :title)
     {excerpt, attrs} = Map.pop!(attrs, :excerpt)
