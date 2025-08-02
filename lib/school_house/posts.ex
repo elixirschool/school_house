@@ -10,13 +10,8 @@ defmodule SchoolHouse.Posts do
     as: :posts,
     highlighters: [:makeup_elixir, :makeup_erlang]
 
-  @paged_posts @posts |> Enum.sort(&(Date.compare(&1.date, &2.date) == :gt)) |> Enum.chunk_every(20)
-  @posts_by_slug Enum.into(@posts, %{}, fn %{slug: slug} = post ->
-                   {slug, post}
-                 end)
-
   def get(slug) do
-    case Map.get(@posts_by_slug, slug) do
+    case Map.get(posts_by_slug(), slug) do
       nil -> {:error, :not_found}
       %Post{} = post -> {:ok, post}
     end
@@ -37,9 +32,9 @@ defmodule SchoolHouse.Posts do
     |> Enum.member?(tag)
   end
 
-  def page(n), do: Enum.at(@paged_posts, n)
+  def page(n), do: Enum.at(paged_posts(), n)
 
-  def pages, do: Enum.count(@paged_posts)
+  def pages, do: Enum.count(paged_posts())
 
   def tag_cloud do
     Enum.reduce(@posts, %{}, fn %{tags: tags}, acc ->
@@ -47,6 +42,18 @@ defmodule SchoolHouse.Posts do
         count = Map.get(accc, tag, 0) + 1
         Map.put(accc, tag, count)
       end)
+    end)
+  end
+
+  defp paged_posts do
+    @posts
+    |> Enum.sort(&(Date.compare(&1.date, &2.date) == :gt))
+    |> Enum.chunk_every(20)
+  end
+
+  defp posts_by_slug do
+    Enum.into(@posts, %{}, fn %{slug: slug} = post ->
+      {slug, post}
     end)
   end
 end
