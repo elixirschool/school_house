@@ -69,7 +69,7 @@ defmodule SchoolHouse.MixProject do
       {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
       {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
       {:floki, ">= 0.0.0", only: :test},
-      {:phoenix_live_reload, "~> 1.2", only: :dev}
+      {:phoenix_live_reload, "~> 1.6", only: :dev}
     ]
   end
 
