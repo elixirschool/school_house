@@ -2,9 +2,9 @@ defmodule SchoolHouseWeb.HtmlHelpers do
   @moduledoc """
   A collection of helpers to assist in working with translations and lessons
   """
-  use Phoenix.HTML
 
   import SchoolHouseWeb.Gettext
+  use Phoenix.Component
 
   alias SchoolHouse.Lessons
   alias SchoolHouse.LocaleInfo
@@ -55,17 +55,21 @@ defmodule SchoolHouseWeb.HtmlHelpers do
         "#{class} #{additional_classes}"
       end
 
-    content_tag(
-      :span,
-      [
-        link(contents,
-          class: "#{class} #{additional_classes}",
-          to: destination
-        ),
-        name |> Lessons.coming_soon?() |> maybe_coming_soon_badge()
-      ],
-      class: "flex flex-wrap"
-    )
+    lesson_link_content(%{
+      destination: destination,
+      class: class,
+      contents: contents,
+      name: name
+    })
+  end
+
+  def lesson_link_content(assigns) do
+    ~H"""
+    <span class="flex flex-wrap">
+      <a href={@destination} class={@class}>{@contents}</a>
+      <%= maybe_coming_soon_badge(@name |> Lessons.coming_soon?()) %>
+    </span>
+    """
   end
 
   # mod -> module
@@ -80,14 +84,18 @@ defmodule SchoolHouseWeb.HtmlHelpers do
   end
 
   def maybe_coming_soon_badge(true) do
-    content_tag(
-      :span,
-      gettext("Coming Soon"),
-      class: "rounded py-px px-1 bg-purple text-xs text-white font-semibold self-center flex-shrink-0"
-    )
+    coming_soon_badge(%{})
   end
 
   def maybe_coming_soon_badge(_), do: []
+
+  defp coming_soon_badge(assigns) do
+    ~H"""
+    <span class="rounded py-px px-1 bg-purple text-xs text-white font-semibold self-center flex-shrink-0">
+      <%= gettext("Coming Soon") %>
+    </span>
+    """
+  end
 
   def supported_locales do
     locales = LocaleInfo.map()

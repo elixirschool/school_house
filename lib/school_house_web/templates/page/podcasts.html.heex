@@ -25,12 +25,12 @@
                 </div>
               </a>
               <div class="font-medium text-md leading-6 space-y-1">
-                <%= link(to: podcast.website) do %>
+                <.link href={podcast.website}>
                   <h3 class="text-xl font-medium text-purple dark:text-purple-dark"><%= podcast.name %></h3>
                   <%= if podcast.language do %>
                     <p class="text-primary dark:text-primary-dark"><%= podcast.language %></p>
                   <% end %>
-                <% end %>
+                </.link>
               </div>
               <div class="text-lg">
                 <p class="text-primary dark:text-primary-dark"><%= podcast.about %></p>

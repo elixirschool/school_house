@@ -13,17 +13,6 @@
 
 <div class="bg-body dark:bg-body-dark">
   <div class="md:w-11/12 lg:w-8/12 mx-auto">
-    <.form :let={f} for={:filters} id="filter-form" class="flex-row flex items-center mb-6 px-2 text-primary dark:text-primary-dark" phx-change="filter">
-      <p class="text-light dark:text-light-dark mr-5"><%= gettext("Filter")%></p>
-      <div class="mx-2 flex flex-row items-center gap-x-2">
-        <%= checkbox f, :online, id: "online-only", checked: filter_is_online?(@filters) %>
-        <label for="online-only"><%= gettext("Online")%></label>
-      </div>
-      <div class="ml-auto">
-        <label for="country-select" class="pr-2"><%= gettext("Country")%></label>
-        <%= select f, :country, @country_options, selected: country_filter(@filters), class: "w-40 pl-3 pr-6 appearance-none bg-nav dark:bg-nav-dark", id: "country-select" %>
-      </div>
-    </.form>
     <div>
       <table class="divide-y divide-gray-200 w-full">
         <thead class="bg-gray-50 dark:bg-gray-600">

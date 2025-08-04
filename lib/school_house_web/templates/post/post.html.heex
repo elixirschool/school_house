@@ -15,7 +15,7 @@
     </div>
 
     <div class="pt-6 text-center">
-      <h1 class="text-2xl leading-8 font-extrabold tracking-tight sm:text-2xl prose dark:prose-dark"><%= raw @post.title %></h1>
+      <h1 class="text-2xl leading-8 font-extrabold tracking-tight sm:text-2xl prose dark:prose-dark"><%= Phoenix.HTML.raw @post.title %></h1>
     </div>
 
     <div class="py-2 text-center">
@@ -25,10 +25,10 @@
     </div>
 
     <div class="bg-brand-gray-300 dark:bg-brand-gray-800 rounded-xl p-4 mb-3 text-xl sm:mb-4 text-center prose dark:prose-dark">
-      <%= raw @post.excerpt %>
+      <%= Phoenix.HTML.raw @post.excerpt %>
     </div>
 
     <div class="prose dark:prose-dark">
-      <%= raw @post.body %>
+      <%= Phoenix.HTML.raw @post.body %>
     </div>
 </section>

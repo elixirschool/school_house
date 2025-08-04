@@ -7,7 +7,7 @@
         <%= lesson_link(@conn, lesson.section, lesson.name, "text-lg font-medium leading-6 text-purple dark:text-purple-dark") do %>
           <%= lesson.title %>
         <% end %>
-          <%= raw lesson.excerpt %>
+          <%= Phoenix.HTML.raw lesson.excerpt %>
       </div>
     </div>
   <% end %>

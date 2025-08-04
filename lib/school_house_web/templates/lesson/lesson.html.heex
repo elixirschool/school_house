@@ -4,16 +4,16 @@
   </div>
 
   <%= if @lesson.excerpt do %>
-    <div class="bg-brand-gray-300 dark:bg-nav-dark rounded-xl p-4 excerpt-box"><%= raw @lesson.excerpt %></div>
+    <div class="bg-brand-gray-300 dark:bg-nav-dark rounded-xl p-4 excerpt-box"><%= Phoenix.HTML.raw @lesson.excerpt %></div>
   <% end %>
 
   <div class="pt-8">
     <span class="text-4xl font-bold border-b-4 border-brand-purple"><%= gettext("Table of Contents")%></span>
     <div class="pt-6">
-      <%= raw @lesson.table_of_contents %>
+      <%= Phoenix.HTML.raw @lesson.table_of_contents %>
     </div>
   </div>
-  <%= raw @lesson.body %>
+  <%= Phoenix.HTML.raw @lesson.body %>
 
   <blockquote class="edit-lesson dark:text-primary-dark">
     <%= gettext("Caught a mistake or want to contribute to the lesson?")%>

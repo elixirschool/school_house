@@ -23,9 +23,9 @@
   <div class="flex justify-center">
     <div class="p-4 mt-12 border-b">
       <%= for page <- 1..@pages do %>
-        <%= link(to: Routes.post_path(@conn, :index, page: (page - 1)), class: "inline-flex items-center px-4 py-2 border text-sm font-medium rounded-md") do %>
+        <.link navigate={Routes.post_path(@conn, :index, page: (page - 1))} class="inline-flex items-center px-4 py-2 border text-sm font-medium rounded-md">
           <%= page %>
-        <% end %>
+        </.link>
       <% end %>
     </div>
   </div>

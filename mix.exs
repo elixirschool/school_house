@@ -7,7 +7,7 @@ defmodule SchoolHouse.MixProject do
       version: "0.1.0",
       elixir: "~> 1.13",
       elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: [:phoenix] ++ Mix.compilers(),
+      compilers: Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),
@@ -46,8 +46,8 @@ defmodule SchoolHouse.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:appsignal, "~> 2.7"},
-      {:appsignal_phoenix, "~> 2.3"},
+      {:appsignal, "~> 2.15"},
+      {:appsignal_phoenix, "~> 2.7"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:libcluster, "~> 3.3"},
@@ -55,9 +55,10 @@ defmodule SchoolHouse.MixProject do
       {:makeup_elixir, "~> 1.0"},
       {:makeup_erlang, "~> 1.0"},
       {:nimble_publisher, "~> 1.0"},
-      {:phoenix, "~> 1.6.9"},
-      {:phoenix_html, "~> 3.2"},
-      {:phoenix_live_view, "~> 0.17"},
+      {:phoenix, "~> 1.7"},
+      {:phoenix_view, "~> 2.0"},
+      {:phoenix_html, "~> 4.2"},
+      {:phoenix_live_view, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:ssl_verify_fun, "~> 1.1.7", manager: :rebar3, override: true},
       {:telemetry_metrics, "~> 0.6"},

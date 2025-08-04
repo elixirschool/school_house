@@ -19,7 +19,7 @@
                   <%= @previous.title %>
                 <% end %>
               </p>
-              <%= raw @previous.excerpt %>
+              <%= Phoenix.HTML.raw @previous.excerpt %>
             </div>
           <% end %>
         </div>
@@ -41,7 +41,7 @@
                   <%= @next.title %>
                 <% end %>
               </p>
-              <%= raw @next.excerpt %>
+              <%= Phoenix.HTML.raw @next.excerpt %>
             </div>
           <% end %>
         </div>

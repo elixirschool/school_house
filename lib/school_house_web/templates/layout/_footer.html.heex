@@ -38,13 +38,19 @@
             </p>
             <ul class="mt-4 space-y-4">
               <li>
-                <%= link(gettext("Why Elixir?"), to: Routes.page_path(@conn, :why, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <.link navigate={Routes.page_path(@conn, :why, current_locale())} class="text-base text-light dark:text-light-dark hover:text-gray-900">
+                  <%= gettext("Why Elixir?") %>
+                </.link>
               </li>
               <li>
-                <%= link(gettext("Podcasts"), to: Routes.page_path(@conn, :podcasts, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <.link navigate={Routes.page_path(@conn, :podcasts, current_locale())} class="text-base text-light dark:text-light-dark hover:text-gray-900">
+                  <%= gettext("Podcasts") %>
+                </.link>
               </li>
               <li>
-                <%= link(gettext("Conferences"), to: Routes.live_path(@conn, SchoolHouseWeb.ConferencesLive, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <.link navigate={Routes.live_path(@conn, SchoolHouseWeb.ConferencesLive, current_locale())} class="text-base text-light dark:text-light-dark hover:text-gray-900">
+                  <%= gettext("Conferences") %>
+                </.link>
               </li>
             </ul>
           </div>
@@ -54,35 +60,51 @@
             </p>
             <ul class="mt-4 space-y-4">
               <li>
-                <%= link(gettext("Basics"), to: Routes.lesson_path(@conn, :index, current_locale(), :basics), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <.link navigate={Routes.lesson_path(@conn, :index, current_locale(), :basics)} class="text-base text-light dark:text-light-dark hover:text-gray-900">
+                  <%= gettext("Basics") %>
+                </.link>
               </li>
 
               <li>
-                <%= link(gettext("Intermediate"), to: Routes.lesson_path(@conn, :index, current_locale(), :intermediate), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <.link navigate={Routes.lesson_path(@conn, :index, current_locale(), :intermediate)} class="text-base text-light dark:text-light-dark hover:text-gray-900">
+                  <%= gettext("Intermediate") %>
+                </.link>
               </li>
 
               <li>
-                <%= link(gettext("Advanced"), to: Routes.lesson_path(@conn, :index, current_locale(), :advanced), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <.link navigate={Routes.lesson_path(@conn, :index, current_locale(), :advanced)} class="text-base text-light dark:text-light-dark hover:text-gray-900">
+                  <%= gettext("Advanced") %>
+                </.link>
               </li>
 
               <li>
-                <%= link(gettext("Testing"), to: Routes.lesson_path(@conn, :index, current_locale(), :testing), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <.link navigate={Routes.lesson_path(@conn, :index, current_locale(), :testing)} class="text-base text-light dark:text-light-dark hover:text-gray-900">
+                  <%= gettext("Testing") %>
+                </.link>
               </li>
 
               <li>
-                <%= link(gettext("Data Processing"), to: Routes.lesson_path(@conn, :index, current_locale(), :data_processing), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <.link navigate={Routes.lesson_path(@conn, :index, current_locale(), :data_processing)} class="text-base text-light dark:text-light-dark hover:text-gray-900">
+                  <%= gettext("Data Processing") %>
+                </.link>
               </li>
 
               <li>
-                <%= link(gettext("Ecto"), to: Routes.lesson_path(@conn, :index, current_locale(), :ecto), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <.link navigate={Routes.lesson_path(@conn, :index, current_locale(), :ecto)} class="text-base text-light dark:text-light-dark hover:text-gray-900">
+                  <%= gettext("Ecto") %>
+                </.link>
               </li>
 
               <li>
-                <%= link(gettext("Storage"), to: Routes.lesson_path(@conn, :index, current_locale(), :storage), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <.link navigate={Routes.lesson_path(@conn, :index, current_locale(), :storage)} class="text-base text-light dark:text-light-dark hover:text-gray-900">
+                  <%= gettext("Storage") %>
+                </.link>
               </li>
 
               <li>
-                <%= link(gettext("Miscellaneous"), to: Routes.lesson_path(@conn, :index, current_locale(), :misc), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <.link navigate={Routes.lesson_path(@conn, :index, current_locale(), :misc)} class="text-base text-light dark:text-light-dark hover:text-gray-900">
+                  <%= gettext("Miscellaneous") %>
+                </.link>
               </li>
             </ul>
           </div>
@@ -90,19 +112,27 @@
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
             <p class="text-sm font-semibold tracking-wider text-lighter dark:text-lighter-dark uppercase">
-              <%= link(gettext("Blog"), to: Routes.post_path(@conn, :index), class: "hover:text-gray-600") %>
+              <.link navigate={Routes.post_path(@conn, :index)} class="hover:text-gray-600">
+                <%= gettext("Blog") %>
+              </.link>
             </p>
             <ul class="mt-4 space-y-4">
               <li>
-                <%= link(gettext("Announcements"), to: Routes.post_path(@conn, :filter_by_tag, "announcement"), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <.link navigate={Routes.post_path(@conn, :filter_by_tag, "announcement")} class="text-base text-light dark:text-light-dark hover:text-gray-900">
+                  <%= gettext("Announcements") %>
+                </.link>
               </li>
 
               <li>
-                <%= link(gettext("Today I Learned (TIL)"), to: Routes.post_path(@conn, :filter_by_tag, "til"), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <.link navigate={Routes.post_path(@conn, :filter_by_tag, "til")} class="text-base text-light dark:text-light-dark hover:text-gray-900">
+                  <%= gettext("Today I Learned (TIL)") %>
+                </.link>
               </li>
 
               <li>
-                <%= link(gettext("Reviews"), to: Routes.post_path(@conn, :filter_by_tag, "review"), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <.link navigate={Routes.post_path(@conn, :filter_by_tag, "review")} class="text-base text-light dark:text-light-dark hover:text-gray-900">
+                  <%= gettext("Reviews") %>
+                </.link>
               </li>
 
             </ul>
@@ -113,11 +143,15 @@
             </p>
             <ul class="mt-4 space-y-4">
               <li>
-                <%= link(gettext("Get Involved"), to: Routes.page_path(@conn, :get_involved, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
+                <.link navigate={Routes.page_path(@conn, :get_involved, current_locale())} class="text-base text-light dark:text-light-dark hover:text-gray-900">
+                  <%= gettext("Get Involved") %>
+                </.link>
               </li>
               <%= if current_locale() != "en" do %>
                 <li>
-                  <%= link gettext("Translation Report"), to: Routes.report_path(@conn, :index, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900" %>
+                  <.link navigate={Routes.report_path(@conn, :index, current_locale())} class="text-base text-light dark:text-light-dark hover:text-gray-900">
+                    <%= gettext("Translation Report") %>
+                  </.link>
                 </li>
               <% end %>
             </ul>

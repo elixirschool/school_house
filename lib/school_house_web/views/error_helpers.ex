@@ -3,18 +3,26 @@ defmodule SchoolHouseWeb.ErrorHelpers do
   Conveniences for translating and building error messages.
   """
 
-  use Phoenix.HTML
+  use Phoenix.Component
 
   @doc """
   Generates tag for inlined form input errors.
   """
   def error_tag(form, field) do
     Enum.map(Keyword.get_values(form.errors, field), fn error ->
-      content_tag(:span, translate_error(error),
-        class: "invalid-feedback",
-        phx_feedback_for: input_id(form, field)
-      )
+      error_span(%{
+        message: translate_error(error),
+        phx_feedback_for: Phoenix.HTML.Form.input_id(form, field)
+      })
     end)
+  end
+
+  defp error_span(assigns) do
+    ~H"""
+    <span class="invalid-feedback" phx-feedback-for={@phx_feedback_for}>
+      <%= @message %>
+    </span>
+    """
   end
 
   @doc """
