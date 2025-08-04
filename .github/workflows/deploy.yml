@@ -34,12 +34,7 @@ jobs:
           images: |
             ghcr.io/${{ github.repository }}
           tags: |
-            type=sha
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
-            type=ref,event=branch
-            type=ref,event=pr
+            type=raw,value={{date 'YYYYMMDD-HHmmss'}}
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -70,12 +65,12 @@ jobs:
         with:
           script: |
             const metadata = JSON.parse(process.env.BUILD_OUTPUT)
-            const shaUrl = metadata.tags.find((t) => t.includes(':sha-'))
+            const timestampUrl = metadata.tags.find((t) => t.match(/:\d{8}-\d{6}$/))
 
-            if (shaUrl == null) {
-              core.error('Unable to find sha tag of image')
+            if (timestampUrl == null) {
+              core.error('Unable to find timestamp tag of image')
             } else {
-              const [image, tag] = shaUrl.split(':')
+              const [image, tag] = timestampUrl.split(':')
               core.setOutput('image', image)
               core.setOutput('tag', tag)
             }

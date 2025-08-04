@@ -22,7 +22,7 @@ defmodule SchoolHouseWeb do
       use Phoenix.Controller, namespace: SchoolHouseWeb
 
       import Plug.Conn
-      import SchoolHouseWeb.Gettext
+      use Gettext, backend: SchoolHouseWeb.Gettext
       alias SchoolHouseWeb.Router.Helpers, as: Routes
     end
   end
@@ -74,7 +74,7 @@ defmodule SchoolHouseWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import SchoolHouseWeb.Gettext
+      use Gettext, backend: SchoolHouseWeb.Gettext
     end
   end
 
@@ -90,7 +90,7 @@ defmodule SchoolHouseWeb do
       import Phoenix.View
 
       import SchoolHouseWeb.ErrorHelpers
-      import SchoolHouseWeb.Gettext
+      use Gettext, backend: SchoolHouseWeb.Gettext
       import SchoolHouseWeb.HtmlHelpers
       alias SchoolHouseWeb.Router.Helpers, as: Routes
     end
