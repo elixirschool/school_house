@@ -15,17 +15,17 @@ Both checkers are free and open source, and can be used on individual URLs.
 
 Rocket Validator is a web crawler and reporting tool that lets you automatically check thousands of URLs (or just a few) with a single click.
 
-The current site for Beta Elixir School has 1,040 web pages. Imagine if you had to check each web page manually, both for HTML and accessibility issues. That's 2,080 checks needed!
+The current site for Elixir School has more than 1,000 web pages. Imagine if you had to check each web page manually, both for HTML and accessibility issues. That's more than 2,000 checks needed!
 
 RV lets us automate this site-wide checking and also schedule periodic checks to constantly monitor for new issues.
 
 ## Create your RV account
 
-RV is a paid service but Elixir School contributors have a free Pro account to work on this site. If you're an Elixir School contributor you just need to [sign up](https://rocketvalidator.com/registration/new) for a free account, and contact [jaime@rocketvalidator.com](mailto:jaime@rocketvalidator.com) to have your account upgraded to Pro.
+RV is a paid service but Elixir School contributors have a free Pro account to work on this site. If you're an Elixir School contributor you just need to [sign up](https://rocketvalidator.com/registration/new) for a free account, and contact [jaime@rocketvalidator.com](mailto:jaime@rocketvalidator.com) to have your account upgraded to Pro for free.
 
 ## Create your first report
 
-Once you're logged in at RV, you can [create a new report](https://rocketvalidator.com/s/new). You just need to enter a starting URL (https://beta.elixirschool.com), and click on **Start validation**.
+Once you're logged in at RV, you can [create a new report](https://rocketvalidator.com/s/new). You just need to enter a starting URL (https://elixirschool.com), and click on **Validate**.
 
 Your site validation report will be created, and the crawler will find the internal web pages, and validate each one for HTML and accessibility issues.
 
@@ -50,13 +50,19 @@ There are some issues that we can decide not to fix, for example HTML markup tha
 * A string to match URLs. It can be a whole URL if you want to be specific, or just a substring like `elixirschool`, which is recommended as it will match both on the beta, staging and production sites, as well as your ngrok instances if you include that on the name.
 * A string to match the issue message. A substring is enough, for example matching on `Attribute “phx-` will hide all issues regarding about invalid attributes set by Phoenix.
 
-Each RV user defines their own muting rules, here are the rules [that we've agreed to mute](https://rocketvalidator.com/domains/elixirschool.com?tab=mutings&auth=171c6160-f0a2-49d9-b83f-065c15c8a072).
+Each RV user defines their own muting rules, but here are some suggestions:
+
+| URL match                | Message match   | Comments                      |
+|--------------------------|-----------------|-------------------------------|
+| https://elixirschool.com | Attribute “phx- | Required by Phoenix framework |
+| https://elixirschool.com | Attribute “@    | Required by Alpine.js         |
+| https://elixirschool.com | Attribute “x    | Required by Alpine.js.        |
 
 ## Shared Domain Stats
 
 RV generates daily domain stats based on the reports you run, which can be shared by RV users. We're using the ones shared from @jaimeiniesta's account as a central reference:
 
-[Latest Stats and Reports for Beta Elixir School](https://rocketvalidator.com/domains/elixirschool.com?auth=171c6160-f0a2-49d9-b83f-065c15c8a072)
+[Latest Stats and Reports for Elixir School](https://rocketvalidator.com/stats/elixirschool.com)
 
 ## Scheduling Reports
 
