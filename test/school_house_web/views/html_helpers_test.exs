@@ -69,4 +69,14 @@ defmodule SchoolHouseWeb.HtmlHelpersTest do
       assert 1 < length(locales)
     end
   end
+
+  describe "strip_p_tags" do
+    test "removes <p> and </p> tags from string" do
+      assert HtmlHelpers.strip_p_tags("<p>some content</p>") == "some content"
+    end
+
+    test "converts </p> tags to newline" do
+      assert HtmlHelpers.strip_p_tags("<p>one</p><p>two</p>") == "one\ntwo"
+    end
+  end
 end

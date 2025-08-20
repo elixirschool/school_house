@@ -99,4 +99,19 @@ defmodule SchoolHouseWeb.HtmlHelpers do
   def translation_status_css_class(%{status: :minor}), do: "bg-yellow-400"
   def translation_status_css_class(%{status: :patch}), do: "bg-yellow-200"
   def translation_status_css_class(_line), do: "bg-white"
+
+  @doc """
+  Removes all <p> and </p> tags from the given string, inserting newline if needed.
+
+  This is useful to avoid nesting <p> tags inside elements that don't allow them like headings or span,
+  for example in the blog posts titles.
+  """
+  def strip_p_tags(str) when is_binary(str) do
+    str
+    |> String.replace("<p>", "")
+    |> String.replace("</p>", "\n")
+    |> String.trim()
+  end
+
+  def strip_p_tags(str), do: str
 end
