@@ -13,8 +13,16 @@ defmodule SchoolHouseWeb.LessonController do
   end
 
   def lesson(conn, %{"name" => name, "section" => section}) do
-    with {:ok, lesson} <- Lessons.get(section, name, Gettext.get_locale(SchoolHouseWeb.Gettext)) do
-      render(conn, "lesson.html", page_title: lesson.title, lesson: lesson)
+    locale = Gettext.get_locale(SchoolHouseWeb.Gettext)
+
+    with {:ok, lesson} <- Lessons.get(section, name, locale) do
+      section_lessons = Lessons.list(section, locale)
+
+      render(conn, "lesson.html",
+        page_title: lesson.title,
+        lesson: lesson,
+        section_lessons: section_lessons
+      )
     end
   end
 end

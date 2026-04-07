@@ -14,10 +14,12 @@ defmodule SchoolHouse.Application do
       SchoolHouseWeb.Telemetry,
       # Start the PubSub system
       {Phoenix.PubSub, name: SchoolHouse.PubSub},
+      # HTTP client pool for GitHub API
+      {Finch, name: SchoolHouse.Finch},
+      # GitHub Sponsors data cache
+      SchoolHouse.Sponsors,
       # Start the Endpoint (http/https)
       SchoolHouseWeb.Endpoint
-      # Start a worker by calling: SchoolHouse.Worker.start_link(arg)
-      # {SchoolHouse.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

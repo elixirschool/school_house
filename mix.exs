@@ -5,9 +5,8 @@ defmodule SchoolHouse.MixProject do
     [
       app: :school_house,
       version: "0.1.0",
-      elixir: "~> 1.13",
+      elixir: "~> 1.18",
       elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: [:phoenix] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),
@@ -55,9 +54,10 @@ defmodule SchoolHouse.MixProject do
       {:makeup_elixir, ">= 0.0.0"},
       {:makeup_erlang, ">= 0.0.0"},
       {:nimble_publisher, "~> 0.1"},
-      {:phoenix, "~> 1.6.9"},
-      {:phoenix_html, "~> 3.2"},
-      {:phoenix_live_view, "~> 0.17"},
+      {:phoenix, "~> 1.7"},
+      {:phoenix_html, "~> 3.3"},
+      {:phoenix_live_view, "~> 0.20"},
+      {:phoenix_view, "~> 2.0"},
       {:plug_cowboy, "~> 2.0"},
       {:ssl_verify_fun, "~> 1.1.7", manager: :rebar3, override: true},
       {:telemetry_metrics, "~> 0.6"},
@@ -66,7 +66,7 @@ defmodule SchoolHouse.MixProject do
       # Dev & Test dependencies
       {:credo, "~> 1.7", only: [:dev, :test]},
       {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
-      {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
+      {:esbuild, "~> 0.8", runtime: Mix.env() == :dev},
       {:floki, ">= 0.0.0", only: :test},
       {:phoenix_live_reload, "~> 1.2", only: :dev}
     ]

@@ -32,7 +32,7 @@ defmodule SchoolHouseWeb.HtmlHelpers do
         conn,
         section,
         name,
-        class \\ "block hover:bg-purple hover:dark:bg-purple text-primary dark:text-primary-dark hover:text-white hover:dark:text-light-dark",
+        class \\ "inline text-on-surface-secondary hover:text-brand-500 transition-colors",
         do: contents
       ) do
     {destination, additional_classes} =
@@ -64,18 +64,23 @@ defmodule SchoolHouseWeb.HtmlHelpers do
         ),
         name |> Lessons.coming_soon?() |> maybe_coming_soon_badge()
       ],
-      class: "flex flex-wrap"
+      class: "contents"
     )
   end
 
   # mod -> module
   # asgn -> assigns
   def load_locale_styles(mod, asgn) do
-    sanitized_locale = String.replace(current_locale(), "-", "_")
-    style_func = String.to_atom("#{sanitized_locale}_locale_styles")
+    locale = current_locale()
 
-    if function_exported?(mod, style_func, 1) do
-      apply(mod, style_func, [asgn])
+    if locale in LocaleInfo.list() do
+      sanitized_locale = String.replace(locale, "-", "_")
+      # Safe to use String.to_atom here: locale is validated against the fixed whitelist above
+      style_func = String.to_atom("#{sanitized_locale}_locale_styles")
+
+      if function_exported?(mod, style_func, 1) do
+        apply(mod, style_func, [asgn])
+      end
     end
   end
 
@@ -83,7 +88,7 @@ defmodule SchoolHouseWeb.HtmlHelpers do
     content_tag(
       :span,
       gettext("Coming Soon"),
-      class: "rounded py-px px-1 bg-purple text-xs text-white font-semibold self-center flex-shrink-0"
+      class: "rounded py-px px-1 bg-brand-500 text-xs text-white font-semibold self-center flex-shrink-0"
     )
   end
 

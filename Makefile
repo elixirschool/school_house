@@ -4,15 +4,9 @@ setup: content
 	mix do setup, compile, assets.deploy
 
 content:
+	git submodule update --init --depth 1
 	rm -rf assets/static/images
-
-	# Clone from live repo
-	rm -rf content && git clone --branch main --single-branch --depth 1 https://github.com/elixirschool/elixirschool.git content
-
-	# If you are testing Elixir School guides, you can comment the line above and uncomment the one below, updating PATH_TO_YOUR_LOCAL_REPO
-	# rsync -av /PATH_TO_YOUR_LOCAL_REPO/elixirschool/ ./content --exclude .git
-
-	mv content/images assets/static/images
+	cp -r content/images assets/static/images
 
 build:
 	docker build .

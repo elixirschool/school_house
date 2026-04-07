@@ -10,7 +10,7 @@ defmodule SchoolHouseWeb.FallbackController do
     |> render("404.html")
   end
 
-  def call(conn, {:error, :translation_not_found, missing_locale}) do
+  def call(conn, {:error, {:translation_not_found, missing_locale}}) do
     conn
     |> put_status(404)
     |> put_view(ErrorView)

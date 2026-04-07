@@ -1,14 +1,18 @@
-<section class="container items-center w-3/4 mb-6 prose dark:prose-dark">
+<section class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
   <%= render("_#{@section}.html") %>
 
-  <%= for lesson <- @lessons do %>
-    <div class="m-2 overflow-hidden bg-body dark:bg-body-dark">
-      <div class="px-4 py-2 sm:px-6">
-        <%= lesson_link(@conn, lesson.section, lesson.name, "text-lg font-medium leading-6 text-purple dark:text-purple-dark") do %>
-          <%= lesson.title %>
-        <% end %>
+  <div class="space-y-4 mt-8">
+    <%= for lesson <- @lessons do %>
+      <div class="bg-surface-card border border-border-subtle rounded-design-md p-5 hover:border-brand-300 hover:shadow-design-md hover:-translate-y-0.5 transition-all duration-200">
+        <div class="mb-2">
+          <%= lesson_link(@conn, lesson.section, lesson.name, "font-heading text-lg font-semibold text-brand-500 hover:text-brand-600 transition-colors") do %>
+            <%= lesson.title %>
+          <% end %>
+        </div>
+        <div class="text-sm text-on-surface-secondary leading-relaxed">
           <%= raw lesson.excerpt %>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </section>

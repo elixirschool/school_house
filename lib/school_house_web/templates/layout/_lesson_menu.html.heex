@@ -1,350 +1,114 @@
-<input type="checkbox" value="selected" id="toggle-one" class="toggle-input">
-<label for="toggle-one" class="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold"><%= gettext("Lessons")%></label>
-<div class="border-t-4 border-brand-purple-800 pt-6 px-6 md:p-6 mega-menu md:absolute mb-6 md:mb-16 md:shadow-xl bg-nav dark:bg-nav-dark">
-    <div class="container mx-auto w-full flex flex-wrap justify-left text-primary dark:text-primary-dark">
+<div x-data="{ open: false }" @click.away="open = false" @keydown.escape="open = false" class="relative">
+  <button @click="open = !open" aria-haspopup="true" x-bind:aria-expanded="open" class="text-on-surface-secondary text-sm font-medium no-underline hover:text-brand-500 relative flex items-center gap-1 after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-brand-500 after:rounded-sm after:transition-all hover:after:w-full">
+    <%= gettext("Lessons") %>
+    <svg class="w-3.5 h-3.5 opacity-50 transition-transform" x-bind:class="open && 'rotate-180'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+    </svg>
+  </button>
+  <div x-cloak x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-1" role="menu" class="fixed left-0 right-0 top-16 z-40 border-t border-b border-border-subtle bg-surface-card shadow-design-lg">
+    <div class="max-w-7xl mx-auto px-6 py-8">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <!-- Basics -->
+        <div>
+          <h4 class="font-heading text-xs font-bold uppercase tracking-widest text-on-surface-muted mb-3"><%= gettext("Basics") %></h4>
+          <ol class="flex flex-col gap-1 list-decimal list-inside text-sm marker:text-on-surface-muted">
+            <li><%= lesson_link @conn, :basics, :basics do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Basics") %></span><% end %></li>
+            <li><%= lesson_link @conn, :basics, :collections do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Collections") %></span><% end %></li>
+            <li><%= lesson_link @conn, :basics, :enum do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Enum") %></span><% end %></li>
+            <li><%= lesson_link @conn, :basics, :pattern_matching do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Pattern Matching") %></span><% end %></li>
+            <li><%= lesson_link @conn, :basics, :control_structures do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Control Structures") %></span><% end %></li>
+            <li><%= lesson_link @conn, :basics, :functions do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Functions") %></span><% end %></li>
+            <li><%= lesson_link @conn, :basics, :pipe_operator do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Pipe Operator") %></span><% end %></li>
+            <li><%= lesson_link @conn, :basics, :modules do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Modules") %></span><% end %></li>
+            <li><%= lesson_link @conn, :basics, :mix do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Mix") %></span><% end %></li>
+            <li><%= lesson_link @conn, :basics, :sigils do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Sigils") %></span><% end %></li>
+            <li><%= lesson_link @conn, :basics, :documentation do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Documentation") %></span><% end %></li>
+            <li><%= lesson_link @conn, :basics, :comprehensions do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Comprehensions") %></span><% end %></li>
+            <li><%= lesson_link @conn, :basics, :strings do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Strings") %></span><% end %></li>
+            <li><%= lesson_link @conn, :basics, :date_time do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Date and Time") %></span><% end %></li>
+            <li><%= lesson_link @conn, :basics, :iex_helpers do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("IEX Helpers") %></span><% end %></li>
+          </ol>
+        </div>
 
-        <!-- First column -->
-        <ul class="px-4 w-full md:w-1/4 lg:w-1/5 border-gray-600 border-b md:border-r lg:border-b-0 pb-6 pt-0 md:pt-6 lg:pt-3">
-            <!-- Basics -->
-            <li>
-                <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2"><%= gettext("Basics") %></p>
-                <ol class="list-decimal ml-6">
-                    <li>
-                        <%= lesson_link @conn, :basics, :basics do %>
-                            <%= gettext("Basics") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :basics, :collections do %>
-                            <%= gettext("Collections") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :basics, :enum do %>
-                            <%= gettext("Enum") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :basics, :pattern_matching do %>
-                            <%= gettext("Pattern Matching") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :basics, :control_structures do %>
-                            <%= gettext("Control Structures") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :basics, :functions do %>
-                            <%= gettext("Functions") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :basics, :pipe_operator do %>
-                            <%= gettext("Pipe Operator") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :basics, :modules do %>
-                            <%= gettext("Modules") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :basics, :mix do %>
-                            <%= gettext("Mix") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :basics, :sigils do %>
-                            <%= gettext("Sigils") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :basics, :documentation do %>
-                            <%= gettext("Documentation") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :basics, :comprehensions do %>
-                            <%= gettext("Comprehensions") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :basics, :strings do %>
-                            <%= gettext("Strings") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :basics, :date_time do %>
-                            <%= gettext("Date and Time") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :basics, :iex_helpers do %>
-                            <%= gettext("IEX Helpers") %>
-                        <% end %>
-                    </li>
-                </ol>
-            </li>
+        <!-- Intermediate + Advanced -->
+        <div>
+          <h4 class="font-heading text-xs font-bold uppercase tracking-widest text-on-surface-muted mb-3"><%= gettext("Intermediate") %></h4>
+          <ol class="flex flex-col gap-1 list-decimal list-inside text-sm marker:text-on-surface-muted mb-6">
+            <li><%= lesson_link @conn, :intermediate, :mix_tasks do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Custom Mix Tasks") %></span><% end %></li>
+            <li><%= lesson_link @conn, :intermediate, :erlang do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Erlang Interoperability") %></span><% end %></li>
+            <li><%= lesson_link @conn, :intermediate, :error_handling do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Error Handling") %></span><% end %></li>
+            <li><%= lesson_link @conn, :intermediate, :escripts do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Executables") %></span><% end %></li>
+            <li><%= lesson_link @conn, :intermediate, :concurrency do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Concurrency") %></span><% end %></li>
+          </ol>
 
-        </ul>
+          <h4 class="font-heading text-xs font-bold uppercase tracking-widest text-on-surface-muted mb-3"><%= gettext("Advanced") %></h4>
+          <ol class="flex flex-col gap-1 list-decimal list-inside text-sm marker:text-on-surface-muted">
+            <li><%= lesson_link @conn, :advanced, :otp_concurrency do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("OTP Concurrency") %></span><% end %></li>
+            <li><%= lesson_link @conn, :advanced, :otp_supervisors do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("OTP Supervisors") %></span><% end %></li>
+            <li><%= lesson_link @conn, :advanced, :otp_distribution do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("OTP Distribution") %></span><% end %></li>
+            <li><%= lesson_link @conn, :advanced, :metaprogramming do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Metaprogramming") %></span><% end %></li>
+            <li><%= lesson_link @conn, :advanced, :umbrella_projects do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Umbrella Projects") %></span><% end %></li>
+            <li><%= lesson_link @conn, :advanced, :typespec do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Specifications and types") %></span><% end %></li>
+            <li><%= lesson_link @conn, :advanced, :behaviours do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Behaviours") %></span><% end %></li>
+            <li><%= lesson_link @conn, :advanced, :protocols do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Protocols") %></span><% end %></li>
+          </ol>
+        </div>
 
-        <!-- Second column -->
-        <ul class="px-4 w-full md:w-1/4 lg:w-1/5 border-gray-600 border-b md:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-            <!-- Intermediate -->
-            <li>
-                <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2"><%= gettext("Intermediate") %></p>
-                <ol class="list-decimal ml-6">
-                    <li>
-                        <%= lesson_link @conn, :intermediate, :mix_tasks do %>
-                            <%= gettext("Custom Mix Tasks") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :intermediate, :erlang do %>
-                            <%= gettext("Erlang Interoperability") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :intermediate, :error_handling do %>
-                            <%= gettext("Error Handling") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :intermediate, :escripts do %>
-                            <%= gettext("Executables") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :intermediate, :concurrency do %>
-                            <%= gettext("Concurrency") %>
-                        <% end %>
-                    </li>
-                </ol>
-            </li>
+        <!-- Testing + Data Processing -->
+        <div>
+          <h4 class="font-heading text-xs font-bold uppercase tracking-widest text-on-surface-muted mb-3"><%= gettext("Testing") %></h4>
+          <ol class="flex flex-col gap-1 list-decimal list-inside text-sm marker:text-on-surface-muted mb-6">
+            <li><%= lesson_link @conn, :testing, :basics do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Basics") %></span><% end %></li>
+            <li><%= lesson_link @conn, :testing, :doctests do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Doctests") %></span><% end %></li>
+            <li><%= lesson_link @conn, :testing, :bypass do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">Bypass <span class="text-xs italic"><%= gettext("library") %></span></span><% end %></li>
+            <li><%= lesson_link @conn, :testing, :mox do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">Mox <span class="text-xs italic"><%= gettext("library") %></span></span><% end %></li>
+            <li><%= lesson_link @conn, :testing, :stream_data do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">StreamData <span class="text-xs italic"><%= gettext("library") %></span></span><% end %></li>
+          </ol>
 
-            <!-- Advanced -->
-            <li>
-                <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2 pt-6"><%= gettext("Advanced") %></p>
-                <ol class="list-decimal ml-6">
-                    <li>
-                        <%= lesson_link @conn, :advanced, :otp_concurrency do %>
-                            <%= gettext("OTP Concurrency") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :advanced, :otp_supervisors do %>
-                            <%= gettext("OTP Supervisors") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :advanced, :otp_distribution do %>
-                            <%= gettext("OTP Distribution") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :advanced, :metaprogramming do %>
-                            <%= gettext("Metaprogramming") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :advanced, :umbrella_projects do %>
-                            <%= gettext("Umbrella Projects") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :advanced, :typespec do %>
-                            <%= gettext("Specifications and types") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :advanced, :behaviours do %>
-                            <%= gettext("Behaviours") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :advanced, :protocols do %>
-                            <%= gettext("Protocols") %>
-                        <% end %>
-                    </li>
-                </ol>
-            </li>
-        </ul>
+          <h4 class="font-heading text-xs font-bold uppercase tracking-widest text-on-surface-muted mb-3"><%= gettext("Data Processing") %></h4>
+          <ol class="flex flex-col gap-1 list-decimal list-inside text-sm marker:text-on-surface-muted">
+            <li><%= lesson_link @conn, :data_processing, :genstage do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">GenStage <span class="text-xs italic"><%= gettext("library") %></span></span><% end %></li>
+            <li><%= lesson_link @conn, :data_processing, :flow do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">Flow <span class="text-xs italic"><%= gettext("library") %></span></span><% end %></li>
+            <li><%= lesson_link @conn, :data_processing, :broadway do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">Broadway <span class="text-xs italic"><%= gettext("library") %></span></span><% end %></li>
+          </ol>
+        </div>
 
-        <!-- Third column -->
-        <ul class="px-4 w-full md:w-1/4 lg:w-1/5 border-gray-600 border-b md:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-            <!-- Testing -->
-            <li>
-                <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2"><%= gettext("Testing") %></p>
-                <ol class="list-decimal ml-6">
-                    <li>
-                        <%= lesson_link @conn, :testing, :basics do %>
-                            <%= gettext("Basics") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :testing, :doctests do %>
-                            <%= gettext("Doctests") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :testing, :bypass do %>
-                            Bypass <span class="text-xs italic"><%= gettext("library") %></span>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :testing, :mox do %>
-                            Mox <span class="text-xs italic"><%= gettext("library") %></span>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :testing, :stream_data do %>
-                            StreamData <span class="text-xs italic"><%= gettext("library") %></span>
-                        <% end %>
-                    </li>
-                </ol>
+        <!-- Ecto + Storage -->
+        <div>
+          <h4 class="font-heading text-xs font-bold uppercase tracking-widest text-on-surface-muted mb-3"><%= gettext("Ecto") %></h4>
+          <ol class="flex flex-col gap-1 list-decimal list-inside text-sm marker:text-on-surface-muted mb-6">
+            <li><%= lesson_link @conn, :ecto, :basics do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Basics") %></span><% end %></li>
+            <li><%= lesson_link @conn, :ecto, :changesets do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Changesets") %></span><% end %></li>
+            <li><%= lesson_link @conn, :ecto, :associations do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Associations") %></span><% end %></li>
+            <li><%= lesson_link @conn, :ecto, :querying_basics do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Querying: Basics") %></span><% end %></li>
+            <li><%= lesson_link @conn, :ecto, :querying_advanced do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Querying: Advanced") %></span><% end %></li>
+          </ol>
 
-            </li>
+          <h4 class="font-heading text-xs font-bold uppercase tracking-widest text-on-surface-muted mb-3"><%= gettext("Storage") %></h4>
+          <ol class="flex flex-col gap-1 list-decimal list-inside text-sm marker:text-on-surface-muted">
+            <li><%= lesson_link @conn, :storage, :ets do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">Erlang Term Storage (ETS)</span><% end %></li>
+            <li><%= lesson_link @conn, :storage, :mnesia do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">Mnesia</span><% end %></li>
+            <li><%= lesson_link @conn, :storage, :cachex do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">Cachex <span class="text-xs italic"><%= gettext("library") %></span></span><% end %></li>
+            <li><%= lesson_link @conn, :storage, :redix do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">Redix <span class="text-xs italic"><%= gettext("library") %></span></span><% end %></li>
+          </ol>
+        </div>
 
-            <!-- Data Processing -->
-            <li>
-                <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2 pt-6"><%= gettext("Data Processing") %></p>
-                <ol class="list-decimal ml-6">
-                    <li>
-                        <%= lesson_link @conn, :data_processing, :genstage do %>
-                            GenStage <span class="text-xs italic"><%= gettext("library") %></span>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :data_processing, :flow do %>
-                            Flow <span class="text-xs italic"><%= gettext("library") %></span>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :data_processing, :broadway do %>
-                            Broadway <span class="text-xs italic"><%= gettext("library") %></span>
-                        <% end %>
-                    </li>
-                </ol>
-            </li>
-        </ul>
-
-        <!-- Fourth column -->
-        <ul class="px-4 w-full md:w-1/4 lg:w-1/5 border-gray-600 border-b md:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-            <!-- Ecto -->
-            <li>
-                <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2"><%= gettext("Ecto") %></p>
-                <ol class="list-decimal ml-6">
-                    <li>
-                        <%= lesson_link @conn, :ecto, :basics do %>
-                            <%= gettext("Basics") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :ecto, :changesets do %>
-                            <%= gettext("Changesets") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :ecto, :associations do %>
-                            <%= gettext("Associations") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :ecto, :querying_basics do %>
-                            <%= gettext("Querying: Basics") %>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :ecto, :querying_advanced do %>
-                            <%= gettext("Querying: Advanced") %>
-                        <% end %>
-                    </li>
-                </ol>
-            </li>
-
-            <!-- Storage -->
-            <li>
-                <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2 pt-6"><%= gettext("Storage") %></p>
-                <ol class="list-decimal ml-6">
-                    <li>
-                        <%= lesson_link @conn, :storage, :ets do %>
-                            Erlang Term Storage (ETS)
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :storage, :mnesia do %>
-                            Mnesia
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :storage, :cachex do %>
-                            Cachex <span class="text-xs italic"><%= gettext("library") %></span>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :storage, :redix do %>
-                            Redix <span class="text-xs italic"><%= gettext("library") %></span>
-                        <% end %>
-                    </li>
-                </ol>
-            </li>
-        </ul>
-
-        <!-- Fifth column -->
-        <ul class="px-4 w-full md:w-1/4 lg:w-1/5 border-gray-600 border-b md:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3">
-            <!-- Miscellaneous -->
-            <li>
-                <p class="font-bold text-xl text-primary dark:text-primary-dark mb-2"><%= gettext("Miscellaneous") %></p>
-                <ol class="list-decimal ml-6">
-                    <li>
-                        <%= lesson_link @conn, :misc, :benchee do %>
-                            Benchee <span class="text-xs italic"><%= gettext("library") %></span>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :misc, :plug do %>
-                            Plug <span class="text-xs italic"><%= gettext("library") %></span>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :misc, :eex do %>
-                            <%= gettext("Embedded Elixir (EEx)")%>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :misc, :debugging do %>
-                            <%= gettext("Debugging")%>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :misc, :nerves do %>
-                            Nerves <span class="text-xs italic"><%= gettext("library") %></span>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :misc, :guardian do %>
-                            Guardian <span class="text-xs italic"><%= gettext("library") %></span>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :misc, :poolboy do %>
-                            Poolboy <span class="text-xs italic"><%= gettext("library") %></span>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :misc, :nimble_publisher do %>
-                            NimblePublisher <span class="text-xs italic"><%= gettext("library") %></span>
-                        <% end %>
-                    </li>
-                    <li>
-                        <%= lesson_link @conn, :misc, :lua do %>
-                            Lua <span class="text-xs italic"><%= gettext("library") %></span>
-                        <% end %>
-                    </li>
-
-                </ol>
-            </li>
-        </ul>
+        <!-- Miscellaneous -->
+        <div>
+          <h4 class="font-heading text-xs font-bold uppercase tracking-widest text-on-surface-muted mb-3"><%= gettext("Miscellaneous") %></h4>
+          <ol class="flex flex-col gap-1 list-decimal list-inside text-sm marker:text-on-surface-muted">
+            <li><%= lesson_link @conn, :misc, :benchee do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">Benchee <span class="text-xs italic"><%= gettext("library") %></span></span><% end %></li>
+            <li><%= lesson_link @conn, :misc, :plug do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">Plug <span class="text-xs italic"><%= gettext("library") %></span></span><% end %></li>
+            <li><%= lesson_link @conn, :misc, :eex do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Embedded Elixir (EEx)") %></span><% end %></li>
+            <li><%= lesson_link @conn, :misc, :debugging do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors"><%= gettext("Debugging") %></span><% end %></li>
+            <li><%= lesson_link @conn, :misc, :nerves do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">Nerves <span class="text-xs italic"><%= gettext("library") %></span></span><% end %></li>
+            <li><%= lesson_link @conn, :misc, :guardian do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">Guardian <span class="text-xs italic"><%= gettext("library") %></span></span><% end %></li>
+            <li><%= lesson_link @conn, :misc, :poolboy do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">Poolboy <span class="text-xs italic"><%= gettext("library") %></span></span><% end %></li>
+            <li><%= lesson_link @conn, :misc, :nimble_publisher do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">NimblePublisher <span class="text-xs italic"><%= gettext("library") %></span></span><% end %></li>
+            <li><%= lesson_link @conn, :misc, :lua do %><span class="text-on-surface-secondary hover:text-brand-500 transition-colors">Lua <span class="text-xs italic"><%= gettext("library") %></span></span><% end %></li>
+          </ol>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

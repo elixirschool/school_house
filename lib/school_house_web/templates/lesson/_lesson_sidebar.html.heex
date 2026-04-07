@@ -1,0 +1,21 @@
+<div class="sidebar-section" x-data data-section={@lesson.section} data-total={length(@section_lessons)}>
+  <div class="sidebar-section-title">
+    <%= section_display_name(@lesson.section) %>
+    <span class="sidebar-section-count"
+          x-text="$store.progress.completedInSection($el.closest('[data-section]').dataset.section) + '/' + $el.closest('[data-section]').dataset.total">
+    </span>
+  </div>
+  <%= for lesson <- @section_lessons do %>
+    <% active = lesson.name == @lesson.name %>
+    <% lesson_id = "#{lesson.section}/#{lesson.name}" %>
+    <a href={Routes.lesson_path(@conn, :lesson, current_locale(), lesson.section, lesson.name)}
+       class={"sidebar-link#{if active, do: " active", else: ""}"}
+       data-lesson-id={lesson_id}>
+      <span class={"check#{if active, do: " is-active", else: ""}"}
+            x-bind:class={"#{unless active, do: "$store.progress.isCompleted($el.closest('[data-lesson-id]').dataset.lessonId) && 'is-done'", else: "''"}"}>
+        <%= if active do %>●<% end %>
+      </span>
+      <%= lesson.title %>
+    </a>
+  <% end %>
+</div>

@@ -1,32 +1,88 @@
-<section class="container w-3/4 mb-6 items-center prose dark:prose-dark">
-  <div class="pt-16 md:pt-6 pb-6">
-    <h1 class="text-6xl font-bold"><%= @lesson.title %></h1>
-  </div>
-
-  <%= if @lesson.excerpt do %>
-    <div class="bg-brand-gray-300 dark:bg-nav-dark rounded-xl p-4 excerpt-box"><%= raw @lesson.excerpt %></div>
-  <% end %>
-
-  <div class="pt-8">
-    <span class="text-4xl font-bold border-b-4 border-brand-purple"><%= gettext("Table of Contents")%></span>
-    <div class="pt-6">
-      <%= raw @lesson.table_of_contents %>
+<div class="lesson-layout" x-data data-section={@lesson.section} data-name={@lesson.name}
+     x-init="$store.progress.markVisited($el.dataset.section, $el.dataset.name); $store.progress.observeLesson($el.dataset.section, $el.dataset.name)">
+  <!-- Mobile Lesson Nav (visible only on small screens) -->
+  <div class="lesson-mobile-nav" x-data="{ showNav: false, showToc: false }">
+    <button @click="showNav = !showNav; showToc = false" class="lesson-mobile-nav-btn" aria-expanded="false" x-bind:aria-expanded="showNav">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      Lessons
+    </button>
+    <button @click="showToc = !showToc; showNav = false" class="lesson-mobile-nav-btn" aria-expanded="false" x-bind:aria-expanded="showToc">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      On This Page
+    </button>
+    <div x-show="showNav" x-transition x-cloak class="lesson-mobile-drawer" @keydown.escape="showNav = false">
+      <%= render("_lesson_sidebar.html", conn: @conn, lesson: @lesson, section_lessons: @section_lessons) %>
+    </div>
+    <div x-show="showToc" x-transition x-cloak class="lesson-mobile-drawer" @keydown.escape="showToc = false">
+      <%= render("_toc_sidebar.html", conn: @conn, lesson: @lesson) %>
     </div>
   </div>
-  <%= raw @lesson.body %>
+  <!-- Left Sidebar -->
+  <aside class="lesson-sidebar" aria-label="Lesson navigation">
+    <%= render("_lesson_sidebar.html", conn: @conn, lesson: @lesson, section_lessons: @section_lessons) %>
+  </aside>
 
-  <blockquote class="edit-lesson dark:text-primary-dark">
-    <%= gettext("Caught a mistake or want to contribute to the lesson?")%>
-    <a href={"https://github.com/elixirschool/elixirschool/edit/main/lessons/#{@lesson.locale}/#{@lesson.section}/#{@lesson.name}.md"} target="_blank" rel="noopener">
-      <%= gettext("Edit this lesson on GitHub!")%>
-    </a>
-  </blockquote>
-</section>
+  <!-- Main Content -->
+  <article class="lesson-content">
+    <nav class="lesson-breadcrumb" aria-label="Breadcrumb">
+      <%= link(gettext("Lessons"), to: Routes.lesson_path(@conn, :index, current_locale(), @lesson.section), class: "") %>
+      <span class="sep">/</span>
+      <%= link(section_display_name(@lesson.section), to: Routes.lesson_path(@conn, :index, current_locale(), @lesson.section), class: "") %>
+      <span class="sep">/</span>
+      <span class="current" aria-current="page"><%= @lesson.title %></span>
+    </nav>
 
-<%= render("_pagination.html", conn: @conn, next: @lesson.next, previous: @lesson.previous) %>
+    <h1 class="lesson-title"><%= @lesson.title %></h1>
 
-<div class="relative -mb-16 pb-16">
-  <div class="absolute inset-0 flex items-center pt-16" aria-hidden="true">
-    <div class="w-full border-t border-gray-200"></div>
-  </div>
+    <%= if @lesson.excerpt do %>
+      <div class="bg-surface-secondary border border-border-subtle rounded-design-md p-5 mb-8 text-on-surface-secondary excerpt-box"><%= raw @lesson.excerpt %></div>
+    <% end %>
+
+    <div class="lesson-prose prose dark:prose-dark max-w-none">
+      <%= raw @lesson.body %>
+    </div>
+
+    <div id="lesson-end"></div>
+
+    <div class="lesson-complete-toast"
+         role="status"
+         aria-live="polite"
+         x-show="$store.progress.showToast"
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="opacity-0 translate-y-2"
+         x-transition:enter-end="opacity-100 translate-y-0"
+         x-transition:leave="transition ease-in duration-200"
+         x-transition:leave-start="opacity-100 translate-y-0"
+         x-transition:leave-end="opacity-0 translate-y-2"
+         x-cloak>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+      </svg>
+      Lesson complete
+    </div>
+
+    <div class="lesson-nav">
+      <div>
+        <%= if @lesson.previous do %>
+          <%= link(to: Routes.lesson_path(@conn, :lesson, current_locale(), @lesson.previous.section, @lesson.previous.name), class: "lesson-nav-btn prev") do %>
+            <span class="label"><%= gettext("Previous Lesson") %></span>
+            <span class="title">&larr; <%= @lesson.previous.title %></span>
+          <% end %>
+        <% end %>
+      </div>
+      <div>
+        <%= if @lesson.next do %>
+          <%= link(to: Routes.lesson_path(@conn, :lesson, current_locale(), @lesson.next.section, @lesson.next.name), class: "lesson-nav-btn next") do %>
+            <span class="label"><%= gettext("Next Lesson") %></span>
+            <span class="title"><%= @lesson.next.title %> &rarr;</span>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </article>
+
+  <!-- Right Sidebar (TOC) -->
+  <aside class="toc-sidebar" aria-label="Table of contents">
+    <%= render("_toc_sidebar.html", conn: @conn, lesson: @lesson) %>
+  </aside>
 </div>

@@ -1,34 +1,19 @@
-<section class="container w-3/4 mb-6 items-center">
-  <div class="py-6 text-center">
-      <span class="text-4xl leading-8 font-extrabold tracking-tight text-purple dark:text-purple-dark sm:text-4xl "><%= gettext("Elixir School") %></span>
-    </div>
+<section class="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+  <div class="text-center mb-8">
+    <div class="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-brand-500 mb-4"><%= gettext("Elixir School Presents") %></div>
+    <h1 class="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-on-surface mb-4"><%= @post.title |> strip_p_tags() |> raw() %></h1>
+    <p class="text-sm text-on-surface-muted">
+      <%= gettext("By") %> <%= @post.author %> · <%= gettext("Posted") %> <%= @post.date %>
+    </p>
+  </div>
 
-    <div class="relative">
-      <div class="absolute inset-0 flex items-center" aria-hidden="true">
-        <div class="w-full border-t border-gray-300"></div>
-      </div>
-      <div class="relative flex justify-center">
-        <span class="px-2 bg-white dark:bg-body-dark text-sm text-light dark:text-light-dark">
-          <%= gettext("Presents") %>
-        </span>
-      </div>
-    </div>
-
-    <div class="pt-6 text-center">
-      <h1 class="text-2xl leading-8 font-extrabold tracking-tight sm:text-2xl prose dark:prose-dark"><%= @post.title |> strip_p_tags() |> raw() %></h1>
-    </div>
-
-    <div class="py-2 text-center">
-      <h2 class="text-medium leading-8 tracking-tight text-primary dark:text-primary-dark sm:text-large ">
-        <%= gettext("By") %> <%= @post.author %> | <%= gettext("Posted") %> <%= @post.date %>
-      </h2>
-    </div>
-
-    <div class="bg-brand-gray-300 dark:bg-brand-gray-800 rounded-xl p-4 mb-3 text-xl sm:mb-4 text-center prose dark:prose-dark">
+  <%= if @post.excerpt do %>
+    <div class="bg-surface-secondary border border-border-subtle rounded-design-md p-5 mb-8 text-center text-on-surface-secondary">
       <%= raw @post.excerpt %>
     </div>
+  <% end %>
 
-    <div class="prose dark:prose-dark">
-      <%= raw @post.body %>
-    </div>
+  <div class="prose dark:prose-dark max-w-none">
+    <%= raw @post.body %>
+  </div>
 </section>

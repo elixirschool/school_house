@@ -1,5 +1,7 @@
 import Config
 
+config :school_house, :github_token, System.get_env("GITHUB_TOKEN")
+
 if config_env() == :prod do
   secret_key_base =
     System.get_env("SECRET_KEY_BASE") ||

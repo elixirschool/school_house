@@ -5,6 +5,7 @@ import { LiveSocket } from "phoenix_live_view"
 import Alpine from "alpinejs";
 
 window.Alpine = Alpine;
+import "./progress"
 Alpine.start();
 
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
@@ -40,6 +41,5 @@ liveSocket.connect()
 // >> liveSocket.enableLatencySim(1000)
 window.liveSocket = liveSocket
 
-import "./pickup"
 import "./dark-mode"
 import "./menu-toggle"

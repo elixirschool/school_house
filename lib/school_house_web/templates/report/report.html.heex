@@ -1,18 +1,16 @@
-<div class="py-12 bg-body dark:bg-body-dark">
-  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <div class="lg:text-center">
-      <h1 class="mt-2 text-4xl font-extrabold tracking-tight leading-8 text-purple dark:text-purple-dark sm:text-4xl">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+  <div class="text-center mb-12">
+    <h1 class="font-heading text-4xl font-extrabold text-on-surface">
       <%= gettext("Translation Report") %>
-      </h1>
-    </div>
+    </h1>
   </div>
-</div>
 
-<%= render("_section.html", lessons: @report.basics, section: gettext("Basics")) %>
-<%= render("_section.html", lessons: @report.intermediate, section: gettext("Intermediate")) %>
-<%= render("_section.html", lessons: @report.advanced, section: gettext("Advanced")) %>
-<%= render("_section.html", lessons: @report.testing, section: gettext("Testing"))%>
-<%= render("_section.html", lessons: @report.data_processing, section: gettext("Data Processing")) %>
-<%= render("_section.html", lessons: @report.ecto, section: gettext("Ecto")) %>
-<%= render("_section.html", lessons: @report.storage, section: gettext("Storage")) %>
-<%= render("_section.html", lessons: @report.misc, section: gettext("Miscellaneous")) %>
+  <%= render("_section.html", lessons: @report.basics, section: gettext("Basics")) %>
+  <%= render("_section.html", lessons: @report.intermediate, section: gettext("Intermediate")) %>
+  <%= render("_section.html", lessons: @report.advanced, section: gettext("Advanced")) %>
+  <%= render("_section.html", lessons: @report.testing, section: gettext("Testing"))%>
+  <%= render("_section.html", lessons: @report.data_processing, section: gettext("Data Processing")) %>
+  <%= render("_section.html", lessons: @report.ecto, section: gettext("Ecto")) %>
+  <%= render("_section.html", lessons: @report.storage, section: gettext("Storage")) %>
+  <%= render("_section.html", lessons: @report.misc, section: gettext("Miscellaneous")) %>
+</div>

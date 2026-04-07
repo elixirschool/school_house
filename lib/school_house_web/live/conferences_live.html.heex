@@ -1,54 +1,56 @@
-<div class="py-12 bg-body dark:bg-body-dark">
-  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <div class="lg:text-center">
-      <h1 class="mt-2 text-4xl font-extrabold tracking-tight leading-8 text-purple dark:text-purple-dark sm:text-4xl">
-        <%= gettext("Elixir Conferences")%>
-      </h1>
-      <p class="max-w-2xl mt-4 text-xl text-light dark:text-light-dark lg:mx-auto">
-        <%= gettext("Check out all of the conferences that focus on Elixir!")%>
+<div class="py-16 sm:py-24 px-4 sm:px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14">
+      <div class="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-brand-500 mb-3"><%= gettext("Events") %></div>
+      <h1 class="font-heading text-4xl sm:text-5xl font-extrabold tracking-tight text-on-surface mb-4"><%= gettext("Elixir Conferences") %></h1>
+      <p class="text-lg text-on-surface-secondary max-w-xl mx-auto">
+        <%= gettext("Check out all of the conferences that focus on Elixir!") %>
       </p>
     </div>
   </div>
 </div>
 
-<div class="bg-body dark:bg-body-dark">
-  <div class="md:w-11/12 lg:w-8/12 mx-auto">
-    <.form :let={f} for={:filters} id="filter-form" class="flex-row flex items-center mb-6 px-2 text-primary dark:text-primary-dark" phx-change="filter">
-      <p class="text-light dark:text-light-dark mr-5"><%= gettext("Filter")%></p>
-      <div class="mx-2 flex flex-row items-center gap-x-2">
-        <%= checkbox f, :online, id: "online-only", checked: filter_is_online?(@filters) %>
-        <label for="online-only"><%= gettext("Online")%></label>
-      </div>
-      <div class="ml-auto">
-        <label for="country-select" class="pr-2"><%= gettext("Country")%></label>
-        <%= select f, :country, @country_options, selected: country_filter(@filters), class: "w-40 pl-3 pr-6 appearance-none bg-nav dark:bg-nav-dark", id: "country-select" %>
-      </div>
-    </.form>
-    <div>
-      <table class="divide-y divide-gray-200 w-full">
-        <thead class="bg-gray-50 dark:bg-gray-600">
+<div class="px-4 sm:px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="bg-surface-card border border-border-subtle rounded-design-lg p-4 mb-6">
+      <.form :let={f} for={to_form(%{}, as: :filters)} id="filter-form" class="flex flex-row flex-wrap items-center gap-4 text-on-surface" phx-change="filter">
+        <p class="text-on-surface-muted font-medium text-sm"><%= gettext("Filter") %></p>
+        <div class="flex flex-row items-center gap-x-2">
+          <%= checkbox f, :online, id: "online-only", checked: filter_is_online?(@filters), class: "rounded border-border-default text-brand-500 focus:ring-brand-500" %>
+          <label for="online-only" class="text-sm"><%= gettext("Online") %></label>
+        </div>
+        <div class="ml-auto flex items-center gap-2">
+          <label for="country-select" class="text-sm font-medium text-on-surface-muted"><%= gettext("Country") %></label>
+          <%= select f, :country, @country_options, selected: country_filter(@filters), class: "w-40 pl-3 pr-8 py-2 appearance-none bg-surface border border-border-default rounded-design-sm text-sm text-on-surface focus:ring-brand-500 focus:border-brand-500", id: "country-select" %>
+        </div>
+      </.form>
+    </div>
+
+    <div class="bg-surface-card border border-border-subtle rounded-design-lg overflow-hidden">
+      <table class="w-full">
+        <thead class="bg-surface-secondary">
           <tr>
-            <th scope="col" class="w-5/12 px-6 py-3 text-left text-xs font-medium text-light dark:text-light-dark uppercase tracking-wider">
-              <%= gettext("Name")%>
+            <th scope="col" class="w-5/12 px-6 py-3 text-left text-xs font-semibold text-on-surface-muted uppercase tracking-wider">
+              <%= gettext("Name") %>
             </th>
-            <th scope="col" class="w-4/12 px-6 py-3 text-left text-xs font-medium text-light dark:text-light-dark uppercase tracking-wider">
-              <%= gettext("Location")%>
+            <th scope="col" class="w-4/12 px-6 py-3 text-left text-xs font-semibold text-on-surface-muted uppercase tracking-wider">
+              <%= gettext("Location") %>
             </th>
-            <th scope="col" class="w-3/12 px-6 py-3 text-left text-xs font-medium text-light dark:text-light-dark uppercase tracking-wider">
-              <%= gettext("Date")%>
+            <th scope="col" class="w-3/12 px-6 py-3 text-left text-xs font-semibold text-on-surface-muted uppercase tracking-wider">
+              <%= gettext("Date") %>
             </th>
           </tr>
         </thead>
-        <tbody class="bg-body divide-y divide-gray-200 dark:bg-body-dark">
+        <tbody class="divide-y divide-border-subtle">
           <%= for conference <- @conferences do %>
-            <tr>
+            <tr class="hover:bg-surface-secondary/50 transition-colors">
               <td class="px-6 py-4">
-                <a class="text-purple dark:text-purple-dark underline" href={conference.link}><%= conference.name %></a>
+                <a class="font-medium text-brand-500 hover:text-brand-600 transition-colors" href={conference.link} target="_blank" rel="noopener noreferrer"><%= conference.name %></a>
               </td>
               <td class="px-6 py-4">
-                <p class="text-sm text-primary dark:text-primary-dark"><%= conference.location %></p>
+                <p class="text-sm text-on-surface-secondary"><%= conference.location %></p>
               </td>
-              <td class="px-6 py-4 text-sm text-primary dark:text-primary-dark">
+              <td class="px-6 py-4 text-sm text-on-surface-secondary">
                 <p><%= conference.date %></p>
               </td>
             </tr>

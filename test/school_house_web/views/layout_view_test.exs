@@ -8,10 +8,12 @@ defmodule SchoolHouseWeb.LayoutViewTest do
              |> SchoolHouseWeb.LayoutView.render_dark_mode?() == "dark"
     end
 
-    test "returns `` when dark mode query parameter is not present", %{conn: conn} do
-      assert conn
-             |> Map.put(:query_params, %{})
-             |> SchoolHouseWeb.LayoutView.render_dark_mode?() == ""
+    test "returns nil when dark mode query parameter is not present", %{conn: conn} do
+      assert is_nil(
+               conn
+               |> Map.put(:query_params, %{})
+               |> SchoolHouseWeb.LayoutView.render_dark_mode?()
+             )
     end
   end
 end

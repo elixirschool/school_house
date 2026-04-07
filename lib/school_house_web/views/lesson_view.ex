@@ -2,6 +2,24 @@ defmodule SchoolHouseWeb.LessonView do
   use SchoolHouseWeb, :view
   import Phoenix.Component, only: [sigil_H: 2]
 
+  use Gettext, backend: SchoolHouseWeb.Gettext
+
+  @section_names %{
+    basics: "Basics",
+    intermediate: "Intermediate",
+    advanced: "Advanced",
+    testing: "Testing",
+    data_processing: "Data Processing",
+    ecto: "Ecto",
+    storage: "Storage",
+    misc: "Miscellaneous"
+  }
+
+  def section_display_name(section) do
+    name = Map.get(@section_names, section, to_string(section))
+    Gettext.gettext(SchoolHouseWeb.Gettext, name)
+  end
+
   def fa_locale_styles(assigns) do
     ~H"""
       <style>

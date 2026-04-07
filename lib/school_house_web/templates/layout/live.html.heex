@@ -1,11 +1,11 @@
-<main class="container">
-  <p class="alert alert-info" role="alert"
+<main class="min-h-screen">
+  <p :if={Phoenix.Flash.get(@flash, :info)} class="px-4 py-3 text-sm font-medium text-accent-green bg-green-50 dark:bg-green-900/20 border-b border-green-200 dark:border-green-800" role="alert"
     phx-click="lv:clear-flash"
-    phx-value-key="info"><%= live_flash(@flash, :info) %></p>
+    phx-value-key="info"><%= Phoenix.Flash.get(@flash, :info) %></p>
 
-  <p class="alert alert-danger" role="alert"
+  <p :if={Phoenix.Flash.get(@flash, :error)} class="px-4 py-3 text-sm font-medium text-accent-rose bg-red-50 dark:bg-red-900/20 border-b border-red-200 dark:border-red-800" role="alert"
     phx-click="lv:clear-flash"
-    phx-value-key="error"><%= live_flash(@flash, :error) %></p>
+    phx-value-key="error"><%= Phoenix.Flash.get(@flash, :error) %></p>
 
   <%= @inner_content %>
 </main>

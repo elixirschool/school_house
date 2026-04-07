@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          submodules: true
 
       - id: metadata
         name: Get Metadata
@@ -83,6 +85,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          submodules: true
 
       - name: Install (flyctl)
         uses: superfly/flyctl-actions/setup-flyctl@master

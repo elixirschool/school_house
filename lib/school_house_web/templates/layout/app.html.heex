@@ -1,5 +1,5 @@
-<main class="container block justify-center" dir="auto">
-  <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-  <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+<main class="min-h-screen" dir="auto">
+  <p :if={Phoenix.Flash.get(@conn.assigns[:flash], :info)} class="px-4 py-3 text-sm font-medium text-accent-green bg-green-50 dark:bg-green-900/20 border-b border-green-200 dark:border-green-800" role="alert"><%= Phoenix.Flash.get(@conn.assigns[:flash], :info) %></p>
+  <p :if={Phoenix.Flash.get(@conn.assigns[:flash], :error)} class="px-4 py-3 text-sm font-medium text-accent-rose bg-red-50 dark:bg-red-900/20 border-b border-red-200 dark:border-red-800" role="alert"><%= Phoenix.Flash.get(@conn.assigns[:flash], :error) %></p>
   <%= @inner_content %>
 </main>

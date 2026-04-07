@@ -1,61 +1,83 @@
-<div class="pt-20 pb-4 md:py-12 bg-body dark:bg-body-dark">
-  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <div class="lg:text-center">
-      <h1 class="mt-2 text-4xl font-extrabold tracking-tight leading-8 text-purple dark:text-purple-dark sm:text-4xl">
-        <%= gettext("Get Involved") %>
-      </h1>
-      <p class="max-w-2xl mt-4 text-xl text-light dark:text-light-dark lg:mx-auto">
+<div class="py-16 sm:py-24 px-4 sm:px-6">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-14">
+      <div class="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-brand-500 mb-3"><%= gettext("Community") %></div>
+      <h1 class="font-heading text-4xl sm:text-5xl font-extrabold tracking-tight text-on-surface mb-4"><%= gettext("Get Involved") %></h1>
+      <p class="text-lg text-on-surface-secondary max-w-2xl mx-auto">
         <%= gettext("Elixir School is built by contributors, skilled and new alike! Help us make it better and extend the reach of Elixir to anyone that wants to learn. Below are a few ways to contribute.") %>
       </p>
     </div>
-  </div>
-</div>
-<div class="bg-body dark:bg-body-dark px-4 lg:px-0">
-  <div>
-    <div class="flex my-12">
-      <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-      </svg>
-      <div class="ml-3">
-        <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-          <%= gettext("Improve the Website") %>
-        </h3>
-        <div class="mt-2 text-base text-light dark:text-light-dark">
-          <%= gettext("Elixir School is an open source project, with code hosted on") %> <a target="_blank" href="https://github.com/elixirschool/school_house" class="font-bold text-purple dark:text-purple-dark">GitHub</a>.
-          <%= gettext("Take a look at the") %> <a target="_blank" href="https://github.com/elixirschool/school_house/issues" class="font-bold text-purple dark:text-purple-dark"><%= gettext("issues") %></a> <%= gettext("on the repository to find a task that interests you. Create a pull request when your change is ready and after review it will be merged into the codebase!") %>
-          <%= gettext("See something you think should be improved? Feel free to open an issue or create a pull request with the change.") %>
+
+    <div class="space-y-6">
+      <div class="bg-surface-card border border-border-subtle rounded-design-lg p-8 hover:border-brand-300 hover:shadow-design-md transition-all duration-200">
+        <div class="flex gap-5">
+          <div class="w-10 h-10 rounded-lg bg-brand-100 flex items-center justify-center flex-shrink-0 mt-1">
+            <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-heading text-xl font-bold text-on-surface mb-3"><%= gettext("Improve the Website") %></h3>
+            <p class="text-on-surface-secondary leading-relaxed">
+              <%= gettext("Elixir School is an open source project, with code hosted on") %> <a target="_blank" rel="noopener noreferrer" href="https://github.com/elixirschool/school_house" class="font-semibold text-brand-500 hover:text-brand-600 transition-colors">GitHub</a>.
+              <%= gettext("Take a look at the") %> <a target="_blank" rel="noopener noreferrer" href="https://github.com/elixirschool/school_house/issues" class="font-semibold text-brand-500 hover:text-brand-600 transition-colors"><%= gettext("issues") %></a> <%= gettext("on the repository to find a task that interests you. Create a pull request when your change is ready and after review it will be merged into the codebase!") %>
+              <%= gettext("See something you think should be improved? Feel free to open an issue or create a pull request with the change.") %>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="flex my-12">
-      <!-- Heroicon name: outline/check -->
-      <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-      </svg>
-      <div class="ml-3">
-        <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-          <%= gettext("Translate Lessons") %>
-        </h3>
-        <div class="mt-2 text-base text-light dark:text-light-dark">
-          <%= gettext("Lessons on Elixir School are translated into 25 different languages! If there is a lesson missing a translation that you can provide, translate it and create a pull request.") %>
-          <%= gettext("As you read lessons, if you see an opportunity for improvement go ahead and create a pull request with the change, the next reader will thank you. Steps for translating a lesson") %>
-          <%= gettext("are available on") %> <a target="_blank" href="https://github.com/elixirschool/elixirschool#translating-a-lesson" class="font-bold text-purple dark:text-purple-dark">GitHub</a>.
+
+      <div class="bg-surface-card border border-border-subtle rounded-design-lg p-8 hover:border-brand-300 hover:shadow-design-md transition-all duration-200">
+        <div class="flex gap-5">
+          <div class="w-10 h-10 rounded-lg bg-green-100/60 flex items-center justify-center flex-shrink-0 mt-1">
+            <svg class="w-5 h-5 text-accent-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-heading text-xl font-bold text-on-surface mb-3"><%= gettext("Translate Lessons") %></h3>
+            <p class="text-on-surface-secondary leading-relaxed">
+              <%= gettext("Lessons on Elixir School are translated into 25 different languages! If there is a lesson missing a translation that you can provide, translate it and create a pull request.") %>
+              <%= gettext("As you read lessons, if you see an opportunity for improvement go ahead and create a pull request with the change, the next reader will thank you. Steps for translating a lesson") %>
+              <%= gettext("are available on") %> <a target="_blank" rel="noopener noreferrer" href="https://github.com/elixirschool/elixirschool#translating-a-lesson" class="font-semibold text-brand-500 hover:text-brand-600 transition-colors">GitHub</a>.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="flex my-12">
-      <!-- Heroicon name: outline/check -->
-      <svg class="flex-shrink-0 w-6 h-6 font-bold text-purple dark:text-purple-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-      </svg>
-      <div class="ml-3">
-        <h3 class="text-lg font-medium text-heavy dark:text-heavy-dark leading-6">
-          <%= gettext("Contribute to the Blog") %>
-        </h3>
-        <div class="mt-2 text-base text-light dark:text-light-dark">
-          <%= gettext("Have a topic related to Elixir that you are knowledgeable about and want to share? Write a blog post and it could be featured on the Elixir School post feed.") %>
-          <%= gettext("This is a great way to contribute and get visibility for your post! Steps for submitting a post are available on") %>
-          <a target="_blank" href="https://github.com/elixirschool/elixirschool#posting-an-article" class="font-bold text-purple dark:text-purple-dark">GitHub</a>.
+
+      <div class="bg-surface-card border border-border-subtle rounded-design-lg p-8 hover:border-brand-300 hover:shadow-design-md transition-all duration-200">
+        <div class="flex gap-5">
+          <div class="w-10 h-10 rounded-lg bg-amber-100/60 flex items-center justify-center flex-shrink-0 mt-1">
+            <svg class="w-5 h-5 text-accent-amber" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-heading text-xl font-bold text-on-surface mb-3"><%= gettext("Contribute to the Blog") %></h3>
+            <p class="text-on-surface-secondary leading-relaxed">
+              <%= gettext("Have a topic related to Elixir that you are knowledgeable about and want to share? Write a blog post and it could be featured on the Elixir School post feed.") %>
+              <%= gettext("This is a great way to contribute and get visibility for your post! Steps for submitting a post are available on") %>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/elixirschool/elixirschool#posting-an-article" class="font-semibold text-brand-500 hover:text-brand-600 transition-colors">GitHub</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-surface-card border border-border-subtle rounded-design-lg p-8 hover:border-brand-300 hover:shadow-design-md transition-all duration-200">
+        <div class="flex gap-5">
+          <div class="w-10 h-10 rounded-lg bg-rose-100/60 flex items-center justify-center flex-shrink-0 mt-1">
+            <svg class="w-5 h-5 text-rose-500" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-heading text-xl font-bold text-on-surface mb-3"><%= gettext("Sponsor the Project") %></h3>
+            <p class="text-on-surface-secondary leading-relaxed">
+              <%= gettext("Elixir School is free and always will be. Financial sponsorships help us maintain lessons, fund new content, and keep infrastructure running for developers worldwide.") %>
+              <%= link(to: Routes.page_path(@conn, :sponsors, current_locale()), class: "font-semibold text-brand-500 hover:text-brand-600 transition-colors") do %>
+                <%= gettext("Learn more about sponsoring") %> &rarr;
+              <% end %>
+            </p>
+          </div>
         </div>
       </div>
     </div>

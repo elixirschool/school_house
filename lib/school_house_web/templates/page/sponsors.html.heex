@@ -1,0 +1,111 @@
+<div class="py-16 sm:py-24 px-4 sm:px-6">
+  <div class="max-w-5xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-14">
+      <div class="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-brand-500 mb-3"><%= gettext("Support Elixir School") %></div>
+      <h1 class="font-heading text-4xl sm:text-5xl font-extrabold tracking-tight text-on-surface mb-4"><%= gettext("Sponsors") %></h1>
+      <p class="text-lg text-on-surface-secondary max-w-2xl mx-auto">
+        <%= gettext("Elixir School is free, open-source, and community-driven. Sponsors help us maintain lessons, build new content, and keep Elixir education accessible to everyone.") %>
+      </p>
+    </div>
+
+    <!-- Why Sponsor -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-16">
+      <div class="bg-surface-card border border-border-subtle rounded-design-lg p-6 text-center">
+        <div class="w-12 h-12 rounded-xl bg-brand-100 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </div>
+        <h3 class="font-heading text-base font-bold text-on-surface mb-2"><%= gettext("Support Open Education") %></h3>
+        <p class="text-sm text-on-surface-secondary leading-relaxed"><%= gettext("Your sponsorship directly funds new lessons, keeps content current, and supports translations into 25+ languages.") %></p>
+      </div>
+      <div class="bg-surface-card border border-border-subtle rounded-design-lg p-6 text-center">
+        <div class="w-12 h-12 rounded-xl bg-green-100/60 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-accent-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h3 class="font-heading text-base font-bold text-on-surface mb-2"><%= gettext("Global Reach") %></h3>
+        <p class="text-sm text-on-surface-secondary leading-relaxed"><%= gettext("Elixir School serves developers worldwide with lessons translated into dozens of languages. Your support extends that reach.") %></p>
+      </div>
+      <div class="bg-surface-card border border-border-subtle rounded-design-lg p-6 text-center">
+        <div class="w-12 h-12 rounded-xl bg-amber-100/60 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-accent-amber" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+          </svg>
+        </div>
+        <h3 class="font-heading text-base font-bold text-on-surface mb-2"><%= gettext("Community Recognition") %></h3>
+        <p class="text-sm text-on-surface-secondary leading-relaxed"><%= gettext("Sponsors are featured on our site and recognized as champions of Elixir education in the community.") %></p>
+      </div>
+    </div>
+
+    <!-- Current Sponsors -->
+    <div class="mb-16">
+      <h2 class="font-heading text-2xl font-bold text-on-surface mb-6 text-center"><%= gettext("Our Sponsors") %></h2>
+      <%= if @sponsors != [] do %>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+          <%= for sponsor <- @sponsors do %>
+            <a href={"https://github.com/#{sponsor.login}"} target="_blank" rel="noopener noreferrer"
+               class="bg-surface-card border border-border-subtle rounded-design-lg p-5 flex flex-col items-center gap-3 hover:border-brand-300 hover:shadow-design-md transition-all duration-200 group">
+              <img src={sponsor.avatar_url} alt={sponsor.name} class="w-16 h-16 rounded-full ring-2 ring-border-subtle group-hover:ring-brand-300 transition-all" />
+              <div class="text-center">
+                <div class="font-heading text-sm font-bold text-on-surface"><%= sponsor.name %></div>
+                <div class="text-xs text-on-surface-muted mt-0.5"><%= sponsor.tier_name %></div>
+              </div>
+              <span class="sr-only">(opens in new tab)</span>
+            </a>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="bg-surface-card border border-border-subtle border-dashed rounded-design-lg p-10 text-center">
+          <div class="w-16 h-16 rounded-2xl bg-rose-100/60 flex items-center justify-center mx-auto mb-5">
+            <svg class="w-8 h-8 text-rose-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-on-surface mb-2"><%= gettext("Be Our First Sponsor") %></h3>
+          <p class="text-on-surface-secondary max-w-md mx-auto mb-6">
+            <%= gettext("Your support helps keep Elixir education free and accessible to developers around the world. Every contribution makes a difference.") %>
+          </p>
+          <a href="https://github.com/sponsors/elixirschool" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 px-7 py-3.5 bg-brand-600 text-white rounded-full font-semibold text-sm hover:bg-brand-700 hover:-translate-y-0.5 hover:shadow-[0_6px_24px_rgba(124,58,237,0.25)] transition-all">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" /></svg>
+            <%= gettext("Become a Sponsor") %>
+            <span class="sr-only">(opens in new tab)</span>
+          </a>
+        </div>
+      <% end %>
+    </div>
+
+    <!-- Sponsorship Tiers -->
+    <div class="mb-16">
+      <h2 class="font-heading text-2xl font-bold text-on-surface mb-6 text-center"><%= gettext("Sponsorship Tiers") %></h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <%= for tier <- Enum.reject(@tiers, & &1.one_time) do %>
+          <div class={"bg-surface-card border rounded-design-lg p-6 #{if tier.monthly_price >= 500, do: "border-brand-300 ring-1 ring-brand-200 shadow-design-md", else: "border-border-subtle"}"}>
+            <div class="flex items-baseline gap-1 mb-3">
+              <span class="font-heading text-2xl font-extrabold text-on-surface">$<%= tier.monthly_price %></span>
+              <span class="text-sm text-on-surface-muted">/ month</span>
+            </div>
+            <p class="text-sm text-on-surface-secondary leading-relaxed"><%= tier.description %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- CTA Banner -->
+    <div class="bg-brand-600 rounded-design-lg p-8 sm:p-10 text-center">
+      <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-white mb-3"><%= gettext("Become a Sponsor") %></h2>
+      <p class="text-brand-100 max-w-lg mx-auto mb-6">
+        <%= gettext("Join the organizations and individuals who believe in free, accessible Elixir education for everyone.") %>
+      </p>
+      <a href="https://github.com/sponsors/elixirschool" target="_blank" rel="noopener noreferrer"
+         class="inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-700 rounded-full font-bold text-sm hover:-translate-y-0.5 hover:shadow-[0_6px_24px_rgba(0,0,0,0.15)] transition-all">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" /></svg>
+        <%= gettext("Sponsor on GitHub") %>
+        <span class="sr-only">(opens in new tab)</span>
+      </a>
+    </div>
+  </div>
+</div>

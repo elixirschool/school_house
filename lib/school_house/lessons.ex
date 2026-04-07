@@ -42,6 +42,8 @@ defmodule SchoolHouse.Lessons do
 
   def coming_soon?(name), do: name in @future_lessons
 
+  def filtered_lessons, do: @filtered_lessons
+
   defp locale_lessons(locale) do
     Module.concat(__MODULE__, String.capitalize(locale))
   end
@@ -50,7 +52,7 @@ defmodule SchoolHouse.Lessons do
     with nil <- locale_lessons(locale).get(section, name),
          true <- translation?(locale),
          %Lesson{} <- locale_lessons("en").get(section, name) do
-      {:error, :translation_not_found, locale}
+      {:error, {:translation_not_found, locale}}
     else
       %Lesson{} = lesson -> {:ok, populate_surrounding_lessons(lesson)}
       _ -> {:error, :not_found}
@@ -96,19 +98,22 @@ defmodule SchoolHouse.Lessons do
   end
 
   def list(section, locale) do
-    section = String.to_existing_atom(section)
-
-    config =
-      :school_house
-      |> Application.get_env(:lessons)
-      |> Keyword.get(section)
-
-    lessons =
-      for lesson <- config do
-        locale_lessons(locale).get(section, lesson)
+    section_atom =
+      try do
+        String.to_existing_atom(section)
+      rescue
+        ArgumentError -> nil
       end
 
-    Enum.reject(lessons, &is_nil/1)
+    case section_atom && Keyword.get(Application.get_env(:school_house, :lessons), section_atom) do
+      nil ->
+        []
+
+      config ->
+        config
+        |> Enum.map(&locale_lessons(locale).get(section_atom, &1))
+        |> Enum.reject(&is_nil/1)
+    end
   end
 
   defp translation?(locale), do: "en" != locale
@@ -117,8 +122,8 @@ defmodule SchoolHouse.Lessons do
     {previous_section, previous_lesson} = previous_lesson(lesson)
     {next_section, next_lesson} = next_lesson(lesson)
 
-    previous = locale_lessons(locale).get(previous_section, previous_lesson)
-    next = locale_lessons(locale).get(next_section, next_lesson)
+    previous = if previous_section, do: locale_lessons(locale).get(previous_section, previous_lesson)
+    next = if next_section, do: locale_lessons(locale).get(next_section, next_lesson)
 
     %{lesson | previous: previous, next: next}
   end

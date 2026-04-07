@@ -65,8 +65,9 @@ COPY Makefile Makefile
 # install npm dependencies
 RUN cd assets && npm ci
 
-# install content from remote repository
-RUN make content
+# copy content submodule and extract images
+COPY content content
+RUN rm -rf assets/static/images && cp -r content/images assets/static/images
 
 # generate rss and sitemap static files
 RUN mix school_house.gen.rss ${DEPLOY_DOMAIN}

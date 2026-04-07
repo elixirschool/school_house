@@ -11,964 +11,1441 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_footer.html.heex:57
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:10 lib/school_house_web/templates/layout/_lesson_menu.html.heex:14
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:182 lib/school_house_web/templates/layout/_lesson_menu.html.heex:240
-#: lib/school_house_web/templates/lesson/_basics.html.heex:5 lib/school_house_web/templates/report/report.html.heex:11
+#: lib/school_house_web/templates/layout/_footer.html.heex:36
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:13
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:15
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:61
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:80
+#: lib/school_house_web/templates/lesson/_basics.html.heex:3
+#: lib/school_house_web/templates/report/report.html.heex:8
+#, elixir-format, elixir-autogen
 msgid "Basics"
 msgstr "初級"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:19
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:16
+#, elixir-format, elixir-autogen
 msgid "Collections"
 msgstr "コレクション"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:34
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:19
+#, elixir-format, elixir-autogen
 msgid "Control Structures"
 msgstr "制御構造"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:24
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:17
+#, elixir-format, elixir-autogen
 msgid "Enum"
-msgstr ""
+msgstr "Enum"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:39
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:20
+#, elixir-format, elixir-autogen
 msgid "Functions"
 msgstr "関数"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:49
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:22
+#, elixir-format, elixir-autogen
 msgid "Modules"
 msgstr "モジュール"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:29
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:18
+#: lib/school_house_web/templates/page/index.html.heex:149
+#, elixir-format, elixir-autogen
 msgid "Pattern Matching"
 msgstr "パターンマッチング"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:44
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:21
+#, elixir-format, elixir-autogen
 msgid "Pipe Operator"
 msgstr "パイプライン演算子"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_footer.html.heex:65
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:128 lib/school_house_web/templates/lesson/_advanced.html.heex:5
-#: lib/school_house_web/templates/report/report.html.heex:13
+#: lib/school_house_web/templates/layout/_footer.html.heex:38
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:44
+#: lib/school_house_web/templates/lesson/_advanced.html.heex:3
+#: lib/school_house_web/templates/report/report.html.heex:10
+#, elixir-format, elixir-autogen
 msgid "Advanced"
 msgstr "上級"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:250
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:82
+#, elixir-format, elixir-autogen
 msgid "Associations"
 msgstr "アソシエーション"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:162
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:52
+#, elixir-format, elixir-autogen
 msgid "Behaviours"
 msgstr "ビヘイビア"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:245
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:81
+#, elixir-format, elixir-autogen
 msgid "Changesets"
 msgstr "チェンジセット"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:69
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:26
+#, elixir-format, elixir-autogen
 msgid "Comprehensions"
 msgstr "内包表記"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:120
-#: lib/school_house_web/templates/page/why.html.heex:157
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:41
+#: lib/school_house_web/templates/page/why.html.heex:122
+#, elixir-format, elixir-autogen
 msgid "Concurrency"
 msgstr "並行性"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:100
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:37
+#, elixir-format, elixir-autogen
 msgid "Custom Mix Tasks"
 msgstr "カスタムMixタスク"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_footer.html.heex:73
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:211 lib/school_house_web/templates/lesson/_data_processing.html.heex:5
-#: lib/school_house_web/templates/report/report.html.heex:15
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:68
+#: lib/school_house_web/templates/lesson/_data_processing.html.heex:3
+#: lib/school_house_web/templates/report/report.html.heex:12
+#, elixir-format, elixir-autogen
 msgid "Data Processing"
 msgstr "データ処理"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:79
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:28
+#, elixir-format, elixir-autogen
 msgid "Date and Time"
 msgstr "日付と時間"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:187
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:62
+#, elixir-format, elixir-autogen
 msgid "Doctests"
-msgstr ""
+msgstr "Doctests"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:64
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:25
+#, elixir-format, elixir-autogen
 msgid "Documentation"
 msgstr "ドキュメント"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_footer.html.heex:77
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:236 lib/school_house_web/templates/lesson/_ecto.html.heex:5
-#: lib/school_house_web/templates/report/report.html.heex:16
+#: lib/school_house_web/templates/layout/_footer.html.heex:39
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:78
+#: lib/school_house_web/templates/lesson/_ecto.html.heex:3
+#: lib/school_house_web/templates/page/ecosystem.html.heex:89
+#: lib/school_house_web/templates/report/report.html.heex:13
+#, elixir-format, elixir-autogen
 msgid "Ecto"
-msgstr ""
+msgstr "Ecto"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:105
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:38
+#, elixir-format, elixir-autogen
 msgid "Erlang Interoperability"
 msgstr "Erlangとの相互運用"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:110
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:39
+#, elixir-format, elixir-autogen
 msgid "Error Handling"
 msgstr "エラーハンドリング"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:115
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:40
+#, elixir-format, elixir-autogen
 msgid "Executables"
 msgstr "実行ファイル"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:84
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:29
+#, elixir-format, elixir-autogen
 msgid "IEX Helpers"
 msgstr "IEx Helpers"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_footer.html.heex:61
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:96 lib/school_house_web/templates/lesson/_intermediate.html.heex:5
-#: lib/school_house_web/templates/report/report.html.heex:12
+#: lib/school_house_web/templates/layout/_footer.html.heex:37
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:35
+#: lib/school_house_web/templates/lesson/_intermediate.html.heex:3
+#: lib/school_house_web/templates/report/report.html.heex:9
+#, elixir-format, elixir-autogen
 msgid "Intermediate"
 msgstr "中級"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:147
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:49
+#, elixir-format, elixir-autogen
 msgid "Metaprogramming"
 msgstr "メタプログラミング"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_footer.html.heex:85
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:298 lib/school_house_web/templates/lesson/_misc.html.heex:5
-#: lib/school_house_web/templates/report/report.html.heex:18
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:98
+#: lib/school_house_web/templates/lesson/_misc.html.heex:3
+#: lib/school_house_web/templates/report/report.html.heex:15
+#, elixir-format, elixir-autogen
 msgid "Miscellaneous"
 msgstr "その他"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:54
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:23
+#, elixir-format, elixir-autogen
 msgid "Mix"
-msgstr ""
+msgstr "Mix"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:132
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:46
+#, elixir-format, elixir-autogen
 msgid "OTP Concurrency"
 msgstr "OTPの並行性"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:142
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:48
+#, elixir-format, elixir-autogen
 msgid "OTP Distribution"
 msgstr "OTPディストリビューション"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:137
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:47
+#, elixir-format, elixir-autogen
 msgid "OTP Supervisors"
 msgstr "OTPスーパバイザ"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:167
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:53
+#, elixir-format, elixir-autogen
 msgid "Protocols"
 msgstr "プロトコル"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:260
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:84
+#, elixir-format, elixir-autogen
 msgid "Querying: Advanced"
 msgstr "クエリ: 応用"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:255
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:83
+#, elixir-format, elixir-autogen
 msgid "Querying: Basics"
 msgstr "クエリ: 基本"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:59
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:24
+#, elixir-format, elixir-autogen
 msgid "Sigils"
 msgstr "シギル"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:157
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:51
+#, elixir-format, elixir-autogen
 msgid "Specifications and types"
 msgstr "仕様と型"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_footer.html.heex:81
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:268 lib/school_house_web/templates/lesson/_storage.html.heex:5
-#: lib/school_house_web/templates/report/report.html.heex:17
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:87
+#: lib/school_house_web/templates/lesson/_storage.html.heex:3
+#: lib/school_house_web/templates/report/report.html.heex:14
+#, elixir-format, elixir-autogen
 msgid "Storage"
 msgstr "ストレージ"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:74
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:27
+#, elixir-format, elixir-autogen
 msgid "Strings"
 msgstr "文字列"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_footer.html.heex:69
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:178 lib/school_house_web/templates/lesson/_testing.html.heex:5
-#: lib/school_house_web/templates/report/report.html.heex:14
+#: lib/school_house_web/templates/layout/_footer.html.heex:40
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:59
+#: lib/school_house_web/templates/lesson/_testing.html.heex:3
+#: lib/school_house_web/templates/report/report.html.heex:11
+#, elixir-format, elixir-autogen
 msgid "Testing"
 msgstr "テスト"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:152
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:50
+#, elixir-format, elixir-autogen
 msgid "Umbrella Projects"
 msgstr "アンブレラプロジェクト"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:192
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:197 lib/school_house_web/templates/layout/_lesson_menu.html.heex:202
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:215 lib/school_house_web/templates/layout/_lesson_menu.html.heex:220
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:225 lib/school_house_web/templates/layout/_lesson_menu.html.heex:282
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:287 lib/school_house_web/templates/layout/_lesson_menu.html.heex:302
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:307 lib/school_house_web/templates/layout/_lesson_menu.html.heex:322
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:327 lib/school_house_web/templates/layout/_lesson_menu.html.heex:332
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:337 lib/school_house_web/templates/layout/_lesson_menu.html.heex:342
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:63
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:64
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:65
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:70
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:71
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:72
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:91
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:92
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:100
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:101
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:104
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:105
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:106
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:107
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:108
+#, elixir-format, elixir-autogen
 msgid "library"
 msgstr "ライブラリ"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:109
+#: lib/school_house_web/templates/page/why.html.heex:122
+#, elixir-format, elixir-autogen
 msgid "Scalable"
 msgstr "スケーラブル"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_footer.html.heex:41
-#: lib/school_house_web/templates/layout/_header.html.heex:13 lib/school_house_web/templates/page/index.html.heex:57
+#: lib/school_house_web/templates/layout/_footer.html.heex:54
+#: lib/school_house_web/templates/layout/_header.html.heex:12
+#: lib/school_house_web/templates/layout/_header.html.heex:48
+#: lib/school_house_web/templates/page/index.html.heex:23
+#: lib/school_house_web/templates/page/index.html.heex:87
 #: lib/school_house_web/templates/page/why.html.heex:5
+#, elixir-format, elixir-autogen
 msgid "Why Elixir?"
 msgstr "なぜElixir？"
 
-#, elixir-format
-#: lib/school_house_web/templates/report/_section.html.heex:16
+#: lib/school_house_web/templates/report/_section.html.heex:10
+#, elixir-format, elixir-autogen
 msgid "Lesson"
 msgstr "レッスン"
 
-#, elixir-format
-#: lib/school_house_web/templates/report/_section.html.heex:22
+#: lib/school_house_web/templates/report/_section.html.heex:16
+#, elixir-format, elixir-autogen
 msgid "Original Version"
 msgstr "オリジナルバージョン"
 
-#, elixir-format
-#: lib/school_house_web/templates/report/_section.html.heex:19
+#: lib/school_house_web/templates/report/_section.html.heex:13
+#, elixir-format, elixir-autogen
 msgid "Translated Title"
 msgstr "翻訳タイトル"
 
-#, elixir-format
-#: lib/school_house_web/templates/report/_section.html.heex:25
+#: lib/school_house_web/templates/report/_section.html.heex:19
+#, elixir-format, elixir-autogen
 msgid "Translated Version"
 msgstr "翻訳バージョン"
 
-#, elixir-format
-#: lib/school_house_web/controllers/page_controller.ex:19
-#: lib/school_house_web/templates/layout/_footer.html.heex:120 lib/school_house_web/templates/report/report.html.heex:5
+#: lib/school_house_web/controllers/page_controller.ex:23
+#: lib/school_house_web/templates/layout/_footer.html.heex:74
+#: lib/school_house_web/templates/report/report.html.heex:4
+#, elixir-format, elixir-autogen
 msgid "Translation Report"
 msgstr "翻訳レポート"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:224
+#: lib/school_house_web/templates/page/why.html.heex:150
+#, elixir-format, elixir-autogen
 msgid "A Slack alternative built with Elixir is fast becoming a popular chat option for the community."
 msgstr "コミュニティで人気のチャットオプションになりつつあります。"
 
-#, elixir-format
 #: lib/school_house_web/views/error_view.ex:21
+#, elixir-format, elixir-autogen
 msgid "An error occurred."
 msgstr "エラーが発生しました。"
 
-#, elixir-format
 #: lib/school_house_web/templates/layout/_footer.html.heex:97
+#, elixir-format
 msgid "Announcements"
 msgstr "お知らせ"
 
-#, elixir-format
-#: lib/school_house_web/templates/post/index.html.heex:8
+#: lib/school_house_web/templates/post/index.html.heex:9
+#, elixir-format, elixir-autogen
 msgid "Articles authored by Elixir School contributors and members of the community."
 msgstr "Elixir Schoolの貢献者やコミュニティメンバーによって執筆された記事です。"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/get_involved.html.heex:41
+#, elixir-format, elixir-autogen
 msgid "As you read lessons, if you see an opportunity for improvement go ahead and create a pull request with the change, the next reader will thank you. Steps for translating a lesson"
 msgstr "レッスンを読んでいて、改善の余地があると思ったら、先にプルリクエストを作成して変更を加えておくと、次の読者があなたに感謝するでしょう。レッスンを翻訳するための手順"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:225
+#: lib/school_house_web/templates/page/why.html.heex:151
+#, elixir-format, elixir-autogen
 msgid "Be sure to check it out!"
 msgstr "ぜひチェックしてみてください！"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:270
+#: lib/school_house_web/templates/page/why.html.heex:169
+#, elixir-format, elixir-autogen
 msgid "Be sure to follow the popular Elixir hashtags"
 msgstr "Elixirの人気のハッシュタグ"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_footer.html.heex:93
-#: lib/school_house_web/templates/layout/_header.html.heex:19
+#: lib/school_house_web/templates/layout/_footer.html.heex:50
+#: lib/school_house_web/templates/layout/_header.html.heex:21
+#: lib/school_house_web/templates/layout/_header.html.heex:57
+#, elixir-format, elixir-autogen
 msgid "Blog"
 msgstr "ブログ"
 
-#, elixir-format, fuzzy
-#: lib/school_house_web/templates/lesson/_intermediate.html.heex:8
+#: lib/school_house_web/templates/lesson/_intermediate.html.heex:6
+#, elixir-format, elixir-autogen, fuzzy
 msgid "Building on upon our foundation these lessons introduce topics like concurrency, error handling, and interoperability."
 msgstr "並行処理、エラー処理、相互運用性などのトピックを紹介する中級レッスンです。"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:92
+#, elixir-format
 msgid "Built on the back of a giant, the Erlang runtime system, Elixir takes things even further with easy extensibility, compatibility with Erlang and other BEAM languages, and an ever expanding collection of libraries and packages to improve developer happiness."
 msgstr "Erlangという巨大なランタイムシステムを背景に作られたElixirは、簡単な拡張性、Erlangや他のBEAM言語との互換性、そして開発者の幸福度を向上させるために常に拡張されるライブラリやパッケージのコレクションによって、さらに進化を遂げました。"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:64
+#: lib/school_house_web/templates/page/why.html.heex:86
+#, elixir-format, elixir-autogen
 msgid "Bundled with Elixir is the venerable ExUnit library providing everything necessary to comprehensively test your applications."
 msgstr "Elixirには、アプリケーションを包括的にテストするために必要なすべてのものを提供する、由緒あるExUnitライブラリがバンドルされています。"
 
-#, elixir-format
-#: lib/school_house_web/templates/post/post.html.heex:22
+#: lib/school_house_web/templates/post/post.html.heex:6
+#, elixir-format, elixir-autogen
 msgid "By"
-msgstr ""
+msgstr "著者"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:143
+#, elixir-format
 msgid "By The Numbers"
 msgstr "数字から見る"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:29
+#: lib/school_house_web/templates/page/why.html.heex:23
+#, elixir-format, elixir-autogen
 msgid "By eliminating the ability to mutate state outside of scope, functional programs are often easier to follow and contain fewer bugs."
 msgstr "スコープ外で状態を変化させる機能を排除することで、関数型プログラムはしばしば追跡が容易になり、バグも少なくなります。"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:73
+#, elixir-format
 msgid "By focusing on breaking problems down into simple side-effect free functions we can ensure fewer bugs, better test coverage, while incrementally building our solutions through the composition of well tested functions."
 msgstr "問題をシンプルで副作用のない関数に分けることで、バグを減らし、テストカバー率を向上させ、よくテストされた関数の組み合わせによって解決策を段階的に構築していくことができます。"
 
-#, elixir-format
-#: lib/school_house_web/templates/lesson/lesson.html.heex:19
-msgid "Caught a mistake or want to contribute to the lesson?"
-msgstr "間違いを報告したい、あるいはこのレッスンに貢献したい？"
-
-#, elixir-format
-#: lib/school_house_web/live/conferences_live.html.heex:8
+#: lib/school_house_web/live/conferences_live.html.heex:7
+#, elixir-format, elixir-autogen
 msgid "Check out all of the conferences that focus on Elixir!"
 msgstr "Elixirに焦点が当てられている全てのカンファレンスをチェックしよう！"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/podcasts.html.heex:8
+#: lib/school_house_web/templates/page/podcasts.html.heex:7
+#, elixir-format, elixir-autogen
 msgid "Check out all the great of Podcasts that focus on Elixir and the BEAM ecosystem!"
 msgstr "ElixirとBEAM仮想マシンに焦点が当てられている全てのポッドキャストをチェックしよう！"
 
-#, elixir-format
 #: lib/school_house_web/templates/report/_coming_soon.html.heex:6
+#: lib/school_house_web/views/html_helpers.ex:85
+#, elixir-format, elixir-autogen
 msgid "Coming Soon"
 msgstr "近日公開！"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:184
+#, elixir-format
 msgid "Companies"
 msgstr "の会社が"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:145
+#: lib/school_house_web/templates/page/why.html.heex:122
+#, elixir-format, elixir-autogen
 msgid "Compatible with Erlang"
 msgstr "Erlangとの互換性"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_footer.html.heex:47
-#: lib/school_house_web/templates/page/index.html.heex:151 lib/school_house_web/templates/page/why.html.heex:282
+#: lib/school_house_web/templates/layout/_footer.html.heex:52
+#: lib/school_house_web/templates/page/index.html.heex:63
+#: lib/school_house_web/templates/page/why.html.heex:173
+#, elixir-format, elixir-autogen
 msgid "Conferences"
 msgstr "カンファレンス"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/get_involved.html.heex:53
+#: lib/school_house_web/templates/page/get_involved.html.heex:56
+#, elixir-format, elixir-autogen
 msgid "Contribute to the Blog"
 msgstr "ブログへの貢献"
 
-#, elixir-format
 #: lib/school_house_web/live/conferences_live.html.heex:23
+#, elixir-format, elixir-autogen
 msgid "Country"
 msgstr "国"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:28
+#: lib/school_house_web/templates/page/why.html.heex:22
+#, elixir-format, elixir-autogen
 msgid "Data is not mutated, rather transformed, into a new set of data."
 msgstr "データは変更されるのではなく、新しく変換されたデータの集合となります。"
 
-#, elixir-format
-#: lib/school_house_web/live/conferences_live.html.heex:38
+#: lib/school_house_web/live/conferences_live.html.heex:40
+#, elixir-format, elixir-autogen
 msgid "Date"
 msgstr "日付"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:317
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:103
+#, elixir-format, elixir-autogen
 msgid "Debugging"
 msgstr "デバッグ"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:221
+#: lib/school_house_web/templates/page/why.html.heex:148
+#, elixir-format, elixir-autogen
 msgid "Discord"
-msgstr ""
+msgstr "Discord"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/index.html.heex:60
+#: lib/school_house_web/templates/page/index.html.heex:89
+#, elixir-format, elixir-autogen
 msgid "Discover why Elixir's popularity has skyrocketed and new companies adopt it daily."
 msgstr "Elixirの人気が急上昇し、日々新しい企業が導入している理由を紹介します。"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:60
+#: lib/school_house_web/templates/page/why.html.heex:83
+#, elixir-format, elixir-autogen
 msgid "Easy to Test"
 msgstr "テストが容易"
 
-#, elixir-format
-#: lib/school_house_web/templates/lesson/lesson.html.heex:21
-msgid "Edit this lesson on GitHub!"
-msgstr "このレッスンをGitHubで編集しよう！"
-
-#, elixir-format
 #: lib/school_house_web/live/conferences_live.html.heex:5
+#, elixir-format, elixir-autogen
 msgid "Elixir Conferences"
 msgstr "Elixir カンファレンス"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:240
+#: lib/school_house_web/templates/page/why.html.heex:157
+#, elixir-format, elixir-autogen
 msgid "Elixir Forum"
 msgstr "Elixirフォーラム"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/podcasts.html.heex:5
+#, elixir-format, elixir-autogen
 msgid "Elixir Podcasts"
 msgstr "Elixirポッドキャスト"
 
-#, elixir-format
 #: lib/school_house_web/templates/layout/_footer.html.heex:10
-#: lib/school_house_web/templates/layout/_header.html.heex:8 lib/school_house_web/templates/post/post.html.heex:3
-msgid "Elixir School"
-msgstr ""
-
+#: lib/school_house_web/templates/layout/_header.html.heex:8, lib/school_house_web/templates/post/post.html.heex:3
 #, elixir-format
-#: lib/school_house_web/templates/page/get_involved.html.heex:24
+msgid "Elixir School"
+msgstr "Elixir School"
+
+#: lib/school_house_web/templates/page/get_involved.html.heex:22
+#, elixir-format, elixir-autogen
 msgid "Elixir School is an open source project, with code hosted on"
 msgstr "Elixir Schoolはオープンソースプロジェクトで、ソースコードはこちらから見れます："
 
-#, elixir-format
-#: lib/school_house_web/templates/page/get_involved.html.heex:8
+#: lib/school_house_web/templates/page/get_involved.html.heex:7
+#, elixir-format, elixir-autogen
 msgid "Elixir School is built by contributors, skilled and new alike! Help us make it better and extend the reach of Elixir to anyone that wants to learn. Below are a few ways to contribute."
 msgstr "Elixir Schoolは、ベテランも初心者も関係なく、貢献者によって築き上げられました。Elixir Schoolをより良いものにし、Elixirを学びたい人たちへ輪を広げていきましょう。以下は、貢献するためのいくつかの方法です。"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:8
+#, elixir-format
 msgid "Elixir School is the premier destination for people looking to learn and master the Elixir programming language."
 msgstr "Elixir SchoolはElixirを学び、マスターするための最高の場所です。"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:98
+#: lib/school_house_web/templates/page/why.html.heex:119
+#, elixir-format, elixir-autogen
 msgid "Elixir and the BEAM virtual machine pack a serious punch when it comes to features. With over 35 years of experience the Erlang runtime system has proven itself time and time again as solid platform for distributed, high-available systems."
 msgstr "ElixirとBEAM仮想マシンは、機能面でも非常に優れています。Erlangランタイムシステムは35年以上の間、分散型高可用性システムのための強固なプラットフォームとして証明されてきました。 "
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:8
+#: lib/school_house_web/templates/page/why.html.heex:7
+#, elixir-format, elixir-autogen
 msgid "Elixir is a wonderful language but don't take our word for it. Let's look at some of the reasons you and your organization should adopt Elixir."
 msgstr "Elixirは素晴らしい言語ですが、私たちの言葉を鵜呑みにしないでください。ここで、あなたとあなたの組織がElixirを採用すべき理由をいくつか見てみましょう。"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/_newsletter.html.heex:14
+#, elixir-format, elixir-autogen
 msgid "Email address"
 msgstr "Eメール"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:312
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:102
+#, elixir-format, elixir-autogen
 msgid "Embedded Elixir (EEx)"
 msgstr "埋め込みElixir (EEx)"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/_newsletter.html.heex:15
+#, elixir-format, elixir-autogen
 msgid "Enter your email"
 msgstr "Eメールを入力"
 
-#, elixir-format
-#: lib/school_house_web/templates/lesson/_storage.html.heex:8
+#: lib/school_house_web/templates/lesson/_storage.html.heex:6
+#, elixir-format, elixir-autogen
 msgid "Explore how interact with the BEAM's built in data storage, Redis, and others."
 msgstr "BEAMに内蔵されたデータストレージ、Redisなどとの連携方法を探す。"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:133
+#: lib/school_house_web/templates/page/why.html.heex:122
+#, elixir-format, elixir-autogen
 msgid "Extensible"
 msgstr "拡張性"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:121
+#: lib/school_house_web/templates/page/why.html.heex:122
+#, elixir-format, elixir-autogen
 msgid "Fault Tolerant"
 msgstr "耐障害性"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/index.html.heex:90
-#: lib/school_house_web/templates/page/why.html.heex:97
+#: lib/school_house_web/templates/page/index.html.heex:113
+#: lib/school_house_web/templates/page/why.html.heex:117
+#, elixir-format, elixir-autogen
 msgid "Feature Packed"
 msgstr "機能満載"
 
-#, elixir-format
 #: lib/school_house_web/live/conferences_live.html.heex:17
+#, elixir-format, elixir-autogen
 msgid "Filter"
 msgstr "フィルター"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:42
+#: lib/school_house_web/templates/page/why.html.heex:48
+#, elixir-format, elixir-autogen
 msgid "Focus on Functions"
 msgstr "関数重視"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:237
+#: lib/school_house_web/templates/page/why.html.heex:155
+#, elixir-format, elixir-autogen
 msgid "Forum"
 msgstr "フォーラム"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/index.html.heex:71
-#: lib/school_house_web/templates/page/why.html.heex:72
+#: lib/school_house_web/templates/page/index.html.heex:99
+#: lib/school_house_web/templates/page/why.html.heex:13
+#, elixir-format, elixir-autogen
 msgid "Functional Programming"
 msgstr "関数型プログラミング"
 
-#, elixir-format
-#: lib/school_house_web/controllers/page_controller.ex:27
-#: lib/school_house_web/templates/layout/_footer.html.heex:116 lib/school_house_web/templates/layout/_header.html.heex:22
+#: lib/school_house_web/controllers/page_controller.ex:35
+#: lib/school_house_web/templates/layout/_footer.html.heex:64
+#: lib/school_house_web/templates/layout/_header.html.heex:24
+#: lib/school_house_web/templates/layout/_header.html.heex:60
 #: lib/school_house_web/templates/page/get_involved.html.heex:5
+#, elixir-format, elixir-autogen
 msgid "Get Involved"
 msgstr "貢献する"
 
-#, elixir-format
 #: lib/school_house_web/templates/layout/_footer.html.heex:37
+#, elixir-format
 msgid "Getting Started"
 msgstr "始める"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:267
+#: lib/school_house_web/templates/page/why.html.heex:167
+#, elixir-format, elixir-autogen
 msgid "Hashtags"
 msgstr "ハッシュタグ"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/get_involved.html.heex:56
+#: lib/school_house_web/templates/page/get_involved.html.heex:58
+#, elixir-format, elixir-autogen
 msgid "Have a topic related to Elixir that you are knowledgeable about and want to share? Write a blog post and it could be featured on the Elixir School post feed."
 msgstr "Elixirに関連するトピックをお持ちで、それについて知識があり、共有したいとお考えですか？ブログ記事を書くと、Elixir Schoolの記事フィードで紹介されるかもしれません。"
 
-#, elixir-format
-#: lib/school_house_web/controllers/page_controller.ex:7
+#: lib/school_house_web/controllers/page_controller.ex:8
+#, elixir-format, elixir-autogen
 msgid "Home"
 msgstr "ホーム"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:25
+#: lib/school_house_web/templates/page/why.html.heex:20
+#, elixir-format, elixir-autogen
 msgid "Immutability"
 msgstr "不変性"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/get_involved.html.heex:21
+#: lib/school_house_web/templates/page/get_involved.html.heex:20
+#, elixir-format, elixir-autogen
 msgid "Improve the Website"
 msgstr "Webサイトの向上"
 
-#, elixir-format
-#: lib/school_house_web/templates/lesson/_ecto.html.heex:8
+#: lib/school_house_web/templates/lesson/_ecto.html.heex:6
+#, elixir-format, elixir-autogen
 msgid "Interacting with data is a part of most applications. These lessons explore the Ecto library and how to leverage it for our database interactions."
 msgstr "データとの相互作用は、ほとんどのアプリケーションの一部です。このレッスンでは、Ectoライブラリと、データベースの操作にEctoを活用する方法について学びます。"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/_newsletter.html.heex:9
+#, elixir-format, elixir-autogen
 msgid "Join the Elixir School newsletter to keep up with the latest lessons, blog posts, and opportunities within the community."
 msgstr "Elixir Schoolのニュースレターに登録すると、最新のレッスン、ブログ記事、コミュニティ内の機会について知ることができます。"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/index.html.heex:173
+#: lib/school_house_web/templates/page/index.html.heex:67
+#, elixir-format, elixir-autogen
 msgid "Languages"
 msgstr "カ国語"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/index.html.heex:76
-#: lib/school_house_web/templates/page/index.html.heex:95 lib/school_house_web/templates/page/index.html.heex:115
+#: lib/school_house_web/templates/page/index.html.heex:102
+#: lib/school_house_web/templates/page/index.html.heex:116
+#, elixir-format, elixir-autogen
 msgid "Learn More"
 msgstr "もっと知る"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_footer.html.heex:53
-#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:2 lib/school_house_web/templates/lesson/_advanced.html.heex:5
-#: lib/school_house_web/templates/lesson/_basics.html.heex:5 lib/school_house_web/templates/lesson/_data_processing.html.heex:5
-#: lib/school_house_web/templates/lesson/_ecto.html.heex:5 lib/school_house_web/templates/lesson/_intermediate.html.heex:5
-#: lib/school_house_web/templates/lesson/_misc.html.heex:5 lib/school_house_web/templates/lesson/_storage.html.heex:5
-#: lib/school_house_web/templates/lesson/_testing.html.heex:5
+#: lib/school_house_web/templates/layout/_header.html.heex:54
+#: lib/school_house_web/templates/layout/_lesson_menu.html.heex:3
+#: lib/school_house_web/templates/lesson/_advanced.html.heex:3
+#: lib/school_house_web/templates/lesson/_basics.html.heex:3
+#: lib/school_house_web/templates/lesson/_data_processing.html.heex:3
+#: lib/school_house_web/templates/lesson/_ecto.html.heex:3
+#: lib/school_house_web/templates/lesson/_intermediate.html.heex:3
+#: lib/school_house_web/templates/lesson/_misc.html.heex:3
+#: lib/school_house_web/templates/lesson/_storage.html.heex:3
+#: lib/school_house_web/templates/lesson/_testing.html.heex:3
+#: lib/school_house_web/templates/lesson/lesson.html.heex:11
+#, elixir-format, elixir-autogen
 msgid "Lessons"
 msgstr "レッスン"
 
-#, elixir-format
-#: lib/school_house_web/templates/lesson/_basics.html.heex:8
+#: lib/school_house_web/templates/lesson/_basics.html.heex:6
+#, elixir-format, elixir-autogen
 msgid "Lessons covering the foundational topics. New to Elixir? This is the place to start."
 msgstr "レッスンでは、基本的なトピックをカバーしています。Elixirは初めてですか？ここがスタート地点です。"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/get_involved.html.heex:40
+#, elixir-format, elixir-autogen
 msgid "Lessons on Elixir School are translated into 25 different languages! If there is a lesson missing a translation that you can provide, translate it and create a pull request."
 msgstr "Elixir Schoolのレッスンは25ヶ国語に翻訳されています！もし、翻訳が必要なレッスンがあれば、翻訳してプルリクエストを作成してください。"
 
-#, elixir-format
-#: lib/school_house_web/live/conferences_live.html.heex:35
+#: lib/school_house_web/live/conferences_live.html.heex:37
+#, elixir-format, elixir-autogen
 msgid "Location"
 msgstr "ロケーション"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:252
+#: lib/school_house_web/templates/page/why.html.heex:161
+#, elixir-format, elixir-autogen
 msgid "Meetups"
 msgstr "ミートアップ"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:285
+#: lib/school_house_web/templates/page/why.html.heex:175
+#, elixir-format, elixir-autogen
 msgid "More to come..."
 msgstr "まだまだ他にもたくさん..."
 
-#, elixir-format
-#: lib/school_house_web/live/conferences_live.html.heex:32
+#: lib/school_house_web/live/conferences_live.html.heex:34
+#, elixir-format, elixir-autogen
 msgid "Name"
 msgstr "名前"
 
-#, elixir-format
-#: lib/school_house_web/templates/lesson/_pagination.html.heex:31
+#: lib/school_house_web/templates/lesson/_pagination.html.heex:14
+#: lib/school_house_web/templates/lesson/lesson.html.heex:57
+#, elixir-format, elixir-autogen
 msgid "Next Lesson"
 msgstr "次のレッスン"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/_newsletter.html.heex:17
+#, elixir-format, elixir-autogen
 msgid "Notify me"
 msgstr "通知する"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:195
+#, elixir-format
 msgid "On Hex"
 msgstr "がHexにあります"
 
-#, elixir-format
 #: lib/school_house_web/live/conferences_live.html.heex:20
+#, elixir-format, elixir-autogen
 msgid "Online"
 msgstr "オンライン"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:195
+#, elixir-format
 msgid "Packages"
 msgstr "パッケージもの"
 
-#, elixir-format
 #: lib/school_house_web/views/error_view.ex:7
+#, elixir-format, elixir-autogen
 msgid "Page not found"
 msgstr "ページが見つかりませんでした"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:169
+#: lib/school_house_web/templates/page/why.html.heex:122
+#, elixir-format, elixir-autogen
 msgid "Performant"
 msgstr "高性能"
 
-#, elixir-format
-#: lib/school_house_web/controllers/page_controller.ex:11
-#: lib/school_house_web/templates/layout/_footer.html.heex:44 lib/school_house_web/templates/page/index.html.heex:162
+#: lib/school_house_web/controllers/page_controller.ex:15
+#: lib/school_house_web/templates/layout/_footer.html.heex:51
+#, elixir-format, elixir-autogen
 msgid "Podcasts"
 msgstr "ポッドキャスト"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:240
+#: lib/school_house_web/templates/page/why.html.heex:157
+#, elixir-format, elixir-autogen
 msgid "Prefer the forum format for your questions? No problem! Head over to"
 msgstr "フォーラム形式での質問がお好きですか？大丈夫！"
 
-#, elixir-format
 #: lib/school_house_web/templates/post/post.html.heex:12
-msgid "Presents"
-msgstr ""
-
 #, elixir-format
-#: lib/school_house_web/templates/lesson/_pagination.html.heex:12
+msgid "Presents"
+msgstr "提供"
+
+#: lib/school_house_web/templates/lesson/_pagination.html.heex:6
+#: lib/school_house_web/templates/lesson/lesson.html.heex:49
+#, elixir-format, elixir-autogen
 msgid "Previous Lesson"
 msgstr "前のレッスン"
 
-#, elixir-format
-#: lib/school_house_web/controllers/page_controller.ex:15
+#: lib/school_house_web/controllers/page_controller.ex:19
 #: lib/school_house_web/templates/page/_newsletter.html.heex:23
+#, elixir-format, elixir-autogen
 msgid "Privacy Policy"
 msgstr "プライバシーポリシー"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:45
+#: lib/school_house_web/templates/page/why.html.heex:50
+#, elixir-format, elixir-autogen
 msgid "Problems are decomposed into simple functions with an emphasis on no side-effects."
 msgstr "問題は単純な機能に分解され、副作用がないことが重視されます。"
 
-#, elixir-format
-#: lib/school_house_web/templates/lesson/_data_processing.html.heex:8
+#: lib/school_house_web/templates/lesson/_data_processing.html.heex:6
+#, elixir-format, elixir-autogen
 msgid "Processing large amount of data concurrently comes easy to Elixir. We'll explore how to leverage libraries to make this task even easier."
 msgstr "Elixirでは、大量のデータを同時に処理することは容易です。ここでは、このタスクをより簡単にするためのライブラリの活用方法を探ります。"
 
-#, elixir-format
 #: lib/school_house_web/templates/layout/_footer.html.heex:112
+#, elixir-format
 msgid "Project"
 msgstr "プロジェクト"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:209
+#: lib/school_house_web/templates/page/why.html.heex:144
+#, elixir-format, elixir-autogen
 msgid "Request your invite today!"
 msgstr "今すぐ招待をリクエスト！"
 
-#, elixir-format
 #: lib/school_house_web/templates/layout/_footer.html.heex:105
+#, elixir-format
 msgid "Reviews"
 msgstr "レビュー"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:154
-#: lib/school_house_web/templates/page/index.html.heex:165 lib/school_house_web/templates/page/index.html.heex:176
-#: lib/school_house_web/templates/page/index.html.heex:187 lib/school_house_web/templates/page/index.html.heex:198
+#: lib/school_house_web/templates/page/index.html.heex:165, lib/school_house_web/templates/page/index.html.heex:176
+#: lib/school_house_web/templates/page/index.html.heex:187, lib/school_house_web/templates/page/index.html.heex:198
+#, elixir-format
 msgid "See Them Here"
 msgstr "ここから見る"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/get_involved.html.heex:26
+#: lib/school_house_web/templates/page/get_involved.html.heex:24
+#, elixir-format, elixir-autogen
 msgid "See something you think should be improved? Feel free to open an issue or create a pull request with the change."
 msgstr "改善すべき点が見つかりましたか？今すぐissueとプルリクエストを作成してみましょう。"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/_newsletter.html.heex:6
+#, elixir-format, elixir-autogen
 msgid "Sign up for our newsletter"
 msgstr "ニュースレターにサインアップ"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:47
+#, elixir-format
 msgid "Since functions are first class citizens in Functional Programming we're able to easily re-use our functions throughout our applications."
 msgstr "関数型プログラミングでは、関数は第一級市民なので、アプリケーション全体で関数を簡単に再利用することができます。"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:205
+#: lib/school_house_web/templates/page/why.html.heex:141
+#, elixir-format, elixir-autogen
 msgid "Slack"
-msgstr ""
+msgstr "Slack"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:146
+#, elixir-format
 msgid "Still not convinced? Here are some numbers that demonstrate Elixir's growth and reach."
 msgstr "まだ納得がいかない？Elixirの成長とリーチを物語る数字をご紹介します。"
 
-#, elixir-format
-#: lib/school_house_web/templates/lesson/lesson.html.heex:11
-msgid "Table of Contents"
-msgstr "目次"
-
-#, elixir-format
-#: lib/school_house_web/templates/page/get_involved.html.heex:25
+#: lib/school_house_web/templates/page/get_involved.html.heex:23
+#, elixir-format, elixir-autogen
 msgid "Take a look at the"
 msgstr "リポジトリにある"
 
-#, elixir-format
-#: lib/school_house_web/templates/lesson/_advanced.html.heex:8
+#: lib/school_house_web/templates/lesson/_advanced.html.heex:6
+#, elixir-format, elixir-autogen
 msgid "Taking our knowledge to the next level, these lessons get cover the advanced topics of Elixir and the BEAM."
 msgstr "私たちの知識を次のレベルへ上げるため、このレッスンでは、ElixirとBEAMの高度なトピックをカバーします。"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:208
+#: lib/school_house_web/templates/page/why.html.heex:143
+#, elixir-format, elixir-autogen
 msgid "The Elixir Slack is a popular destination for many in the community."
 msgstr "Elixir Slackは、コミュニティの多くの人が利用しています。"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:195
+#: lib/school_house_web/templates/page/why.html.heex:137
+#, elixir-format, elixir-autogen
 msgid "The community and ecosystem that have grown up with the language remain one of the alluring parts of Elixir."
 msgstr "この言語とともに成長してきたコミュニティやエコシステムは、今もElixirの魅力の一つです。"
 
-#, elixir-format
-#: lib/school_house_web/templates/lesson/_testing.html.heex:8
+#: lib/school_house_web/templates/lesson/_testing.html.heex:6
+#, elixir-format, elixir-autogen
 msgid "The first step to writing fault tolerant and scalable code is writing bug free code. In these lessons we explore how best to test our Elixir code."
 msgstr "耐障害性と拡張性のあるコードを書くための最初のステップは、バグのないコードを書くことです。このレッスンでは、Elixirのコードをどのようにテストするのがベストなのかを探求します。"
 
-#, elixir-format
 #: lib/school_house_web/views/error_view.ex:8
+#, elixir-format, elixir-autogen
 msgid "The page you're looking for seems to be missing."
 msgstr "お探しのページがないようです。"
 
-#, elixir-format
-#: lib/school_house_web/templates/layout/_footer.html.heex:13
+#: lib/school_house_web/templates/layout/_footer.html.heex:12
+#, elixir-format, elixir-autogen
 msgid "The premier destination for learning and mastering Elixir"
 msgstr "Elixirを学び、マスターするための最高の場所"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:63
+#: lib/school_house_web/templates/page/why.html.heex:85
+#, elixir-format, elixir-autogen
 msgid "The very nature of functional programming, small functions with no side-effects, makes testing easy."
 msgstr "関数型プログラミングの本質である、副作用のない小さな関数は、テストを容易にしてくれます。"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:46
+#: lib/school_house_web/templates/page/why.html.heex:51
+#, elixir-format, elixir-autogen
 msgid "These \"pure functions\" always produce the same results for a given input and change nothing."
 msgstr "このような「純粋関数」は、与えられた入力に対して常に同じ結果を生成し、何も変化させません。"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/why.html.heex:30
+#, elixir-format
 msgid "This has the added benefit of improving support for concurrency and thus scalability of systems."
 msgstr "これにより、並行処理のサポートが向上し、システムのスケーラビリティが向上するというメリットもあります。"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/get_involved.html.heex:57
+#: lib/school_house_web/templates/page/get_involved.html.heex:59
+#, elixir-format, elixir-autogen
 msgid "This is a great way to contribute and get visibility for your post! Steps for submitting a post are available on"
 msgstr "これは投稿して知名度を上げるのに最適な方法です！投稿の手順は、次のサイトでご覧いただけます："
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:12
+#, elixir-format
 msgid "Through the hard work of volunteers Elixir School has been translated to many languages. Some of these translations include: "
 msgstr "ボランティアの方々の努力により、Elixir Schoolは多くの言語に翻訳されています。その中には次のような翻訳があります: "
 
-#, elixir-format
 #: lib/school_house_web/templates/layout/_footer.html.heex:101
+#, elixir-format
 msgid "Today I Learned (TIL)"
 msgstr "今日の学び（TIL）"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/get_involved.html.heex:37
+#: lib/school_house_web/templates/page/get_involved.html.heex:38
+#, elixir-format, elixir-autogen
 msgid "Translate Lessons"
 msgstr "レッスンを翻訳"
 
-#, elixir-format
 #: lib/school_house_web/templates/error/translation_missing.html.heex:4
+#, elixir-format, elixir-autogen
 msgid "Translation unavailable"
 msgstr "訳されていません"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:173
+#, elixir-format
 msgid "Translations"
 msgstr "対応"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:184
+#, elixir-format
 msgid "Using Elixir"
 msgstr "Elixirを使用しています"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/index.html.heex:110
-#: lib/school_house_web/templates/page/why.html.heex:194
+#: lib/school_house_web/templates/page/index.html.heex:127
+#: lib/school_house_web/templates/page/why.html.heex:135
+#, elixir-format, elixir-autogen
 msgid "Vibrant Ecosystem"
 msgstr "活気あるエコシステム"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:268
+#, elixir-format
 msgid "Want to learn more?"
 msgstr "もっと知りたいですか？"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/_newsletter.html.heex:21
+#, elixir-format, elixir-autogen
 msgid "We care about the protection of your data. Read our"
 msgstr "私たちは、お客様のデータの保護に配慮しています。"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:270
+#, elixir-format
 msgid "We have articles spanning several topics"
 msgstr "色んなトピックの記事があります"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:34
+#, elixir-format
 msgid "We welcome and encourage you to join us in continuing to make Elixir School great by getting involved at elixirschool/elixirschool!"
 msgstr "elixirschool/elixirschoolに参加することで、私たちと一緒にElixir Schoolを盛り上げてください！"
 
-#, elixir-format
 #: lib/school_house_web/templates/error/translation_missing.html.heex:6
+#, elixir-format, elixir-autogen
 msgid "We're sorry, the resource you're looking for has not been translated yet."
 msgstr "申し訳ありません。お探しのリソースはまだ翻訳されていません。"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:5
+#, elixir-format
 msgid "Welcome to Elixir School!"
 msgstr "Elixir Schoolへようこそ！"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:9
+#, elixir-format
 msgid "Whether you’re a seasoned veteran or this is your first time, you’ll find what you need in lessons and auxiliary resources."
 msgstr "ベテランの方も、初めての方も、レッスンや補助教材で必要なものが見つかるはずです。"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:74
+#: lib/school_house_web/templates/page/why.html.heex:15
+#, elixir-format, elixir-autogen
 msgid "While its roots are in lambda calculus, functional programming can be fun, easy, and approachable for everyone! By focusing on breaking problems down into simple, side-effect free, functions we can ensure fewer bugs, better test coverage, while incrementally building our solutions through the composition of well tested functions."
 msgstr "ラムダ計算をルーツとする関数型プログラミングは、楽しく、簡単で、誰にでも親しみやすいものです！問題を単純で副作用のない関数に分解することに集中することで、バグを減らし、テストカバレッジを向上させ、よくテストされた関数の組み合わせによって解決策を段階的に構築することができます。"
 
-#, elixir-format
-#: lib/school_house_web/controllers/page_controller.ex:23
+#: lib/school_house_web/controllers/page_controller.ex:27
+#, elixir-format, elixir-autogen
 msgid "Why Choose Elixir?"
 msgstr "なぜElixirを選ぶのか？"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:173
+#, elixir-format
 msgid "With Lesson"
 msgstr "に"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:112
+#, elixir-format
 msgid "With dozens of conferences, hundreds of meetups, Slack, IRC, Discord, and multiple active hashtags."
 msgstr "何十ものカンファレンス、何百ものミートアップ、SlackやIRC、Discordなど、そして他にもたくさんアクティブなハッシュタグによって。"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:255
+#: lib/school_house_web/templates/page/why.html.heex:163
+#, elixir-format, elixir-autogen
 msgid "With over 150 meetups, you're sure to find local Elixir enthusiasts. Check out"
 msgstr "150以上のミートアップがあり、地元のElixir愛好家がきっと見つかるはずです。チェックしてみよう："
 
-#, elixir-format
-#: lib/school_house_web/templates/page/index.html.heex:30
-#: lib/school_house_web/templates/page/why.html.heex:270
+#: lib/school_house_web/templates/page/why.html.heex:169
+#, elixir-format, elixir-autogen
 msgid "and"
 msgstr "と"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/get_involved.html.heex:42
+#, elixir-format, elixir-autogen
 msgid "are available on"
 msgstr "は次で利用可能です："
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:255
+#: lib/school_house_web/templates/page/why.html.heex:163
+#, elixir-format, elixir-autogen
 msgid "for more."
 msgstr " "
 
-#, elixir-format
-#: lib/school_house_web/templates/page/get_involved.html.heex:25
+#: lib/school_house_web/templates/page/get_involved.html.heex:23
+#, elixir-format, elixir-autogen
 msgid "issues"
-msgstr ""
+msgstr "イシュー"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:270
+#: lib/school_house_web/templates/page/why.html.heex:169
+#, elixir-format, elixir-autogen
 msgid "on Twitter."
 msgstr "をツイッターでフォロー。"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/get_involved.html.heex:25
+#: lib/school_house_web/templates/page/get_involved.html.heex:23
+#, elixir-format, elixir-autogen
 msgid "on the repository to find a task that interests you. Create a pull request when your change is ready and after review it will be merged into the codebase!"
 msgstr "を見て、興味のある課題を探してみてください。変更が完了したらプルリクエストを作成し、レビュー後、コードベースにマージされます！"
 
-#, elixir-format
-#: lib/school_house_web/templates/page/why.html.heex:240
+#: lib/school_house_web/templates/page/why.html.heex:157
+#, elixir-format, elixir-autogen
 msgid "to join the conversation."
 msgstr "に参加しよう。"
 
-#, elixir-format
-#: lib/school_house_web/templates/post/index.html.heex:5
+#: lib/school_house_web/templates/post/index.html.heex:6
+#, elixir-format, elixir-autogen
 msgid "Recent Posts"
 msgstr "最近の投稿"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:162
+#, elixir-format
 msgid "(& Counting)"
 msgstr "（増加中...）"
 
-#, elixir-format
 #: lib/school_house_web/templates/page/index.html.heex:273
+#, elixir-format
 msgid "Visit the Blog"
 msgstr "ブログを見る"
 
-#, elixir-format
 #: lib/school_house_web/templates/error/translation_missing.html.heex:7
+#, elixir-format, elixir-autogen
 msgid "If you speak that language, you can help translate"
-msgstr ""
+msgstr "その言語を話せる方は、翻訳にご協力ください"
 
-#, elixir-format
 #: lib/school_house_web/templates/error/translation_missing.html.heex:7
+#, elixir-format, elixir-autogen
 msgid "this page"
-msgstr ""
+msgstr "このページ"
+
+#: lib/school_house_web/templates/page/index.html.heex:343
+#, elixir-autogen, elixir-format
+msgid "Begin with Basics"
+msgstr "基礎から始める"
+
+#: lib/school_house_web/templates/page/index.html.heex:100
+#, elixir-autogen, elixir-format
+msgid "Break problems into simple, side-effect free functions. Better test coverage, fewer bugs, and solutions built from well-tested compositions."
+msgstr "問題を副作用のないシンプルな関数に分解。より良いテストカバレッジ、より少ないバグ、そして十分にテストされた合成から構築されたソリューション。"
+
+#: lib/school_house_web/templates/page/index.html.heex:345
+#, elixir-autogen, elixir-format
+msgid "Browse All Posts"
+msgstr "すべての記事を見る"
+
+#: lib/school_house_web/templates/page/index.html.heex:88
+#, elixir-autogen, elixir-format
+msgid "Built for the Modern World"
+msgstr "現代の世界のために構築"
+
+#: lib/school_house_web/templates/page/index.html.heex:114
+#, elixir-autogen, elixir-format
+msgid "Built on the Erlang VM (BEAM), battle-tested for 30+ years. Get lightweight processes, fault tolerance, and hot code reloading out of the box."
+msgstr "30年以上の実績を持つErlang VM (BEAM) 上に構築。軽量プロセス、耐障害性、ホットコードリローディングをすぐに利用可能。"
+
+#: lib/school_house_web/templates/layout/_footer.html.heex:61
+#: lib/school_house_web/templates/page/get_involved.html.heex:4
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Community"
+msgstr "国"
+
+#: lib/school_house_web/templates/page/index.html.heex:75
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Companies Using Elixir"
+msgstr "の会社が"
+
+#: lib/school_house_web/templates/page/index.html.heex:13
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Elixir"
+msgstr "なぜElixir？"
+
+#: lib/school_house_web/templates/post/post.html.heex:3
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Elixir School Presents"
+msgstr "Elixir School がお届け"
+
+#: lib/school_house_web/live/conferences_live.html.heex:4
+#, elixir-autogen, elixir-format
+msgid "Events"
+msgstr "イベント"
+
+#: lib/school_house_web/templates/page/why.html.heex:4
+#, elixir-autogen, elixir-format
+msgid "Explore"
+msgstr "探索"
+
+#: lib/school_house_web/templates/post/index.html.heex:4
+#, elixir-autogen, elixir-format
+msgid "From the Blog"
+msgstr "ブログから"
+
+#: lib/school_house_web/templates/page/index.html.heex:71
+#, elixir-autogen, elixir-format
+msgid "Hex Packages"
+msgstr "Hexパッケージ"
+
+#: lib/school_house_web/templates/page/index.html.heex:340
+#, elixir-autogen, elixir-format
+msgid "Jump into your first lesson and discover why developers love Elixir. Free, open-source, and community-driven."
+msgstr "最初のレッスンに飛び込んで、開発者がElixirを愛する理由を発見しよう。無料、オープンソース、コミュニティ主導。"
+
+#: lib/school_house_web/templates/layout/_footer.html.heex:33
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Learn"
+msgstr "もっと知る"
+
+#: lib/school_house_web/templates/page/index.html.heex:12
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Learn & Master"
+msgstr "もっと知る"
+
+#: lib/school_house_web/templates/page/index.html.heex:79
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Lessons & Guides"
+msgstr "レッスン"
+
+#: lib/school_house_web/templates/page/podcasts.html.heex:4
+#, elixir-autogen, elixir-format
+msgid "Listen & Learn"
+msgstr "聴いて学ぶ"
+
+#: lib/school_house_web/templates/post/post.html.heex:6
+#, elixir-autogen, elixir-format
+msgid "Posted"
+msgstr "投稿日"
+
+#: lib/school_house_web/templates/page/index.html.heex:339
+#, elixir-autogen, elixir-format
+msgid "Ready to Get Started?"
+msgstr "始める準備はできましたか？"
+
+#: lib/school_house_web/templates/layout/_footer.html.heex:47
+#, elixir-autogen, elixir-format
+msgid "Resources"
+msgstr "リソース"
+
+#: lib/school_house_web/templates/page/index.html.heex:20
+#, elixir-autogen, elixir-format
+msgid "Start Learning"
+msgstr "学習を始める"
+
+#: lib/school_house_web/templates/page/index.html.heex:16
+#, elixir-autogen, elixir-format
+msgid "The premier destination for learning the Elixir programming language. From first steps to advanced OTP patterns — free, community-driven lessons that grow with you."
+msgstr "Elixirプログラミング言語を学ぶための最高の場所。最初の一歩から高度なOTPパターンまで — 無料、コミュニティ主導のレッスンがあなたと共に成長します。"
+
+#: lib/school_house_web/templates/layout/_dark_mode_toggle.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "Toggle dark mode"
+msgstr "ダークモード切り替え"
+
+#: lib/school_house_web/templates/page/index.html.heex:9
+#, elixir-autogen, elixir-format
+msgid "Translated in 25+ Languages"
+msgstr "25以上の言語に翻訳済み"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:142
+#, elixir-autogen, elixir-format
+msgid "A declarative, resource-oriented application framework. Model your domain, and Ash generates APIs, admin interfaces, and more from your resource definitions."
+msgstr "宣言的でリソース指向のアプリケーションフレームワーク。ドメインをモデル化すると、Ashがリソース定義からAPI、管理インターフェースなどを生成します。"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:159
+#, elixir-autogen, elixir-format
+msgid "A full-stack, reactive web framework for Elixir. Write both front-end and back-end code in Elixir with seamless client-server interactivity."
+msgstr "Elixir向けのフルスタック・リアクティブWebフレームワーク。Elixirでフロントエンドとバックエンドの両方のコードを書き、シームレスなクライアント・サーバー間のインタラクティビティを実現します。"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:91
+#, elixir-autogen, elixir-format
+msgid "A toolkit for data mapping and query building. Ecto provides changesets for data validation, composable queries, and database migrations for Elixir applications."
+msgstr "データマッピングとクエリ構築のためのツールキット。Ectoは、Elixirアプリケーション向けのデータバリデーション用チェンジセット、コンポーザブルなクエリ、データベースマイグレーションを提供します。"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:140
+#, elixir-autogen, elixir-format
+msgid "Ash Framework"
+msgstr "Ash Framework"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:123
+#, elixir-autogen, elixir-format
+msgid "Broadway"
+msgstr "Broadway"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:74
+#, elixir-autogen, elixir-format
+msgid "Build and deploy embedded software in Elixir. Craft firmware for Raspberry Pi and other IoT devices with the fault tolerance and reliability of the BEAM."
+msgstr "Elixirで組み込みソフトウェアを構築・デプロイ。BEAMの耐障害性と信頼性を備えたRaspberry Piやその他のIoTデバイス向けファームウェアを作成します。"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:125
+#, elixir-autogen, elixir-format
+msgid "Concurrent, multi-stage data ingestion and processing. Build data pipelines with back-pressure, batching, and fault tolerance powered by GenStage."
+msgstr "並行的な多段階データ取り込みと処理。GenStageを活用したバックプレッシャー、バッチ処理、耐障害性を備えたデータパイプラインを構築します。"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:4
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Discover"
+msgstr "Discord"
+
+#: lib/school_house_web/controllers/page_controller.ex:31
+#: lib/school_house_web/templates/layout/_footer.html.heex:53
+#: lib/school_house_web/templates/layout/_header.html.heex:15
+#: lib/school_house_web/templates/layout/_header.html.heex:51
+#: lib/school_house_web/templates/page/index.html.heex:260
+#, elixir-autogen, elixir-format
+msgid "Ecosystem"
+msgstr "エコシステム"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:7
+#, elixir-autogen, elixir-format
+msgid "Elixir's ecosystem includes world-class frameworks and tools that make developers productive across domains — from web development and machine learning to embedded systems and data processing."
+msgstr "Elixirのエコシステムには、Web開発や機械学習から組み込みシステムやデータ処理まで — さまざまな分野で開発者の生産性を高める世界クラスのフレームワークとツールが含まれています。"
+
+#: lib/school_house_web/templates/page/index.html.heex:130
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Explore Ecosystem"
+msgstr "探索"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:157
+#, elixir-autogen, elixir-format
+msgid "Hologram"
+msgstr "Hologram"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:40
+#, elixir-autogen, elixir-format
+msgid "Interactive notebooks for Elixir. Explore data, prototype ideas, and collaborate with rich documentation — all in a beautiful web-based interface."
+msgstr "Elixir向けのインタラクティブノートブック。データの探索、アイデアのプロトタイピング、リッチなドキュメントでのコラボレーション — すべて美しいWebベースのインターフェースで。"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:38
+#: lib/school_house_web/templates/page/index.html.heex:281
+#, elixir-autogen, elixir-format
+msgid "Livebook"
+msgstr "Livebook"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:72
+#: lib/school_house_web/templates/page/index.html.heex:299
+#, elixir-autogen, elixir-format
+msgid "Nerves"
+msgstr "Nerves"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:57
+#, elixir-autogen, elixir-format
+msgid "Numerical computing and machine learning for Elixir. Run pre-trained models from Hugging Face, build neural networks, and leverage GPU acceleration natively."
+msgstr "Elixir向けの数値計算と機械学習。Hugging Faceの事前学習済みモデルの実行、ニューラルネットワークの構築、ネイティブGPUアクセラレーションの活用。"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:55
+#: lib/school_house_web/templates/page/index.html.heex:290
+#, elixir-autogen, elixir-format
+msgid "Nx & Bumblebee"
+msgstr "Nx & Bumblebee"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:106
+#, elixir-autogen, elixir-format
+msgid "Oban"
+msgstr "Oban"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:21
+#: lib/school_house_web/templates/page/index.html.heex:272
+#, elixir-autogen, elixir-format
+msgid "Phoenix & LiveView"
+msgstr "Phoenix & LiveView"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:108
+#, elixir-autogen, elixir-format
+msgid "Robust, database-backed job processing for Elixir. Schedule, queue, and execute background work with reliability, observability, and built-in resilience."
+msgstr "Elixir向けの堅牢なデータベースバックドジョブ処理。信頼性、可観測性、組み込みの復元力を備えたバックグラウンドワークのスケジュール、キュー、実行。"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:5
+#, elixir-autogen, elixir-format
+msgid "The Elixir Ecosystem"
+msgstr "Elixirエコシステム"
+
+#: lib/school_house_web/templates/page/ecosystem.html.heex:23
+#, elixir-autogen, elixir-format
+msgid "The premier web framework for Elixir with built-in real-time UI capabilities. Build rich, interactive applications with server-rendered HTML — no JavaScript framework required."
+msgstr "リアルタイムUI機能を内蔵したElixirの最高峰Webフレームワーク。サーバーレンダリングHTMLでリッチでインタラクティブなアプリケーションを構築 — JavaScriptフレームワーク不要。"
+
+#: lib/school_house_web/templates/page/index.html.heex:128
+#, elixir-autogen, elixir-format
+msgid "World-class tools like Phoenix, LiveView, Livebook, and Nx. Plus a thriving community with 13,000+ packages on Hex."
+msgstr "Phoenix、LiveView、Livebook、Nxなどの世界クラスのツール。さらにHexに13,000以上のパッケージを持つ活発なコミュニティ。"
+
+#: lib/school_house_web/templates/page/index.html.heex:300
+#, elixir-autogen, elixir-format
+msgid "Embedded systems and IoT firmware"
+msgstr "組み込みシステムとIoTファームウェア"
+
+#: lib/school_house_web/templates/page/index.html.heex:305
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Explore the Full Ecosystem"
+msgstr "探索"
+
+#: lib/school_house_web/templates/page/index.html.heex:262
+#, elixir-autogen, elixir-format
+msgid "From web development to machine learning and IoT — the Elixir ecosystem has you covered."
+msgstr "Web開発から機械学習、IoTまで — Elixirエコシステムがすべてをカバーします。"
+
+#: lib/school_house_web/templates/page/index.html.heex:282
+#, elixir-autogen, elixir-format
+msgid "Interactive notebooks for exploration and learning"
+msgstr "探索と学習のためのインタラクティブノートブック"
+
+#: lib/school_house_web/templates/page/index.html.heex:291
+#, elixir-autogen, elixir-format
+msgid "Machine learning and numerical computing"
+msgstr "機械学習と数値計算"
+
+#: lib/school_house_web/templates/page/index.html.heex:261
+#, elixir-autogen, elixir-format
+msgid "Powerful Tools & Frameworks"
+msgstr "強力なツールとフレームワーク"
+
+#: lib/school_house_web/templates/page/index.html.heex:273
+#, elixir-autogen, elixir-format
+msgid "Real-time web apps with server-rendered HTML"
+msgstr "サーバーレンダリングHTMLによるリアルタイムWebアプリ"
+
+#: lib/school_house_web/templates/page/sponsors.html.heex:66
+#, elixir-autogen, elixir-format
+msgid "Be Our First Sponsor"
+msgstr "最初のスポンサーになってください"
+
+#: lib/school_house_web/templates/page/sponsors.html.heex:73
+#: lib/school_house_web/templates/page/sponsors.html.heex:97
+#, elixir-autogen, elixir-format
+msgid "Become a Sponsor"
+msgstr "スポンサーになる"
+
+#: lib/school_house_web/templates/page/_sponsors_bar.html.heex:17
+#, elixir-autogen, elixir-format
+msgid "Become a sponsor"
+msgstr "スポンサーになる"
+
+#: lib/school_house_web/templates/page/sponsors.html.heex:38
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Community Recognition"
+msgstr "国"
+
+#: lib/school_house_web/templates/page/index.html.heex:331
+#, elixir-autogen, elixir-format
+msgid "Continue"
+msgstr "続ける"
+
+#: lib/school_house_web/templates/page/index.html.heex:324
+#, elixir-autogen, elixir-format
+msgid "Continue Learning"
+msgstr "学習を続ける"
+
+#: lib/school_house_web/templates/lesson/_toc_sidebar.html.heex:9
+#, elixir-autogen, elixir-format
+msgid "Edit on GitHub"
+msgstr "GitHubで編集"
+
+#: lib/school_house_web/templates/page/index.html.heex:142
+#, elixir-autogen, elixir-format
+msgid "Elegant, Expressive Code"
+msgstr "エレガントで表現力豊かなコード"
+
+#: lib/school_house_web/templates/page/get_involved.html.heex:75
+#, elixir-autogen, elixir-format
+msgid "Elixir School is free and always will be. Financial sponsorships help us maintain lessons, fund new content, and keep infrastructure running for developers worldwide."
+msgstr "Elixir Schoolは無料で、これからもずっと無料です。財政的な支援は、レッスンの維持、新しいコンテンツの制作、世界中の開発者のためのインフラ運営に役立ちます。"
+
+#: lib/school_house_web/templates/page/sponsors.html.heex:8
+#, elixir-autogen, elixir-format
+msgid "Elixir School is free, open-source, and community-driven. Sponsors help us maintain lessons, build new content, and keep Elixir education accessible to everyone."
+msgstr "Elixir Schoolは無料、オープンソース、コミュニティ主導です。スポンサーは、レッスンの維持、新しいコンテンツの構築、すべての人がElixir教育にアクセスできるようにすることを支援します。"
+
+#: lib/school_house_web/templates/page/sponsors.html.heex:30
+#, elixir-autogen, elixir-format
+msgid "Elixir School serves developers worldwide with lessons translated into dozens of languages. Your support extends that reach."
+msgstr "Elixir Schoolは、数十の言語に翻訳されたレッスンで世界中の開発者にサービスを提供しています。あなたのサポートがその範囲を広げます。"
+
+#: lib/school_house_web/templates/page/index.html.heex:143
+#, elixir-autogen, elixir-format
+msgid "From pattern matching to real-time web apps — see why developers fall in love with Elixir."
+msgstr "パターンマッチングからリアルタイムWebアプリまで — 開発者がElixirに恋する理由をご覧ください。"
+
+#: lib/school_house_web/templates/page/sponsors.html.heex:29
+#, elixir-autogen, elixir-format
+msgid "Global Reach"
+msgstr "グローバルな展開"
+
+#: lib/school_house_web/templates/page/sponsors.html.heex:99
+#, elixir-autogen, elixir-format
+msgid "Join the organizations and individuals who believe in free, accessible Elixir education for everyone."
+msgstr "すべての人のための無料でアクセス可能なElixir教育を信じる組織や個人に参加してください。"
+
+#: lib/school_house_web/templates/page/get_involved.html.heex:77
+#, elixir-autogen, elixir-format
+msgid "Learn more about sponsoring"
+msgstr "スポンサーシップの詳細"
+
+#: lib/school_house_web/templates/page/index.html.heex:182
+#, elixir-autogen, elixir-format
+msgid "Lightweight Concurrency"
+msgstr "軽量な並行処理"
+
+#: lib/school_house_web/templates/lesson/_toc_sidebar.html.heex:1
+#, elixir-autogen, elixir-format
+msgid "On This Page"
+msgstr "このページの内容"
+
+#: lib/school_house_web/templates/page/sponsors.html.heex:45
+#, elixir-autogen, elixir-format
+msgid "Our Sponsors"
+msgstr "スポンサー"
+
+#: lib/school_house_web/templates/page/index.html.heex:217
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Phoenix LiveView"
+msgstr "Phoenix LiveView"
+
+#: lib/school_house_web/templates/lesson/_toc_sidebar.html.heex:13
+#, elixir-autogen, elixir-format
+msgid "Report an Issue"
+msgstr "問題を報告"
+
+#: lib/school_house_web/templates/page/index.html.heex:219
+#, elixir-autogen, elixir-format
+msgid "Rich, real-time user experiences with server-rendered HTML. No JavaScript required — just write Elixir and let LiveView handle the rest."
+msgstr "サーバーレンダリングHTMLによるリッチなリアルタイムユーザー体験。JavaScript不要 — Elixirを書くだけで、LiveViewが残りを処理します。"
+
+#: lib/school_house_web/templates/page/index.html.heex:141
+#, elixir-autogen, elixir-format
+msgid "See It in Action"
+msgstr "実際に見る"
+
+#: lib/school_house_web/templates/page/index.html.heex:184
+#, elixir-autogen, elixir-format
+msgid "Spawn millions of isolated processes on a single machine — each communicating through message passing. This is the foundation of fault-tolerant, concurrent systems powered by the BEAM virtual machine."
+msgstr "単一のマシンで数百万の分離されたプロセスを生成 — それぞれがメッセージパッシングで通信します。これがBEAM仮想マシンを基盤とした耐障害性のある並行システムの基礎です。"
+
+#: lib/school_house_web/templates/layout/_footer.html.heex:70
+#, elixir-autogen, elixir-format
+msgid "Sponsor"
+msgstr "スポンサー"
+
+#: lib/school_house_web/templates/page/sponsors.html.heex:104
+#, elixir-autogen, elixir-format
+msgid "Sponsor on GitHub"
+msgstr "GitHubでスポンサー"
+
+#: lib/school_house_web/templates/page/get_involved.html.heex:73
+#, elixir-autogen, elixir-format
+msgid "Sponsor the Project"
+msgstr "プロジェクトをスポンサー"
+
+#: lib/school_house_web/controllers/page_controller.ex:40
+#: lib/school_house_web/templates/page/sponsors.html.heex:6
+#, elixir-autogen, elixir-format
+msgid "Sponsors"
+msgstr "スポンサー"
+
+#: lib/school_house_web/templates/page/sponsors.html.heex:39
+#, elixir-autogen, elixir-format
+msgid "Sponsors are featured on our site and recognized as champions of Elixir education in the community."
+msgstr "スポンサーは当サイトで紹介され、コミュニティにおけるElixir教育のチャンピオンとして認められます。"
+
+#: lib/school_house_web/templates/page/sponsors.html.heex:81
+#, elixir-autogen, elixir-format
+msgid "Sponsorship Tiers"
+msgstr "スポンサーシップ階層"
+
+#: lib/school_house_web/templates/page/sponsors.html.heex:5
+#, elixir-autogen, elixir-format
+msgid "Support Elixir School"
+msgstr "Elixir Schoolを支援"
+
+#: lib/school_house_web/templates/page/sponsors.html.heex:20
+#, elixir-autogen, elixir-format
+msgid "Support Open Education"
+msgstr "オープン教育を支援"
+
+#: lib/school_house_web/templates/page/_sponsors_bar.html.heex:4
+#, elixir-autogen, elixir-format
+msgid "Supported By"
+msgstr "支援"
+
+#: lib/school_house_web/templates/page/index.html.heex:151
+#, elixir-autogen, elixir-format
+msgid "Write expressive, self-documenting code. Instead of if/else chains, each function clause declares exactly what data shape it handles — making your intent crystal clear."
+msgstr "表現力豊かで自己文書化されるコードを書きましょう。if/elseチェーンの代わりに、各関数節がどのデータ形状を処理するかを正確に宣言し — 意図を明確にします。"
+
+#: lib/school_house_web/templates/page/sponsors.html.heex:21
+#, elixir-autogen, elixir-format
+msgid "Your sponsorship directly funds new lessons, keeps content current, and supports translations into 25+ languages."
+msgstr "あなたのスポンサーシップは、新しいレッスンの制作、コンテンツの最新化、25以上の言語への翻訳を直接支援します。"
+
+#: lib/school_house_web/templates/page/sponsors.html.heex:68
+#, elixir-autogen, elixir-format
+msgid "Your support helps keep Elixir education free and accessible to developers around the world. Every contribution makes a difference."
+msgstr "あなたのサポートは、世界中の開発者がElixir教育を無料でアクセスできるようにするのに役立ちます。すべての貢献が違いを生みます。"

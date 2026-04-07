@@ -1,32 +1,31 @@
-<div class="container pt-20 pb-5 md:py-12 bg-body dark:bg-body-dark">
-  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <div class="lg:text-center">
-      <h2 class="mt-2 text-4xl font-extrabold tracking-tight leading-8 text-purple dark:text-purple-dark sm:text-4xl">
+<div class="py-16 sm:py-24 px-4 sm:px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14">
+      <div class="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-brand-500 mb-3"><%= gettext("From the Blog") %></div>
+      <h2 class="font-heading text-4xl font-extrabold tracking-tight text-on-surface mb-4">
         <%= assigns[:blog_heading] || gettext("Recent Posts") %>
       </h2>
-      <p class="mt-3 text-xl text-center text-heavy dark:text-heavy-dark sm:mt-4">
-      <%= gettext("Articles authored by Elixir School contributors and members of the community.") %>
+      <p class="text-lg text-on-surface-secondary max-w-xl mx-auto">
+        <%= gettext("Articles authored by Elixir School contributors and members of the community.") %>
       </p>
     </div>
-  </div>
-</div>
 
-<div class="bg-body dark:bg-body-dark">
-  <div class="px-4 pt-4 mt-2 grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
-    <%= for post <- @posts  do %>
-      <%= render("_post_preview.html", conn: @conn, post: post) %>
+    <div class="grid gap-6 lg:grid-cols-3 md:grid-cols-2">
+      <%= for post <- @posts do %>
+        <%= render("_post_preview.html", conn: @conn, post: post) %>
+      <% end %>
+    </div>
+
+    <%= if @conn.assigns.page_title == "Blog" do %>
+      <div class="flex justify-center mt-12">
+        <div class="inline-flex gap-2">
+          <%= for page <- 1..@pages do %>
+            <%= link(to: Routes.post_path(@conn, :index, page: (page - 1)), class: "inline-flex items-center justify-center w-10 h-10 border border-border-subtle rounded-design-sm text-sm font-medium text-on-surface-secondary hover:border-brand-400 hover:text-brand-500 transition-all") do %>
+              <%= page %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>
-
-<%= if @conn.assigns.page_title == "Blog" do %>
-  <div class="flex justify-center">
-    <div class="p-4 mt-12 border-b">
-      <%= for page <- 1..@pages do %>
-        <%= link(to: Routes.post_path(@conn, :index, page: (page - 1)), class: "inline-flex items-center px-4 py-2 border text-sm font-medium rounded-md") do %>
-          <%= page %>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-<% end %>

@@ -1,0 +1,22 @@
+<%= if @featured_sponsors != [] do %>
+<section class="py-14 px-4 sm:px-6 border-t border-border-subtle">
+  <div class="max-w-5xl mx-auto text-center">
+    <div class="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-on-surface-muted mb-6"><%= gettext("Supported By") %></div>
+    <div class="flex flex-wrap justify-center items-center gap-8 mb-6">
+      <%= for sponsor <- @featured_sponsors do %>
+        <a href={"https://github.com/#{sponsor.login}"} target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-3 group" title={sponsor.name}>
+          <img src={sponsor.avatar_url} alt={sponsor.name}
+               class="w-10 h-10 rounded-full ring-2 ring-border-subtle group-hover:ring-brand-300 transition-all" />
+          <span class="font-heading text-sm font-bold text-on-surface-secondary group-hover:text-brand-600 transition-colors"><%= sponsor.name %></span>
+        </a>
+      <% end %>
+    </div>
+    <div>
+      <%= link(to: Routes.page_path(@conn, :sponsors, current_locale()), class: "text-sm font-semibold text-brand-500 hover:text-brand-600 transition-colors") do %>
+        <%= gettext("Become a sponsor") %> &rarr;
+      <% end %>
+    </div>
+  </div>
+</section>
+<% end %>

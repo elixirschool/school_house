@@ -9,4 +9,14 @@ defmodule SchoolHouseWeb.PageControllerTest do
       assert body =~ "Get Involved"
     end
   end
+
+  describe "sponsors/2" do
+    test "renders the sponsors page", %{conn: conn} do
+      conn = get(conn, Routes.page_path(conn, :sponsors, "en"))
+      body = html_response(conn, 200)
+
+      assert body =~ "Sponsors"
+      assert body =~ "github.com/sponsors/elixirschool"
+    end
+  end
 end

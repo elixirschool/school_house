@@ -1,0 +1,4 @@
+[submodule "content"]
+	path = content
+	url = https://github.com/elixirschool/elixirschool.git
+	branch = main

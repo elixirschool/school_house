@@ -1,135 +1,89 @@
-<footer class="mt-16 bg-footer dark:bg-footer-dark" aria-labelledby="footerHeading">
+<footer class="border-t border-border-subtle bg-surface pt-16 pb-8 px-4 sm:px-8" aria-labelledby="footerHeading">
   <p id="footerHeading" class="sr-only">Footer</p>
-  <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
-    <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-      <div class="space-y-8 xl:col-span-1">
-        <div class="flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 p-2 text-white rounded-full bg-purple dark:bg-purple-dark" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-          </svg>
-          <span class="ml-3 text-xl text-heavy dark:text-heavy-dark"><%= gettext("Elixir School")%></span>
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <!-- Brand Column -->
+      <div class="lg:col-span-1">
+        <div class="flex items-center gap-2.5 mb-4">
+          <img src="/brand/elixir-school-icon.png" alt="" class="w-8 h-8 rounded-lg" />
+          <span class="font-heading font-bold text-lg text-on-surface tracking-tight">elixir <span class="text-brand-500">school</span></span>
         </div>
-        <p class="text-base italic text-lighter dark:text-lighter-dark">
-          <%= gettext("The premier destination for learning and mastering Elixir")%>
+        <p class="text-sm text-on-surface-secondary leading-relaxed max-w-[300px]">
+          <%= gettext("The premier destination for learning and mastering Elixir") %>
         </p>
-        <div class="flex space-x-6">
-
-          <a href="https://twitter.com/elixirschool" class="text-light dark:text-light-dark hover:text-gray-500">
-            <span class="sr-only">Twitter</span>
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <div class="flex gap-4 mt-4">
+          <a href="https://twitter.com/elixirschool" class="text-on-surface-muted hover:text-brand-500 transition-colors">
+            <span class="sr-only">Twitter (opens in new tab)</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
             </svg>
           </a>
-
-          <a href="https://github.com/elixirschool" class="text-light dark:text-light-dark hover:text-gray-500">
-            <span class="sr-only">GitHub</span>
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <a href="https://github.com/elixirschool" class="text-on-surface-muted hover:text-brand-500 transition-colors">
+            <span class="sr-only">GitHub (opens in new tab)</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
             </svg>
           </a>
-
         </div>
       </div>
-      <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-2 xl:col-span-2">
-        <div class="md:grid md:grid-cols-2 md:gap-8">
-          <div>
-            <p class="text-sm font-semibold tracking-wider text-lighter dark:text-lighter-dark uppercase">
-              <%= gettext("Getting Started")%>
-            </p>
-            <ul class="mt-4 space-y-4">
-              <li>
-                <%= link(gettext("Why Elixir?"), to: Routes.page_path(@conn, :why, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
-              </li>
-              <li>
-                <%= link(gettext("Podcasts"), to: Routes.page_path(@conn, :podcasts, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
-              </li>
-              <li>
-                <%= link(gettext("Conferences"), to: Routes.live_path(@conn, SchoolHouseWeb.ConferencesLive, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
-              </li>
-            </ul>
-          </div>
-          <div class="mt-12 md:mt-0">
-            <p class="text-sm font-semibold tracking-wider text-lighter dark:text-lighter-dark uppercase">
-              <%= gettext("Lessons") %>
-            </p>
-            <ul class="mt-4 space-y-4">
-              <li>
-                <%= link(gettext("Basics"), to: Routes.lesson_path(@conn, :index, current_locale(), :basics), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
-              </li>
 
-              <li>
-                <%= link(gettext("Intermediate"), to: Routes.lesson_path(@conn, :index, current_locale(), :intermediate), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
-              </li>
+      <!-- Learn Column -->
+      <div>
+        <h4 class="font-heading text-xs font-bold uppercase tracking-widest text-on-surface-muted mb-4">
+          <%= gettext("Learn") %>
+        </h4>
+        <ul class="flex flex-col gap-2.5">
+          <li><%= link(gettext("Basics"), to: Routes.lesson_path(@conn, :index, current_locale(), :basics), class: "text-sm text-on-surface-secondary hover:text-brand-500 transition-colors") %></li>
+          <li><%= link(gettext("Intermediate"), to: Routes.lesson_path(@conn, :index, current_locale(), :intermediate), class: "text-sm text-on-surface-secondary hover:text-brand-500 transition-colors") %></li>
+          <li><%= link(gettext("Advanced"), to: Routes.lesson_path(@conn, :index, current_locale(), :advanced), class: "text-sm text-on-surface-secondary hover:text-brand-500 transition-colors") %></li>
+          <li><%= link(gettext("Ecto"), to: Routes.lesson_path(@conn, :index, current_locale(), :ecto), class: "text-sm text-on-surface-secondary hover:text-brand-500 transition-colors") %></li>
+          <li><%= link(gettext("Testing"), to: Routes.lesson_path(@conn, :index, current_locale(), :testing), class: "text-sm text-on-surface-secondary hover:text-brand-500 transition-colors") %></li>
+        </ul>
+      </div>
 
-              <li>
-                <%= link(gettext("Advanced"), to: Routes.lesson_path(@conn, :index, current_locale(), :advanced), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
-              </li>
+      <!-- Resources Column -->
+      <div>
+        <h4 class="font-heading text-xs font-bold uppercase tracking-widest text-on-surface-muted mb-4">
+          <%= gettext("Resources") %>
+        </h4>
+        <ul class="flex flex-col gap-2.5">
+          <li><%= link(gettext("Blog"), to: Routes.post_path(@conn, :index), class: "text-sm text-on-surface-secondary hover:text-brand-500 transition-colors") %></li>
+          <li><%= link(gettext("Podcasts"), to: Routes.page_path(@conn, :podcasts, current_locale()), class: "text-sm text-on-surface-secondary hover:text-brand-500 transition-colors") %></li>
+          <li><%= link(gettext("Conferences"), to: Routes.live_path(@conn, SchoolHouseWeb.ConferencesLive, current_locale()), class: "text-sm text-on-surface-secondary hover:text-brand-500 transition-colors") %></li>
+          <li><%= link(gettext("Ecosystem"), to: Routes.page_path(@conn, :ecosystem, current_locale()), class: "text-sm text-on-surface-secondary hover:text-brand-500 transition-colors") %></li>
+          <li><%= link(gettext("Why Elixir?"), to: Routes.page_path(@conn, :why, current_locale()), class: "text-sm text-on-surface-secondary hover:text-brand-500 transition-colors") %></li>
+        </ul>
+      </div>
 
-              <li>
-                <%= link(gettext("Testing"), to: Routes.lesson_path(@conn, :index, current_locale(), :testing), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
-              </li>
-
-              <li>
-                <%= link(gettext("Data Processing"), to: Routes.lesson_path(@conn, :index, current_locale(), :data_processing), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
-              </li>
-
-              <li>
-                <%= link(gettext("Ecto"), to: Routes.lesson_path(@conn, :index, current_locale(), :ecto), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
-              </li>
-
-              <li>
-                <%= link(gettext("Storage"), to: Routes.lesson_path(@conn, :index, current_locale(), :storage), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
-              </li>
-
-              <li>
-                <%= link(gettext("Miscellaneous"), to: Routes.lesson_path(@conn, :index, current_locale(), :misc), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="md:grid md:grid-cols-2 md:gap-8">
-          <div>
-            <p class="text-sm font-semibold tracking-wider text-lighter dark:text-lighter-dark uppercase">
-              <%= link(gettext("Blog"), to: Routes.post_path(@conn, :index), class: "hover:text-gray-600") %>
-            </p>
-            <ul class="mt-4 space-y-4">
-              <li>
-                <%= link(gettext("Announcements"), to: Routes.post_path(@conn, :filter_by_tag, "announcement"), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
-              </li>
-
-              <li>
-                <%= link(gettext("Today I Learned (TIL)"), to: Routes.post_path(@conn, :filter_by_tag, "til"), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
-              </li>
-
-              <li>
-                <%= link(gettext("Reviews"), to: Routes.post_path(@conn, :filter_by_tag, "review"), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
-              </li>
-
-            </ul>
-          </div>
-          <div class="mt-12 md:mt-0">
-            <p class="text-sm font-semibold tracking-wider text-lighter dark:text-lighter-dark uppercase">
-              <%= gettext("Project")%>
-            </p>
-            <ul class="mt-4 space-y-4">
-              <li>
-                <%= link(gettext("Get Involved"), to: Routes.page_path(@conn, :get_involved, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900") %>
-              </li>
-              <%= if current_locale() != "en" do %>
-                <li>
-                  <%= link gettext("Translation Report"), to: Routes.report_path(@conn, :index, current_locale()), class: "text-base text-light dark:text-light-dark hover:text-gray-900" %>
-                </li>
-              <% end %>
-            </ul>
-          </div>
-        </div>
+      <!-- Community Column -->
+      <div>
+        <h4 class="font-heading text-xs font-bold uppercase tracking-widest text-on-surface-muted mb-4">
+          <%= gettext("Community") %>
+        </h4>
+        <ul class="flex flex-col gap-2.5">
+          <li><%= link(gettext("Get Involved"), to: Routes.page_path(@conn, :get_involved, current_locale()), class: "text-sm text-on-surface-secondary hover:text-brand-500 transition-colors") %></li>
+          <li><a href="https://github.com/elixirschool" class="text-sm text-on-surface-secondary hover:text-brand-500 transition-colors">GitHub</a></li>
+          <li><a href="https://twitter.com/elixirschool" class="text-sm text-on-surface-secondary hover:text-brand-500 transition-colors">Twitter</a></li>
+          <li>
+            <%= link(to: Routes.page_path(@conn, :sponsors, current_locale()), class: "text-sm text-on-surface-secondary hover:text-brand-500 transition-colors inline-flex items-center gap-1.5") do %>
+              <svg class="w-3.5 h-3.5 text-rose-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" /></svg>
+              <%= gettext("Sponsor") %>
+            <% end %>
+          </li>
+          <%= if current_locale() != "en" do %>
+            <li><%= link gettext("Translation Report"), to: Routes.report_path(@conn, :index, current_locale()), class: "text-sm text-on-surface-secondary hover:text-brand-500 transition-colors" %></li>
+          <% end %>
+        </ul>
       </div>
     </div>
-    <div class="pt-8 mt-12 border-t border-gray-200">
-      <p class="text-base text-lighter dark:text-lighter-dark xl:text-center">
-        &copy; 2021 Sean Callan —
-        <a href="https://twitter.com/doomspork" rel="noopener noreferrer"  class="text-base text-light dark:text-light-dark hover:text-gray-900" target="_blank">@doomspork</a>
-      </p>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-border-subtle pt-6 flex flex-col sm:flex-row justify-between items-center gap-2">
+      <span class="text-xs text-on-surface-muted">
+        &copy; <%= Date.utc_today().year %> Sean Callan &mdash;
+        <a href="https://twitter.com/doomspork" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors" target="_blank">@doomspork<span class="sr-only"> (opens in new tab)</span></a>
+      </span>
+      <span class="text-xs text-on-surface-muted">Built with Phoenix & LiveView</span>
     </div>
   </div>
 </footer>
